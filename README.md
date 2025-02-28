@@ -1,26 +1,39 @@
 # AI & Data Science Roadmap 🚀
 
-Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensive learning path for AI and Data Science, starting from essential mathematics and progressing through advanced theoretical courses. Follow the links, courses, and articles to build a strong foundation and practical skills for AI, machine learning, and related fields. 🌟
+Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive learning path for AI and Data Science, starting from essential mathematics and progressing through advanced theoretical courses. Follow the links, courses, and articles to build a strong foundation and practical skills in AI, machine learning, and related fields. 🌟
+
+---
+
+## 📋 Table of Contents
+- [Mathematics for Machine Learning](#mathematics-for-machine-learning)
+- [Statistics](#statistics)
+- [Econometrics](#econometrics)
+- [Intro to Python & Data Structures](#intro-to-python--data-structures)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [SQL Introduction](#sql-introduction)
+- [Web Scraping with Python](#web-scraping-with-python)
+- [Advanced Theoretical Courses](#advanced-theoretical-courses)
+- [Big Data](#big-data)
+- [Deep Learning](#deep-learning)
+- [Machine Learning Operations (MLOps)](#machine-learning-operations-mlops)
+- [Data Engineering](#data-engineering)
+- [Medicine Specialization](#medicine-specialization)
+- [Additional Resources](#additional-resources)
 
 ---
 
 ## 📐 Mathematics for Machine Learning
-- **[Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)** - If you need to build foundational knowledge.
+- **[Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)** - Build foundational knowledge.
 - **[Coursera: Expressway to Data Science (Essential Math)](https://www.coursera.org/specializations/expressway-to-data-science-essential-math)**
-- **[Coursera: Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning?irclickid=VxjwArSIRxyPWyNxtHx-hTEWUkHWT-VjxS4dQM0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses)**
+- **[Coursera: Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning)**
 
 ---
 
-## 📊 Algebra and Differential Calculus for Data Science
-- **[Coursera: Algebra and Differential Calculus for Data Science](https://www.coursera.org/learn/algebra-and-differential-calculus-for-data-science?irclickid=VxjwArSIRxyPWyNxtHx-hTEWUkHWT61jxS4dQM0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus)**
-
----
-
-## 📈 Statistics
+## 📊 Statistics
 ### Courses
-- **[Stanford Statistics](https://www.coursera.org/learn/stanford-statistics#syllabus)**
-- **[Statistical Analysis & Hypothesis Testing with SAS](https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas#syllabus)**
-- **[Probability & Statistics](https://www.coursera.org/learn/probability-statistics#syllabus)**
+- **[Stanford Statistics](https://www.coursera.org/learn/stanford-statistics)** - Comprehensive statistical methods.
+- **[Statistical Analysis & Hypothesis Testing with SAS](https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas)** - Focuses on statistical analysis with SAS.
+- **[Probability & Statistics](https://www.coursera.org/learn/probability-statistics)** - Introductory course on probability and statistics.
 
 ### Articles & Papers
 #### A/B Testing
@@ -32,20 +45,16 @@ Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensiv
 - **[Improving Sensitivity of Controlled Experiments (Netflix)](https://www.researchgate.net/publication/305997925_Improving_the_Sensitivity_of_Online_Controlled_Experiments_Case_Studies_at_Netflix)**
 - **[CUPED Methodology (Microsoft)](https://exp-platform.com/Documents/2013-02-CUPED-ImprovingSensitivityOfControlledExperiments.pdf)**
 
-#### Ratio Metrics
-- **[CMU Paper on Ratio Metrics](https://arxiv.org/pdf/1803.06336.pdf)**
-- **[Statistical Analysis of Ratio Metrics](https://www.stat.cmu.edu/~hseltman/files/ratio.pdf)**
-
 ### 📚 Books About Statistics
-- **[Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)**
-- **[Naked Statistics (Open Library)](https://openlibrary.org/works/OL19167522W/Naked_Statistics)**
+- **[Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)** - A practical introduction to statistics using Python.
+- **[Naked Statistics (Open Library)](https://openlibrary.org/works/OL19167522W/Naked_Statistics)** - Accessible introduction to statistics.
 
 ---
 
-## 📖 10 Fundamental Theorems for Econometrics
-### Pre-Requisites of Econometrics
+## 📖 Econometrics
+### Pre-Requisites
 - **[Econometric Theorems (Book)](https://bookdown.org/ts_robinson1994/10EconometricTheorems/)**
-- **[Regressions, Time Series, Fitting Distributions](https://www.coursera.org/learn/erasmus-econometrics?irclickid=wSsRVvxTlxyKWXiVqWUrNT83UkHQLO36xS4dQo0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#syllabus)**
+- **[Regressions, Time Series, Fitting Distributions](https://www.coursera.org/learn/erasmus-econometrics)**
 
 ### Additional Resources
 - **[Kaggle: Time Series Basics](https://www.kaggle.com/learn/time-series)**
@@ -53,10 +62,10 @@ Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensiv
 
 ---
 
-## 🐍 Intro to Python & Data Structures and Algorithms
+## 🐍 Intro to Python & Data Structures
 - **[Python Crash Course (YouTube)](https://www.youtube.com/watch?v=rfscVS0vtbw)**
 - **[Python for Applied Data Science (Coursera)](https://www.coursera.org/learn/python-for-applied-data-science-ai)**
-- **[Coursera: Data Structures and Algorithms Specialization](https://www.coursera.org/specializations/algorithms?irclickid=SITTWYyCbxyPW0Hxo00WPWwaUkFQAmXSxS4dQM0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#outcomes)**
+- **[Data Structures and Algorithms Specialization (Coursera)](https://www.coursera.org/specializations/algorithms)**
 
 ### Practice
 - **[Leetcode Study Plan](https://leetcode.com/studyplan/)**
@@ -66,7 +75,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensiv
 
 ## 🔍 Exploratory Data Analysis
 - **[EDA with Python & Pandas (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-python-pandas)**
-- **[IBM Exploratory Data Analysis for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning#syllabus)**
+- **[IBM Exploratory Data Analysis for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning)**
 - **[EDA with Seaborn (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-seaborn)**
 
 ---
@@ -84,7 +93,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensiv
 
 ## 📚 Advanced Theoretical Courses
 - **[Machine Learning Course (mlcourse.ai)](https://mlcourse.ai/book/index.html)**
-- **[Introduction to Machine Learning (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction?irclickid=3GUQkrxy:xyKWXiVqWUrNT83UkHQt43TxS4dQo0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=4863057&utm_content=b2c#courses)**
+- **[Introduction to Machine Learning (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction)**
 
 ### Additional Resources
 - **[Pattern Recognition and Machine Learning (Book PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)**
@@ -98,7 +107,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensiv
 ---
 
 ## 🔬 Deep Learning
-- **[Coursera: Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning#courses)**
+- **[Coursera: Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)**
 - **[Deep Learning Book](https://www.deeplearningbook.org/)**
 - **[Attention Mechanisms in Transformers (Jalammar)](https://jalammar.github.io/illustrated-transformer/)**
 
