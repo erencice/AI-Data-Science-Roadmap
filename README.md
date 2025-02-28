@@ -4,24 +4,6 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 
 ---
 
-## 📋 Table of Contents
-- [Mathematics for Machine Learning](#mathematics-for-machine-learning)
-- [Statistics](#statistics)
-- [Econometrics](#econometrics)
-- [Intro to Python & Data Structures](#intro-to-python--data-structures)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-- [SQL Introduction](#sql-introduction)
-- [Web Scraping with Python](#web-scraping-with-python)
-- [Advanced Theoretical Courses](#advanced-theoretical-courses)
-- [Big Data](#big-data)
-- [Deep Learning](#deep-learning)
-- [Machine Learning Operations (MLOps)](#machine-learning-operations-mlops)
-- [Data Engineering](#data-engineering)
-- [Medicine Specialization](#medicine-specialization)
-- [Additional Resources](#additional-resources)
-
----
-
 ## 📐 Mathematics for Machine Learning
 - **[Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)** - Build foundational knowledge.
 - **[Coursera: Expressway to Data Science (Essential Math)](https://www.coursera.org/specializations/expressway-to-data-science-essential-math)**
