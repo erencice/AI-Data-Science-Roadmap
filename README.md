@@ -2,8 +2,6 @@
 
 Welcome to the **AI & Data Science Roadmap**! This guide provides a comprehensive learning path for AI and Data Science, starting from essential mathematics and progressing through advanced theoretical courses. Follow the links, courses, and articles to build a strong foundation and practical skills for AI, machine learning, and related fields. 🌟
 
-![AI & Data Science](https://miro.medium.com/v2/resize:fit:1400/1*e7o4j3Zc1v5oj4IY3c4COg.png)
-
 ---
 
 ## 📐 Mathematics for Machine Learning
