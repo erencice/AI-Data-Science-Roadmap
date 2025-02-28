@@ -117,7 +117,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 
 ## 📖 Additional Resources
 - **[Everything You Always Wanted to Know About Mathematics](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf)**
-
+- **[Gujarati's Basic Econometrics](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)**
 ---
 
 ### Happy Learning! 🎓✨
