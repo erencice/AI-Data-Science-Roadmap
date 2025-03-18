@@ -69,8 +69,9 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 ---
 
 ## 🌐 Web Scraping with Python
-- **[Web Scraping with Python (Real Python)](https://realpython.com/learning-paths/python-web-scraping/)**
-
+- **[Selenium Documentation](https://selenium-python.readthedocs.io/index.html)**
+- **[Beautiful Soup Documentation](https://tedboy.github.io/bs4_doc/index.html)**
+- **[Practice for Web Scraping](https://www.scrapingcourse.com/ecommerce/)** 
 ---
 
 ## 📚 Advanced Theoretical Courses
