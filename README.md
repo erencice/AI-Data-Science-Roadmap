@@ -77,6 +77,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 ## 📚 Advanced Theoretical Courses
 - **[Machine Learning Course (mlcourse.ai)](https://mlcourse.ai/book/index.html)**
 - **[Introduction to Machine Learning (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction)**
+- **[Introduction to Statistical Learning (E-Book)](https://www.statlearning.com/)**
 
 ### Additional Resources
 - **[Pattern Recognition and Machine Learning (Book PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)**
