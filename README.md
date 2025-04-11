@@ -120,8 +120,8 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 ## 📖 Additional Resources
 - **[Everything You Always Wanted to Know About Mathematics](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf)**
 - **[Gujarati's Basic Econometrics](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)**
-- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝘄𝗶𝘁𝗵 𝗥:](https://otexts.com/fpp3/)**
-- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲, 𝘁𝗵𝗲 𝗣𝘆𝘁𝗵𝗼𝗻𝗶𝗰 𝗪𝗮𝘆:](https://otexts.com/fpppy/)**
+- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝘄𝗶𝘁𝗵 𝗥](https://otexts.com/fpp3/)**
+- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲, 𝘁𝗵𝗲 𝗣𝘆𝘁𝗵𝗼𝗻𝗶𝗰 𝗪𝗮𝘆](https://otexts.com/fpppy/)**
 ---
 
 ### Happy Learning! 🎓✨
