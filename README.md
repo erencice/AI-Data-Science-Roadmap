@@ -104,7 +104,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 ## ⚙️ Machine Learning Operations (MLOps)
 - **[MLOps Zoomcamp (GitHub)](https://github.com/DataTalksClub/mlops-zoomcamp)**
 - **[Coursera: MLOps for Machine Learning Engineering](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops)**
-- **[Machine Learning Systems (E-Book)](https://mlsysbook.ai)
+- **[Machine Learning Systems (E-Book)](https://mlsysbook.ai)**
 
 ---
 
