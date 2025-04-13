@@ -123,6 +123,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 - **[Gujarati's Basic Econometrics](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)**
 - **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝘄𝗶𝘁𝗵 𝗥](https://otexts.com/fpp3/)**
 - **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲, 𝘁𝗵𝗲 𝗣𝘆𝘁𝗵𝗼𝗻𝗶𝗰 𝗪𝗮𝘆](https://otexts.com/fpppy/)**
+- **[AI Engineering Reading List](https://www.latent.space/p/2025-papers)**
 ---
 
 ### Happy Learning! 🎓✨
