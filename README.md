@@ -112,6 +112,13 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 - **[Data Engineering Zoomcamp (GitHub)](https://github.com/DataTalksClub/data-engineering-zoomcamp/)**
 
 ---
+---
+## 🧭 Not Ready for Theory Yet?
+
+If the concepts above feel too complex or intimidating right now, and theoretical content doesn’t suit your learning style at the moment, you might want to start with the following practical program and then return to the resources above:
+
+- **[Google Advanced Data Analytics Professional Certificate (Coursera)](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)** – A hands-on, beginner-friendly path to build foundational data analytics skills with real-world projects.
+---
 
 ## 🏥 Medicine Specialization
 - **[Coursera: AI for Medicine Specialization](https://www.coursera.org/specializations/ai-for-medicine)**
