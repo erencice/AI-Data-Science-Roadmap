@@ -130,6 +130,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 - **[Prompt Engineering Guide](https://drive.google.com/file/d/1AbaBYbEa_EbPelsT40-vj64L-2IwUJHy/view?pli=1)**
 - **[A Course in Reinforcement Learning (E-Book)](https://web.mit.edu/dimitrib/www/RLCOURSECOMPLETE%202ndEDITION.pdf)**
 - **[An Introduction to Mathematical Proof (E-Book)](https://personal.math.ubc.ca/~PLP/assets/plp.pdf)**
+- **[Statistics and Machine Learning in Python (E-Book)](https://hal.science/hal-03038776v3/file/StatisticsMachineLearningPython.pdf)**
 ---
 
 ### Happy Learning! 🎓✨
