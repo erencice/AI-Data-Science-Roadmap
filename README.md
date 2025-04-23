@@ -139,6 +139,7 @@ If the concepts above feel too complex or intimidating right now, and theoretica
 - **[A Course in Reinforcement Learning (E-Book)](https://web.mit.edu/dimitrib/www/RLCOURSECOMPLETE%202ndEDITION.pdf)**
 - **[An Introduction to Mathematical Proof (E-Book)](https://personal.math.ubc.ca/~PLP/assets/plp.pdf)**
 - **[Statistics and Machine Learning in Python (E-Book)](https://hal.science/hal-03038776v3/file/StatisticsMachineLearningPython.pdf)**
+- **[Introduction to Modern Statistics (2e) (E-book)](https://openintro-ims.netlify.app)**
 ---
 
 ### Happy Learning! 🎓✨
