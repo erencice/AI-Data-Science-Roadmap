@@ -133,7 +133,6 @@ If the concepts above feel too complex or intimidating right now, and theoretica
 - **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲, 𝘁𝗵𝗲 𝗣𝘆𝘁𝗵𝗼𝗻𝗶𝗰 𝗪𝗮𝘆](https://otexts.com/fpppy/)**
 - **[AI Engineering Reading List](https://www.latent.space/p/2025-papers)**
 - **[Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)**
-- **[Scientific Data Analysis and Visualization with Python](https://pyoflife.com/scientific-data-analysis-and-visualization-with-python/)**
 - **[O'Reilly Python for Data Analysis](https://wesmckinney.com/book/)**
 - **[Prompt Engineering Guide](https://drive.google.com/file/d/1AbaBYbEa_EbPelsT40-vj64L-2IwUJHy/view?pli=1)**
 - **[A Course in Reinforcement Learning (E-Book)](https://web.mit.edu/dimitrib/www/RLCOURSECOMPLETE%202ndEDITION.pdf)**
