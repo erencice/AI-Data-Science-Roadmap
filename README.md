@@ -29,7 +29,6 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 
 ### 📚 Books About Statistics
 - **[Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)** - A practical introduction to statistics using Python.
-- **[Naked Statistics (Open Library)](https://openlibrary.org/works/OL19167522W/Naked_Statistics)** - Accessible introduction to statistics.
 
 ---
 
