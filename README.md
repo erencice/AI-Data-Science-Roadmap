@@ -1,52 +1,46 @@
 # AI & Data Science Roadmap 🚀
 
-Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive learning path for AI and Data Science, starting from essential mathematics and progressing through advanced theoretical courses. Follow the links, courses, and articles to build a strong foundation and practical skills in AI, machine learning, and related fields. 🌟
+Welcome to the **AI & Data Science Roadmap**! This guide offers a structured learning path, starting from foundational mathematics and progressing through advanced AI and Data Science topics. Follow the curated links to courses, articles, and books to build your skills step by step. 🌟
 
 ---
 
-## 📐 Mathematics for Machine Learning
-- **[Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)** - Build foundational knowledge.
+## 1. 📐 Mathematics for Machine Learning
+- **[Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)** – Learn the essentials.
 - **[Coursera: Expressway to Data Science (Essential Math)](https://www.coursera.org/specializations/expressway-to-data-science-essential-math)**
 - **[Coursera: Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning)**
 
 ---
 
-## 📊 Statistics
+## 2. 📊 Statistics
 ### Courses
-- **[Stanford Statistics](https://www.coursera.org/learn/stanford-statistics)** - Comprehensive statistical methods.
-- **[Statistical Analysis & Hypothesis Testing with SAS](https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas)** - Focuses on statistical analysis with SAS.
-- **[Probability & Statistics](https://www.coursera.org/learn/probability-statistics)** - Introductory course on probability and statistics.
+- **[Stanford Statistics](https://www.coursera.org/learn/stanford-statistics)** – Comprehensive methods.
+- **[Statistical Analysis & Hypothesis Testing with SAS](https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas)** – Focus on SAS.
+- **[Probability & Statistics](https://www.coursera.org/learn/probability-statistics)** – Introductory course.
 
 ### Articles & Papers
-#### A/B Testing
-- **[Practitioner's Guide to Statistical Tests (Medium)](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b)**
-- **[Step-by-Step for Planning an A/B Test](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b)**
+- **[A/B Testing Guide (Medium)](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b)**
+- **[Planning A/B Tests Step-by-Step](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b)**
 
-#### Increasing Test Sensitivity
-- **[Minimum Detectable Effect (SplitMetrics)](https://splitmetrics.com/resources/minimum-detectable-effect-mde/)**
-- **[Improving Sensitivity of Controlled Experiments (Netflix)](https://www.researchgate.net/publication/305997925_Improving_the_Sensitivity_of_Online_Controlled_Experiments_Case_Studies_at_Netflix)**
-- **[CUPED Methodology (Microsoft)](https://exp-platform.com/Documents/2013-02-CUPED-ImprovingSensitivityOfControlledExperiments.pdf)**
-
-### 📚 Books About Statistics
-- **[Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)** - A practical introduction to statistics using Python.
+### 📚 Books
+- **[Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)** – Practical introduction using Python.
 
 ---
 
-## 📖 Econometrics
+## 3. 📖 Econometrics
 ### Pre-Requisites
 - **[Econometric Theorems (Book)](https://bookdown.org/ts_robinson1994/10EconometricTheorems/)**
-- **[Regressions, Time Series, Fitting Distributions](https://www.coursera.org/learn/erasmus-econometrics)**
+- **[Coursera: Regressions, Time Series, Fitting Distributions](https://www.coursera.org/learn/erasmus-econometrics)**
 
 ### Additional Resources
 - **[Kaggle: Time Series Basics](https://www.kaggle.com/learn/time-series)**
-- **[ARIMA for Time Series Forecasting (Machine Learning Mastery)](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)**
+- **[ARIMA for Time Series Forecasting](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)**
 
 ---
 
-## 🐍 Intro to Python & Data Structures
+## 4. 🐍 Intro to Python & Data Structures
 - **[Python Crash Course (YouTube)](https://www.youtube.com/watch?v=rfscVS0vtbw)**
 - **[Python for Applied Data Science (Coursera)](https://www.coursera.org/learn/python-for-applied-data-science-ai)**
-- **[Data Structures and Algorithms Specialization (Coursera)](https://www.coursera.org/specializations/algorithms)**
+- **[Data Structures & Algorithms Specialization (Coursera)](https://www.coursera.org/specializations/algorithms)**
 
 ### Practice
 - **[Leetcode Study Plan](https://leetcode.com/studyplan/)**
@@ -54,26 +48,27 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 
 ---
 
-## 🔍 Exploratory Data Analysis
+## 5. 🔍 Exploratory Data Analysis
 - **[EDA with Python & Pandas (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-python-pandas)**
-- **[IBM Exploratory Data Analysis for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning)**
+- **[IBM EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning)**
 - **[EDA with Seaborn (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-seaborn)**
 
 ---
 
-## 📊 SQL Introduction
+## 6. 📊 SQL Introduction
 - **[SQL Tutorial](https://www.sqltutorial.org/)**
 - **[SQL Roadmap (roadmap.sh)](https://roadmap.sh/sql)**
 
 ---
 
-## 🌐 Web Scraping with Python
+## 7. 🌐 Web Scraping with Python
 - **[Selenium Documentation](https://selenium-python.readthedocs.io/index.html)**
 - **[Beautiful Soup Documentation](https://tedboy.github.io/bs4_doc/index.html)**
-- **[Practice for Web Scraping](https://www.scrapingcourse.com/ecommerce/)** 
+- **[Practice Web Scraping](https://www.scrapingcourse.com/ecommerce/)**
+
 ---
 
-## 📚 Advanced Theoretical Courses
+## 8. 📚 Advanced Theoretical Courses
 - **[Machine Learning Course (mlcourse.ai)](https://mlcourse.ai/book/index.html)**
 - **[Introduction to Machine Learning (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction)**
 - **[Introduction to Statistical Learning (E-Book)](https://www.statlearning.com/)**
@@ -84,60 +79,53 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a comprehensive 
 
 ---
 
-## ☁️ Big Data
+## 9. ☁️ Big Data
 - **[Coursera: Big Data Specialization](https://www.coursera.org/specializations/big-data)**
 
 ---
 
-## 🔬 Deep Learning
-- **[Coursera: Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)**
+## 10. 🔬 Deep Learning
+- **[Deep Learning Specialization (Coursera)](https://www.coursera.org/specializations/deep-learning)**
 - **[Deep Learning Book](https://www.deeplearningbook.org/)**
-- **[Attention Mechanisms in Transformers (Jalammar)](https://jalammar.github.io/illustrated-transformer/)**
+- **[Illustrated Transformers (Jalammar)](https://jalammar.github.io/illustrated-transformer/)**
 
 ### Additional Resources
 - **[Applied ML (GitHub)](https://github.com/eugeneyan/applied-ml)**
-- **[Bishop's Deep Learning Book](https://www.bishopbook.com/)**
 - **[Dive Into Deep Learning](https://d2l.ai)**
+
 ---
 
-## ⚙️ Machine Learning Operations (MLOps)
+## 11. ⚙️ Machine Learning Operations (MLOps)
 - **[MLOps Zoomcamp (GitHub)](https://github.com/DataTalksClub/mlops-zoomcamp)**
-- **[Coursera: MLOps for Machine Learning Engineering](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops)**
+- **[MLOps for Machine Learning Engineering (Coursera)](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops)**
 - **[Machine Learning Systems (E-Book)](https://mlsysbook.ai)**
 
 ---
 
-## 🛠 Data Engineering
+## 12. 🛠 Data Engineering
 - **[Data Engineering Zoomcamp (GitHub)](https://github.com/DataTalksClub/data-engineering-zoomcamp/)**
 
 ---
 
-## 🧭 Not Ready for Theory Yet?
+## ** 🧭 Not Ready for Theory Yet?
+If you're looking for a more hands-on approach, start with this practical program and return to the theoretical content later:
 
-If the concepts above feel too complex or intimidating right now, and theoretical content doesn’t suit your learning style at the moment, you might want to start with the following practical program and then return to the resources above:
-
-- **[Google Advanced Data Analytics Professional Certificate (Coursera)](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)** – A hands-on, beginner-friendly path to build foundational data analytics skills with real-world projects.
-  
----
-
-## 🏥 Medicine Specialization
-- **[Coursera: AI for Medicine Specialization](https://www.coursera.org/specializations/ai-for-medicine)**
+- **[Google Advanced Data Analytics Professional Certificate (Coursera)](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)** – A beginner-friendly, project-based learning path.
 
 ---
 
-## 📖 Additional Resources
+## 14. 🏥 Medicine Specialization
+- **[AI for Medicine Specialization (Coursera)](https://www.coursera.org/specializations/ai-for-medicine)**
+
+---
+
+## 15. 📖 Additional Resources
 - **[Everything You Always Wanted to Know About Mathematics](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf)**
 - **[Gujarati's Basic Econometrics](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)**
-- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝘄𝗶𝘁𝗵 𝗥](https://otexts.com/fpp3/)**
-- **[𝗙𝗼𝗿𝗲𝗰𝗮𝘀𝘁𝗶𝗻𝗴: 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲𝘀 𝗮𝗻𝗱 𝗣𝗿𝗮𝗰𝘁𝗶𝗰𝗲, 𝘁𝗵𝗲 𝗣𝘆𝘁𝗵𝗼𝗻𝗶𝗰 𝗪𝗮𝘆](https://otexts.com/fpppy/)**
+- **[Forecasting: Principles & Practice with R](https://otexts.com/fpp3/)**
 - **[AI Engineering Reading List](https://www.latent.space/p/2025-papers)**
 - **[Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)**
-- **[O'Reilly Python for Data Analysis](https://wesmckinney.com/book/)**
-- **[Prompt Engineering Guide](https://drive.google.com/file/d/1AbaBYbEa_EbPelsT40-vj64L-2IwUJHy/view?pli=1)**
-- **[A Course in Reinforcement Learning (E-Book)](https://web.mit.edu/dimitrib/www/RLCOURSECOMPLETE%202ndEDITION.pdf)**
-- **[An Introduction to Mathematical Proof (E-Book)](https://personal.math.ubc.ca/~PLP/assets/plp.pdf)**
-- **[Statistics and Machine Learning in Python (E-Book)](https://hal.science/hal-03038776v3/file/StatisticsMachineLearningPython.pdf)**
-- **[Introduction to Modern Statistics (2e) (E-book)](https://openintro-ims.netlify.app)**
+
 ---
 
 ### Happy Learning! 🎓✨
