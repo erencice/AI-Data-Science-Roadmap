@@ -114,12 +114,12 @@ If you're looking for a more hands-on approach, start with this practical progra
 
 ---
 
-## 14. 🏥 Medicine Specialization
+## Specilization-1: 🏥 Medicine Specialization
 - **[AI for Medicine Specialization (Coursera)](https://www.coursera.org/specializations/ai-for-medicine)**
 
 ---
 
-## 15. 📖 Additional Resources
+## 📖 Additional Resources
 - **[Everything You Always Wanted to Know About Mathematics](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf)**
 - **[Gujarati's Basic Econometrics](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)**
 - **[Forecasting: Principles & Practice with R](https://otexts.com/fpp3/)**
