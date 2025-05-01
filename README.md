@@ -10,7 +10,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - ⭐️ [Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU) – Learn the essentials through visual intuition.
 - [Expressway to Data Science: Essential Math (Coursera)](https://www.coursera.org/specializations/expressway-to-data-science-essential-math) – Master core math skills quickly.
 - [Mathematics for Machine Learning Specialization (Coursera)](https://www.coursera.org/specializations/mathematics-machine-learning) – Deep dive into the mathematical underpinnings of ML.
-
+- [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – In-depth mathematical insights with clarity and humor.
 ---
 
 ## 2. 📊 Statistics
@@ -146,7 +146,6 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 ## 📚 Additional Resources
 > Bonus reads and repositories for deep learners.
 
-- [Everything You Always Wanted to Know About Mathematics](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf)
 - [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - [Forecasting Principles & Practice with R](https://otexts.com/fpp3/)
 - [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
