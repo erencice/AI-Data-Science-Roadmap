@@ -40,7 +40,8 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 ### 🛠 Practice & Extra
 - [Kaggle: Time Series Basics](https://www.kaggle.com/learn/time-series) – Practical introduction to time series with Kaggle notebooks.
 - [ARIMA for Time Series Forecasting](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/) – A how-to guide for forecasting with ARIMA models.
-
+- [Forecasting: Principles and Practice, the Pythonic Way (E-Book)](https://otexts.com/fpppy/) - A comprehensive guide to time series forecasting using Python, covering key concepts and practical techniques for building robust forecasting models.
+- 
 ---
 
 ## 4. 🐍 Python & Data Structures
