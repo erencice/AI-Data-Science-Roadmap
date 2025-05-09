@@ -92,6 +92,8 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 ### 📖 Deep Theory
 - ⭐️ [Pattern Recognition and Machine Learning – Bishop (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - [PRML Code Repo (GitHub)](https://github.com/gerdm/prml)
+- [Think Complexity (2nd Edition) – Allen B. Downey (PDF)](https://greenteapress.com/wp/think-complexity/) – Computation, complexity science, and emergent behavior.
+
 
 ---
 
