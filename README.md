@@ -156,6 +156,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 > Bonus reads and repositories for deep learners.
 
 - [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
+- [R for Data Science (2e) (Website)](https://r4ds.hadley.nz)
 - [Forecasting Principles & Practice with R](https://otexts.com/fpp3/)
 - [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
 - [AI Engineering Reading List (Latent.Space)](https://www.latent.space/p/2025-papers)
