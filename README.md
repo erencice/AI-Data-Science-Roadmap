@@ -46,7 +46,8 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [Forecasting: Principles and Practice, the Pythonic Way (E-Book)](https://otexts.com/fpppy/)
 - [Forecasting Principles & Practice with R](https://otexts.com/fpp3/)
 - [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
-
+- [Advanced Econometrics (Econometrics II) (E-Book)](https://vladislav-morozov.github.io/econometrics-2/)
+- [Econometrics with Unobserved Heterogeneity (E-Book)](https://vladislav-morozov.github.io/econometrics-heterogeneity/)
 ---
 
 ## 4. 🐍 Python & Data Structures
@@ -138,6 +139,18 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 
 ---
 
+## 13. 🧠 Large Language Models (LLMs) & Open-Source AI  (Optional)
+> Learn to train, fine-tune, and deploy large language models with open-source tools.
+
+- [🧑‍🏫 Open-Source LLM Zoomcamp (GitHub)](https://github.com/DataTalksClub/open-source-llm-zoomcamp)
+- [Hugging Face Course](https://huggingface.co/course/chapter1)
+- [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
+- [LLM University – Cohere](https://llmu.cohere.com)
+- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open-llm-leaderboard)
+- [Awesome LLM Papers (GitHub)](https://github.com/mouredev/awesome-llm-papers)
+
+---
+
 ## 🧭 Prefer Practical Over Theory?
 > Jump into data science with projects, then return to deeper topics later.
 
@@ -155,10 +168,8 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 ## 📚 Additional Resources
 > Bonus reads and repositories for deep learners.
 
-- [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - [R for Data Science (2e) (Website)](https://r4ds.hadley.nz)
 - [Forecasting Principles & Practice with R](https://otexts.com/fpp3/)
-- [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
 - [AI Engineering Reading List (Latent.Space)](https://www.latent.space/p/2025-papers)
 
 ---
