@@ -142,7 +142,6 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 ## 13. 🧠 Large Language Models (LLMs) & Open-Source AI  (Optional)
 > Learn to train, fine-tune, and deploy large language models with open-source tools.
 
-- [🧑‍🏫 Open-Source LLM Zoomcamp (GitHub)](https://github.com/DataTalksClub/open-source-llm-zoomcamp)
 - [Hugging Face Course](https://huggingface.co/course/chapter1)
 - [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
 
