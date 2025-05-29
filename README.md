@@ -145,9 +145,6 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [🧑‍🏫 Open-Source LLM Zoomcamp (GitHub)](https://github.com/DataTalksClub/open-source-llm-zoomcamp)
 - [Hugging Face Course](https://huggingface.co/course/chapter1)
 - [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction)
-- [LLM University – Cohere](https://llmu.cohere.com)
-- [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open-llm-leaderboard)
-- [Awesome LLM Papers (GitHub)](https://github.com/mouredev/awesome-llm-papers)
 
 ---
 
