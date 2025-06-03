@@ -48,6 +48,9 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - [Advanced Econometrics (Econometrics II) (E-Book)](https://vladislav-morozov.github.io/econometrics-2/)
 - [Econometrics with Unobserved Heterogeneity (E-Book)](https://vladislav-morozov.github.io/econometrics-heterogeneity/)
+- [Using R for Introductory Econometrics (Website)](https://pyoflife.com/using-r-for-introductory-econometrics/): This resource provides guidance on using R for introductory econometrics, complementing Python-focused approaches.
+- [Econometrics Notes by F. Diebold (PDF)](https://www.sas.upenn.edu/~fdiebold/Teaching104/Econometrics.pdf): Comprehensive econometrics notes from the University of Pennsylvania.
+
 ---
 
 ## 4. 🐍 Python & Data Structures
@@ -57,6 +60,11 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [Python for Applied Data Science (Coursera)](https://www.coursera.org/learn/python-for-applied-data-science-ai)
 - [Data Structures & Algorithms (Coursera)](https://www.coursera.org/specializations/algorithms)
 - [Introduction to Python – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Introduction-to-Python/index.html)
+
+### 📘 Recommended Books & Guides
+- [Python Introduction Notes by Kevin Sheppard (PDF)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf): An introductory guide to Python programming.
+- [Kevin Sheppard's Python Teaching Notes (Website)](https://www.kevinsheppard.com/teaching/python/notes/): A collection of notes for teaching Python.
+- [Python for Data Analysis by Wes McKinney (Website)](https://wesmckinney.com/book/): The definitive guide to data manipulation with Python and Pandas.
 
 ### 💻 Practice Platforms
 - [LeetCode Study Plan](https://leetcode.com/studyplan/)
@@ -70,6 +78,9 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [EDA with Python & Pandas (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-python-pandas)
 - [IBM: EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning)
 - [EDA with Seaborn (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-seaborn)
+
+### 🔗 External Tools & Libraries
+- [Dataprep.ai (Website)](https://dataprep.ai): A tool for data preparation and exploratory data analysis, simplifying data cleaning and transformation.
 
 ---
 
@@ -102,6 +113,10 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - ⭐️ [Pattern Recognition and Machine Learning – Bishop (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - [PRML Code Repo (GitHub)](https://github.com/gerdm/prml)
 - [Think Complexity (2nd Edition) – Allen B. Downey (PDF)](https://greenteapress.com/wp/think-complexity/)
+- [ML Refined (Website)](https://www.mlrefined.com/): A resource for understanding the theoretical underpinnings and mathematical elegance of machine learning algorithms.
+
+### 🛠 Practical Libraries
+- [Scikit-learn Official Documentation (Website)](https://scikit-learn.org/stable/index.html): The go-to Python library for classical machine learning algorithms, offering comprehensive tools for classification, regression, clustering, and more.
 
 ---
 
@@ -139,7 +154,7 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 
 ---
 
-## 13. 🧠 Large Language Models (LLMs) & Open-Source AI  (Optional)
+## 13. 🧠 Large Language Models (LLMs) & Open-Source AI  (Optional)
 > Learn to train, fine-tune, and deploy large language models with open-source tools.
 
 - [Hugging Face Course](https://huggingface.co/course/chapter1)
@@ -167,6 +182,9 @@ Welcome to the **AI & Data Science Roadmap**! This guide offers a structured lea
 - [R for Data Science (2e) (Website)](https://r4ds.hadley.nz)
 - [Forecasting Principles & Practice with R](https://otexts.com/fpp3/)
 - [AI Engineering Reading List (Latent.Space)](https://www.latent.space/p/2025-papers)
+- [Think Like a Data Scientist (SSRN Paper)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3475303): An academic paper exploring the mindset and approach of a data scientist.
+- [Think Like a Data Scientist (PDF)](https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/752025/mod_resource/content/2/Think%20Like%20a%20Data%20Scientist.pdf): A comprehensive guide encouraging a data-centric approach to problem-solving.
+- [Python for Algorithmic Trading Cookbook (GitHub)](https://github.com/PacktPublishing/Python-for-Algorithmic-Trading-Cookbook): A practical resource for implementing algorithmic trading strategies using Python.
 
 ---
 
