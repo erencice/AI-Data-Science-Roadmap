@@ -442,6 +442,3 @@ Follow this roadmap to learn effectively, connect concepts across disciplines, a
 ---
 
 **🎓 Enjoy the journey! Learn with curiosity. Build with purpose.** 🚀
-```
-
-Umarım bu yol haritası, yapay zeka ve veri bilimi yolculuğunuzda size yardımcı olur. Başka bir konuda yardıma ihtiyacınız olursa, lütfen çekinmeyin.
