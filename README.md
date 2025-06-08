@@ -481,7 +481,8 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * [Think Like a Data Scientist (PDF)](https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/752025/mod_resource/content/2/Think%20Like%20a%20Data%20Scientist.pdf) – Full-text version of the data science thought process.
 * [Python for Algorithmic Trading Cookbook (GitHub)](https://github.com/PacktPublishing/Python-for-Algorithmic-Trading-Cookbook) – Code recipes for finance-focused data science with Python.
 * [AI for Medicine Specialization (Coursera)](https://www.coursera.org/specializations/ai-for-medicine) – Real-world AI applications in the medical field.
-* [Statistical Modeling, Causal Inference, and Social Science](https://online.stat.psu.edu/stat462/node/77/) - Course materials covering statistical modeling and causal inference.
+* [Statistical Modeling, Causal Inference, and Social Science](https://online.stat.psu.edu/stat462/node/77/) – Course materials covering statistical modeling and causal inference.
+* [Computer Vision Roadmap 2024 (PClub)](https://pclub.in/roadmap/2024/08/17/cv-roadmap/) – A detailed guide to learning computer vision from basics to advanced research.
 
 ---
 
