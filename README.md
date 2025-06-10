@@ -71,6 +71,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
     * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – Introduction to statistics using Python.
     * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – Beginner-level online tutorials with Python applications.
     * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Intermediate to advanced statistics concepts.
+    * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces Bayesian statistics and modeling.
 
 ### Resource Priority
 
@@ -84,6 +85,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Think Stats (PDF)                                | Nice-to-have |
 | Basics of Statistics – SOGA-PY (FU Berlin)       | Nice-to-have |
 | Advanced Statistics – SOGA-PY (FU Berlin)        | Nice-to-have |
+| Think Bayes: Bayesian Statistics Made Simple     | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -92,6 +94,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * A/B testing guides provide practical context for experiment design and interpreting results.
 * Think Stats is a good intro for Python users, best started after grasping fundamentals.
 * SOGA-PY resources are well-prepared and supportive for those aiming to learn intermediate and advanced topics.
+* 'Think Bayes' offers a good introduction to Bayesian statistics, a valuable perspective in data analysis.
 
 ---
 
