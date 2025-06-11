@@ -80,20 +80,20 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 3.  **Statistics with Python and Advanced Topics**
 
-    * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – Introduction to statistics using Python.
-    * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – Beginner-level online tutorials with Python applications.
-    * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Intermediate to advanced statistics concepts.
-    * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces Bayesian statistics and modeling.
-    * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/)
-    * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/)
-    * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/)
-    * [STAT 502: Analysis of Variance and Design of Experiments](https://online.stat.psu.edu/stat502/)
-    * [STAT 504: Analysis of Discrete Data](https://online.stat.psu.edu/stat504/)
-    * [STAT 505: Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/)
-    * [STAT 506: Sampling Theory and Methods](https://online.stat.psu.edu/stat506/)
-    * [STAT 507: Epidemiological Research Methods](https://online.stat.psu.edu/stat507/)
-    * [STAT 510: Applied Time Series Analysis](https://online.stat.psu.edu/stat510/)
-    * [STAT 800: Applied Research Methods](https://online.stat.psu.edu/stat800/)
+	 * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – An **introduction to statistics** using Python.
+	 * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – **Beginner-level online tutorials** on statistics with Python applications.
+	 * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Covers **intermediate to advanced statistics concepts** with practical examples.
+	 * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces **Bayesian statistics and modeling** in an accessible way.
+	 * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/) – Penn State University courses focusing on the **fundamentals and advanced usage of the R statistical language**.
+	 * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/) – A course that teaches **applied statistical methods** and techniques for real-world data analysis.
+	 * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/) – Explores the **theory and practical applications of regression analysis**.
+	 * [STAT 502: Analysis of Variance and Design of Experiments](https://online.stat.psu.edu/stat502/) – Covers the principles of **Analysis of Variance (ANOVA)** and **experimental design**.
+	 * [STAT 504: Analysis of Discrete Data](https://online.stat.psu.edu/stat504/) – Focuses on statistical methods used for the **analysis of discrete (categorical) data**.
+	 * [STAT 505: Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/) – Teaches **multivariate statistical methods** for analyzing datasets with multiple variables simultaneously.
+	 * [STAT 506: Sampling Theory and Methods](https://online.stat.psu.edu/stat506/) – Details **sampling theory and methods** for statistical research, including various sampling designs.
+	 * [STAT 507: Epidemiological Research Methods](https://online.stat.psu.edu/stat507/) – Concentrates on **statistical and methodological approaches** used in epidemiological research.
+	 * [STAT 510: Applied Time Series Analysis](https://online.stat.psu.edu/stat510/) – A course that teaches techniques and modeling for the **analysis of time series data**.
+	 * [STAT 800: Applied Research Methods](https://online.stat.psu.edu/stat800/) – Covers the planning, execution, and statistical evaluation of **applied research projects** across various disciplines.
 
 ### Resource Priority
 
