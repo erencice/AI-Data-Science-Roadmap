@@ -67,10 +67,11 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Stanford Statistics (Coursera)](https://www.coursera.org/learn/stanford-statistics) – Comprehensive and solid foundation course in statistics.
     * [Probability & Statistics (Coursera)](https://www.coursera.org/learn/probability-statistics) – Basics of probability and statistics combining theory and practice.
-    * [STAT 100 | Statistical Concepts and Reasoning](https://online.stat.psu.edu/stat100/)
-    * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/)
-    * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/)
-    * [STAT 415: Introduction to Mathematical Statistics](https://online.stat.psu.edu/stat415/)
+    * [STAT 100 | Statistical Concepts and Reasoning](https://online.stat.psu.edu/stat100/) – An introductory course to **statistical concepts and reasoning**, focusing on fundamental principles.
+    * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/) – Provides a foundational understanding of **elementary statistical methods** and data analysis.
+    * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/) – Introduces the **fundamental concepts of probability theory**, including random variables and distributions.
+    * [STAT 415: Introduction to Mathematical Statistics](https://online.stat.psu.edu/stat415/) – Covers the **mathematical foundations of statistics**, including estimation and hypothesis testing.
+
 
 2.  **Applied Statistics and Hypothesis Testing**
 
