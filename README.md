@@ -1,10 +1,18 @@
 # 🚀 AI & Data Science Roadmap
 
-Welcome to the **AI & Data Science Roadmap**! This guide offers a structured, step-by-step learning path designed to build your knowledge progressively — starting from foundational mathematics and statistics, moving through programming and data manipulation, and advancing toward sophisticated machine learning, deep learning, and production-level AI systems.
+Welcome to the **AI & Data Science Roadmap**!
 
-Each section includes carefully selected must-have and nice-to-have resources such as courses, books, articles, and practical projects to ensure both theoretical understanding and hands-on experience.
+This guide offers a structured, step-by-step learning path designed to build your knowledge progressively. You'll start from foundational mathematics and statistics, move through programming and data manipulation, and then advance toward sophisticated machine learning, deep learning, and production-level AI systems.
 
-Follow this roadmap to learn effectively, connect concepts across disciplines, and develop real-world skills that will empower your journey in AI, data science, and beyond. Let’s dive in! 📘📊🤖
+Each section is divided into numbered steps (1., 2., 3., etc.) to indicate a recommended hierarchical learning order.
+
+Additionally, within each step, you'll find "**Resource Priority**" tables. These tables simply denote the importance level of each resource (e.g., **Must-have**, **Nice-to-have**).
+
+Every section includes carefully selected resources such as courses, books, articles, and practical projects to ensure both theoretical understanding and hands-on experience.
+
+Follow this roadmap to learn effectively, connect concepts across disciplines, and develop real-world skills that will empower your journey in AI, data science, and beyond.
+
+Let's dive in! 📘📊🤖
 
 ---
 
@@ -35,11 +43,11 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                                         | Priority    |
-| :----------------------------------------------- | :---------- |
-| Mathematics for Machine Learning (YouTube)       | Must-have   |
-| Expressway to Data Science: Essential Math       | Must-have   |
-| Mathematics for Machine Learning Specialization  | Must-have   |
+| Resource                                                       | Priority   |
+| :------------------------------------------------------------- | :--------- |
+| Mathematics for Machine Learning (YouTube)                     | Must-have  |
+| Expressway to Data Science: Essential Math                    | Must-have  |
+| Mathematics for Machine Learning Specialization                | Must-have  |
 | Everything You Always Wanted to Know About Mathematics (PDF) | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -59,6 +67,10 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Stanford Statistics (Coursera)](https://www.coursera.org/learn/stanford-statistics) – Comprehensive and solid foundation course in statistics.
     * [Probability & Statistics (Coursera)](https://www.coursera.org/learn/probability-statistics) – Basics of probability and statistics combining theory and practice.
+    * [STAT 100 | Statistical Concepts and Reasoning](https://online.stat.psu.edu/stat100/)
+    * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/)
+    * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/)
+    * [STAT 415: Introduction to Mathematical Statistics](https://online.stat.psu.edu/stat415/)
 
 2.  **Applied Statistics and Hypothesis Testing**
 
@@ -72,20 +84,44 @@ For those who want to dive quickly into practice and consolidate the theoretical
     * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – Beginner-level online tutorials with Python applications.
     * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Intermediate to advanced statistics concepts.
     * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces Bayesian statistics and modeling.
+    * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/)
+    * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/)
+    * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/)
+    * [STAT 502: Analysis of Variance and Design of Experiments](https://online.stat.psu.edu/stat502/)
+    * [STAT 504: Analysis of Discrete Data](https://online.stat.psu.edu/stat504/)
+    * [STAT 505: Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/)
+    * [STAT 506: Sampling Theory and Methods](https://online.stat.psu.edu/stat506/)
+    * [STAT 507: Epidemiological Research Methods](https://online.stat.psu.edu/stat507/)
+    * [STAT 510: Applied Time Series Analysis](https://online.stat.psu.edu/stat510/)
+    * [STAT 800: Applied Research Methods](https://online.stat.psu.edu/stat800/)
 
 ### Resource Priority
 
-| Resource                                         | Priority    |
-| :----------------------------------------------- | :---------- |
-| Stanford Statistics (Coursera)                   | Must-have   |
-| Probability & Statistics (Coursera)              | Must-have   |
-| Statistical Analysis & Hypothesis Testing with SAS | Must-have   |
-| A/B Testing Guide (Medium)                       | Must-have   |
-| Planning A/B Tests Step-by-Step                  | Must-have   |
-| Think Stats (PDF)                                | Nice-to-have |
-| Basics of Statistics – SOGA-PY (FU Berlin)       | Nice-to-have |
-| Advanced Statistics – SOGA-PY (FU Berlin)        | Nice-to-have |
-| Think Bayes: Bayesian Statistics Made Simple     | Nice-to-have |
+| Resource                                                       | Priority   |
+| :------------------------------------------------------------- | :--------- |
+| Stanford Statistics (Coursera)                                 | Must-have  |
+| Probability & Statistics (Coursera)                            | Must-have  |
+| STAT 100: Statistical Concepts and Reasoning                   | Must-have  |
+| STAT 200: Elementary Statistics                                | Must-have  |
+| STAT 414: Introduction to Probability Theory                    | Must-have  |
+| STAT 415: Introduction to Mathematical Statistics               | Must-have  |
+| Statistical Analysis & Hypothesis Testing with SAS             | Must-have  |
+| A/B Testing Guide (Medium)                                     | Must-have  |
+| Planning A/B Tests Step-by-Step                                 | Must-have  |
+| Think Stats (PDF)                                              | Nice-to-have |
+| Basics of Statistics – SOGA-PY (FU Berlin)                     | Nice-to-have |
+| Advanced Statistics – SOGA-PY (FU Berlin)                      | Nice-to-have |
+| Think Bayes: Bayesian Statistics Made Simple                  | Nice-to-have |
+| STAT 484 & 485: Topics in R Statistical Language                | Nice-to-have |
+| STAT 500: Applied Statistics                                     | Nice-to-have |
+| STAT 501: Regression Methods                                     | Nice-to-have |
+| STAT 502: Analysis of Variance and Design of Experiments        | Nice-to-have |
+| STAT 504: Analysis of Discrete Data                               | Nice-to-have |
+| STAT 505: Applied Multivariate Statistical Analysis              | Nice-to-have |
+| STAT 506: Sampling Theory and Methods                             | Nice-to-have |
+| STAT 507: Epidemiological Research Methods                        | Nice-to-have |
+| STAT 510: Applied Time Series Analysis                            | Nice-to-have |
+| STAT 800: Applied Research Methods                               | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -127,19 +163,19 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                                         | Priority    |
-| :----------------------------------------------- | :---------- |
-| Econometric Theorems (Book)                      | Must-have   |
-| Gujarati’s Basic Econometrics (PDF)              | Must-have   |
-| Regressions, Time Series, Fitting Distributions (Coursera) | Must-have   |
-| Forecasting Principles & Practice with R         | Must-have   |
-| ARIMA for Time Series Forecasting                | Must-have   |
-| Kaggle: Time Series Basics                       | Nice-to-have |
-| Forecasting: Principles and Practice, the Pythonic Way | Nice-to-have |
-| Advanced Econometrics (Econometrics II)          | Nice-to-have |
-| Econometrics with Unobserved Heterogeneity       | Nice-to-have |
-| Using R for Introductory Econometrics            | Nice-to-have |
-| Econometrics Notes by F. Diebold                 | Nice-to-have |
+| Resource                                                       | Priority   |
+| :------------------------------------------------------------- | :--------- |
+| Econometric Theorems (Book)                                    | Must-have  |
+| Gujarati’s Basic Econometrics (PDF)                             | Must-have  |
+| Regressions, Time Series, Fitting Distributions (Coursera)     | Must-have  |
+| Forecasting Principles & Practice with R                      | Must-have  |
+| ARIMA for Time Series Forecasting                              | Must-have  |
+| Kaggle: Time Series Basics                                     | Nice-to-have |
+| Forecasting: Principles and Practice, the Pythonic Way          | Nice-to-have |
+| Advanced Econometrics (Econometrics II)                        | Nice-to-have |
+| Econometrics with Unobserved Heterogeneity                    | Nice-to-have |
+| Using R for Introductory Econometrics                          | Nice-to-have |
+| Econometrics Notes by F. Diebold                              | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -184,22 +220,22 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                                         | Priority    |
-| :----------------------------------------------- | :---------- |
-| Python Crash Course (YouTube)                    | Must-have   |
-| Python for Applied Data Science (Coursera)       | Must-have   |
-| Data Structures & Algorithms (Coursera)          | Must-have   |
-| Python Introduction Notes by Kevin Sheppard (PDF) | Must-have   |
-| Python for Data Analysis by Wes McKinney         | Must-have   |
-| Statsmodels                                      | Must-have   |
-| R for Data Science (2e)                          | Must-have   |
-| Efficient R Programming                          | Must-have   |
-| R Graphics Cookbook                              | Nice-to-have |
-| Tidy Text Mining                                 | Nice-to-have |
-| Applied Generalized Linear Models and Multilevel Models in R | Nice-to-have |
-| Introduction to Python – SOGA-PY (FU Berlin)     | Nice-to-have |
-| LeetCode Study Plan                              | Nice-to-have |
-| LeetCode Explore                                 | Nice-to-have |
+| Resource                                                       | Priority   |
+| :------------------------------------------------------------- | :--------- |
+| Python Crash Course (YouTube)                                    | Must-have  |
+| Python for Applied Data Science (Coursera)                     | Must-have  |
+| Data Structures & Algorithms (Coursera)                         | Must-have  |
+| Python Introduction Notes by Kevin Sheppard (PDF)                | Must-have  |
+| Python for Data Analysis by Wes McKinney                      | Must-have  |
+| Statsmodels                                                      | Must-have  |
+| R for Data Science (2e)                                          | Must-have  |
+| Efficient R Programming                                          | Must-have  |
+| R Graphics Cookbook                                              | Nice-to-have |
+| Tidy Text Mining                                                 | Nice-to-have |
+| Applied Generalized Linear Models and Multilevel Models in R     | Nice-to-have |
+| Introduction to Python – SOGA-PY (FU Berlin)                     | Nice-to-have |
+| LeetCode Study Plan                                              | Nice-to-have |
+| LeetCode Explore                                                 | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -232,12 +268,12 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                         | Priority    |
-| :------------------------------- | :---------- |
-| EDA with Python & Pandas (Coursera) | Must-have   |
-| IBM: EDA for Machine Learning    | Must-have   |
-| EDA with Seaborn (Coursera)      | Nice-to-have |
-| Dataprep.ai (Website)            | Nice-to-have |
+| Resource                               | Priority   |
+| :------------------------------------- | :--------- |
+| EDA with Python & Pandas (Coursera)     | Must-have  |
+| IBM: EDA for Machine Learning           | Must-have  |
+| EDA with Seaborn (Coursera)             | Nice-to-have |
+| Dataprep.ai (Website)                   | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -259,9 +295,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                 | Priority    |
-| :----------------------- | :---------- |
-| SQL Tutorial             | Must-have   |
+| Resource               | Priority   |
+| :--------------------- | :--------- |
+| SQL Tutorial           | Must-have  |
 | SQL Roadmap (roadmap.sh) | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -287,10 +323,10 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource               | Priority    |
-| :----------------------- | :---------- |
-| Selenium Documentation | Must-have   |
-| Beautiful Soup Docs    | Must-have   |
+| Resource               | Priority   |
+| :--------------------- | :--------- |
+| Selenium Documentation | Must-have  |
+| Beautiful Soup Docs    | Must-have  |
 | Practice Web Scraping  | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -324,16 +360,16 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                                         | Priority    |
-| :----------------------------------------------- | :---------- |
-| mlcourse.ai                                      | Must-have   |
-| Introduction to Statistical Learning             | Must-have   |
-| Pattern Recognition and Machine Learning         | Must-have   |
-| Scikit-learn Official Documentation              | Must-have   |
-| Intro to ML Specialization (Coursera)            | Nice-to-have |
-| Machine Learning – SOGA-PY (FU Berlin)           | Nice-to-have |
-| Think Complexity                                 | Nice-to-have |
-| ML Refined                                       | Nice-to-have |
+| Resource                                                       | Priority   |
+| :------------------------------------------------------------- | :--------- |
+| mlcourse.ai                                                    | Must-have  |
+| Introduction to Statistical Learning                           | Must-have  |
+| Pattern Recognition and Machine Learning                       | Must-have  |
+| Scikit-learn Official Documentation                            | Must-have  |
+| Intro to ML Specialization (Coursera)                            | Nice-to-have |
+| Machine Learning – SOGA-PY (FU Berlin)                         | Nice-to-have |
+| Think Complexity                                               | Nice-to-have |
+| ML Refined                                                       | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -354,9 +390,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                  | Priority    |
-| :------------------------ | :---------- |
-| Big Data Specialization   | Must-have   |
+| Resource                   | Priority   |
+| :------------------------- | :--------- |
+| Big Data Specialization    | Must-have  |
 
 ### Brief Notes and Recommendations
 
@@ -383,13 +419,13 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                             | Priority    |
-| :----------------------------------- | :---------- |
-| Deep Learning Specialization         | Must-have   |
-| Dive into Deep Learning              | Must-have   |
-| Illustrated Transformers             | Must-have   |
-| Deep Learning Book (Goodfellow et al.) | Nice-to-have |
-| Applied ML Practices (GitHub)        | Nice-to-have |
+| Resource                                   | Priority   |
+| :----------------------------------------- | :--------- |
+| Deep Learning Specialization               | Must-have  |
+| Dive into Deep Learning                    | Must-have  |
+| Illustrated Transformers                   | Must-have  |
+| Deep Learning Book (Goodfellow et al.)       | Nice-to-have |
+| Applied ML Practices (GitHub)                | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
@@ -416,10 +452,10 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                      | Priority    |
-| :---------------------------- | :---------- |
-| MLOps Zoomcamp                | Must-have   |
-| MLOps for ML Engineering      | Must-have   |
+| Resource                      | Priority   |
+| :---------------------------- | :--------- |
+| MLOps Zoomcamp                  | Must-have  |
+| MLOps for ML Engineering        | Must-have  |
 | Machine Learning Systems (Book) | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -440,9 +476,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                  | Priority    |
-| :------------------------ | :---------- |
-| Data Engineering Zoomcamp | Must-have   |
+| Resource                  | Priority   |
+| :------------------------ | :--------- |
+| Data Engineering Zoomcamp | Must-have  |
 
 ### Brief Notes and Recommendations
 
@@ -462,9 +498,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Resource Priority
 
-| Resource                      | Priority    |
-| :---------------------------- | :---------- |
-| Hugging Face Course           | Must-have   |
+| Resource                      | Priority   |
+| :---------------------------- | :--------- |
+| Hugging Face Course           | Must-have  |
 | Hugging Face AI Agents Course | Nice-to-have |
 
 ### Brief Notes and Recommendations
