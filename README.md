@@ -131,7 +131,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * Think Stats is a good intro for Python users, best started after grasping fundamentals.
 * SOGA-PY resources are well-prepared and supportive for those aiming to learn intermediate and advanced topics.
 * 'Think Bayes' offers a good introduction to Bayesian statistics, a valuable perspective in data analysis.
-* “Nice-to-have” resources such as Think Stats and the SOGA-PY series serve as an indispensable bridge to advanced statistical topics such as regression and time series analysis, especially with practical applications in Python and R.** turn this into english
+* “Nice-to-have” resources such as Think Stats and the SOGA-PY series serve as an indispensable bridge to advanced statistical topics such as regression and time series analysis, especially with practical applications in Python and R. turn this into english
 
 ---
 
