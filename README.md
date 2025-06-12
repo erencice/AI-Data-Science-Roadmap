@@ -23,7 +23,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * [Google Advanced Data Analytics Certificate (Coursera)](https://www.coursera.org/professional-certificates/google-advanced-data-analytics) - Focuses on hands-on analytics, data tools, and practical workflows.
 
 ---
-
 ## 1. 📐 Mathematics for Machine Learning
 
 ### Learning Sequence and Resources
@@ -40,23 +39,24 @@ For those who want to dive quickly into practice and consolidate the theoretical
 3.  **Detailed Reference and Support Resource**
 
     * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
+    * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying concepts.
 
 ### Resource Priority
 
-| Resource                                                       | Priority    |
-| :------------------------------------------------------------- | :---------- |
-| Mathematics for Machine Learning (YouTube)                     | Must-have   |
-| Expressway to Data Science: Essential Math                    | Must-have   |
-| Mathematics for Machine Learning Specialization                | Must-have   |
-| Everything You Always Wanted to Know About Mathematics (PDF) | Nice-to-have |
+| Resource                                                                | Priority     |
+| :---------------------------------------------------------------------- | :----------- |
+| Mathematics for Machine Learning (YouTube)                              | Must-have    |
+| Expressway to Data Science: Essential Math                             | Must-have    |
+| Mathematics for Machine Learning Specialization                         | Must-have    |
+| Everything You Always Wanted to Know About Mathematics (PDF)            | Nice-to-have |
+| The Theory of Matrices - Gantmacher (PDF)                       | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
 * The first two resources are great for quickly and effectively grasping fundamental concepts.
 * The Coursera Mathematics for Machine Learning Specialization is ideal for solidifying your math foundation, especially if you need deeper understanding.
-* The PDF resource is useful as a reference for deep dives but not recommended as a primary starting point.
-* Completing this math foundation will make progressing to machine learning and data science much easier and daha efficient.
-
+* The PDF resources are useful as references for deep dives but not recommended as primary starting points.
+* Completing this math foundation will make progressing to machine learning and data science much easier and more efficient.
 ---
 
 ## 2. 📊 Statistics
