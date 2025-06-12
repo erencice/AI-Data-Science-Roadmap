@@ -39,7 +39,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 3.  **Detailed Reference and Support Resource**
 
     * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
-    * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying concepts.
+    * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying matrices concepts.
 
 ### Resource Priority
 
