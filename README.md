@@ -323,19 +323,26 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Practice Web Scraping](https://www.scrapingcourse.com/ecommerce/) – Practical exercises scraping mock e-commerce websites.
 
+3.  **Further Reading**
+
+    * [Data Mining: Concepts and Techniques (3rd ed.) Morgan Kaufmann](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf) - Provides a comprehensive understanding of data mining concepts and techniques, which often leverage scraped data.
+
+
 ### Resource Priority
 
-| Resource               | Priority    |
-| :--------------------- | :---------- |
-| Selenium Documentation   | Must-have   |
-| Beautiful Soup Docs      | Must-have   |
-| Practice Web Scraping    | Nice-to-have |
+| Resource                             | Priority     |
+| :----------------------------------- | :----------- |
+| Selenium Documentation               | Must-have    |
+| Beautiful Soup Docs                  | Must-have    |
+| Practice Web Scraping                | Nice-to-have |
+| Data Mining: Concepts and Techniques | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
-* Learn both Beautiful Soup and Selenium as they complement each other: BS for static pages and Selenium for dynamic content.
+* Learn both **Beautiful Soup** and **Selenium** as they complement each other: BS for static pages and Selenium for dynamic content.
 * Hands-on practice is crucial—try the practice course to consolidate your skills on real-like projects.
 * Web scraping is valuable for gathering raw data that isn't easily accessible via APIs or databases.
+* For a deeper theoretical understanding of data mining, which often leverages scraped data, refer to **Data Mining: Concepts and Techniques**.
 
 ---
 
