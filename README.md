@@ -131,7 +131,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * Think Stats is a good intro for Python users, best started after grasping fundamentals.
 * SOGA-PY resources are well-prepared and supportive for those aiming to learn intermediate and advanced topics.
 * 'Think Bayes' offers a good introduction to Bayesian statistics, a valuable perspective in data analysis.
-* “Nice-to-have” resources such as Think Stats and the SOGA-PY series serve as an indispensable bridge to advanced statistical topics such as regression and time series analysis, especially with practical applications in Python and R. turn this into english
+* “Nice-to-have” resources such as Think Stats and the SOGA-PY series serve as an indispensable bridge to advanced statistical topics such as regression and time series analysis, especially with practical applications in Python and R.
 
 ---
 
@@ -143,6 +143,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Econometric Theorems (Book)](https://bookdown.org/ts_robinson1994/10EconometricTheorems/) – Core theoretical principles behind econometric models.
     * [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) – Classic, widely used textbook on regression and inference.
+    * [Brooks: Introductory Econometrics for Finance (2nd Edition, PDF)](https://new.mmf.lnu.edu.ua/wp-content/uploads/2018/03/brooks_econometr_finance_2nd.pdf) – Essential textbook covering econometric methods and their applications in finance.
 
 2.  **Practical Econometrics and Time Series**
 
@@ -168,6 +169,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | :------------------------------------------------------------- | :---------- |
 | Econometric Theorems (Book)                                    | Must-have   |
 | Gujarati’s Basic Econometrics (PDF)                             | Must-have   |
+| Brooks: Introductory Econometrics for Finance (PDF)             | Must-have   |
 | Regressions, Time Series, Fitting Distributions (Coursera)      | Must-have   |
 | Forecasting Principles & Practice with R                        | Must-have   |
 | ARIMA for Time Series Forecasting                              | Must-have   |
@@ -180,8 +182,8 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Brief Notes and Recommendations
 
-* Start with foundational theoretical texts (Econometric Theorems, Gujarati) to build strong conceptual understanding.
-* Note that Gujarati’s Basic Econometrics and other textbooks are comprehensive and long-term reads; it is perfectly fine to study them gradually over time while concurrently progressing through other practical and course-based resources.
+* Start with foundational theoretical texts (Econometric Theorems, Gujarati, Brooks) to build strong conceptual understanding.
+* Note that Gujarati’s Basic Econometrics, Brooks, and other textbooks are comprehensive and long-term reads; it is perfectly fine to study them gradually over time while concurrently progressing through other practical and course-based resources.
 * The Coursera course is ideal to bridge theory with practical regression and time series modeling.
 * Forecasting with R is a key practical skill; complement it with ARIMA tutorials and Kaggle projects for hands-on experience.
 * Advanced and specialized topics can be tackled after mastering the basics and practice workflows.
