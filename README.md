@@ -49,8 +49,8 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | [Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)                | Must-have    |
 | [Expressway to Data Science: Essential Math](https://www.coursera.org/specializations/expressway-to-data-science-essential-math) | Must-have    |
 | [Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning) | Must-have    |
-| [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Nice-to-have |
-| [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Nice-to-have |
+| [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Must-have |
+| [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Must-have |
 | [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -85,9 +85,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 3.  **Statistics with Python and Advanced Topics**
 
     * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – An **introduction to statistics** using Python.
+    * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces **Bayesian statistics and modeling** in an accessible way.
     * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – **Beginner-level online tutorials** on statistics with Python applications.
     * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Covers **intermediate to advanced statistics concepts** with practical examples.
-    * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces **Bayesian statistics and modeling** in an accessible way.
     * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/) – Penn State University courses focusing on the **fundamentals and advanced usage of the R statistical language**.
     * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/) – A course that teaches **applied statistical methods** and techniques for real-world data analysis.
     * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/) – Explores the **theory and practical applications of regression analysis**.
@@ -112,10 +112,10 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Statistical Analysis & Hypothesis Testing with SAS             | Must-have   |
 | A/B Testing Guide (Medium)                                     | Must-have   |
 | Planning A/B Tests Step-by-Step                                 | Must-have   |
-| Think Stats (PDF)                                              | Nice-to-have |
+| Think Stats (PDF)                                              | Must-have |
+| Think Bayes: Bayesian Statistics Made Simple                    | Must-have |
 | Basics of Statistics – SOGA-PY (FU Berlin)                      | Nice-to-have |
 | Advanced Statistics – SOGA-PY (FU Berlin)                     | Nice-to-have |
-| Think Bayes: Bayesian Statistics Made Simple                    | Nice-to-have |
 | STAT 484 & 485: Topics in R Statistical Language                | Nice-to-have |
 | STAT 500: Applied Statistics                                     | Nice-to-have |
 | STAT 501: Regression Methods                                     | Nice-to-have |
