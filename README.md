@@ -38,25 +38,29 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 3.  **Detailed Reference and Support Resource**
 
+    * [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) – Textbook covering the essential mathematical foundations with ML applications in mind.
     * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
     * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying matrices concepts.
 
 ### Resource Priority
 
-| Resource                                                                | Priority     |
-| :---------------------------------------------------------------------- | :----------- |
-| Mathematics for Machine Learning (YouTube)                              | Must-have    |
-| Expressway to Data Science: Essential Math                             | Must-have    |
-| Mathematics for Machine Learning Specialization                         | Must-have    |
-| Everything You Always Wanted to Know About Mathematics (PDF)            | Nice-to-have |
-| The Theory of Matrices - Gantmacher (PDF)                       | Nice-to-have |
+| Resource                                                                                                 | Priority     |
+| :------------------------------------------------------------------------------------------------------- | :----------- |
+| [Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)                | Must-have    |
+| [Expressway to Data Science: Essential Math](https://www.coursera.org/specializations/expressway-to-data-science-essential-math) | Must-have    |
+| [Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning) | Must-have    |
+| [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Nice-to-have |
+| [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Nice-to-have |
+| [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
 * The first two resources are great for quickly and effectively grasping fundamental concepts.
 * The Coursera Mathematics for Machine Learning Specialization is ideal for solidifying your math foundation, especially if you need deeper understanding.
 * The PDF resources are useful as references for deep dives but not recommended as primary starting points.
+* The *Mathematics for Machine Learning* textbook (Deisenroth et al.) is particularly good for bridging abstract math concepts with practical machine learning applications.
 * Completing this math foundation will make progressing to machine learning and data science much easier and more efficient.
+
 ---
 
 ## 2. 📊 Statistics
