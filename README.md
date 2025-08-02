@@ -75,6 +75,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
     * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/) – Provides a foundational understanding of **elementary statistical methods** and data analysis.
     * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/) – Introduces the **fundamental concepts of probability theory**, including random variables and distributions.
     * [STAT 415: Introduction to Mathematical Statistics](https://online.stat.psu.edu/stat415/) – Covers the **mathematical foundations of statistics**, including estimation and hypothesis testing.
+    * [Casella & Berger – Statistical Inference](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) – A rigorous, graduate-level textbook providing a deep theoretical foundation in statistical inference. Essential for a comprehensive understanding of statistical theory underlying econometrics.
 
 2.  **Applied Statistics and Hypothesis Testing**
 
@@ -130,6 +131,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 ### Brief Notes and Recommendations
 
 * Taking both the Stanford and Probability & Statistics courses together is effective to build a solid understanding of statistics and probability fundamentals.
+* Casella & Berger is crucial for gaining deep theoretical insights into statistical inference, complementing the foundational courses with rigorous mathematical understanding.
 * The SAS course is valuable for gaining practical skills in statistical analysis and hypothesis testing.
 * A/B testing guides provide practical context for experiment design and interpreting results.
 * Think Stats is a good intro for Python users, best started after grasping fundamentals.
@@ -145,6 +147,8 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 1.  **Foundations and Theoretical Background**
 
+    * [Greene – Econometric Analysis](https://www.ctanujit.org/uploads/2/5/3/9/25393293/_econometric_analysis_by_greence.pdf) – A highly comprehensive and authoritative graduate-level textbook covering virtually all aspects of econometric theory and application, including detailed mathematical derivations and proofs. Essential for a deep understanding of econometric methods.
+    * [Lütkepohl – New Introduction to Multiple Time Series Analysis](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf) – The definitive textbook for advanced multivariate time series analysis, including VAR, VECM, cointegration, and more. Crucial for serious time series econometrics.
     * [Econometric Theorems (Book)](https://bookdown.org/ts_robinson1994/10EconometricTheorems/) – Core theoretical principles behind econometric models.
     * [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) – Classic, widely used textbook on regression and inference.
     * [Brooks: Introductory Econometrics for Finance (2nd Edition, PDF)](https://new.mmf.lnu.edu.ua/wp-content/uploads/2018/03/brooks_econometr_finance_2nd.pdf) – Essential textbook covering econometric methods and their applications in finance.
