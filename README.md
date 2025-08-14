@@ -40,6 +40,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) – Textbook covering the essential mathematical foundations with ML applications in mind.
     * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
+    * [Trigonometric Cheat Sheet (PDF)](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) - A quick-reference sheet with essential trigonometric formulas, ratios, and transformations.
     * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying matrices concepts.
 
 ### Resource Priority
@@ -51,6 +52,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | [Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning) | Must-have    |
 | [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Must-have |
 | [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Must-have |
+| [Trigonometric Cheat Sheet (PDF)](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) | Must-have |
 | [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -365,6 +367,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
     * [mlcourse.ai](https://mlcourse.ai/book/index.html) – Theory-rich book/course combining fundamentals and practice.
     * [Introduction to Statistical Learning (Book)](https://www.statlearning.com/) – Classic text on ML theory using R, great for foundational concepts.
     * [Intro to ML Specialization (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction) – Balanced theory and application.
+    * [Flexible Imputation of Missing Data (FIMD) - Stef van Buuren](https://stefvanbuuren.name/fimd/) - Companion site for Flexible Imputation of Missing Data, providing explanations, practical guides, and exercises on handling missing data with multiple imputation methods.
     * [Machine Learning – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Machine-learning/index.html) – Blends theoretical concepts with Python practice.
 
 2.  **Deep Theoretical Foundations**
@@ -384,7 +387,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | mlcourse.ai                                                    | Must-have   |
 | Introduction to Statistical Learning                           | Must-have   |
 | Pattern Recognition and Machine Learning                       | Must-have   |
-| Scikit-learn Official Documentation                             | Must-have   |
+| Flexible Imputation of Missing Data (FIMD) - Stef van Buuren | Must-Have |
 | Intro to ML Specialization (Coursera)                           | Nice-to-have |
 | Machine Learning – SOGA-PY (FU Berlin)                          | Nice-to-have |
 | Think Complexity                                               | Nice-to-have |
