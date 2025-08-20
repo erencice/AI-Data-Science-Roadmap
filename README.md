@@ -15,28 +15,11 @@ Follow this roadmap to learn effectively, connect concepts across disciplines, a
 Let's dive in! 📘📊🤖
 
 ---
-
-## 🧭 For Those Who Prefer a Practical Approach
-
-For those who want to dive quickly into practice and consolidate the theoretical foundational concepts later, this is an ideal starting point. This pathway allows you to jump straight into real-world projects and gain hands-on experience using data science tools. If you prefer, you can skip this step and start directly from the theoretical and basic math/statistics sections.
-
-* [Google Advanced Data Analytics Certificate (Coursera)](https://www.coursera.org/professional-certificates/google-advanced-data-analytics) - Focuses on hands-on analytics, data tools, and practical workflows.
-
----
 ## 1. 📐 Mathematics for Machine Learning
 
 ### Learning Sequence and Resources
 
-1.  **Basic Concepts and Quick Introduction**
-
-    * [Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU) – Visual and intuitive introduction to fundamental math concepts.
-    * [Expressway to Data Science: Essential Math (Coursera)](https://www.coursera.org/specializations/expressway-to-data-science-essential-math) – Core math topics tailored for data science.
-
-2.  **In-Depth Mathematics Training**
-
-    * [Mathematics for Machine Learning Specialization (Coursera)](https://www.coursera.org/specializations/mathematics-machine-learning) – Comprehensive courses on linear algebra, calculus, probability, and statistics.
-
-3.  **Detailed Reference and Support Resource**
+1.  **Basics&In-Depth Concepts and Support Resource**
 
     * [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) – Textbook covering the essential mathematical foundations with ML applications in mind.
     * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
@@ -47,9 +30,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 | Resource                                                                                                 | Priority     |
 | :------------------------------------------------------------------------------------------------------- | :----------- |
-| [Mathematics for Machine Learning (YouTube)](https://www.youtube.com/watch?v=LwCRRUa8yTU)                | Must-have    |
-| [Expressway to Data Science: Essential Math](https://www.coursera.org/specializations/expressway-to-data-science-essential-math) | Must-have    |
-| [Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning) | Must-have    |
 | [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Must-have |
 | [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Must-have |
 | [Trigonometric Cheat Sheet (PDF)](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) | Must-have |
@@ -57,11 +37,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Brief Notes and Recommendations
 
-* The first two resources are great for quickly and effectively grasping fundamental concepts.
-* The Coursera Mathematics for Machine Learning Specialization is ideal for solidifying your math foundation, especially if you need deeper understanding.
-* The PDF resources are useful as references for deep dives but not recommended as primary starting points.
 * The *Mathematics for Machine Learning* textbook (Deisenroth et al.) is particularly good for bridging abstract math concepts with practical machine learning applications.
-* Completing this math foundation will make progressing to machine learning and data science much easier and more efficient.
 
 ---
 
@@ -71,8 +47,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 1.  **Fundamental Statistics Concepts and Theory Introduction**
 
-    * [Stanford Statistics (Coursera)](https://www.coursera.org/learn/stanford-statistics) – Comprehensive and solid foundation course in statistics.
-    * [Probability & Statistics (Coursera)](https://www.coursera.org/learn/probability-statistics) – Basics of probability and statistics combining theory and practice.
     * [STAT 100 | Statistical Concepts and Reasoning](https://online.stat.psu.edu/stat100/) – An introductory course to **statistical concepts and reasoning**, focusing on fundamental principles.
     * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/) – Provides a foundational understanding of **elementary statistical methods** and data analysis.
     * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/) – Introduces the **fundamental concepts of probability theory**, including random variables and distributions.
@@ -80,8 +54,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
     * [Casella & Berger – Statistical Inference](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) – A rigorous, graduate-level textbook providing a deep theoretical foundation in statistical inference. Essential for a comprehensive understanding of statistical theory underlying econometrics.
 
 2.  **Applied Statistics and Hypothesis Testing**
-
-    * [Statistical Analysis & Hypothesis Testing with SAS](https://www.coursera.org/learn/statistical-analysis-hypothesis-testing-sas) – Performing statistical tests and experiment design using SAS.
+    * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/) – A course that teaches **applied statistical methods** and techniques for real-world data analysis.
     * [A/B Testing Guide (Medium)](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b) – Practical explanation of statistical tests in A/B testing.
     * [Planning A/B Tests Step-by-Step](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b) – Stepwise guide for designing A/B tests properly.
 
@@ -89,10 +62,7 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – An **introduction to statistics** using Python.
     * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces **Bayesian statistics and modeling** in an accessible way.
-    * [Basics of Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Basics-of-statistics/index.html) – **Beginner-level online tutorials** on statistics with Python applications.
-    * [Advanced Statistics – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Advanced-statistics/index.html) – Covers **intermediate to advanced statistics concepts** with practical examples.
     * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/) – Penn State University courses focusing on the **fundamentals and advanced usage of the R statistical language**.
-    * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/) – A course that teaches **applied statistical methods** and techniques for real-world data analysis.
     * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/) – Explores the **theory and practical applications of regression analysis**.
     * [STAT 502: Analysis of Variance and Design of Experiments](https://online.stat.psu.edu/stat502/) – Covers the principles of **Analysis of Variance (ANOVA)** and **experimental design**.
     * [STAT 504: Analysis of Discrete Data](https://online.stat.psu.edu/stat504/) – Focuses on statistical methods used for the **analysis of discrete (categorical) data**.
@@ -106,21 +76,16 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 | Resource                                                       | Priority    |
 | :------------------------------------------------------------- | :---------- |
-| Stanford Statistics (Coursera)                                 | Must-have   |
-| Probability & Statistics (Coursera)                            | Must-have   |
 | STAT 100: Statistical Concepts and Reasoning                     | Must-have   |
 | STAT 200: Elementary Statistics                                  | Must-have   |
 | STAT 414: Introduction to Probability Theory                    | Must-have   |
 | STAT 415: Introduction to Mathematical Statistics               | Must-have   |
-| Statistical Analysis & Hypothesis Testing with SAS             | Must-have   |
+| STAT 500: Applied Statistics                                     | Must-Have |
 | A/B Testing Guide (Medium)                                     | Must-have   |
 | Planning A/B Tests Step-by-Step                                 | Must-have   |
 | Think Stats (PDF)                                              | Must-have |
 | Think Bayes: Bayesian Statistics Made Simple                    | Must-have |
-| Basics of Statistics – SOGA-PY (FU Berlin)                      | Nice-to-have |
-| Advanced Statistics – SOGA-PY (FU Berlin)                     | Nice-to-have |
 | STAT 484 & 485: Topics in R Statistical Language                | Nice-to-have |
-| STAT 500: Applied Statistics                                     | Nice-to-have |
 | STAT 501: Regression Methods                                     | Nice-to-have |
 | STAT 502: Analysis of Variance and Design of Experiments        | Nice-to-have |
 | STAT 504: Analysis of Discrete Data                              | Nice-to-have |
@@ -157,7 +122,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 2.  **Practical Econometrics and Time Series**
 
-    * [Regressions, Time Series, Fitting Distributions (Coursera)](https://www.coursera.org/learn/erasmus-econometrics) – Practical course covering regressions and time series methods.
     * [Forecasting Principles & Practice with R](https://otexts.com/fpp3/) – Modern forecasting techniques in R.
     * [Forecasting: Principles and Practice, the Pythonic Way (E-Book)](https://otexts.com/fpppy/) – Python equivalent for time series forecasting.
 
@@ -180,7 +144,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Econometric Theorems (Book)                                    | Must-have   |
 | Gujarati’s Basic Econometrics (PDF)                             | Must-have   |
 | Brooks: Introductory Econometrics for Finance (PDF)             | Must-have   |
-| Regressions, Time Series, Fitting Distributions (Coursera)      | Must-have   |
 | Forecasting Principles & Practice with R                        | Must-have   |
 | ARIMA for Time Series Forecasting                              | Must-have   |
 | Kaggle: Time Series Basics                                     | Nice-to-have |
@@ -194,7 +157,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 * Start with foundational theoretical texts (Econometric Theorems, Gujarati, Brooks) to build strong conceptual understanding.
 * Note that Gujarati’s Basic Econometrics, Brooks, and other textbooks are comprehensive and long-term reads; it is perfectly fine to study them gradually over time while concurrently progressing through other practical and course-based resources.
-* The Coursera course is ideal to bridge theory with practical regression and time series modeling.
 * Forecasting with R is a key practical skill; complement it with ARIMA tutorials and Kaggle projects for hands-on experience.
 * Advanced and specialized topics can be tackled after mastering the basics and practice workflows.
 * Supplement your learning with R-focused guides and lecture notes for implementation details and broader perspective.
@@ -213,13 +175,13 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 2.  **Applied Python for Data Science**
 
-    * [Python for Applied Data Science (Coursera)](https://www.coursera.org/learn/python-for-applied-data-science-ai) – Learn Python through real data science projects.
+    * [Data Science and Analytics with Python (PDF)](https://mathstat.dal.ca/~brown/sound/python/P1-Data_Science_and_Analytics_with_Python_2b29.pdf) - Comprehensive guide for practical data science with Python.
     * [Python for Data Analysis by Wes McKinney (Website)](https://wesmckinney.com/book/) – Key reference for data manipulation with Pandas.
     * [Statsmodels](https://www.statsmodels.org/dev/stats.html) - Statistical modeling and econometrics in Python.
 
 3.  **Algorithmic Thinking and Data Structures**
 
-    * [Data Structures & Algorithms (Coursera)](https://www.coursera.org/specializations/algorithms) – Build algorithmic problem-solving skills.
+    * [BCS2 Python Data Structures & Algorithms (Python)](https://opendsa.cs.vt.edu/ODSA/Books/bghs-stem-code-bcs/bcs2/spring-2020/1/html/index.html) – Build algorithmic problem-solving skills.
     * [LeetCode Study Plan](https://leetcode.com/studyplan/) – Structured practice for algorithms and coding challenges.
     * [LeetCode Explore](https://leetcode.com/explore/learn/) – Interactive coding challenges on DSA topics.
 
@@ -236,8 +198,8 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Resource                                                       | Priority    |
 | :------------------------------------------------------------- | :---------- |
 | Python Crash Course (YouTube)                                  | Must-have   |
-| Python for Applied Data Science (Coursera)                     | Must-have   |
-| Data Structures & Algorithms (Coursera)                         | Must-have   |
+| Data Science and Analytics with Python (PDF)                     | Must-have   |
+| BCS2 Python Data Structures & Algorithms (Python)                    | Must-have   |
 | Python Introduction Notes by Kevin Sheppard (PDF)               | Must-have   |
 | Python for Data Analysis by Wes McKinney                       | Must-have   |
 | Statsmodels                                                     | Must-have   |
@@ -267,16 +229,10 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ### Learning Sequence and Resources
 
-1.  **Foundations of EDA**
+1.  **Foundations and Advanced Concepts of EDA
+    * [Python for Data Analysis (PDF)](https://ix.cs.uoregon.edu/~norris/cis407/books/python_for_data_analysis.pdf) – This book is concerned with the nuts and bolts of manipulating, processing, cleaning, and crunching data in Python.
 
-    * [EDA with Python & Pandas (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-python-pandas) – Learn data summarization and visualization basics.
-    * [IBM: EDA for Machine Learning](https://www.coursera.org/learn/ibm-exploratory-data-analysis-for-machine-learning) – EDA concepts tailored for ML workflows.
-
-2.  **Advanced Visualization Techniques**
-
-    * [EDA with Seaborn (Coursera)](https://www.coursera.org/projects/exploratory-data-analysis-seaborn) – Deep dive into visual data exploration with Seaborn.
-
-3.  **Tools and Automation**
+2.  **Tools and Automation**
 
     * [Dataprep.ai (Website)](https://dataprep.ai) – Automate and simplify data cleaning and EDA processes.
 
@@ -284,17 +240,9 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 | Resource                               | Priority    |
 | :------------------------------------- | :---------- |
-| EDA with Python & Pandas (Coursera)      | Must-have   |
-| IBM: EDA for Machine Learning            | Must-have   |
-| EDA with Seaborn (Coursera)              | Nice-to-have |
+| Python for Data Analysis (PDF)      | Must-have   |
 | Dataprep.ai (Website)                    | Nice-to-have |
 
-### Brief Notes and Recommendations
-
-* Begin with basic EDA principles using Pandas and Python to understand data distribution and patterns.
-* Follow up with ML-focused EDA to contextualize analysis in predictive modeling.
-* Advanced visualizations with Seaborn help uncover deeper insights, while tools like Dataprep.ai speed up routine data prep tasks.
-* Combining manual and automated approaches ensures a thorough and efficient EDA workflow.
 
 ---
 
@@ -366,7 +314,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
     * [mlcourse.ai](https://mlcourse.ai/book/index.html) – Theory-rich book/course combining fundamentals and practice.
     * [Introduction to Statistical Learning (Book)](https://www.statlearning.com/) – Classic text on ML theory using R, great for foundational concepts.
-    * [Intro to ML Specialization (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction) – Balanced theory and application.
     * [Flexible Imputation of Missing Data (FIMD) - Stef van Buuren](https://stefvanbuuren.name/fimd/) - Companion site for Flexible Imputation of Missing Data, providing explanations, practical guides, and exercises on handling missing data with multiple imputation methods.
     * [Machine Learning – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Machine-learning/index.html) – Blends theoretical concepts with Python practice.
 
@@ -388,7 +335,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Introduction to Statistical Learning                           | Must-have   |
 | Pattern Recognition and Machine Learning                       | Must-have   |
 | Flexible Imputation of Missing Data (FIMD) - Stef van Buuren | Must-Have |
-| Intro to ML Specialization (Coursera)                           | Nice-to-have |
 | Machine Learning – SOGA-PY (FU Berlin)                          | Nice-to-have |
 | Think Complexity                                               | Nice-to-have |
 | ML Refined                                                     | Nice-to-have |
@@ -402,35 +348,12 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 ---
 
-## 9. ☁️ Big Data
-
-### Learning Sequence and Resources
-
-1.  **Big Data Fundamentals and Tools**
-
-    * [Big Data Specialization (Coursera)](https://www.coursera.org/specializations/big-data) – Comprehensive specialization covering Hadoop, Spark, and distributed data processing.
-
-### Resource Priority
-
-| Resource                   | Priority    |
-| :------------------------- | :---------- |
-| Big Data Specialization    | Must-have   |
-
-### Brief Notes and Recommendations
-
-* This specialization is essential to understand large-scale data processing and distributed computing frameworks.
-* Recommended after building a solid foundation in Python, SQL, and data handling concepts.
-* Useful for roles involving data engineering or handling massive datasets.
-
----
-
-## 10. 🔬 Deep Learning
+## 9. 🔬 Deep Learning
 
 ### Learning Sequence and Resources
 
 1.  **Core Deep Learning Courses and Books**
 
-    * [Deep Learning Specialization (Coursera)](https://www.coursera.org/specializations/deep-learning) – Andrew Ng’s in-depth course series covering foundational DL concepts and architectures.
     * [Dive into Deep Learning](https://d2l.ai) – Hands-on, interactive resource with code examples in Python.
     * [Illustrated Transformers (Jalammar)](https://jalammar.github.io/illustrated-transformer/) – Visual and intuitive explanation of transformer models.
 
@@ -443,15 +366,13 @@ For those who want to dive quickly into practice and consolidate the theoretical
 
 | Resource                               | Priority    |
 | :------------------------------------- | :---------- |
-| Deep Learning Specialization             | Must-have   |
 | Dive into Deep Learning                  | Must-have   |
 | Illustrated Transformers                 | Must-have   |
-| Deep Learning Book (Goodfellow et al.)    | Nice-to-have |
+| Deep Learning Book (Goodfellow et al.)    | Must-Have |
 | Applied ML Practices (GitHub)            | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
-* Start with Andrew Ng’s Deep Learning Specialization for a clear and structured introduction.
 * Complement with “Dive into Deep Learning” for practical coding and interactive learning.
 * The Illustrated Transformers article is great for understanding state-of-the-art transformer architectures.
 * The Goodfellow book is highly recommended for deeper theoretical insights but can be studied alongside or after completing the specialization.
@@ -466,7 +387,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 1.  **Foundations and Practical MLOps**
 
     * [MLOps Zoomcamp (GitHub)](https://github.com/DataTalksClub/mlops-zoomcamp) – Hands-on MLOps practical training.
-    * [MLOps for ML Engineering (Coursera)](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops) – Covers CI/CD, pipelines, deployment best practices.
 
 2.  **Advanced Concepts and Architecture**
 
@@ -477,7 +397,6 @@ For those who want to dive quickly into practice and consolidate the theoretical
 | Resource                       | Priority    |
 | :----------------------------- | :---------- |
 | MLOps Zoomcamp                   | Must-have   |
-| MLOps for ML Engineering         | Must-have   |
 | Machine Learning Systems (Book)  | Nice-to-have |
 
 ### Brief Notes and Recommendations
@@ -541,4 +460,3 @@ For those who want to dive quickly into practice and consolidate the theoretical
 * [Think Like a Data Scientist (SSRN Paper)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3475303) – Understand the mindset of a successful data scientist.
 * [Think Like a Data Scientist (PDF)](https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/752025/mod_resource/content/2/Think%20Like%20a%20Data%20Scientist.pdf) – Full-text version of the data science thought process.
 * [Python for Algorithmic Trading Cookbook (GitHub)](https://github.com/PacktPublishing/Python-for-Algorithmic-Trading-Cookbook) – Code recipes for finance-focused data science with Python.
-* [AI for Medicine Specialization (Coursera)](https://www.coursera.org/specializations/ai-for-medicine) – Focuses on applying AI techniques in the medical field.
