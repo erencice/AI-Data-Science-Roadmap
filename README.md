@@ -380,7 +380,7 @@ Let's dive in! 📘📊🤖
 
 ---
 
-## 11. ⚙️ MLOps (Machine Learning Operations)
+## 10. ⚙️ MLOps (Machine Learning Operations)
 
 ### Learning Sequence and Resources
 
@@ -407,7 +407,7 @@ Let's dive in! 📘📊🤖
 
 ---
 
-## 12. 🛠️ Data Engineering
+## 11. 🛠️ Data Engineering
 
 ### Learning Sequence and Resources
 
@@ -428,7 +428,7 @@ Let's dive in! 📘📊🤖
 
 ---
 
-## 13. 🧠 Large Language Models (LLMs) & Open-Source AI (Optional)
+## 12. 🧠 Large Language Models (LLMs) & Open-Source AI (Optional)
 
 ### Learning Sequence and Resources
 
