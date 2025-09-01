@@ -175,8 +175,8 @@ Let's dive in! 📘📊🤖
 
 2.  **Applied Python for Data Science**
 
-    * [Data Science and Analytics with Python (PDF)](https://mathstat.dal.ca/~brown/sound/python/P1-Data_Science_and_Analytics_with_Python_2b29.pdf) - Comprehensive guide for practical data science with Python.
     * [Python for Data Analysis by Wes McKinney (Website)](https://wesmckinney.com/book/) – Key reference for data manipulation with Pandas.
+    * [Data Science and Analytics with Python (PDF)](https://mathstat.dal.ca/~brown/sound/python/P1-Data_Science_and_Analytics_with_Python_2b29.pdf) - Comprehensive guide for practical data science with Python.
     * [Statsmodels](https://www.statsmodels.org/dev/stats.html) - Statistical modeling and econometrics in Python.
 
 3.  **Algorithmic Thinking and Data Structures**
@@ -198,9 +198,9 @@ Let's dive in! 📘📊🤖
 | Resource                                                       | Priority    |
 | :------------------------------------------------------------- | :---------- |
 | Python Crash Course (YouTube)                                  | Must-have   |
+| Python for Data Analysis by Wes McKinney                       | Must-have   |
 | Data Science and Analytics with Python (PDF)                     | Must-have   |
 | BCS2 Python Data Structures & Algorithms (Python)                    | Must-have   |
-| Python for Data Analysis by Wes McKinney                       | Must-have   |
 | Statsmodels                                                     | Must-have   |
 | R for Data Science (2e)                                        | Must-have   |
 | Efficient R Programming                                        | Must-have   |
