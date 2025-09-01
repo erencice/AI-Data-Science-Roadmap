@@ -200,17 +200,17 @@ Let's dive in! 📘📊🤖
 | Python Crash Course (YouTube)                                  | Must-have   |
 | Data Science and Analytics with Python (PDF)                     | Must-have   |
 | BCS2 Python Data Structures & Algorithms (Python)                    | Must-have   |
-| Python Introduction Notes by Kevin Sheppard (PDF)               | Must-have   |
 | Python for Data Analysis by Wes McKinney                       | Must-have   |
 | Statsmodels                                                     | Must-have   |
 | R for Data Science (2e)                                        | Must-have   |
 | Efficient R Programming                                        | Must-have   |
-| R Graphics Cookbook                                            | Nice-to-have |
-| Tidy Text Mining                                               | Nice-to-have |
-| Applied Generalized Linear Models and Multilevel Models in R    | Nice-to-have |
+| Python Introduction Notes by Kevin Sheppard (PDF)               | Nice-to-have   |
 | Introduction to Python – SOGA-PY (FU Berlin)                   | Nice-to-have |
 | LeetCode Study Plan                                              | Nice-to-have |
 | LeetCode Explore                                               | Nice-to-have |
+| R Graphics Cookbook                                            | Nice-to-have |
+| Tidy Text Mining                                               | Nice-to-have |
+| Applied Generalized Linear Models and Multilevel Models in R    | Nice-to-have |
 
 ### Brief Notes and Recommendations
 
