@@ -318,7 +318,7 @@ Let's dive in! 📘📊🤖
     * [Machine Learning – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Machine-learning/index.html) – Blends theoretical concepts with Python practice.
 
 2.  **Deep Theoretical Foundations**
-
+    * [Interpretable Machine Learning - (Book)](https://christophm.github.io/interpretable-ml-book/) - Comprehensive guide to understanding and explaining machine learning models, focusing on interpretability, model-agnostic techniques, and practical examples.
     * [Pattern Recognition and Machine Learning – Bishop (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) – Core probabilistic ML textbook, advanced level.
     * [Think Complexity (2nd Edition) – Allen B. Downey (PDF)](https://greenteapress.com/wp/think-complexity/) – Covers computational and complexity models in Python.
     * [ML Refined (Website)](https://www.mlrefined.com/) – Elegant theoretical explanations for many ML algorithms.
@@ -335,6 +335,7 @@ Let's dive in! 📘📊🤖
 | Introduction to Statistical Learning                           | Must-have   |
 | Pattern Recognition and Machine Learning                       | Must-have   |
 | Flexible Imputation of Missing Data (FIMD) - Stef van Buuren | Must-Have |
+| Pattern Recognition and Machine Learning – Bishop (PDF) | Must-Have |
 | Machine Learning – SOGA-PY (FU Berlin)                          | Nice-to-have |
 | Think Complexity                                               | Nice-to-have |
 | ML Refined                                                     | Nice-to-have |
