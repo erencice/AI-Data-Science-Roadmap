@@ -321,7 +321,7 @@ Let's dive in! 📘📊🤖
     * [Interpretable Machine Learning - (Book)](https://christophm.github.io/interpretable-ml-book/) - Comprehensive guide to understanding and explaining machine learning models, focusing on interpretability, model-agnostic techniques, and practical examples.
     * [Pattern Recognition and Machine Learning – Bishop (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) – Core probabilistic ML textbook, advanced level.
     * [Think Complexity (2nd Edition) – Allen B. Downey (PDF)](https://greenteapress.com/wp/think-complexity/) – Covers computational and complexity models in Python.
-    * [ML Refined (Website)](https://www.mlrefined.com/) – Elegant theoretical explanations for many ML algorithms.
+    * [ML Refined](https://github.com/neonwatty/machine-learning-refined) – Elegant theoretical explanations for many ML algorithms.
 
 3.  **Practical Libraries**
 
