@@ -1,463 +1,655 @@
 # 🚀 AI & Data Science Roadmap
 
-Welcome to the **AI & Data Science Roadmap**!
+A rigorously structured, end-to-end learning path for everyone starting from zero: absolute beginners, career switchers, students, and working professionals studying part‑time. The aim is to graduate as a Data Science Expert grounded in descriptive and inferential statistics, mathematics, econometrics and causal inference, classical ML, deep learning, and production practices.
 
-This guide offers a structured, step-by-step learning path designed to build your knowledge progressively. You'll start from foundational mathematics and statistics, move through programming and data manipulation, and then advance toward sophisticated machine learning, deep learning, and production-level AI systems.
-
-Each section is divided into numbered steps (1., 2., 3., etc.) to indicate a recommended hierarchical learning order.
-
-Additionally, within each step, you'll find "**Resource Priority**" tables. These tables denote the importance level of each resource (e.g., **Must-have**, **Nice-to-have**).
-
-Every section includes carefully selected resources such as courses, books, articles, and practical projects to ensure both theoretical understanding and hands-on experience.
-
-Follow this roadmap to learn effectively, connect concepts across disciplines, and develop real-world skills that will empower your journey in AI, data science, and beyond.
-
-Let's dive in! 📘📊🤖
-
----
-## 1. 📐 Mathematics for Machine Learning
-
-### Learning Sequence and Resources
-
-1.  **Basics&In-Depth Concepts and Support Resource**
-
-    * [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) – Textbook covering the essential mathematical foundations with ML applications in mind.
-    * [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) – Use as a detailed reference for clarifying concepts when needed.
-    * [Trigonometric Cheat Sheet (PDF)](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) - A quick-reference sheet with essential trigonometric formulas, ratios, and transformations.
-    * [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) – Additional detailed reference for clarifying matrices concepts.
-
-### Resource Priority
-
-| Resource                                                                                                 | Priority     |
-| :------------------------------------------------------------------------------------------------------- | :----------- |
-| [Mathematics for Machine Learning – Deisenroth, Faisal, Ong (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | Must-have |
-| [Everything You Always Wanted to Know About Mathematics (PDF)](https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf) | Must-have |
-| [Trigonometric Cheat Sheet (PDF)](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) | Must-have |
-| [The Theory of Matrices - Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf) | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* The *Mathematics for Machine Learning* textbook (Deisenroth et al.) is particularly good for bridging abstract math concepts with practical machine learning applications.
+## Contents
+- [How to use this roadmap](#how-to-use-this-roadmap)
+- [Pacing model (time assumptions)](#pacing-model-time-assumptions)
+- [Competency outcomes (what “Data Science Expert” means)](#competency-outcomes-what-data-science-expert-means)
+- [Core Curriculum (Stages 0–10)](#core-curriculum)
+  - [Stage 0 — Orientation and Study Setup](#stage-0-orientation-and-study-setup)
+  - [Stage 1 — Mathematics for ML and Optimization](#stage-1-mathematics-for-ml-and-optimization)
+  - [Stage 2 — Probability and Statistics](#stage-2-probability-and-statistics)
+  - [Stage 3 — Programming Fundamentals (Python-first)](#stage-3-programming-fundamentals-python-first)
+  - [Stage 4 — EDA and Visualization](#stage-4-eda-and-visualization)
+  - [Stage 5 — SQL and Data Modeling](#stage-5-sql-and-data-modeling)
+  - [Stage 6 — Data Acquisition: Web Scraping and APIs](#stage-6-data-acquisition-web-scraping-and-apis)
+  - [Stage 7 — Econometrics, Causal Inference, and Time Series](#stage-7-econometrics-causal-inference-and-time-series)
+  - [Stage 8 — Classical Machine Learning](#stage-8-classical-machine-learning)
+  - [Stage 9 — Deep Learning](#stage-9-deep-learning)
+  - [Stage 10 — MLOps and Data Engineering](#stage-10-mlops-and-data-engineering)
+- [Specialization Tracks (optional)](#specialization-tracks-optional)
+  - [NLP and LLMs](#b-nlp-and-llms)
+  - [Computer Vision](#c-computer-vision)
+  - [Recommender Systems](#d-recommender-systems)
+- [Capstone and Portfolio](#capstone-and-portfolio)
+- [Appendix](#appendix)
 
 ---
 
-## 2. 📊 Statistics
+## How to use this roadmap
 
-### Learning Sequence and Resources
-
-1.  **Fundamental Statistics Concepts and Theory Introduction**
-
-    * [STAT 100 | Statistical Concepts and Reasoning](https://online.stat.psu.edu/stat100/) – An introductory course to **statistical concepts and reasoning**, focusing on fundamental principles.
-    * [STAT 200: Elementary Statistics](https://online.stat.psu.edu/stat200/) – Provides a foundational understanding of **elementary statistical methods** and data analysis.
-    * [STAT 414: Introduction to Probability Theory](https://online.stat.psu.edu/stat414/) – Introduces the **fundamental concepts of probability theory**, including random variables and distributions.
-    * [STAT 415: Introduction to Mathematical Statistics](https://online.stat.psu.edu/stat415/) – Covers the **mathematical foundations of statistics**, including estimation and hypothesis testing.
-    * [Casella & Berger – Statistical Inference](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) – A rigorous, graduate-level textbook providing a deep theoretical foundation in statistical inference. Essential for a comprehensive understanding of statistical theory underlying econometrics.
-
-2.  **Applied Statistics and Hypothesis Testing**
-    * [STAT 500: Applied Statistics](https://online.stat.psu.edu/stat500/) – A course that teaches **applied statistical methods** and techniques for real-world data analysis.
-    * [A/B Testing Guide (Medium)](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b) – Practical explanation of statistical tests in A/B testing.
-    * [Planning A/B Tests Step-by-Step](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b) – Stepwise guide for designing A/B tests properly.
-
-3.  **Statistics with Python and Advanced Topics**
-
-    * [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf) – An **introduction to statistics** using Python.
-    * [Think Bayes: Bayesian Statistics Made Simple](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple) - Introduces **Bayesian statistics and modeling** in an accessible way.
-    * [STAT 484 & 485: Topics in R Statistical Language](https://online.stat.psu.edu/stat484-485/) – Penn State University courses focusing on the **fundamentals and advanced usage of the R statistical language**.
-    * [STAT 501: Regression Methods](https://online.stat.psu.edu/stat501/) – Explores the **theory and practical applications of regression analysis**.
-    * [STAT 502: Analysis of Variance and Design of Experiments](https://online.stat.psu.edu/stat502/) – Covers the principles of **Analysis of Variance (ANOVA)** and **experimental design**.
-    * [STAT 504: Analysis of Discrete Data](https://online.stat.psu.edu/stat504/) – Focuses on statistical methods used for the **analysis of discrete (categorical) data**.
-    * [STAT 505: Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/) – Teaches **multivariate statistical methods** for analyzing datasets with multiple variables simultaneously.
-    * [STAT 506: Sampling Theory and Methods](https://online.stat.psu.edu/stat506/) – Details **sampling theory and methods** for statistical research, including various sampling designs.
-    * [STAT 507: Epidemiological Research Methods](https://online.stat.psu.edu/stat507/) – Concentrates on **statistical and methodological approaches** used in epidemiological research.
-    * [STAT 510: Applied Time Series Analysis](https://online.stat.psu.edu/stat510/) – A course that teaches techniques and modeling for the **analysis of time series data**.
-    * [STAT 800: Applied Research Methods](https://online.stat.psu.edu/stat800/) – Covers the planning, execution, and statistical evaluation of **applied research projects** across various disciplines.
-
-### Resource Priority
-
-| Resource                                                       | Priority    |
-| :------------------------------------------------------------- | :---------- |
-| STAT 100: Statistical Concepts and Reasoning                     | Must-have   |
-| STAT 200: Elementary Statistics                                  | Must-have   |
-| STAT 414: Introduction to Probability Theory                    | Must-have   |
-| STAT 415: Introduction to Mathematical Statistics               | Must-have   |
-| STAT 500: Applied Statistics                                     | Must-Have |
-| A/B Testing Guide (Medium)                                     | Must-have   |
-| Planning A/B Tests Step-by-Step                                 | Must-have   |
-| Think Stats (PDF)                                              | Must-have |
-| Think Bayes: Bayesian Statistics Made Simple                    | Must-have |
-| STAT 484 & 485: Topics in R Statistical Language                | Nice-to-have |
-| STAT 501: Regression Methods                                     | Nice-to-have |
-| STAT 502: Analysis of Variance and Design of Experiments        | Nice-to-have |
-| STAT 504: Analysis of Discrete Data                              | Nice-to-have |
-| STAT 505: Applied Multivariate Statistical Analysis              | Nice-to-have |
-| STAT 506: Sampling Theory and Methods                           | Nice-to-have |
-| STAT 507: Epidemiological Research Methods                       | Nice-to-have |
-| STAT 510: Applied Time Series Analysis                           | Nice-to-have |
-| STAT 800: Applied Research Methods                               | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Taking both the Stanford and Probability & Statistics courses together is effective to build a solid understanding of statistics and probability fundamentals.
-* Casella & Berger is crucial for gaining deep theoretical insights into statistical inference, complementing the foundational courses with rigorous mathematical understanding.
-* The SAS course is valuable for gaining practical skills in statistical analysis and hypothesis testing.
-* A/B testing guides provide practical context for experiment design and interpreting results.
-* Think Stats is a good intro for Python users, best started after grasping fundamentals.
-* SOGA-PY resources are well-prepared and supportive for those aiming to learn intermediate and advanced topics.
-* 'Think Bayes' offers a good introduction to Bayesian statistics, a valuable perspective in data analysis.
-* “Nice-to-have” resources such as Think Stats and the SOGA-PY series serve as an indispensable bridge to advanced statistical topics such as regression and time series analysis, especially with practical applications in Python and R.
+- Follow stages in order; specialize after Stage 10 or alongside it if time allows.
+- Each stage includes: Objectives, Place in our goal, Prerequisites, Estimated Effort, Weekly progression (sub‑stages), Essential/Supplementary resources with “Why now”, Practice aligned to what you just learned, Exit Criteria.
+- Short, targeted on‑ramps are provided for true beginners. These are practical and scoped to avoid fatigue.
+- Evidence-based progress: Treat each week as a study cycle. Produce the listed deliverable, check Exit Criteria, and keep a learning log (what you read, built, measured).
 
 ---
 
-## 3. 📖 Econometrics
+## Pacing model (time assumptions)
 
-### Learning Sequence and Resources
+- For everyone: beginners, switchers, students, and working professionals.
+- Estimates are net study hours per week:
+  - Light pace: 3–5 h/week
+  - Standard pace: 5–7 h/week (recommended)
+  - Intensive pace: 8–12 h/week
 
-1.  **Foundations and Theoretical Background**
+Methodology for estimates:
+- Textbooks/notes ~8–12 pages/hour + similar time for exercises/notes.
+- Videos: runtime × 1.4–1.7 (pauses + note‑taking + small practice).
+- Docs/tutorials: quickstarts 1–3 h; deeper guides 4–8 h.
+- Projects are included where listed (typically 2–6 h).
 
-    * [Greene – Econometric Analysis](https://www.ctanujit.org/uploads/2/5/3/9/25393293/_econometric_analysis_by_greence.pdf) – A highly comprehensive and authoritative graduate-level textbook covering virtually all aspects of econometric theory and application, including detailed mathematical derivations and proofs. Essential for a deep understanding of econometric methods.
-    * [Lütkepohl – New Introduction to Multiple Time Series Analysis](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf) – The definitive textbook for advanced multivariate time series analysis, including VAR, VECM, cointegration, and more. Crucial for serious time series econometrics.
-    * [Econometric Theorems (Book)](https://bookdown.org/ts_robinson1994/10EconometricTheorems/) – Core theoretical principles behind econometric models.
-    * [Gujarati’s Basic Econometrics (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) – Classic, widely used textbook on regression and inference.
-    * [Brooks: Introductory Econometrics for Finance (2nd Edition, PDF)](https://new.mmf.lnu.edu.ua/wp-content/uploads/2018/03/brooks_econometr_finance_2nd.pdf) – Essential textbook covering econometric methods and their applications in finance.
-
-2.  **Practical Econometrics and Time Series**
-
-    * [Forecasting Principles & Practice with R](https://otexts.com/fpp3/) – Modern forecasting techniques in R.
-    * [Forecasting: Principles and Practice, the Pythonic Way (E-Book)](https://otexts.com/fpppy/) – Python equivalent for time series forecasting.
-
-3.  **Applied Time Series & Advanced Topics**
-
-    * [ARIMA for Time Series Forecasting](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/) – Tutorial for ARIMA modeling with Python.
-    * [Kaggle: Time Series Basics](https://www.kaggle.com/learn/time-series) – Hands-on projects for time series analysis.
-    * [Advanced Econometrics (Econometrics II) (E-Book)](https://vladislav-morozov.github.io/econometrics-2/) – Covers advanced estimation and inference methods.
-    * [Econometrics with Unobserved Heterogeneity (E-Book)](https://vladislav-morozov.github.io/econometrics-heterogeneity/) – Specialized panel data techniques with heterogeneity.
-
-4.  **Supporting Tools and Notes**
-
-    * [Using R for Introductory Econometrics (Website)](https://pyoflife.com/using-r-for-introductory-econometrics/) – Guide for implementing econometrics in R.
-    * [Econometrics Notes by F. Diebold (PDF)](https://www.sas.upenn.edu/~fdiebold/Teaching104/Econometrics.pdf) – Comprehensive lecture notes from a leading econometrics course.
-
-### Resource Priority
-
-| Resource                                                       | Priority    |
-| :------------------------------------------------------------- | :---------- |
-| Econometric Theorems (Book)                                    | Must-have   |
-| Gujarati’s Basic Econometrics (PDF)                             | Must-have   |
-| Brooks: Introductory Econometrics for Finance (PDF)             | Must-have   |
-| Forecasting Principles & Practice with R                        | Must-have   |
-| ARIMA for Time Series Forecasting                              | Must-have   |
-| Kaggle: Time Series Basics                                     | Nice-to-have |
-| Forecasting: Principles and Practice, the Pythonic Way          | Nice-to-have |
-| Advanced Econometrics (Econometrics II)                        | Nice-to-have |
-| Econometrics with Unobserved Heterogeneity                    | Nice-to-have |
-| Using R for Introductory Econometrics                          | Nice-to-have |
-| Econometrics Notes by F. Diebold                               | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Start with foundational theoretical texts (Econometric Theorems, Gujarati, Brooks) to build strong conceptual understanding.
-* Note that Gujarati’s Basic Econometrics, Brooks, and other textbooks are comprehensive and long-term reads; it is perfectly fine to study them gradually over time while concurrently progressing through other practical and course-based resources.
-* Forecasting with R is a key practical skill; complement it with ARIMA tutorials and Kaggle projects for hands-on experience.
-* Advanced and specialized topics can be tackled after mastering the basics and practice workflows.
-* Supplement your learning with R-focused guides and lecture notes for implementation details and broader perspective.
+Tip: If time is tight, complete the weekly Practice (Deliverable) to keep momentum; return to deeper reading next week.
 
 ---
 
-## 4. 🐍📊 Programming Languages & Data Tools
+## Competency outcomes (what “Data Science Expert” means)
 
-### Learning Sequence and Resources
-
-1.  **Python Basics and Fundamentals**
-
-    * [Python Crash Course (YouTube)](https://www.youtube.com/watch?v=rfscVS0vtbw) – Beginner-friendly Python tutorial.
-    * [Python Introduction Notes by Kevin Sheppard (PDF)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf) – Well-structured starter notes for Python learners.
-    * [Introduction to Python – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Introduction-to-Python/index.html) – Interactive lessons to reinforce basics.
-
-2.  **Applied Python for Data Science**
-
-    * [Python for Data Analysis by Wes McKinney (Website)](https://wesmckinney.com/book/) – Key reference for data manipulation with Pandas.
-    * [Data Science and Analytics with Python (PDF)](https://mathstat.dal.ca/~brown/sound/python/P1-Data_Science_and_Analytics_with_Python_2b29.pdf) - Comprehensive guide for practical data science with Python.
-    * [Statsmodels](https://www.statsmodels.org/dev/stats.html) - Statistical modeling and econometrics in Python.
-
-3.  **Algorithmic Thinking and Data Structures**
-
-    * [BCS2 Python Data Structures & Algorithms (Python)](https://opendsa.cs.vt.edu/ODSA/Books/bghs-stem-code-bcs/bcs2/spring-2020/1/html/index.html) – Build algorithmic problem-solving skills.
-    * [LeetCode Study Plan](https://leetcode.com/studyplan/) – Structured practice for algorithms and coding challenges.
-    * [LeetCode Explore](https://leetcode.com/explore/learn/) – Interactive coding challenges on DSA topics.
-
-4.  **R Programming for Data Analysis & Visualization**
-
-    * [R for Data Science (2e) (Website)](https://r4ds.hadley.nz) – Learn tidyverse-based R programming for data science.
-    * [Efficient R Programming](https://csgillespie.github.io/efficientR/) – Techniques for writing efficient R code.
-    * [R Graphics Cookbook](https://r-graphics.org) – Practical guide to creating various plots in R.
-    * [Tidy Text Mining](https://www.tidytextmining.com) – Learn text mining using tidy principles in R.
-    * [Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/) – Covers advanced statistical modeling in R.
-
-### Resource Priority
-
-| Resource                                                       | Priority    |
-| :------------------------------------------------------------- | :---------- |
-| Python Crash Course (YouTube)                                  | Must-have   |
-| Python for Data Analysis by Wes McKinney                       | Must-have   |
-| Data Science and Analytics with Python (PDF)                     | Must-have   |
-| BCS2 Python Data Structures & Algorithms (Python)                    | Must-have   |
-| Statsmodels                                                     | Must-have   |
-| R for Data Science (2e)                                        | Must-have   |
-| Efficient R Programming                                        | Must-have   |
-| Python Introduction Notes by Kevin Sheppard (PDF)               | Nice-to-have   |
-| Introduction to Python – SOGA-PY (FU Berlin)                   | Nice-to-have |
-| LeetCode Study Plan                                              | Nice-to-have |
-| LeetCode Explore                                               | Nice-to-have |
-| R Graphics Cookbook                                            | Nice-to-have |
-| Tidy Text Mining                                               | Nice-to-have |
-| Applied Generalized Linear Models and Multilevel Models in R    | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Start with Python basics using video tutorials and structured notes for a smooth introduction.
-* Parallelly build applied skills with data science projects and Pandas-focused references.
-* `Statsmodels` is essential for advanced statistical modeling with Python.
-* Strengthen problem-solving by learning algorithms and data structures, practicing regularly on platforms like LeetCode.
-* For R, focus on `R for Data Science` to grasp data manipulation and visualization, and use `Efficient R Programming` for better coding practices.
-* Interactive lessons and additional notes help reinforce understanding but can be used flexibly according to your pace.
-* Combining both Python and R skills offers versatility in data science roles.
-* Libraries like Statsmodels and resources like ‘R for Data Science’ are critical for translating your theoretical knowledge into regression, time series and other inferential statistics applications.
+By the end, you will be able to:
+- Frame problems, design datasets/pipelines, and select appropriate statistical/ML methods.
+- Apply descriptive and inferential statistics correctly, quantify uncertainty, and design credible experiments.
+- Use econometrics and causal inference to estimate effects under assumptions; analyze panel and time‑series data with proper diagnostics and backtesting.
+- Build and evaluate classical ML and deep learning models; interpret, communicate, and document decisions.
+- Acquire data via APIs/scraping responsibly; transform with SQL; manage data quality; visualize and narrate insights.
+- Ship reproducible projects with tests, containers, experiment tracking, CI/CD, and basic orchestration.
 
 ---
 
-## 5. 🔍 Exploratory Data Analysis (EDA)
+<a id="core-curriculum"></a>
+## Core Curriculum (Stages 0–10)
 
-### Learning Sequence and Resources
+<a id="stage-0-orientation-and-study-setup"></a>
+### Stage 0 — Orientation and Study Setup
+Estimated effort (total): 6–10 h · Calendar: ~1–2 weeks at 3–7 h/week
 
-1.  **Foundations and Advanced Concepts of EDA
-    * [Python for Data Analysis (PDF)](https://ix.cs.uoregon.edu/~norris/cis407/books/python_for_data_analysis.pdf) – This book is concerned with the nuts and bolts of manipulating, processing, cleaning, and crunching data in Python.
+- Place in our goal: Establishes foundational habits (version control, environments) that make all subsequent learning reproducible and professional.
+- Objectives: Adopt effective study habits; set up dev environment.
+- Prerequisites: None
 
-2.  **Tools and Automation**
+Zero‑to‑One On‑Ramp (optional)
+- The Missing Semester (Shell/CLI essentials, 4–6 h skim) — [The Missing Semester](https://missing.csail.mit.edu/) — Why now: Command‑line fluency accelerates all later work.
 
-    * [Dataprep.ai (Website)](https://dataprep.ai) – Automate and simplify data cleaning and EDA processes.
+Weekly progression
+- Week 0.1 (3–5 h) — [Using venv](https://docs.python.org/3/library/venv.html) — Why now: Clean, reproducible environments from day one.  
+  Practice (Deliverable): Create and activate a venv; freeze requirements; add setup.md.
 
-### Resource Priority
+  
+- Week 0.2 (3–5 h) — [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git) — Why now: Version control and collaboration are foundational.  
+  Practice (Deliverable): Initialize a repo; commit a template project; open a practice PR and merge it.
 
-| Resource                               | Priority    |
-| :------------------------------------- | :---------- |
-| Python for Data Analysis (PDF)      | Must-have   |
-| Dataprep.ai (Website)                    | Nice-to-have |
+Supplementary
+- [Poetry](https://python-poetry.org/docs/) or [Conda](https://docs.conda.io/en/latest/) — Optional environment managers.
+- [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) — Project scaffolding.
 
-
----
-
-## 6. 🧮 SQL Introduction
-
-### Learning Sequence and Resources
-
-1.  **SQL Fundamentals**
-
-    * [SQL Tutorial](https://www.sqltutorial.org/) – Comprehensive step-by-step tutorials suitable for all levels.
-    * [SQL Roadmap (roadmap.sh)](https://roadmap.sh/sql) – Visual roadmap guiding the topic progression.
-
-### Resource Priority
-
-| Resource                     | Priority    |
-| :--------------------------- | :---------- |
-| SQL Tutorial                 | Must-have   |
-| SQL Roadmap (roadmap.sh)      | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Start with the SQL Tutorial to build a strong foundation in querying, filtering, joining, and manipulating data.
-* Use the roadmap for a visual overview of concepts and to plan learning progression.
-* SQL skills are essential for data retrieval from databases, so prioritize mastering the basics before moving on to integration with other tools.
+Exit Criteria
+- You can manage Python environments and maintain a clean repository.
 
 ---
 
-## 7. 🌐 Web Scraping with Python
+<a id="stage-1-mathematics-for-ml-and-optimization"></a>
+### Stage 1 — Mathematics for ML and Optimization
+Estimated effort (total): 62–96 h · Calendar: ~9–16 weeks at 5–7 h/week
 
-### Learning Sequence and Resources
+- Place in our goal: Mathematical language and optimization tools powering ML/DL training, diagnostics, and interpretation.
+- Objectives: Linear algebra, vector calculus, optimization basics; probability primer.
+- Prerequisites: None (on‑ramp below if needed)
 
-1.  **Core Web Scraping Tools**
+Zero‑to‑One On‑Ramp (short; pick A or B)
+- A) Algebra/Trig quick review (2–6 h) — Complete: Algebra Review Sections 1–5; Trig up to Unit Circle  
+  [Paul’s Algebra/Trig Review](https://tutorial.math.lamar.edu/Extras/AlgebraTrigReview/AlgebraTrigIntro.aspx) — Why now: Concise refresh without a full course.
+- B) Linear algebra intuition (3–6 h) — Complete: Episodes 1, 2, 3, 4, 6, and 8  
+  [3Blue1Brown — Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) — Why now: Geometric intuition accelerates learning.
 
-    * [Selenium Documentation](https://selenium-python.readthedocs.io/index.html) – Automate browsers, useful for dynamic sites.
-    * [Beautiful Soup Docs](https://tedboy.github.io/bs4_doc/index.html) – Parse HTML and extract information easily.
+Weekly progression
+- Week 1 (8–10 h) — MML Ch. 2 Linear Algebra (vectors, matrices, operations)  
+  Resource: [Mathematics for Machine Learning](https://mml-book.github.io/) — Why now: LA underpins ML representations.  
+  Practice (Deliverable): Compute dot products, norms, projections; solve 2×2/3×3 Ax=b (by hand and in NumPy); verify residuals < 1e‑8.
 
-2.  **Hands-On Practice**
+  
+- Week 2 (6–8 h) — MML Ch. 3 Analytic Geometry (subspaces, orthogonality)  
+  Practice (Deliverable): Decompose vectors into parallel/orthogonal components; least‑squares line fit via normal equations; residual plot.
 
-    * [Practice Web Scraping](https://www.scrapingcourse.com/ecommerce/) – Practical exercises scraping mock e-commerce websites.
+  
+- Week 3–4 (10–14 h) — MML Ch. 4 Matrix Decompositions (LU, QR, eigen)  
+  Practice (Deliverable): Solve Ax=b with LU; least‑squares via QR; eigen‑decompose a small symmetric matrix; power iteration convergence plot.  
+  Reference (no practice dependency): [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) — derivatives section.
 
-3.  **Further Reading**
+  
+- Week 5 (6–8 h) — MML Ch. 5 Vector Calculus (gradients, Jacobians)  
+  Practice (Deliverable): Derive gradients for quadratic forms; verify with numerical gradients; short comparison notes.
 
-    * [Data Mining: Concepts and Techniques (3rd ed.) Morgan Kaufmann](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf) - Provides a comprehensive understanding of data mining concepts and techniques, which often leverage scraped data.
+  
+- Week 6–7 (12–18 h) — Convex Optimization (Boyd & Vandenberghe)  
+  Resource: [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) — Complete: Ch. 2, 3, 4, 9 (skip advanced proofs first pass).  
+  Practice (Deliverable): Implement GD vs. momentum on convex quadratics; plot convergence; report iterations to tolerance.
 
+  
+- Week 8 (6–8 h) — Probability Primer  
+  Resource: [OpenIntro Statistics](https://www.openintro.org/book/os/) — Complete: Ch. 3 (3.1–3.5) and Ch. 4 (4.1–4.3).  
+  Practice (Deliverable): Simulate Bernoulli/Binomial/Normal; visualize LLN/CLT with code and commentary.
 
-### Resource Priority
+Supplementary
+- [Trig Cheat Sheet](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) — Handy reference.
+- Think Complexity (2e) — Allen Downey — [Book page](https://greenteapress.com/wp/think-complexity/) · [PDF](https://greenteapress.com/thinkcomplexity2/thinkcomplexity2.pdf)
 
-| Resource                             | Priority     |
-| :----------------------------------- | :----------- |
-| Selenium Documentation               | Must-have    |
-| Beautiful Soup Docs                  | Must-have    |
-| Practice Web Scraping                | Nice-to-have |
-| Data Mining: Concepts and Techniques | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Learn both **Beautiful Soup** and **Selenium** as they complement each other: BS for static pages and Selenium for dynamic content.
-* Hands-on practice is crucial—try the practice course to consolidate your skills on real-like projects.
-* Web scraping is valuable for gathering raw data that isn't easily accessible via APIs or databases.
-* For a deeper theoretical understanding of data mining, which often leverages scraped data, refer to **Data Mining: Concepts and Techniques**.
-
----
-
-## 8. 🎓 Advanced Theoretical ML
-
-### Learning Sequence and Resources
-
-1.  **Introductory Theory and Classic Texts**
-
-    * [mlcourse.ai](https://mlcourse.ai/book/index.html) – Theory-rich book/course combining fundamentals and practice.
-    * [Introduction to Statistical Learning (Book)](https://www.statlearning.com/) – Classic text on ML theory using R, great for foundational concepts.
-    * [Flexible Imputation of Missing Data (FIMD) - Stef van Buuren](https://stefvanbuuren.name/fimd/) - Companion site for Flexible Imputation of Missing Data, providing explanations, practical guides, and exercises on handling missing data with multiple imputation methods.
-    * [Machine Learning – SOGA-PY (FU Berlin)](https://www.geo.fu-berlin.de/en/v/soga-py/Machine-learning/index.html) – Blends theoretical concepts with Python practice.
-
-2.  **Deep Theoretical Foundations**
-    * [Interpretable Machine Learning - (Book)](https://christophm.github.io/interpretable-ml-book/) - Comprehensive guide to understanding and explaining machine learning models, focusing on interpretability, model-agnostic techniques, and practical examples.
-    * [Pattern Recognition and Machine Learning – Bishop (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) – Core probabilistic ML textbook, advanced level.
-    * [Think Complexity (2nd Edition) – Allen B. Downey (PDF)](https://greenteapress.com/wp/think-complexity/) – Covers computational and complexity models in Python.
-    * [ML Refined](https://github.com/neonwatty/machine-learning-refined) – Elegant theoretical explanations for many ML algorithms.
-
-3.  **Practical Libraries**
-
-    * [Scikit-learn Official Documentation](https://scikit-learn.org/stable/index.html) – Essential for implementing classical ML algorithms in Python.
-
-### Resource Priority
-
-| Resource                                                       | Priority    |
-| :------------------------------------------------------------- | :---------- |
-| mlcourse.ai                                                    | Must-have   |
-| Introduction to Statistical Learning                           | Must-have   |
-| Pattern Recognition and Machine Learning                       | Must-have   |
-| Flexible Imputation of Missing Data (FIMD) - Stef van Buuren | Must-Have |
-| Pattern Recognition and Machine Learning – Bishop (PDF) | Must-Have |
-| Machine Learning – SOGA-PY (FU Berlin)                          | Nice-to-have |
-| Think Complexity                                               | Nice-to-have |
-| ML Refined                                                     | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Begin with mlcourse.ai and ISL for a solid theoretical base combined with practical examples.
-* Progress to Bishop’s PRML book for deep theoretical understanding; this can be a long-term study alongside other topics.
-* Use scikit-learn docs to connect theory to practice by implementing algorithms.
-* Supplement learning with online courses and explanatory websites for diverse perspectives and reinforcement.
+Exit Criteria
+- Comfortable with vectors/matrices, derivatives/gradients, and basic convexity; can solve Ax=b and implement GD with empirical convergence.
 
 ---
 
-## 9. 🔬 Deep Learning
+<a id="stage-2-probability-and-statistics"></a>
+### Stage 2 — Probability and Statistics
+Estimated effort (total): 70–120 h · Calendar: ~12–21 weeks at 5–7 h/week
 
-### Learning Sequence and Resources
+- Place in our goal: Descriptive and inferential statistics for valid analysis, experimentation, and uncertainty quantification.
+- Objectives: Probability, estimation, hypothesis testing, regression/ANOVA, Bayesian basics, experimental design.
+- Prerequisites: Stage 1
 
-1.  **Core Deep Learning Courses and Books**
+Zero‑to‑One On‑Ramp (short)
+- StatQuest (6–12 h skim) — Complete: Descriptive, Probability Basics, P‑values/CI  
+  [StatQuest](https://www.youtube.com/c/joshstarmer) — Why now: Clear intuition helps formal courses.
 
-    * [Dive into Deep Learning](https://d2l.ai) – Hands-on, interactive resource with code examples in Python.
-    * [Illustrated Transformers (Jalammar)](https://jalammar.github.io/illustrated-transformer/) – Visual and intuitive explanation of transformer models.
+Weekly progression
+- Week 1–2 (12–16 h) — Descriptive Statistics and Intro  
+  Resource: [OpenIntro Statistics](https://www.openintro.org/book/os/) — Ch. 1–2.  
+  Practice (Deliverable): Summary report with visuals (central tendency, spread, outliers) using a public dataset.
 
-2.  **Advanced and Supplementary Materials**
+  
+- Week 3–4 (15–25 h) — Probability Theory  
+  Resource: [STAT 414](https://online.stat.psu.edu/stat414/) — Lessons 1–10 (core).  
+  Practice (Deliverable): Monte Carlo sims (binomial, normal, exponential) with convergence plots and short write‑up.
 
-    * [Deep Learning Book (Goodfellow et al.)](https://www.deeplearningbook.org/) – Authoritative textbook, more theoretical and advanced.
-    * [Applied ML Practices (GitHub)](https://github.com/eugeneyan/applied-ml) – Real-world applications and pipelines for ML and DL.
+  
+- Week 5–7 (15–25 h) — Mathematical Statistics  
+  Resource: [STAT 415](https://online.stat.psu.edu/stat415/) — Lessons 1–9 (estimation/inference).  
+  Practice (Deliverable): Bootstrap CI vs. analytical CI on real data; compare coverage.
 
-### Resource Priority
+  
+- Week 8–9 (12–16 h) — Regression and ANOVA  
+  Resources: [STAT 501](https://online.stat.psu.edu/stat501/) Lessons 1–8; [STAT 502](https://online.stat.psu.edu/stat502/) Lessons 1–6.  
+  Practice (Deliverable): Fit OLS; diagnostics (residuals, VIF); one/two‑way ANOVA with effect sizes.
 
-| Resource                               | Priority    |
-| :------------------------------------- | :---------- |
-| Dive into Deep Learning                  | Must-have   |
-| Illustrated Transformers                 | Must-have   |
-| Deep Learning Book (Goodfellow et al.)    | Must-Have |
-| Applied ML Practices (GitHub)            | Nice-to-have |
+  
+- Week 10 (6–10 h) — Bayesian Primer  
+  Resource: [Think Bayes (2e)](https://allendowney.github.io/ThinkBayes2/) — Ch. 1–4.  
+  Practice (Deliverable): Beta‑Binomial A/B; posterior predictive checks; compare to frequentist test.
 
-### Brief Notes and Recommendations
+  
+- Week 11 (6–8 h) — Experimentation  
+  Resources: A/B Testing [guide](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b), [planning](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b).  
+  Practice (Deliverable): Power analysis; pre‑registration; mock A/B analysis with a decision memo.
 
-* Complement with “Dive into Deep Learning” for practical coding and interactive learning.
-* The Illustrated Transformers article is great for understanding state-of-the-art transformer architectures.
-* The Goodfellow book is highly recommended for deeper theoretical insights but can be studied alongside or after completing the specialization.
-* Use Applied ML Practices to see how deep learning fits into real-world workflows and pipelines.
+Supplementary
+- STAT 484/485 (R): [course pages](https://online.stat.psu.edu/stat484-485/) — Alternative R path.
 
----
-
-## 10. ⚙️ MLOps (Machine Learning Operations)
-
-### Learning Sequence and Resources
-
-1.  **Foundations and Practical MLOps**
-
-    * [MLOps Zoomcamp (GitHub)](https://github.com/DataTalksClub/mlops-zoomcamp) – Hands-on MLOps practical training.
-
-2.  **Advanced Concepts and Architecture**
-
-    * [Machine Learning Systems (Book)](https://mlsysbook.ai) – In-depth guide to designing scalable ML pipelines and systems.
-
-### Resource Priority
-
-| Resource                       | Priority    |
-| :----------------------------- | :---------- |
-| MLOps Zoomcamp                   | Must-have   |
-| Machine Learning Systems (Book)  | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Essential for transitioning ML models from experiments to production systems.
-* Start with practical courses to grasp pipeline and deployment fundamentals.
-* The book is great for architectural depth and long-term reference.
+Exit Criteria
+- Can design experiments, analyze results, and interpret regression models with quantified uncertainty.
 
 ---
 
-## 11. 🛠️ Data Engineering
+<a id="stage-3-programming-fundamentals-python-first"></a>
+### Stage 3 — Programming Fundamentals (Python-first)
+Estimated effort (total): 20–36 h · Calendar: ~3–7 weeks at 5–7 h/week
 
-### Learning Sequence and Resources
+- Place in our goal: Engineering practices for reliable, testable data projects—skills hiring managers expect.
+- Objectives: Python fluency, packaging, testing, typing, notebook hygiene, core DS libs.
+- Prerequisites: Stage 0–2
 
-1.  **Core Data Engineering Skills**
+Zero‑to‑One On‑Ramp
+- Automate the Boring Stuff (10–16 h skim) — Parts I–II  
+  [Automate the Boring Stuff](https://automatetheboringstuff.com/)
 
-    * [Data Engineering Zoomcamp (GitHub)](https://github.com/DataTalksClub/data-engineering-zoomcamp) – Learn tools like Airflow, Kafka, Spark, and data pipeline construction.
+Weekly progression
+- Week 1 (6–10 h) — Python Basics  
+  Resource: [Official Tutorial](https://docs.python.org/3/tutorial/) or [Python Crash Course](https://www.youtube.com/watch?v=rfscVS0vtbw).  
+  Practice (Deliverable): CSV summary CLI with argparse, logging, and `--help`.
 
-### Resource Priority
+  
+- Week 2 (6–10 h) — pandas/numpy  
+  Resource: [Python for Data Analysis](https://wesmckinney.com/book/) — Indexing, GroupBy, Reshaping, Time Series.  
+  Practice (Deliverable): Reusable cleaning script; benchmark vectorized vs. loops; short results table.
 
-| Resource                   | Priority    |
-| :------------------------- | :---------- |
-| Data Engineering Zoomcamp    | Must-have   |
+  
+- Week 3 (6–10 h) — Packaging/testing/typing  
+  Resources: [PEP 8](https://peps.python.org/pep-0008/), [pytest](https://docs.pytest.org/).  
+  Practice (Deliverable): Package the cleaning script; add unit tests and type hints; build a wheel.
 
-### Brief Notes and Recommendations
+  
+- Week 4 (2–6 h) — Statistical modeling intro  
+  Resource: [statsmodels](https://www.statsmodels.org/stable/index.html) — OLS tutorial + GLM overview.  
+  Practice (Deliverable): Fit OLS; produce a regression report with assumptions and limitations.
 
-* Crucial for managing data flow, transformations, and storage in scalable systems.
-* Best taken after foundational knowledge of Python, SQL, and Big Data concepts.
+Supplementary
+- Kevin Sheppard notes — [Python Notes (PDF)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf)
+- Real Python best practices — [Collection](https://realpython.com/tutorials/best-practices/)
 
----
-
-## 12. 🧠 Large Language Models (LLMs) & Open-Source AI (Optional)
-
-### Learning Sequence and Resources
-
-1.  **Transformer Models and LLMs**
-
-    * [Hugging Face Course](https://huggingface.co/course/chapter1) – Hands-on training on transformers and language models.
-    * [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) – Building autonomous AI agents using open-source tools.
-
-### Resource Priority
-
-| Resource                       | Priority    |
-| :----------------------------- | :---------- |
-| Hugging Face Course            | Must-have   |
-| Hugging Face AI Agents Course  | Nice-to-have |
-
-### Brief Notes and Recommendations
-
-* Ideal for users interested in cutting-edge NLP and AI agent development.
-* Can be explored after mastering core ML and deep learning topics.
-* Optional for general ML/data science learners, but highly valuable for NLP-focused roles.
+Exit Criteria
+- Comfortable with pandas, numpy, plotting; can ship a small, tested project.
 
 ---
 
-## 📚 Additional Resources
+<a id="stage-4-eda-and-visualization"></a>
+### Stage 4 — EDA and Visualization
+Estimated effort (total): 15–24 h · Calendar: ~2–5 weeks at 5–7 h/week
 
-> Bonus reads and repositories for deep learners.
+- Place in our goal: Turn raw data into insight; build communication skills and data quality discipline.
+- Objectives: Data cleaning, profiling, visualization, data quality checks.
+- Prerequisites: Stage 3
 
-* [AI Engineering Reading List (Latent.Space)](https://www.latent.space/p/2025-papers) – Must-read AI papers for 2025.
-* [Think Like a Data Scientist (SSRN Paper)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3475303) – Understand the mindset of a successful data scientist.
-* [Think Like a Data Scientist (PDF)](https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/752025/mod_resource/content/2/Think%20Like%20a%20Data%20Scientist.pdf) – Full-text version of the data science thought process.
-* [Python for Algorithmic Trading Cookbook (GitHub)](https://github.com/PacktPublishing/Python-for-Algorithmic-Trading-Cookbook) – Code recipes for finance-focused data science with Python.
+Zero‑to‑One On‑Ramp
+- Kaggle Data Cleaning (3–5 h) — [Kaggle Data Cleaning](https://www.kaggle.com/learn/data-cleaning)
+
+Weekly progression
+- Week 1 (6–10 h) — Profiling and Cleaning  
+  Resources: [ydata‑profiling](https://ydata-profiling.ydata.ai/docs/master/), [Python for Data Analysis](https://wesmckinney.com/book/).  
+  Practice (Deliverable): Profiling report; reproducible cleaning notebook + script; checklist of issues.
+
+  
+- Week 2 (6–10 h) — Visualization  
+  Resources: [Seaborn](https://seaborn.pydata.org/), [Matplotlib](https://matplotlib.org/stable/).  
+  Practice (Deliverable): Small EDA dashboard (static/light interactive) with 3–5 key charts.
+
+  
+- Week 3 (3–4 h) — Data Quality Tests  
+  Resources: [Great Expectations](https://docs.greatexpectations.io/), [missingno](https://github.com/ResidentMario/missingno).  
+  Practice (Deliverable): Expectation suites for key tables; CI job to run them.
+
+Supplementary
+- [Altair](https://altair-viz.github.io/)
+- [Plotly](https://plotly.com/python/)
+
+Exit Criteria
+- You can profile, clean, visualize data, and communicate insights clearly.
+
+---
+
+<a id="stage-5-sql-and-data-modeling"></a>
+### Stage 5 — SQL and Data Modeling
+Estimated effort (total): 15–28 h · Calendar: ~2–5 weeks at 5–7 h/week
+
+- Place in our goal: Efficient data extraction/joins and schema design for reliable analytics.
+- Objectives: Querying, joins, window functions, indexes, query plans; basic modeling.
+- Prerequisites: Stage 3–4
+
+Zero‑to‑One On‑Ramp
+- Khan Academy SQL (4–8 h skim) — [Khan Academy SQL](https://www.khanacademy.org/computing/computer-programming/sql)
+
+Weekly progression
+- Week 1 (6–10 h) — SQL Fundamentals  
+  Resource: [SQL Tutorial](https://www.sqltutorial.org/).  
+  Practice (Deliverable): CRUD + analytical joins/subqueries; include result screenshots.
+
+  
+- Week 2 (6–10 h) — Advanced SQL  
+  Resources: PostgreSQL [Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html), [EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html).  
+  Practice (Deliverable): KPI queries with windows; analyze plans; add indexes and re‑measure.
+
+  
+- Week 3 (3–8 h) — Data Modeling  
+  Resource: Kimball [overview](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/).  
+  Practice (Deliverable): Design a star schema; ER diagram + rationale.
+
+Supplementary
+- [SQLBolt](https://sqlbolt.com/), [Mode SQL](https://mode.com/sql-tutorial/), [LeetCode SQL](https://leetcode.com/studyplan/top-sql-50/)
+- Sample DBs: [Chinook](https://github.com/lerocha/chinook-database), [Northwind](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
+
+Exit Criteria
+- Optimize queries, use windows/CTEs, design simple analytical schemas.
+
+---
+
+<a id="stage-6-data-acquisition-web-scraping-and-apis"></a>
+### Stage 6 — Data Acquisition: Web Scraping and APIs
+Estimated effort (total): 18–30 h · Calendar: ~3–6 weeks at 5–7 h/week
+
+- Place in our goal: Reliable, ethical ingestion of external data at scale.
+- Objectives: Robust scraping, API consumption, ethics/legal, tooling choice.
+- Prerequisites: Stage 3
+
+Zero‑to‑One On‑Ramp
+- MDN: [HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview), [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+
+Weekly progression
+- Week 1 (3–6 h) — APIs and HTTP Clients  
+  Resources: [Requests](https://requests.readthedocs.io/), [httpx](https://www.python-httpx.org/).  
+  Practice (Deliverable): Small API client with pagination/auth/retries; readme with usage.
+
+  
+- Week 2 (6–10 h) — Static Scraping  
+  Resource: [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).  
+  Practice (Deliverable): Extract structured data; persist to CSV/DB; log failures.
+
+  
+- Week 3 (6–10 h) — Dynamic Sites  
+  Resources: [Playwright](https://playwright.dev/python/), [Selenium](https://selenium-python.readthedocs.io/).  
+  Practice (Deliverable): Headless navigation; capture content behind interactions; robust waits.
+
+  
+- Week 4 (3–4 h) — Crawling and Ethics  
+  Resource: [Scrapy](https://docs.scrapy.org/en/latest/); Ethics: [robots.txt](https://www.robotstxt.org/), [guide](https://scrapeops.io/python-scrapy-playbook/python-ethical-web-scraping/).  
+  Practice (Deliverable): Spider with throttling/backoff; robots checks; output sample.
+
+Supplementary
+- Data Mining — [book info](https://www.sciencedirect.com/book/9780123814791/data-mining)
+
+Exit Criteria
+- Acquire data responsibly from static/dynamic sources.
+
+---
+
+<a id="stage-7-econometrics-causal-inference-and-time-series"></a>
+### Stage 7 — Econometrics, Causal Inference, and Time Series
+Estimated effort (total): 36–64 h · Calendar: ~6–12 weeks at 5–7 h/week
+
+- Place in our goal: Move beyond correlation to credible estimation and sound forecasting. Establishes regression assumptions, identification, and temporal modeling with proper validation.
+- Objectives: OLS and diagnostics, common violations and remedies, causal identification basics (DAGs, RCTs, confounding, DiD), time‑series fundamentals (stationarity, ARIMA), and backtesting.
+- Prerequisites: Stage 2 (Statistics), Stage 3 (Programming)
+
+Weekly progression
+- Week 1 (8–12 h) — OLS Foundations and Gauss–Markov  
+  Resource: Econometrics with R — [Econometrics with R](https://www.econometrics-with-r.org/) (OLS chapters) — Why now: Open, applied route to core regression concepts.  
+  Practice (Deliverable): Fit OLS; residual diagnostics; interpret coefficients and uncertainty.
+
+  
+- Week 2 (6–10 h) — Diagnostics, Heteroskedasticity, Multicollinearity, Autocorrelation  
+  Resources: Econometrics with R (diagnostics), statsmodels examples — [statsmodels](https://www.statsmodels.org/stable/index.html)  
+  Practice (Deliverable): Breusch–Pagan test; White/HC robust SEs; VIF check; Durbin–Watson; apply appropriate remedy and document rationale.
+
+  
+- Week 3 (6–10 h) — Causal Inference Basics (Identification, DAGs, Omitted Variable Bias)  
+  Resource: Cunningham — The Mixtape (free) — [Causal Inference: The Mixtape](https://mixtape.scunning.com/) — Why now: Modern, accessible causal toolkit.  
+  Practice (Deliverable): Simulate confounding; show bias under naive OLS; specify DAG; discuss identification strategy.
+
+  
+- Week 4 (6–10 h) — Research Designs: Matching/PS, Difference‑in‑Differences, Fixed Effects  
+  Resource: The Mixtape (DiD/FE chapters); optional: R4DS causal chapters or relevant tutorials.  
+  Practice (Deliverable): Implement a 2×2 DiD and a panel FE model on a public dataset; assumption checks; effect interpretation.
+
+  
+- Week 5 (6–10 h) — Time Series Fundamentals (Decomposition, Stationarity, ACF/PACF)  
+  Resources: FPP3 (free) — [FPP3](https://otexts.com/fpp3/); Python version — [Forecasting: The Pythonic Way](https://otexts.com/fpppy/) — Why now: Modern forecasting curriculum.  
+  Practice (Deliverable): STL decomposition; unit‑root test (ADF); seasonal strength; write diagnostic notes.
+
+  
+- Week 6 (4–12 h) — ARIMA/SARIMA and Backtesting  
+  Resources: statsmodels.tsa — [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html)  
+  Practice (Deliverable): Fit ARIMA/SARIMA; rolling‑origin backtest; report MAE/MAPE; forecast with intervals; document failure modes.
+
+Supplementary
+- Gujarati & Porter — Basic Econometrics (reference) — [Publisher](https://www.mheducation.com/highered/product/basic-econometrics-gujarati-porter/M9780073375779.html)
+- Wooldridge — Introductory Econometrics (reference) — [Cengage page](https://www.cengage.com/c/introductory-econometrics-a-modern-approach-7e-wooldridge/)
+- Lütkepohl — Multiple Time Series (advanced VAR/state space) — [Springer](https://link.springer.com/book/10.1007/978-3-540-27752-1)
+
+Exit Criteria
+- Diagnose and remedy OLS assumption violations; articulate identification assumptions; implement DiD/FE; build and evaluate ARIMA forecasts with rolling backtests.
+
+---
+
+<a id="stage-8-classical-machine-learning"></a>
+### Stage 8 — Classical Machine Learning
+Estimated effort (total): 30–50 h · Calendar: ~5–9 weeks at 5–7 h/week
+
+- Place in our goal: Baseline modeling toolbox and evaluation mindset across domains.
+- Objectives: Supervised/unsupervised basics, pipelines, validation, metrics, interpretation.
+- Prerequisites: Stage 1–2–3–4
+
+Zero‑to‑One On‑Ramp
+- Kaggle Intro to ML (4–6 h) — [course](https://www.kaggle.com/learn/intro-to-machine-learning)  
+- StatQuest ML (6–12 h skim) — [playlist](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+
+Weekly progression
+- Week 1 (12–18 h) — Supervised Learning  
+  Resource: [scikit‑learn](https://scikit-learn.org/stable/) — Pipelines, preprocessing, linear/logistic/tree/ensembles.  
+  Practice (Deliverable): Full pipeline with ColumnTransformer + CV; baseline and tuned models; model card.
+
+  
+- Week 2 (6–10 h) — Model Selection and Validation  
+  Resource: scikit‑learn CV/metrics.  
+  Practice (Deliverable): Nested CV vs. holdout; report metric variance and uncertainty.
+
+  
+- Week 3 (5–8 h) — Interpretability  
+  Resource: [Interpretable ML](https://christophm.github.io/interpretable-ml-book/).  
+  Practice (Deliverable): Permutation importance, PDP/ICE, SHAP; interpretation notes and caveats.
+
+  
+- Week 4 (3–6 h) — Missing Data  
+  Resource: [FIMD](https://stefvanbuuren.name/fimd/).  
+  Practice (Deliverable): Compare simple imputations vs. MICE; downstream performance and bias discussion.
+
+  
+- Week 5 (4–8 h) — Unsupervised Basics (incl. PCA)  
+  Resource: scikit‑learn clustering/dimensionality reduction.  
+  Practice (Deliverable): PCA explained variance; customer clustering; silhouette score; UMAP visualization.  
+  Optional tie‑in: MML Ch. 10 “Principal Component Analysis” for deeper LA derivations.
+
+Essential text
+- ISLR/ISLRv2 — Complete: Ch. 2–6 (core); skim Ch. 8 (trees) and Ch. 10 (unsupervised)  
+  [Introduction to Statistical Learning](https://www.statlearning.com/)
+
+Supplementary
+- [mlcourse.ai](https://mlcourse.ai/book/index.html), [SHAP](https://shap.readthedocs.io/en/latest/)
+
+Exit Criteria
+- Ship a reproducible ML pipeline with meaningful evaluation and documented decisions.
+
+---
+
+<a id="stage-9-deep-learning"></a>
+### Stage 9 — Deep Learning
+Estimated effort (total): 40–70 h · Calendar: ~7–11 weeks at 5–7 h/week
+
+- Place in our goal: Modern neural architectures and training practices for vision/NLP and beyond.
+- Objectives: Neural nets, CNN/RNN basics, modern training, transfer learning, Transformers.
+- Prerequisites: Stage 1–2–3–8
+
+Zero‑to‑One On‑Ramp
+- fast.ai (audit 6–10 h skim) — [course](https://course.fast.ai/) — first 3 lessons  
+- Kaggle Intro to DL (3–5 h) — [course](https://www.kaggle.com/learn/intro-to-deep-learning)
+
+Weekly progression
+- Week 1 (12–18 h) — DL Fundamentals  
+  Resources: [D2L](https://d2l.ai/) Ch. 2–6; [PyTorch Tutorials](https://pytorch.org/tutorials/) “Learn the Basics”.  
+  Practice (Deliverable): Implement an MLP; add regularization/schedulers; track metrics in a table.
+
+  
+- Week 2 (8–12 h) — CNN Training  
+  Practice (Deliverable): Train a CNN on CIFAR‑10; experiment with augmentation and mixup/cutmix; compare runs with logged metrics.
+
+  
+- Week 3 (6–8 h) — Sequence Models  
+  Practice (Deliverable): LSTM baseline on a sequence dataset; compare to a classical baseline; error analysis.
+
+  
+- Week 4 (6–8 h) — Transformers Intro  
+  Resource: [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/).  
+  Practice (Deliverable): Fine‑tune a small Transformer on text classification; evaluate; save artifacts.
+
+  
+- Week 5 (8–14 h) — Transfer Learning Project  
+  Practice (Deliverable): End‑to‑end project with dataset prep, training, evaluation, and a demo notebook/app.
+
+Supplementary
+- [Deep Learning (Goodfellow et al.)](https://www.deeplearningbook.org/), [CS231n](http://cs231n.stanford.edu/), [fast.ai](https://course.fast.ai/)
+
+Exit Criteria
+- Train, debug, and deploy a DL model with solid metrics and documentation.
+
+---
+
+<a id="stage-10-mlops-and-data-engineering"></a>
+### Stage 10 — MLOps and Data Engineering
+Estimated effort (total): 40–60 h · Calendar: ~6–10 weeks at 5–7 h/week
+
+- Place in our goal: Take projects to production with reproducibility, automation, and scalable data pipelines.
+- Objectives: Experiment tracking, model/data versioning, containers, CI/CD, orchestration; batch/stream pipelines, warehouses, transformations, Spark.
+- Prerequisites: Stage 8–9
+
+Zero‑to‑One On‑Ramp
+- Docker 101 (2–4 h) — [tutorial](https://www.docker.com/101-tutorial/), GH Actions Quickstart (1–2 h) — [guide](https://docs.github.com/en/actions/quickstart)
+
+Weekly progression
+- Week 1 (6–8 h) — Experiment Tracking  
+  Resource: [MLflow](https://mlflow.org/) — Tracking + Models + Registry.  
+  Practice (Deliverable): Track runs/artifacts; compare experiments; promote best model to registry.
+
+  
+- Week 2 (6–8 h) — Data/Model Versioning  
+  Resource: [DVC](https://dvc.org/) — Get Started + Pipelines + Remote.  
+  Practice (Deliverable): Version datasets; create pipelines; reproduce results end‑to‑end.
+
+  
+- Week 3 (6–8 h) — Containerization  
+  Resource: [Docker – Get Started](https://docs.docker.com/get-started/) — best practices.  
+  Practice (Deliverable): Containerize your ML project; validate locally and in CI.
+
+  
+- Week 4 (5–8 h) — CI/CD and Orchestration  
+  Resources: GH Actions; [Airflow](https://airflow.apache.org/) / [Prefect](https://docs.prefect.io/); [Great Expectations](https://docs.greatexpectations.io/).  
+  Practice (Deliverable): Weekly batch job with data checks and model refresh; passing CI.
+
+  
+- Week 5 (8–12 h) — Warehousing and Transformations  
+  Resource: [dbt Fundamentals](https://docs.getdbt.com/docs/get-started-dbt).  
+  Practice (Deliverable): Staging/model layer with tests/docs in dbt; exposures.
+
+  
+- Week 6 (8–12 h) — Spark and Streaming  
+  Resource: Data Engineering Zoomcamp (Spark, Kafka) — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)  
+  Practice (Deliverable): Spark ETL job; benchmark vs. pandas; simple Kafka ingestion; checkpointing.
+
+Supplementary
+- [Machine Learning Systems](https://mlsysbook.ai/)
+- [Delta Lake](https://delta.io/), [Apache Iceberg](https://iceberg.apache.org/) — Lakehouse patterns.
+
+Exit Criteria
+- From notebook to reproducible, testable, containerized service with automated data/ML pipelines.
+
+---
+
+## Specialization Tracks (optional)
+
+> Optional after Stage 10 or in parallel where relevant.
+
+<a id="b-nlp-and-llms"></a>
+### B) NLP and LLMs
+Estimated effort (total): 24–40 h
+
+Zero‑to‑One On‑Ramp
+- spaCy Course (3–6 h) — [course](https://course.spacy.io/en/)
+
+Weekly progression
+- Week B1 (10–16 h) — Transformers Fundamentals  
+  Resource: [Hugging Face Course](https://huggingface.co/learn/nlp-course/chapter1) — Ch. 1–4.  
+  Practice (Deliverable): Fine‑tune a text classifier; track metrics; export artifacts.
+
+  
+- Week B2 (6–10 h) — RAG Systems  
+  Resources: [LangChain](https://python.langchain.com/), [LlamaIndex](https://docs.llamaindex.ai/).  
+  Practice (Deliverable): RAG app on your docs; evaluation with ragas; latency/quality trade‑offs.
+
+  
+- Week B3 (6–10 h) — Evaluation and Safety  
+  Resources: [lm‑eval‑harness](https://github.com/EleutherAI/lm-eval-harness), [ragas](https://github.com/explodinggradients/ragas), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).  
+  Practice (Deliverable): Build an evaluation suite; document safety mitigations.
+
+  
+- Week B4 (2–4 h, optional) — Agents  
+  Resource: [HF Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction).  
+  Practice (Deliverable): Prototype a simple agent with a constrained toolset.
+
+Exit Criteria
+- End‑to‑end RAG with evaluation and basic safety.
+
+---
+
+<a id="c-computer-vision"></a>
+### C) Computer Vision
+Estimated effort (total): 24–40 h
+
+Zero‑to‑One On‑Ramp
+- PyTorch 60‑min Blitz (2–4 h) — [tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+
+Weekly progression
+- Week C1 (10–16 h) — Vision Foundations  
+  Resource: [torchvision tutorials](https://pytorch.org/vision/stable/index.html#tutorials).  
+  Practice (Deliverable): Train a ResNet with augmentations; evaluate with confusion matrix/AUC.
+
+  
+- Week C2 (6–10 h) — Practical DL  
+  Resources: [fastai vision](https://docs.fast.ai/vision.learner.html), [course](https://course.fast.ai/).  
+  Practice (Deliverable): Prototype multiple architectures; compare results.
+
+  
+- Week C3 (4–8 h, optional) — Theory  
+  Resource: [CS231n](http://cs231n.stanford.edu/).  
+  Practice (Deliverable): Custom augmentation/evaluation protocol and brief report.
+
+Exit Criteria
+- Fine‑tuned vision model with clear evaluation.
+
+---
+
+<a id="d-recommender-systems"></a>
+### D) Recommender Systems
+Estimated effort (total): 18–30 h
+
+Zero‑to‑One On‑Ramp
+- Recsys basics (2–4 h) — [Google Developers](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
+
+Weekly progression
+- Week D1 (6–10 h) — MF and Implicit Feedback  
+  Resource: [implicit](https://github.com/benfred/implicit).  
+  Practice (Deliverable): Train ALS/BPR on interactions; tune hyperparams; offline metrics.
+
+  
+- Week D2 (6–10 h) — Pipelines and Evaluation  
+  Resource: [Microsoft Recommenders](https://github.com/microsoft/recommenders).  
+  Practice (Deliverable): Offline eval pipeline; MAP/NDCG/Recall@k; ablations.
+
+  
+- Week D3 (6–10 h) — Ranking Metrics  
+  Resource: [Metrics overview (PDF)](https://cmci.colorado.edu/classes/INFO-4604/files/rec_sys_metrics.pdf).  
+  Practice (Deliverable): Compare candidate generators/rankers with proper ranking metrics.
+
+Exit Criteria
+- Top‑N recommender with offline eval and simple online serving.
+
+---
+
+## Capstone and Portfolio
+
+Deliverables
+- 1 Capstone (end‑to‑end): problem framing → data → modeling → deployment → docs
+- 2–3 polished mid‑size projects from earlier stages
+
+Checklist
+- Clear README, architecture diagram, environment file, tests, Makefile/CLI
+- Reproducible runs, tracked experiments, meaningful metrics, demo (app/notebook)
+
+Presentation
+- One‑page case study blog per project, emphasizing decisions, uncertainty, and impact.
+
+---
+
+## Appendix
+
+- Datasets
+  - [UCI Machine Learning Repository](https://archive.ics.uci.edu/) — Curated datasets for benchmarking.
+  - [Kaggle Datasets](https://www.kaggle.com/datasets) — Variety + public notebooks.
+  - [Google Dataset Search](https://datasetsearch.research.google.com/) — Meta‑search to find domain data.
+- Templates
+  - [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) — Standardized project structure.
+- Study tips
+  - Timeboxing, spaced repetition, “project‑first” learning — Improves retention and portfolio output.
