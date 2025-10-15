@@ -1,655 +1,1389 @@
-# 🚀 AI & Data Science Roadmap
+# AI & Data Science Roadmap
+A weekly, cumulative, and measurable plan to become a data specialist who understands the theory, can explain “why”, and delivers in practice.
 
-A rigorously structured, end-to-end learning path for everyone starting from zero: absolute beginners, career switchers, students, and working professionals studying part‑time. The aim is to graduate as a Data Science Expert grounded in descriptive and inferential statistics, mathematics, econometrics and causal inference, classical ML, deep learning, and production practices.
+What’s new in this version
+- Plain-language definitions and mini-examples added wherever terms could be unfamiliar (e.g., normalize_minmax, tokenize_basic, safe_div, idempotent, Frobenius norm, WAIC/LOO, Hausman, etc.).
+- Assignment & Pass and Self-check sections rewritten so anyone can follow them step by step.
+- Each week states clear outcomes: “By the end of this week, you will be able to…”
+- All main sources remain fully completed by the end.
 
-## Contents
-- [How to use this roadmap](#how-to-use-this-roadmap)
-- [Pacing model (time assumptions)](#pacing-model-time-assumptions)
-- [Competency outcomes (what “Data Science Expert” means)](#competency-outcomes-what-data-science-expert-means)
-- [Core Curriculum (Stages 0–10)](#core-curriculum)
-  - [Stage 0 — Orientation and Study Setup](#stage-0-orientation-and-study-setup)
-  - [Stage 1 — Mathematics for ML and Optimization](#stage-1-mathematics-for-ml-and-optimization)
-  - [Stage 2 — Probability and Statistics](#stage-2-probability-and-statistics)
-  - [Stage 3 — Programming Fundamentals (Python-first)](#stage-3-programming-fundamentals-python-first)
-  - [Stage 4 — EDA and Visualization](#stage-4-eda-and-visualization)
-  - [Stage 5 — SQL and Data Modeling](#stage-5-sql-and-data-modeling)
-  - [Stage 6 — Data Acquisition: Web Scraping and APIs](#stage-6-data-acquisition-web-scraping-and-apis)
-  - [Stage 7 — Econometrics, Causal Inference, and Time Series](#stage-7-econometrics-causal-inference-and-time-series)
-  - [Stage 8 — Classical Machine Learning](#stage-8-classical-machine-learning)
-  - [Stage 9 — Deep Learning](#stage-9-deep-learning)
-  - [Stage 10 — MLOps and Data Engineering](#stage-10-mlops-and-data-engineering)
-- [Specialization Tracks (optional)](#specialization-tracks-optional)
-  - [NLP and LLMs](#b-nlp-and-llms)
-  - [Computer Vision](#c-computer-vision)
-  - [Recommender Systems](#d-recommender-systems)
-- [Capstone and Portfolio](#capstone-and-portfolio)
-- [Appendix](#appendix)
+Key Principles
+- Order (prerequisites): Setup/Programming → Mathematics (MML) → Probability & Statistics (frequentist) → Bayesian Statistics (Statistical Rethinking) → Econometrics & Causal Inference → Classical ML → Time Series → Deep Learning → MLOps → Data Engineering → LLMs → Capstone.
+- Main sources: Authoritative, internationally recognized, and completed (every week has clickable links).
+- Weekly structure:
+  - Sources (Primary → Alternatives)
+  - What you’ll learn
+  - Role in ML/AI
+  - Time & Load
+  - By the end of this week, you will be able to…
+  - Key terms explained (plain words + tiny examples if needed)
+  - Assignment & Pass (simple steps + numeric acceptance criteria)
+  - Self-check (how to run tests, pass = ≥ 80% unless stricter noted)
 
----
+Gap Week (if you don’t pass)
+- Spend 6–10 hours only on the missing concept(s).
+- Read the exact sections again + do 2–3 small exercises + re-run tests.
+- Write a 1-page note “What I fixed and how”.
+- Proceed only after passing.
 
-## How to use this roadmap
+Testing & Hygiene (every week)
+- Keep tests/ at repo root; run tests with: `pytest -q` (or in a Notebook cell: `!pytest -q`).
+- Pass threshold: ≥ 80% tests pass (unless a stricter threshold is stated).
+- Reproducibility: environment.yml or requirements.txt, fixed random seeds.
+- Filenames: `Week-XX-Topic.ipynb` (or .py) and short `Week-XX-RESULTS.md`.
 
-- Follow stages in order; specialize after Stage 10 or alongside it if time allows.
-- Each stage includes: Objectives, Place in our goal, Prerequisites, Estimated Effort, Weekly progression (sub‑stages), Essential/Supplementary resources with “Why now”, Practice aligned to what you just learned, Exit Criteria.
-- Short, targeted on‑ramps are provided for true beginners. These are practical and scoped to avoid fatigue.
-- Evidence-based progress: Treat each week as a study cycle. Produce the listed deliverable, check Exit Criteria, and keep a learning log (what you read, built, measured).
-
----
-
-## Pacing model (time assumptions)
-
-- For everyone: beginners, switchers, students, and working professionals.
-- Estimates are net study hours per week:
-  - Light pace: 3–5 h/week
-  - Standard pace: 5–7 h/week (recommended)
-  - Intensive pace: 8–12 h/week
-
-Methodology for estimates:
-- Textbooks/notes ~8–12 pages/hour + similar time for exercises/notes.
-- Videos: runtime × 1.4–1.7 (pauses + note‑taking + small practice).
-- Docs/tutorials: quickstarts 1–3 h; deeper guides 4–8 h.
-- Projects are included where listed (typically 2–6 h).
-
-Tip: If time is tight, complete the weekly Practice (Deliverable) to keep momentum; return to deeper reading next week.
+Visual Legend
+- Primary = must complete
+- Alternatives = optional reinforcement
+- ✅ = passed this week
+- ⚠️ = add a Gap Week before continuing
 
 ---
 
-## Competency outcomes (what “Data Science Expert” means)
+## PHASE 0 — Setup & Acceleration (2 weeks)
 
-By the end, you will be able to:
-- Frame problems, design datasets/pipelines, and select appropriate statistical/ML methods.
-- Apply descriptive and inferential statistics correctly, quantify uncertainty, and design credible experiments.
-- Use econometrics and causal inference to estimate effects under assumptions; analyze panel and time‑series data with proper diagnostics and backtesting.
-- Build and evaluate classical ML and deep learning models; interpret, communicate, and document decisions.
-- Acquire data via APIs/scraping responsibly; transform with SQL; manage data quality; visualize and narrate insights.
-- Ship reproducible projects with tests, containers, experiment tracking, CI/CD, and basic orchestration.
+### Week 1 — Python + Git Basics
+- Sources  
+  - Primary: [Python Tutorial for Beginners (Full Course)](https://www.youtube.com/watch?v=rfscVS0vtbw)  
+  - Alternatives: [Kevin Sheppard — Python Introduction Notes (PDF)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf) · [SOGA-PY: Introduction to Python](https://www.geo.fu-berlin.de/en/v/soga-py/Introduction-to-Python/index.html) · [Git & GitHub — Getting Started](https://docs.github.com/en/get-started/using-git)
+- What you’ll learn: Python syntax, types, functions, modules; Git flow (branch/PR).
+- Role in ML/AI: Development backbone for all analysis/modeling.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Write simple Python functions, read/write files, and use Git branches and PRs.
 
----
+- Key terms explained
+  - normalize_minmax: Rescale numbers to [0, 1] so the smallest value becomes 0 and the largest becomes 1.
+    ```python
+    def normalize_minmax(xs):
+        lo, hi = min(xs), max(xs)
+        return [(x - lo) / (hi - lo) if hi > lo else 0.0 for x in xs]
+    ```
+  - tokenize_basic: Split a sentence into simple word tokens by removing punctuation and splitting on spaces.
+    ```python
+    import re
+    def tokenize_basic(text):
+        return re.findall(r"[A-Za-z0-9]+", text)
+    # "Hello, world!" -> ["Hello","world","1"] if numbers exist
+    ```
+  - safe_div: Division that doesn’t crash on division-by-zero (returns None or a message instead).
+    ```python
+    def safe_div(a, b):
+        return a / b if b != 0 else None
+    ```
 
-<a id="core-curriculum"></a>
-## Core Curriculum (Stages 0–10)
+- Assignment & Pass (step-by-step)
+  1) Create a GitHub repo “ai-ds-journey”.  
+  2) Add `Week-01-Python.ipynb` implementing `normalize_minmax`, `tokenize_basic`, `safe_div`, and simple file I/O (read a small text file; count lines).  
+  3) Add `README.md` with environment and run steps.  
+  4) Create a branch, open a PR, merge it.  
+  Pass: Notebook runs fully; PR merged; README clear.
 
-<a id="stage-0-orientation-and-study-setup"></a>
-### Stage 0 — Orientation and Study Setup
-Estimated effort (total): 6–10 h · Calendar: ~1–2 weeks at 3–7 h/week
-
-- Place in our goal: Establishes foundational habits (version control, environments) that make all subsequent learning reproducible and professional.
-- Objectives: Adopt effective study habits; set up dev environment.
-- Prerequisites: None
-
-Zero‑to‑One On‑Ramp (optional)
-- The Missing Semester (Shell/CLI essentials, 4–6 h skim) — [The Missing Semester](https://missing.csail.mit.edu/) — Why now: Command‑line fluency accelerates all later work.
-
-Weekly progression
-- Week 0.1 (3–5 h) — [Using venv](https://docs.python.org/3/library/venv.html) — Why now: Clean, reproducible environments from day one.  
-  Practice (Deliverable): Create and activate a venv; freeze requirements; add setup.md.
-
-  
-- Week 0.2 (3–5 h) — [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git) — Why now: Version control and collaboration are foundational.  
-  Practice (Deliverable): Initialize a repo; commit a template project; open a practice PR and merge it.
-
-Supplementary
-- [Poetry](https://python-poetry.org/docs/) or [Conda](https://docs.conda.io/en/latest/) — Optional environment managers.
-- [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) — Project scaffolding.
-
-Exit Criteria
-- You can manage Python environments and maintain a clean repository.
-
----
-
-<a id="stage-1-mathematics-for-ml-and-optimization"></a>
-### Stage 1 — Mathematics for ML and Optimization
-Estimated effort (total): 62–96 h · Calendar: ~9–16 weeks at 5–7 h/week
-
-- Place in our goal: Mathematical language and optimization tools powering ML/DL training, diagnostics, and interpretation.
-- Objectives: Linear algebra, vector calculus, optimization basics; probability primer.
-- Prerequisites: None (on‑ramp below if needed)
-
-Zero‑to‑One On‑Ramp (short; pick A or B)
-- A) Algebra/Trig quick review (2–6 h) — Complete: Algebra Review Sections 1–5; Trig up to Unit Circle  
-  [Paul’s Algebra/Trig Review](https://tutorial.math.lamar.edu/Extras/AlgebraTrigReview/AlgebraTrigIntro.aspx) — Why now: Concise refresh without a full course.
-- B) Linear algebra intuition (3–6 h) — Complete: Episodes 1, 2, 3, 4, 6, and 8  
-  [3Blue1Brown — Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) — Why now: Geometric intuition accelerates learning.
-
-Weekly progression
-- Week 1 (8–10 h) — MML Ch. 2 Linear Algebra (vectors, matrices, operations)  
-  Resource: [Mathematics for Machine Learning](https://mml-book.github.io/) — Why now: LA underpins ML representations.  
-  Practice (Deliverable): Compute dot products, norms, projections; solve 2×2/3×3 Ax=b (by hand and in NumPy); verify residuals < 1e‑8.
-
-  
-- Week 2 (6–8 h) — MML Ch. 3 Analytic Geometry (subspaces, orthogonality)  
-  Practice (Deliverable): Decompose vectors into parallel/orthogonal components; least‑squares line fit via normal equations; residual plot.
-
-  
-- Week 3–4 (10–14 h) — MML Ch. 4 Matrix Decompositions (LU, QR, eigen)  
-  Practice (Deliverable): Solve Ax=b with LU; least‑squares via QR; eigen‑decompose a small symmetric matrix; power iteration convergence plot.  
-  Reference (no practice dependency): [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) — derivatives section.
-
-  
-- Week 5 (6–8 h) — MML Ch. 5 Vector Calculus (gradients, Jacobians)  
-  Practice (Deliverable): Derive gradients for quadratic forms; verify with numerical gradients; short comparison notes.
-
-  
-- Week 6–7 (12–18 h) — Convex Optimization (Boyd & Vandenberghe)  
-  Resource: [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) — Complete: Ch. 2, 3, 4, 9 (skip advanced proofs first pass).  
-  Practice (Deliverable): Implement GD vs. momentum on convex quadratics; plot convergence; report iterations to tolerance.
-
-  
-- Week 8 (6–8 h) — Probability Primer  
-  Resource: [OpenIntro Statistics](https://www.openintro.org/book/os/) — Complete: Ch. 3 (3.1–3.5) and Ch. 4 (4.1–4.3).  
-  Practice (Deliverable): Simulate Bernoulli/Binomial/Normal; visualize LLN/CLT with code and commentary.
-
-Supplementary
-- [Trig Cheat Sheet](https://tutorial.math.lamar.edu/pdf/Trig_Cheat_Sheet.pdf) — Handy reference.
-- Think Complexity (2e) — Allen Downey — [Book page](https://greenteapress.com/wp/think-complexity/) · [PDF](https://greenteapress.com/thinkcomplexity2/thinkcomplexity2.pdf)
-
-Exit Criteria
-- Comfortable with vectors/matrices, derivatives/gradients, and basic convexity; can solve Ax=b and implement GD with empirical convergence.
+- Self-check (how to test)
+  - Create `tests/test_week01.py` with ≥ 10 tiny tests (mean, normalize, tokenize, unique set, join paths OS-safe, safe_div handles 1/0, strip+lower, sum list, read text line count, sorting).
+  - Run `pytest -q`. Pass if ≥ 8 tests are green (≥ 80%). If not, fix code and re-run.
 
 ---
 
-<a id="stage-2-probability-and-statistics"></a>
-### Stage 2 — Probability and Statistics
-Estimated effort (total): 70–120 h · Calendar: ~12–21 weeks at 5–7 h/week
+### Week 2 — Pandas for IO/Cleaning + Mini EDA
+- Sources  
+  - Primary: [Python for Data Analysis (online book)](https://wesmckinney.com/book/)  
+  - Alternatives: [PFDA (PDF)](https://ix.cs.uoregon.edu/~norris/cis407/books/python_for_data_analysis.pdf) · [Data Science and Analytics with Python (PDF)](https://mathstat.dal.ca/~brown/sound/python/P1-Data_Science_and_Analytics_with_Python_2b29.pdf)
+- What you’ll learn: Read CSV/Parquet, handle missing/outliers, reshape/join, basic plotting.
+- Role: Data quality and EDA foundation.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Load, clean, join, and visualize a dataset; write a short findings summary.
 
-- Place in our goal: Descriptive and inferential statistics for valid analysis, experimentation, and uncertainty quantification.
-- Objectives: Probability, estimation, hypothesis testing, regression/ANOVA, Bayesian basics, experimental design.
-- Prerequisites: Stage 1
+- Key terms explained
+  - Missing values (NA): Cells with no data; you can drop or impute (fill) them.
+  - Outliers: Unusually large/small points; simple rule: IQR (Q3−Q1). Points < Q1−1.5·IQR or > Q3+1.5·IQR are “outliers”.
+  - Join/Merge: Combine tables by a common key (e.g., user_id).
 
-Zero‑to‑One On‑Ramp (short)
-- StatQuest (6–12 h skim) — Complete: Descriptive, Probability Basics, P‑values/CI  
-  [StatQuest](https://www.youtube.com/c/joshstarmer) — Why now: Clear intuition helps formal courses.
+- Assignment & Pass
+  - Do: `Week-02-EDA.ipynb` on an open dataset; NA/outlier handling, type fixes, joins; ≥ 4 plots (hist, box, scatter, heatmap).  
+  - Write `Week-02-EDA.md` with 5 findings + 3 recommendations.  
+  - Provide `requirements.txt` or `environment.yml`.  
+  - Pass: Reproducible notebook; labeled plots; findings match visuals.
 
-Weekly progression
-- Week 1–2 (12–16 h) — Descriptive Statistics and Intro  
-  Resource: [OpenIntro Statistics](https://www.openintro.org/book/os/) — Ch. 1–2.  
-  Practice (Deliverable): Summary report with visuals (central tendency, spread, outliers) using a public dataset.
-
-  
-- Week 3–4 (15–25 h) — Probability Theory  
-  Resource: [STAT 414](https://online.stat.psu.edu/stat414/) — Lessons 1–10 (core).  
-  Practice (Deliverable): Monte Carlo sims (binomial, normal, exponential) with convergence plots and short write‑up.
-
-  
-- Week 5–7 (15–25 h) — Mathematical Statistics  
-  Resource: [STAT 415](https://online.stat.psu.edu/stat415/) — Lessons 1–9 (estimation/inference).  
-  Practice (Deliverable): Bootstrap CI vs. analytical CI on real data; compare coverage.
-
-  
-- Week 8–9 (12–16 h) — Regression and ANOVA  
-  Resources: [STAT 501](https://online.stat.psu.edu/stat501/) Lessons 1–8; [STAT 502](https://online.stat.psu.edu/stat502/) Lessons 1–6.  
-  Practice (Deliverable): Fit OLS; diagnostics (residuals, VIF); one/two‑way ANOVA with effect sizes.
-
-  
-- Week 10 (6–10 h) — Bayesian Primer  
-  Resource: [Think Bayes (2e)](https://allendowney.github.io/ThinkBayes2/) — Ch. 1–4.  
-  Practice (Deliverable): Beta‑Binomial A/B; posterior predictive checks; compare to frequentist test.
-
-  
-- Week 11 (6–8 h) — Experimentation  
-  Resources: A/B Testing [guide](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b), [planning](https://towardsdatascience.com/step-by-step-for-planning-an-a-b-test-ef3c93143c0b).  
-  Practice (Deliverable): Power analysis; pre‑registration; mock A/B analysis with a decision memo.
-
-Supplementary
-- STAT 484/485 (R): [course pages](https://online.stat.psu.edu/stat484-485/) — Alternative R path.
-
-Exit Criteria
-- Can design experiments, analyze results, and interpret regression models with quantified uncertainty.
+- Self-check
+  - `tests/test_week02.py`: missing rate function, IQR outlier count (on a tiny fixture), merge shape correctness.  
+  - Run `pytest -q`; pass if ≥ 80%.
 
 ---
 
-<a id="stage-3-programming-fundamentals-python-first"></a>
-### Stage 3 — Programming Fundamentals (Python-first)
-Estimated effort (total): 20–36 h · Calendar: ~3–7 weeks at 5–7 h/week
+## PHASE 1 — Mathematics (MML) with soft transitions (11 weeks) — complete MML
+Primary: [Mathematics for Machine Learning (MML)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 
-- Place in our goal: Engineering practices for reliable, testable data projects—skills hiring managers expect.
-- Objectives: Python fluency, packaging, testing, typing, notebook hygiene, core DS libs.
-- Prerequisites: Stage 0–2
+### Week 3 — Linear Algebra I: Vectors, Matrices, Linear Maps
+- Sources: Primary: [MML Ch.2](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [MIT 18.06 L1–L3](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) · [3Blue1Brown (LA intro)](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+- What you’ll learn: Matrix/vector ops, rank, linear transforms.
+- Role: Algebraic foundation for features/parameters.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Compute with matrices/vectors and visualize simple 2D transforms.
 
-Zero‑to‑One On‑Ramp
-- Automate the Boring Stuff (10–16 h skim) — Parts I–II  
-  [Automate the Boring Stuff](https://automatetheboringstuff.com/)
+- Key terms explained
+  - Rank: How many independent columns (or rows) a matrix has—capacity to transform space.
+  - Linear map: A function like y = A x that preserves addition and scalar multiplication.
 
-Weekly progression
-- Week 1 (6–10 h) — Python Basics  
-  Resource: [Official Tutorial](https://docs.python.org/3/tutorial/) or [Python Crash Course](https://www.youtube.com/watch?v=rfscVS0vtbw).  
-  Practice (Deliverable): CSV summary CLI with argparse, logging, and `--help`.
+- Assignment & Pass  
+  - Do: `Week-03-LA.ipynb` — compare `matmul/solve/pinv`; visualize rotations/scaling.  
+  - Pass: Relative solve error < 1e−6 on 100 random systems; mini-quiz ≥ 80%.
 
-  
-- Week 2 (6–10 h) — pandas/numpy  
-  Resource: [Python for Data Analysis](https://wesmckinney.com/book/) — Indexing, GroupBy, Reshaping, Time Series.  
-  Practice (Deliverable): Reusable cleaning script; benchmark vectorized vs. loops; short results table.
-
-  
-- Week 3 (6–10 h) — Packaging/testing/typing  
-  Resources: [PEP 8](https://peps.python.org/pep-0008/), [pytest](https://docs.pytest.org/).  
-  Practice (Deliverable): Package the cleaning script; add unit tests and type hints; build a wheel.
-
-  
-- Week 4 (2–6 h) — Statistical modeling intro  
-  Resource: [statsmodels](https://www.statsmodels.org/stable/index.html) — OLS tutorial + GLM overview.  
-  Practice (Deliverable): Fit OLS; produce a regression report with assumptions and limitations.
-
-Supplementary
-- Kevin Sheppard notes — [Python Notes (PDF)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2021.pdf)
-- Real Python best practices — [Collection](https://realpython.com/tutorials/best-practices/)
-
-Exit Criteria
-- Comfortable with pandas, numpy, plotting; can ship a small, tested project.
+- Self-check: `tests/test_week03.py` (rank, rotation orthonormality, identity solve). Run `pytest -q`.
 
 ---
 
-<a id="stage-4-eda-and-visualization"></a>
-### Stage 4 — EDA and Visualization
-Estimated effort (total): 15–24 h · Calendar: ~2–5 weeks at 5–7 h/week
+### Week 4 — Analytic Geometry: Norms, Projections (Idempotency)
+- Sources: Primary: [MML Ch.3](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [3Blue1Brown (projections)](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+- What you’ll learn: L1/L2/∞ norms, projections, orthogonality.
+- Role: Geometric least squares and regularization intuition.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Choose appropriate norms and verify projection behavior programmatically.
 
-- Place in our goal: Turn raw data into insight; build communication skills and data quality discipline.
-- Objectives: Data cleaning, profiling, visualization, data quality checks.
-- Prerequisites: Stage 3
+- Key terms explained
+  - Norms: Ways to measure vector size. L1 = sum |xᵢ|; L2 = sqrt(sum xᵢ²); L∞ = max |xᵢ|.
+  - Projection matrix (P): Maps any vector to the “closest point” in a subspace (like dropping a shadow on a plane).
+  - Idempotent (for P): Applying P twice is same as once (P·P = P).
+  - Frobenius norm: Size of a matrix like a vector of all its entries: `np.linalg.norm(M, 'fro')`.
 
-Zero‑to‑One On‑Ramp
-- Kaggle Data Cleaning (3–5 h) — [Kaggle Data Cleaning](https://www.kaggle.com/learn/data-cleaning)
+- Assignment & Pass
+  - Do: Visualize k-NN boundaries with L1/L2/∞ and explain differences.  
+  - Do: Projection matrix idempotency test: pass if `np.linalg.norm(P @ P - P, ord='fro') < 1e-8`.  
+  - Pass: 1–2 page “which norm when, and why?” note + idempotency test passes.
 
-Weekly progression
-- Week 1 (6–10 h) — Profiling and Cleaning  
-  Resources: [ydata‑profiling](https://ydata-profiling.ydata.ai/docs/master/), [Python for Data Analysis](https://wesmckinney.com/book/).  
-  Practice (Deliverable): Profiling report; reproducible cleaning notebook + script; checklist of issues.
-
-  
-- Week 2 (6–10 h) — Visualization  
-  Resources: [Seaborn](https://seaborn.pydata.org/), [Matplotlib](https://matplotlib.org/stable/).  
-  Practice (Deliverable): Small EDA dashboard (static/light interactive) with 3–5 key charts.
-
-  
-- Week 3 (3–4 h) — Data Quality Tests  
-  Resources: [Great Expectations](https://docs.greatexpectations.io/), [missingno](https://github.com/ResidentMario/missingno).  
-  Practice (Deliverable): Expectation suites for key tables; CI job to run them.
-
-Supplementary
-- [Altair](https://altair-viz.github.io/)
-- [Plotly](https://plotly.com/python/)
-
-Exit Criteria
-- You can profile, clean, visualize data, and communicate insights clearly.
+- Self-check: `tests/test_week04.py` (idempotency; ||x||∞ ≤ ||x||2 ≤ ||x||1 by examples). Run `pytest -q`.
 
 ---
 
-<a id="stage-5-sql-and-data-modeling"></a>
-### Stage 5 — SQL and Data Modeling
-Estimated effort (total): 15–28 h · Calendar: ~2–5 weeks at 5–7 h/week
+### Week 5 — Matrix Decompositions I: QR, Orthogonality, SVD (intuition)
+- Sources: Primary: [MML Ch.4 (first half)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [Gantmacher (PDF)](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/gantmacher1.pdf)
+- What you’ll learn: QR factorization, orthogonal matrices, SVD intuition.
+- Role: Numerical stability, high-quality least squares.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Solve least squares with QR and check SVD’s orthonormal factors.
 
-- Place in our goal: Efficient data extraction/joins and schema design for reliable analytics.
-- Objectives: Querying, joins, window functions, indexes, query plans; basic modeling.
-- Prerequisites: Stage 3–4
+- Key terms explained
+  - QR: A = Q·R with Q orthonormal (columns ⟂ and unit length), R upper-triangular—great for stable solves.
+  - SVD: A = U Σ Vᵀ; like rotating, scaling, rotating—reveals directions of most variance.
 
-Zero‑to‑One On‑Ramp
-- Khan Academy SQL (4–8 h skim) — [Khan Academy SQL](https://www.khanacademy.org/computing/computer-programming/sql)
+- Assignment & Pass  
+  - Do: QR-based LS vs `np.linalg.lstsq`; L2 difference < 1e−8. Verify U/V orthonormality.  
+  - Pass: All checks pass; code is clean and commented.
 
-Weekly progression
-- Week 1 (6–10 h) — SQL Fundamentals  
-  Resource: [SQL Tutorial](https://www.sqltutorial.org/).  
-  Practice (Deliverable): CRUD + analytical joins/subqueries; include result screenshots.
-
-  
-- Week 2 (6–10 h) — Advanced SQL  
-  Resources: PostgreSQL [Window Functions](https://www.postgresql.org/docs/current/tutorial-window.html), [EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html).  
-  Practice (Deliverable): KPI queries with windows; analyze plans; add indexes and re‑measure.
-
-  
-- Week 3 (3–8 h) — Data Modeling  
-  Resource: Kimball [overview](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/).  
-  Practice (Deliverable): Design a star schema; ER diagram + rationale.
-
-Supplementary
-- [SQLBolt](https://sqlbolt.com/), [Mode SQL](https://mode.com/sql-tutorial/), [LeetCode SQL](https://leetcode.com/studyplan/top-sql-50/)
-- Sample DBs: [Chinook](https://github.com/lerocha/chinook-database), [Northwind](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
-
-Exit Criteria
-- Optimize queries, use windows/CTEs, design simple analytical schemas.
+- Self-check: `tests/test_week05.py`.
 
 ---
 
-<a id="stage-6-data-acquisition-web-scraping-and-apis"></a>
-### Stage 6 — Data Acquisition: Web Scraping and APIs
-Estimated effort (total): 18–30 h · Calendar: ~3–6 weeks at 5–7 h/week
+### Week 6 — Matrix Decompositions II: SVD→PCA, Low-Rank Approximation
+- Sources: Primary: [MML Ch.4 (PCA section)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [3Blue1Brown (PCA)](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+- What you’ll learn: PCA from SVD, reconstruction error, elbow.
+- Role: Dimensionality reduction and denoising.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Implement PCA from scratch and justify chosen components.
 
-- Place in our goal: Reliable, ethical ingestion of external data at scale.
-- Objectives: Robust scraping, API consumption, ethics/legal, tooling choice.
-- Prerequisites: Stage 3
+- Key terms explained
+  - Reconstruction error: How much detail you lose when you keep only top-k components.
+  - Elbow method: Choose k at the “bend” of error curve (diminishing returns after that point).
 
-Zero‑to‑One On‑Ramp
-- MDN: [HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview), [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- Assignment & Pass  
+  - Do: PCA from scratch + sklearn; per-component explained variance diff < 1e−3; error vs rank plot + elbow justification.  
+  - Pass: Matching results + clear elbow rationale.
 
-Weekly progression
-- Week 1 (3–6 h) — APIs and HTTP Clients  
-  Resources: [Requests](https://requests.readthedocs.io/), [httpx](https://www.python-httpx.org/).  
-  Practice (Deliverable): Small API client with pagination/auth/retries; readme with usage.
-
-  
-- Week 2 (6–10 h) — Static Scraping  
-  Resource: [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).  
-  Practice (Deliverable): Extract structured data; persist to CSV/DB; log failures.
-
-  
-- Week 3 (6–10 h) — Dynamic Sites  
-  Resources: [Playwright](https://playwright.dev/python/), [Selenium](https://selenium-python.readthedocs.io/).  
-  Practice (Deliverable): Headless navigation; capture content behind interactions; robust waits.
-
-  
-- Week 4 (3–4 h) — Crawling and Ethics  
-  Resource: [Scrapy](https://docs.scrapy.org/en/latest/); Ethics: [robots.txt](https://www.robotstxt.org/), [guide](https://scrapeops.io/python-scrapy-playbook/python-ethical-web-scraping/).  
-  Practice (Deliverable): Spider with throttling/backoff; robots checks; output sample.
-
-Supplementary
-- Data Mining — [book info](https://www.sciencedirect.com/book/9780123814791/data-mining)
-
-Exit Criteria
-- Acquire data responsibly from static/dynamic sources.
+- Self-check: `tests/test_week06.py`.
 
 ---
 
-<a id="stage-7-econometrics-causal-inference-and-time-series"></a>
-### Stage 7 — Econometrics, Causal Inference, and Time Series
-Estimated effort (total): 36–64 h · Calendar: ~6–12 weeks at 5–7 h/week
+### Week 7 — Vector Calculus I: Multivariate Derivatives & Chain Rule
+- Sources: Primary: [MML Ch.5 (basics)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [3Blue1Brown (Calculus 1–12)](https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJu6NsY6v3v)
+- What you’ll learn: Gradient, Jacobian, Hessian; chain rule.
+- Role: Math behind backprop and optimization.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Derive gradients and verify them numerically.
 
-- Place in our goal: Move beyond correlation to credible estimation and sound forecasting. Establishes regression assumptions, identification, and temporal modeling with proper validation.
-- Objectives: OLS and diagnostics, common violations and remedies, causal identification basics (DAGs, RCTs, confounding, DiD), time‑series fundamentals (stationarity, ARIMA), and backtesting.
-- Prerequisites: Stage 2 (Statistics), Stage 3 (Programming)
+- Key terms explained
+  - Gradient: Vector of partial derivatives—direction of steepest ascent.
+  - Jacobian: Matrix of first derivatives for vector-valued functions.
+  - Hessian: Matrix of second derivatives—curvature.
 
-Weekly progression
-- Week 1 (8–12 h) — OLS Foundations and Gauss–Markov  
-  Resource: Econometrics with R — [Econometrics with R](https://www.econometrics-with-r.org/) (OLS chapters) — Why now: Open, applied route to core regression concepts.  
-  Practice (Deliverable): Fit OLS; residual diagnostics; interpret coefficients and uncertainty.
+- Assignment & Pass  
+  - Do: Gradient checks (analytical vs finite differences); relative error < 1e−5.  
+  - Pass: All functions meet the threshold.
 
-  
-- Week 2 (6–10 h) — Diagnostics, Heteroskedasticity, Multicollinearity, Autocorrelation  
-  Resources: Econometrics with R (diagnostics), statsmodels examples — [statsmodels](https://www.statsmodels.org/stable/index.html)  
-  Practice (Deliverable): Breusch–Pagan test; White/HC robust SEs; VIF check; Durbin–Watson; apply appropriate remedy and document rationale.
-
-  
-- Week 3 (6–10 h) — Causal Inference Basics (Identification, DAGs, Omitted Variable Bias)  
-  Resource: Cunningham — The Mixtape (free) — [Causal Inference: The Mixtape](https://mixtape.scunning.com/) — Why now: Modern, accessible causal toolkit.  
-  Practice (Deliverable): Simulate confounding; show bias under naive OLS; specify DAG; discuss identification strategy.
-
-  
-- Week 4 (6–10 h) — Research Designs: Matching/PS, Difference‑in‑Differences, Fixed Effects  
-  Resource: The Mixtape (DiD/FE chapters); optional: R4DS causal chapters or relevant tutorials.  
-  Practice (Deliverable): Implement a 2×2 DiD and a panel FE model on a public dataset; assumption checks; effect interpretation.
-
-  
-- Week 5 (6–10 h) — Time Series Fundamentals (Decomposition, Stationarity, ACF/PACF)  
-  Resources: FPP3 (free) — [FPP3](https://otexts.com/fpp3/); Python version — [Forecasting: The Pythonic Way](https://otexts.com/fpppy/) — Why now: Modern forecasting curriculum.  
-  Practice (Deliverable): STL decomposition; unit‑root test (ADF); seasonal strength; write diagnostic notes.
-
-  
-- Week 6 (4–12 h) — ARIMA/SARIMA and Backtesting  
-  Resources: statsmodels.tsa — [statsmodels.tsa](https://www.statsmodels.org/stable/tsa.html)  
-  Practice (Deliverable): Fit ARIMA/SARIMA; rolling‑origin backtest; report MAE/MAPE; forecast with intervals; document failure modes.
-
-Supplementary
-- Gujarati & Porter — Basic Econometrics (reference) — [Publisher](https://www.mheducation.com/highered/product/basic-econometrics-gujarati-porter/M9780073375779.html)
-- Wooldridge — Introductory Econometrics (reference) — [Cengage page](https://www.cengage.com/c/introductory-econometrics-a-modern-approach-7e-wooldridge/)
-- Lütkepohl — Multiple Time Series (advanced VAR/state space) — [Springer](https://link.springer.com/book/10.1007/978-3-540-27752-1)
-
-Exit Criteria
-- Diagnose and remedy OLS assumption violations; articulate identification assumptions; implement DiD/FE; build and evaluate ARIMA forecasts with rolling backtests.
+- Self-check: `tests/test_week07.py`.
 
 ---
 
-<a id="stage-8-classical-machine-learning"></a>
-### Stage 8 — Classical Machine Learning
-Estimated effort (total): 30–50 h · Calendar: ~5–9 weeks at 5–7 h/week
+### Week 8 — Vector Calculus II: Bridge to Autodiff
+- Sources: Primary: [MML Ch.5 (advanced)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [PyTorch Autograd](https://pytorch.org/docs/stable/autograd.html) · [JAX](https://jax.readthedocs.io/en/latest/)
+- What you’ll learn: Manual derivatives vs autograd; stability notes.
+- Role: Trusting your training loop.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Verify autograd output matches your manual gradients.
 
-- Place in our goal: Baseline modeling toolbox and evaluation mindset across domains.
-- Objectives: Supervised/unsupervised basics, pipelines, validation, metrics, interpretation.
-- Prerequisites: Stage 1–2–3–4
+- Key terms explained
+  - Autograd: Library feature computing derivatives automatically via chain rule.
 
-Zero‑to‑One On‑Ramp
-- Kaggle Intro to ML (4–6 h) — [course](https://www.kaggle.com/learn/intro-to-machine-learning)  
-- StatQuest ML (6–12 h skim) — [playlist](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+- Assignment & Pass  
+  - Do: For log-loss, softmax CE, L2 regularization—max difference (manual vs autograd) < 1e−6.  
+  - Pass: Thresholds met; short commentary.
 
-Weekly progression
-- Week 1 (12–18 h) — Supervised Learning  
-  Resource: [scikit‑learn](https://scikit-learn.org/stable/) — Pipelines, preprocessing, linear/logistic/tree/ensembles.  
-  Practice (Deliverable): Full pipeline with ColumnTransformer + CV; baseline and tuned models; model card.
-
-  
-- Week 2 (6–10 h) — Model Selection and Validation  
-  Resource: scikit‑learn CV/metrics.  
-  Practice (Deliverable): Nested CV vs. holdout; report metric variance and uncertainty.
-
-  
-- Week 3 (5–8 h) — Interpretability  
-  Resource: [Interpretable ML](https://christophm.github.io/interpretable-ml-book/).  
-  Practice (Deliverable): Permutation importance, PDP/ICE, SHAP; interpretation notes and caveats.
-
-  
-- Week 4 (3–6 h) — Missing Data  
-  Resource: [FIMD](https://stefvanbuuren.name/fimd/).  
-  Practice (Deliverable): Compare simple imputations vs. MICE; downstream performance and bias discussion.
-
-  
-- Week 5 (4–8 h) — Unsupervised Basics (incl. PCA)  
-  Resource: scikit‑learn clustering/dimensionality reduction.  
-  Practice (Deliverable): PCA explained variance; customer clustering; silhouette score; UMAP visualization.  
-  Optional tie‑in: MML Ch. 10 “Principal Component Analysis” for deeper LA derivations.
-
-Essential text
-- ISLR/ISLRv2 — Complete: Ch. 2–6 (core); skim Ch. 8 (trees) and Ch. 10 (unsupervised)  
-  [Introduction to Statistical Learning](https://www.statlearning.com/)
-
-Supplementary
-- [mlcourse.ai](https://mlcourse.ai/book/index.html), [SHAP](https://shap.readthedocs.io/en/latest/)
-
-Exit Criteria
-- Ship a reproducible ML pipeline with meaningful evaluation and documented decisions.
+- Self-check: `tests/test_week08.py`.
 
 ---
 
-<a id="stage-9-deep-learning"></a>
-### Stage 9 — Deep Learning
-Estimated effort (total): 40–70 h · Calendar: ~7–11 weeks at 5–7 h/week
+### Week 9 — Probability & Distributions (bridge to stats)
+- Sources: Primary: [MML Ch.6](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [STAT 414 Units 1–2](https://online.stat.psu.edu/stat414/)
+- What you’ll learn: Basic distributions, expectation/variance, independence, Bayes intuition.
+- Role: Warm start for stats.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Simulate CLT and explain it with simple plots.
 
-- Place in our goal: Modern neural architectures and training practices for vision/NLP and beyond.
-- Objectives: Neural nets, CNN/RNN basics, modern training, transfer learning, Transformers.
-- Prerequisites: Stage 1–2–3–8
+- Key terms explained
+  - CLT (Central Limit Theorem): Averages of many samples tend to be normally distributed.
 
-Zero‑to‑One On‑Ramp
-- fast.ai (audit 6–10 h skim) — [course](https://course.fast.ai/) — first 3 lessons  
-- Kaggle Intro to DL (3–5 h) — [course](https://www.kaggle.com/learn/intro-to-deep-learning)
+- Assignment & Pass  
+  - Do: CLT simulations; convergence plots + 1-page plain-language interpretation.  
+  - Pass: Correct interpretation; reproducible code.
 
-Weekly progression
-- Week 1 (12–18 h) — DL Fundamentals  
-  Resources: [D2L](https://d2l.ai/) Ch. 2–6; [PyTorch Tutorials](https://pytorch.org/tutorials/) “Learn the Basics”.  
-  Practice (Deliverable): Implement an MLP; add regularization/schedulers; track metrics in a table.
-
-  
-- Week 2 (8–12 h) — CNN Training  
-  Practice (Deliverable): Train a CNN on CIFAR‑10; experiment with augmentation and mixup/cutmix; compare runs with logged metrics.
-
-  
-- Week 3 (6–8 h) — Sequence Models  
-  Practice (Deliverable): LSTM baseline on a sequence dataset; compare to a classical baseline; error analysis.
-
-  
-- Week 4 (6–8 h) — Transformers Intro  
-  Resource: [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/).  
-  Practice (Deliverable): Fine‑tune a small Transformer on text classification; evaluate; save artifacts.
-
-  
-- Week 5 (8–14 h) — Transfer Learning Project  
-  Practice (Deliverable): End‑to‑end project with dataset prep, training, evaluation, and a demo notebook/app.
-
-Supplementary
-- [Deep Learning (Goodfellow et al.)](https://www.deeplearningbook.org/), [CS231n](http://cs231n.stanford.edu/), [fast.ai](https://course.fast.ai/)
-
-Exit Criteria
-- Train, debug, and deploy a DL model with solid metrics and documentation.
+- Self-check: `tests/test_week09.py`.
 
 ---
 
-<a id="stage-10-mlops-and-data-engineering"></a>
-### Stage 10 — MLOps and Data Engineering
-Estimated effort (total): 40–60 h · Calendar: ~6–10 weeks at 5–7 h/week
+### Week 10 — Continuous Optimization I: Convexity, Gradient Descent
+- Sources: Primary: [MML Ch.7 (basics)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [Boyd & Vandenberghe Ch.1–2](https://web.stanford.edu/~boyd/cvxbook/)
+- What you’ll learn: Convexity/strong convexity; GD convergence.
+- Role: Training dynamics and LR selection.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Train logistic regression from scratch and compare LR schedules.
 
-- Place in our goal: Take projects to production with reproducibility, automation, and scalable data pipelines.
-- Objectives: Experiment tracking, model/data versioning, containers, CI/CD, orchestration; batch/stream pipelines, warehouses, transformations, Spark.
-- Prerequisites: Stage 8–9
+- Key terms explained
+  - Convex function: Any line segment between two points on the graph lies above the graph—no “local” traps.
+  - Learning rate (LR) schedule: How LR changes over time (constant/decay/cosine).
 
-Zero‑to‑One On‑Ramp
-- Docker 101 (2–4 h) — [tutorial](https://www.docker.com/101-tutorial/), GH Actions Quickstart (1–2 h) — [guide](https://docs.github.com/en/actions/quickstart)
+- Assignment & Pass  
+  - Do: Train with constant/decay/cosine LR; best ROC-AUC improves ≥ +0.03 vs worst.  
+  - Pass: Plots + short report.
 
-Weekly progression
-- Week 1 (6–8 h) — Experiment Tracking  
-  Resource: [MLflow](https://mlflow.org/) — Tracking + Models + Registry.  
-  Practice (Deliverable): Track runs/artifacts; compare experiments; promote best model to registry.
-
-  
-- Week 2 (6–8 h) — Data/Model Versioning  
-  Resource: [DVC](https://dvc.org/) — Get Started + Pipelines + Remote.  
-  Practice (Deliverable): Version datasets; create pipelines; reproduce results end‑to‑end.
-
-  
-- Week 3 (6–8 h) — Containerization  
-  Resource: [Docker – Get Started](https://docs.docker.com/get-started/) — best practices.  
-  Practice (Deliverable): Containerize your ML project; validate locally and in CI.
-
-  
-- Week 4 (5–8 h) — CI/CD and Orchestration  
-  Resources: GH Actions; [Airflow](https://airflow.apache.org/) / [Prefect](https://docs.prefect.io/); [Great Expectations](https://docs.greatexpectations.io/).  
-  Practice (Deliverable): Weekly batch job with data checks and model refresh; passing CI.
-
-  
-- Week 5 (8–12 h) — Warehousing and Transformations  
-  Resource: [dbt Fundamentals](https://docs.getdbt.com/docs/get-started-dbt).  
-  Practice (Deliverable): Staging/model layer with tests/docs in dbt; exposures.
-
-  
-- Week 6 (8–12 h) — Spark and Streaming  
-  Resource: Data Engineering Zoomcamp (Spark, Kafka) — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)  
-  Practice (Deliverable): Spark ETL job; benchmark vs. pandas; simple Kafka ingestion; checkpointing.
-
-Supplementary
-- [Machine Learning Systems](https://mlsysbook.ai/)
-- [Delta Lake](https://delta.io/), [Apache Iceberg](https://iceberg.apache.org/) — Lakehouse patterns.
-
-Exit Criteria
-- From notebook to reproducible, testable, containerized service with automated data/ML pipelines.
+- Self-check: `tests/test_week10.py`.
 
 ---
 
-## Specialization Tracks (optional)
+### Week 11 — Continuous Optimization II: Momentum, Adam(W)
+- Sources: Primary: [MML Ch.7 (advanced)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) · Alt: [Deep Learning (Optimization)](https://www.deeplearningbook.org/)
+- What you’ll learn: Momentum, Nesterov, Adam/AdamW; conditioning, scaling.
+- Role: Stable/faster training.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Show statistically significant optimizer improvements across seeds.
 
-> Optional after Stage 10 or in parallel where relevant.
+- Key terms explained
+  - Momentum: Adds fraction of previous update to smooth descent.
+  - AdamW: Adaptive learning with decoupled weight decay—robust default.
 
-<a id="b-nlp-and-llms"></a>
-### B) NLP and LLMs
-Estimated effort (total): 24–40 h
+- Assignment & Pass  
+  - Do: Compare GD vs Momentum vs AdamW (5 seeds); best optimizer’s improvement has t-test p<0.05.  
+  - Pass: Significance shown + brief methods note.
 
-Zero‑to‑One On‑Ramp
-- spaCy Course (3–6 h) — [course](https://course.spacy.io/en/)
-
-Weekly progression
-- Week B1 (10–16 h) — Transformers Fundamentals  
-  Resource: [Hugging Face Course](https://huggingface.co/learn/nlp-course/chapter1) — Ch. 1–4.  
-  Practice (Deliverable): Fine‑tune a text classifier; track metrics; export artifacts.
-
-  
-- Week B2 (6–10 h) — RAG Systems  
-  Resources: [LangChain](https://python.langchain.com/), [LlamaIndex](https://docs.llamaindex.ai/).  
-  Practice (Deliverable): RAG app on your docs; evaluation with ragas; latency/quality trade‑offs.
-
-  
-- Week B3 (6–10 h) — Evaluation and Safety  
-  Resources: [lm‑eval‑harness](https://github.com/EleutherAI/lm-eval-harness), [ragas](https://github.com/explodinggradients/ragas), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).  
-  Practice (Deliverable): Build an evaluation suite; document safety mitigations.
-
-  
-- Week B4 (2–4 h, optional) — Agents  
-  Resource: [HF Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction).  
-  Practice (Deliverable): Prototype a simple agent with a constrained toolset.
-
-Exit Criteria
-- End‑to‑end RAG with evaluation and basic safety.
+- Self-check: `tests/test_week11.py`.
 
 ---
 
-<a id="c-computer-vision"></a>
-### C) Computer Vision
-Estimated effort (total): 24–40 h
+### Week 12 — Math Mini-Project & Gate to Stats
+- Sources: Primary: [MML (relevant sections)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
+- What you’ll learn: Standardize → PCA → Logistic → Optimizer comparisons.
+- Role: Confirms stats readiness.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Deliver a reproducible pipeline connecting math to ML.
 
-Zero‑to‑One On‑Ramp
-- PyTorch 60‑min Blitz (2–4 h) — [tutorial](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
+- Key terms explained
+  - Standardization: Make each feature mean 0, std 1.
+  - ROC-AUC: Probability the model ranks a random positive above a random negative.
 
-Weekly progression
-- Week C1 (10–16 h) — Vision Foundations  
-  Resource: [torchvision tutorials](https://pytorch.org/vision/stable/index.html#tutorials).  
-  Practice (Deliverable): Train a ResNet with augmentations; evaluate with confusion matrix/AUC.
+- Assignment & Pass (all required)  
+  - Do: ROC-AUC ≥ 0.80; pass 20-question quiz (rank/QR/SVD/CLT/convexity) with ≥ 80%; README documents data/steps/results.  
+  - Pass: ✅ All criteria met; otherwise ⚠️ Gap Week.
 
-  
-- Week C2 (6–10 h) — Practical DL  
-  Resources: [fastai vision](https://docs.fast.ai/vision.learner.html), [course](https://course.fast.ai/).  
-  Practice (Deliverable): Prototype multiple architectures; compare results.
+- Self-check: `tests/test_week12.py`.
 
-  
-- Week C3 (4–8 h, optional) — Theory  
-  Resource: [CS231n](http://cs231n.stanford.edu/).  
-  Practice (Deliverable): Custom augmentation/evaluation protocol and brief report.
-
-Exit Criteria
-- Fine‑tuned vision model with clear evaluation.
+Status: MML completed ✅
 
 ---
 
-<a id="d-recommender-systems"></a>
-### D) Recommender Systems
-Estimated effort (total): 18–30 h
+## PHASE 2 — Probability & Statistics (frequentist, 12 weeks) — complete All of Statistics
+Primary: [All of Statistics (AoS)](https://link.springer.com/book/10.1007/978-0-387-21736-9)
 
-Zero‑to‑One On‑Ramp
-- Recsys basics (2–4 h) — [Google Developers](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
+### Week 13 — Probability Basics (AoS Ch.1–2)
+- Sources: Primary: [AoS Ch.1–2](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [Casella & Berger Ch.1–2 (PDF)](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) · [STAT 414 (Units 1–2)](https://online.stat.psu.edu/stat414/)
+- What you’ll learn: Probability spaces, conditional probability, Bayes, independence.
+- Role: Core uncertainty calculus.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Compute conditional probabilities and apply Bayes’ rule.
 
-Weekly progression
-- Week D1 (6–10 h) — MF and Implicit Feedback  
-  Resource: [implicit](https://github.com/benfred/implicit).  
-  Practice (Deliverable): Train ALS/BPR on interactions; tune hyperparams; offline metrics.
+- Key terms explained
+  - Bayes’ rule: Update belief with new evidence: Posterior ∝ Likelihood × Prior.
 
-  
-- Week D2 (6–10 h) — Pipelines and Evaluation  
-  Resource: [Microsoft Recommenders](https://github.com/microsoft/recommenders).  
-  Practice (Deliverable): Offline eval pipeline; MAP/NDCG/Recall@k; ablations.
-
-  
-- Week D3 (6–10 h) — Ranking Metrics  
-  Resource: [Metrics overview (PDF)](https://cmci.colorado.edu/classes/INFO-4604/files/rec_sys_metrics.pdf).  
-  Practice (Deliverable): Compare candidate generators/rankers with proper ranking metrics.
-
-Exit Criteria
-- Top‑N recommender with offline eval and simple online serving.
+- Assignment & Pass: Simulate Bayes updating; analytical vs simulation difference < 0.01.  
+- Self-check: `tests/test_week13.py`.
 
 ---
 
-## Capstone and Portfolio
+### Week 14 — Distributions & Expectations (AoS Ch.3–4)
+- Sources: Primary: [AoS Ch.3–4](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [Think Stats Ch.2–4 (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
+- What you’ll learn: Discrete/continuous distributions, moments, transforms.
+- Role: Foundations for losses/metrics.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Simulate common distributions and verify their moments.
 
-Deliverables
-- 1 Capstone (end‑to‑end): problem framing → data → modeling → deployment → docs
-- 2–3 polished mid‑size projects from earlier stages
+- Key terms explained
+  - Expectation/Variance: Average value; average squared deviation from the mean.
 
-Checklist
-- Clear README, architecture diagram, environment file, tests, Makefile/CLI
-- Reproducible runs, tracked experiments, meaningful metrics, demo (app/notebook)
-
-Presentation
-- One‑page case study blog per project, emphasizing decisions, uncertainty, and impact.
+- Assignment & Pass: Moment validation via simulation (±0.02).  
+- Self-check: `tests/test_week14.py`.
 
 ---
 
-## Appendix
+### Week 15 — Multivariate Distributions & Dependence (AoS Ch.5–6)
+- Sources: Primary: [AoS Ch.5–6](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 414 (Units 3–4)](https://online.stat.psu.edu/stat414/)
+- What you’ll learn: Joint/conditional distributions, covariance/correlation.
+- Role: Dependence structure for features.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Build a correlation heatmap and interpret it.
 
-- Datasets
-  - [UCI Machine Learning Repository](https://archive.ics.uci.edu/) — Curated datasets for benchmarking.
-  - [Kaggle Datasets](https://www.kaggle.com/datasets) — Variety + public notebooks.
-  - [Google Dataset Search](https://datasetsearch.research.google.com/) — Meta‑search to find domain data.
-- Templates
-  - [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/) — Standardized project structure.
-- Study tips
-  - Timeboxing, spaced repetition, “project‑first” learning — Improves retention and portfolio output.
+- Key terms explained
+  - Covariance/Correlation: How two variables move together; correlation is scaled to [-1, 1].
+
+- Assignment & Pass: Multivariate simulation + heatmap + interpretation.  
+- Self-check: `tests/test_week15.py`.
+
+---
+
+### Week 16 — Sampling, LLN, CLT (AoS Ch.7–8)
+- Sources: Primary: [AoS Ch.7–8](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [C&B (asymptotics) (PDF)](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf)
+- What you’ll learn: Sampling distributions, LLN, CLT.
+- Role: Basis for CIs and tests.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Show empirically that sample means converge to normality.
+
+- Key terms explained
+  - LLN: With more samples, sample mean approaches true mean.
+
+- Assignment & Pass: CLT convergence; KS test p>0.05 at adequate n.  
+- Self-check: `tests/test_week16.py`.
+
+---
+
+### Week 17 — Estimation I: Unbiasedness, Sufficiency, UMVU (AoS Ch.9–10)
+- Sources: Primary: [AoS Ch.9–10](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 415 (Estimation)](https://online.stat.psu.edu/stat415/)
+- What you’ll learn: Unbiasedness, efficiency, sufficiency, UMVU.
+- Role: Evaluating estimators.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Compare estimators via simulated bias and MSE tables.
+
+- Key terms explained
+  - Unbiased: On average, hits the true value.  
+  - UMVU: Best (smallest variance) among unbiased estimators.
+
+- Assignment & Pass: MSE comparisons + “which/why” justification.  
+- Self-check: `tests/test_week17.py`.
+
+---
+
+### Week 18 — Estimation II: MLE & Asymptotics (AoS Ch.11–12)
+- Sources: Primary: [AoS Ch.11–12](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [Think Stats (MLE examples)](https://greenteapress.com/thinkstats/thinkstats.pdf)
+- What you’ll learn: MLE, regularity, asymptotic normality.
+- Role: Likelihood-based inference and CI building.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Fit MLEs numerically and compare with closed forms.
+
+- Key terms explained
+  - MLE: Parameter values that maximize the likelihood of observed data.
+
+- Assignment & Pass: `scipy.optimize` MLE; analytical vs numeric difference < 1e−2.  
+- Self-check: `tests/test_week18.py`.
+
+---
+
+### Week 19 — Hypothesis Testing & Power (AoS Ch.13–14)
+- Sources: Primary: [AoS Ch.13–14](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 415 (Testing)](https://online.stat.psu.edu/stat415/)
+- What you’ll learn: Neyman–Pearson, power, Type I/II errors.
+- Role: Experiment design and model comparisons.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Draw power curves and compute sample sizes.
+
+- Key terms explained
+  - Power: Probability of detecting a real effect.  
+  - Type I/II: False positive / false negative.
+
+- Assignment & Pass: Power curves + sample size plan.  
+- Self-check: `tests/test_week19.py`.
+
+---
+
+### Week 20 — Linear Regression (statistical framing) (AoS Ch.18)
+- Sources: Primary: [AoS Ch.18](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 500 (Regression)](https://online.stat.psu.edu/stat500/) · [statsmodels (Linear Models)](https://www.statsmodels.org/dev/stats.html)
+- What you’ll learn: OLS estimation, assumptions, diagnostics.
+- Role: Foundation of supervised learning.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Fit OLS and interpret QQ, VIF, residual plots.
+
+- Key terms explained
+  - QQ-plot: Checks normality of residuals.  
+  - VIF: Detects multicollinearity; high VIF → redundant predictors.
+
+- Assignment & Pass: OLS + diagnostics report.  
+- Self-check: `tests/test_week20.py`.
+
+---
+
+### Week 21 — ANOVA & Experimental Design (AoS relevant)
+- Sources: Primary: [AoS (ANOVA/Design sections)](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 502 (ANOVA & DOE)](https://online.stat.psu.edu/stat502/) · [A/B Testing Guide](https://vkteam.medium.com/practitioners-guide-to-statistical-tests-ed2d580ef04f#1e3b)
+- What you’ll learn: ANOVA logic, blocking, power.
+- Role: Product/policy experiments.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Design an A/B test with justified sample size and error control.
+
+- Key terms explained
+  - ANOVA: Tests if group means differ.  
+  - Blocking: Group similar units to reduce noise.
+
+- Assignment & Pass: A/B design + power + false positive control notes.  
+- Self-check: `tests/test_week21.py`.
+
+---
+
+### Week 22 — Logistic Regression & Categorical Data (GLM bridge)
+- Sources: Primary: [AoS (Logistic/GLM sections)](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 504 (Categorical)](https://online.stat.psu.edu/stat504/)
+- What you’ll learn: Logistic regression, odds ratios, calibration.
+- Role: Binary classification foundation.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Fit/assess a logistic model (ROC/PR-AUC, calibration).
+
+- Key terms explained
+  - Odds ratio: How odds change per unit increase in a predictor.  
+  - Calibration: Do predicted probabilities match observed frequencies?
+
+- Assignment & Pass: Logistic model + calibration curve + ROC/PR-AUC.  
+- Self-check: `tests/test_week22.py`.
+
+---
+
+### Week 23 — Multivariate Analysis (PCA)
+- Sources: Primary: [AoS (PCA/multivariate sections)](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 505 (Multivariate)](https://online.stat.psu.edu/stat505/)
+- What you’ll learn: PCA, covariance structure, visualization.
+- Role: Dimensionality reduction for EDA/modeling.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Run PCA and interpret loadings/plots.
+
+- Key terms explained
+  - Loadings: How strongly each original variable influences a component.
+
+- Assignment & Pass: PCA plots + short interpretation.  
+- Self-check: `tests/test_week23.py`.
+
+---
+
+### Week 24 — Sampling & Frequentist Mini-Project
+- Sources: Primary: [AoS (Sampling sections)](https://link.springer.com/book/10.1007/978-0-387-21736-9) · Alt: [STAT 506 (Sampling Theory)](https://online.stat.psu.edu/stat506/)
+- What you’ll learn: Sampling designs; bias; weighting intuition.
+- Role: Data collection bias control.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Deliver a complete frequentist analysis with clear assumptions.
+
+- Key terms explained
+  - Sampling weights: Adjust for unequal sampling probabilities.
+
+- Assignment & Pass (gate)  
+  - Do: 4–6 page report + code—experiment/analysis/CI/test integrated; explain regression assumptions/diagnostics.  
+  - Pass: Reproducible and sound; else ⚠️ Gap Week.
+
+- Self-check: `tests/test_week24.py`.
+
+Status: All of Statistics completed ✅
+
+---
+
+## PHASE 2B — Bayesian Statistics (6 weeks) — complete Statistical Rethinking (2e)
+Primary: [Statistical Rethinking (book site)](https://xcelab.net/rm/statistical-rethinking/) · [Lectures](https://www.youtube.com/@rmcelreath)  
+Tooling: R+Stan (brms/rstanarm) or Python+PyMC ([PyMC docs](https://www.pymc.io/projects/docs/en/stable/)). Optional: [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
+
+### Week 25 — Bayesian Foundations (SR Ch.1–2)
+- What you’ll learn: Bayesian vs frequentist; priors/posteriors; generative mindset.
+- Role: Foundation for Bayesian modeling.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Compute simple posteriors and compare priors.
+
+- Key terms explained
+  - Prior/Posterior: Belief before/after seeing data.
+  - Conjugate prior: Prior that keeps posterior in the same family (easy math).
+
+- Assignment & Pass: Conjugate + grid approx (binomial); ≥ 3 priors; match analytic/hi-precision refs (explain tolerance).  
+- Self-check: `tests/test_week25.py`.
+
+---
+
+### Week 26 — Bayesian Regression & Posterior Predictive Checks (SR Ch.3–4)
+- What you’ll learn: Bayesian linear regression; priors on β/σ; PPC.
+- Role: Regression under uncertainty.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Fit BLR, run PPCs, and contrast with OLS.
+
+- Key terms explained
+  - Posterior Predictive Check (PPC): Simulate from the model and compare to observed data.
+
+- Assignment & Pass: Fit BLR; PPC plots; BLR vs OLS comparison with uncertainty.  
+- Self-check: `tests/test_week26.py`.
+
+---
+
+### Week 27 — Regularization & Model Comparison (SR Ch.5–6)
+- What you’ll learn: Priors as regularizers; WAIC/LOO; overfitting control.
+- Role: Principled model selection.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Compare ≥ 3 models via WAIC/LOO and justify choice.
+
+- Key terms explained
+  - WAIC/LOO: Bayesian criteria to compare models by out-of-sample fit.
+
+- Assignment & Pass: WAIC/LOO table + PPC sanity; short justification.  
+- Self-check: `tests/test_week27.py`.
+
+---
+
+### Week 28 — Categorical Outcomes (SR Ch.7–8)
+- What you’ll learn: (Ordered) logistic models; priors; calibration; credible intervals.
+- Role: Bayesian classification.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Fit Bayesian logistic and report calibrated probabilities.
+
+- Key terms explained
+  - Credible interval: Bayesian interval for the parameter with, say, 95% probability mass.
+
+- Assignment & Pass: Fit model; calibration curve with credible intervals; posterior odds ratios.  
+- Self-check: `tests/test_week28.py`.
+
+---
+
+### Week 29 — Multilevel/Hierarchical Models (SR Ch.9–10)
+- What you’ll learn: Partial pooling; varying intercepts/slopes; shrinkage.
+- Role: Robust grouped estimates.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Build a hierarchical model and show shrinkage benefits.
+
+- Key terms explained
+  - Partial pooling: Groups borrow strength; extreme estimates shrink toward overall mean.
+
+- Assignment & Pass: Compare no pooling vs multilevel; interpret group posteriors.  
+- Self-check: `tests/test_week29.py`.
+
+---
+
+### Week 30 — Causal Graphs & Bayesian Causal Thinking (SR Ch.11)
+- What you’ll learn: DAGs, d-separation, backdoor/frontdoor.
+- Role: Bridge to econometric identification.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Draw DAGs, find adjustment sets, and simulate bias removal.
+
+- Key terms explained
+  - DAG: Directed Acyclic Graph representing causal assumptions.
+  - Backdoor criterion: Which variables to adjust for to block confounding paths.
+
+- Assignment & Pass: DAG + adjustment set(s); simulate confounding vs adjusted.  
+- Self-check: `tests/test_week30.py`.
+
+Status: Statistical Rethinking completed ✅
+
+---
+
+## PHASE 3 — Econometrics & Causal Inference (16 weeks) — complete Stock & Watson
+Primary: [Introduction to Econometrics (Stock & Watson)](https://www.pearson.com/en-us/subject-catalog/p/introduction-to-econometrics/P200000003546/9780136647991)  
+Alternatives: [Wooldridge](https://www.cengage.com/c/introductory-econometrics-a-modern-approach-7e-wooldridge/) · [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) · [Greene (PDF)](https://www.ctanujit.org/uploads/2/5/3/9/25393293/_econometric_analysis_by_greence.pdf) · [Mostly Harmless Econometrics (MHE)](https://press.princeton.edu/books/hardcover/9780691120355/mostly-harmless-econometrics) · [Mixtape](https://mixtape.scunning.com/)
+
+### Week 31 — OLS & Gauss–Markov (bridge from stats)
+- What you’ll learn: BLUE, assumptions, interpretation.
+- Role: Parametric inference backbone.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Fit/interpret OLS with uncertainty (CI/tests).
+
+- Key terms explained
+  - Gauss–Markov: Under assumptions, OLS is the “best” linear unbiased estimator.
+
+- Assignment & Pass: OLS + CI/tests + effect sizes; clear narrative.  
+- Self-check: `tests/test_week31.py`.
+
+---
+
+### Week 32 — Diagnostics: Heteroskedasticity, Autocorrelation, Robust SE
+- What you’ll learn: HC-robust; autocorrelation tests/fixes.
+- Role: Valid inference under violations.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Use robust/clustered SE and explain differences.
+
+- Key terms explained
+  - Heteroskedasticity: Error variance changes with predictors.  
+  - Robust/Clustered SE: Fix SE estimates under such issues.
+
+- Assignment & Pass: Refit with HC/cluster-robust; comparison note.  
+- Self-check: `tests/test_week32.py`.
+
+---
+
+### Week 33 — Specification: Multicollinearity, OVB, Interactions
+- What you’ll learn: VIF, omitted variable bias, interactions/dummies.
+- Role: Correct model specification and interpretation.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Detect/fix misspecification and justify changes.
+
+- Key terms explained
+  - Omitted Variable Bias (OVB): Leaving out a relevant variable biases estimates.
+
+- Assignment & Pass: Spec table + diagnostics-based decision.  
+- Self-check: `tests/test_week33.py`.
+
+---
+
+### Week 34 — GLM Bridge Refresh (soften transition)
+- What you’ll learn: Exponential family, links, MLE recap.
+- Role: Gentle entry to Logit/Probit.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Choose a link and explain why.
+
+- Key terms explained
+  - Link function: Connects linear predictors to non-linear outcomes (e.g., logit).
+
+- Assignment & Pass: Small GLMs; short link selection note.  
+- Self-check: `tests/test_week34.py`.
+
+---
+
+### Week 35 — Binary Response: Logit/Probit
+- What you’ll learn: MLE, marginal effects, calibration; ROC/PR-AUC.
+- Role: Econometric classification.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Fit Logit/Probit; report marginal effects and calibration.
+
+- Key terms explained
+  - Marginal effect: Change in probability for a small change in a predictor.
+
+- Assignment & Pass: Fit both; marginal effects table; calibration report.  
+- Self-check: `tests/test_week35.py`.
+
+---
+
+### Week 36 — OLS Asymptotics & Consistency; Motivation for IV
+- What you’ll learn: Endogeneity, OVB, consistency.
+- Role: Why instruments are needed.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Simulate OVB and show bias; motivate IV.
+
+- Key terms explained
+  - Endogeneity: Predictor correlates with error (e.g., omitted confounder).
+
+- Assignment & Pass: OVB simulation + written motivation for IV.  
+- Self-check: `tests/test_week36.py`.
+
+---
+
+### Weeks 37–38 — Instrumental Variables & 2SLS
+- What you’ll learn: Instrument validity/relevance; 2SLS; weak IV tests.
+- Role: Identification with endogeneity.
+- Time & Load: 2×12–14h
+- By the end of these weeks, you will be able to…  
+  - Estimate 2SLS and assess instrument strength.
+
+- Key terms explained
+  - First-stage F-stat (≥ 10 rule-of-thumb): Detects weak instruments.  
+  - Over-identification test: Checks if multiple instruments agree.
+
+- Assignment & Pass: First-stage F ≥ 10; over-ID test + interpretation; discuss validity.  
+- Self-check: `tests/test_week37.py`, `tests/test_week38.py`.
+
+---
+
+### Weeks 39–40 — Panel Data I–II: FE/RE, Hausman, Cluster-Robust
+- What you’ll learn: FE/RE assumptions; Hausman; clustered SE.
+- Role: Control unobserved heterogeneity.
+- Time & Load: 2×12–14h
+- By the end of these weeks, you will be able to…  
+  - Choose FE/RE (Hausman), justify clustered SE.
+
+- Key terms explained
+  - FE (Fixed Effects): Controls unit-specific constants; RE (Random Effects): Assumes random unit effects uncorrelated with regressors.  
+  - Hausman test: Decides between FE and RE.
+
+- Assignment & Pass: FE vs RE + Hausman + cluster-robust; decision note.  
+- Self-check: `tests/test_week39.py`, `tests/test_week40.py`.
+
+---
+
+### Week 41 — Difference-in-Differences & Event Studies
+- What you’ll learn: Parallel trends; event-study plots.
+- Role: Natural experiments.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Test pre-trends and present an event-study figure.
+
+- Key terms explained
+  - Parallel trends: Treated vs control would track similarly absent treatment.
+
+- Assignment & Pass: Pre-trend test; sensitivity variants; event-study plot.  
+- Self-check: `tests/test_week41.py`.
+
+---
+
+### Week 42 — Regression Discontinuity
+- What you’ll learn: Cutoffs; local polynomials; bandwidth sensitivity.
+- Role: Strong quasi-experiment.
+- Time & Load: 12–14h
+- By the end of this week, you will be able to…  
+  - Fit local polynomials and report bandwidth sensitivity.
+
+- Key terms explained
+  - Bandwidth: How close to the cutoff you look; smaller → less bias but more noise.
+
+- Assignment & Pass: Sensitivity table/plot; robustness checks.  
+- Self-check: `tests/test_week42.py`.
+
+---
+
+### Week 43 — Time-Series Bridge (econometric POV)
+- What you’ll learn: Stationarity; AC/PAC; ARMA families (intro).
+- Role: Bridge to forecasting.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Identify ARMA orders and transform to stationarity.
+
+- Key terms explained
+  - Stationarity: Distribution does not change over time (roughly constant mean/variance).
+
+- Assignment & Pass: ARMA identification + stationarity transform.  
+- Self-check: `tests/test_week43.py`.
+
+---
+
+### Weeks 44–46 — Replication + Mini Project
+- What you’ll learn: Full pipeline for IV/DiD/RD/Panel with robustness culture.
+- Role: Realistic causal analysis and reporting.
+- Time & Load: 3×10–12h
+- By the end of these weeks, you will be able to…  
+  - Reproduce/execute a mini causal study with assumptions stated and tested.
+
+- Key terms explained
+  - Robustness checks: Try alternative specs/samples to see if result holds.
+
+- Assignment & Pass: Full replication/study; clear identification; robustness/sensitivity; 4–6 page report + code.  
+- Self-check: `tests/test_week44.py`, `tests/test_week45.py`, `tests/test_week46.py`.
+
+Status: S&W core topics completed ✅ (Add 2–3 reading weeks if you want to fully read MHE chapters.)
+
+Gate to ML  
+- ≥ 2 methods among IV/DiD/RD/Panel completed with robust reports.  
+- Assumptions/diagnostics correct; reproducible code + README.
+
+---
+
+## PHASE 4 — Classical Machine Learning (8 weeks) — complete ISLR v2
+Primary: [An Introduction to Statistical Learning (ISLR v2)](https://www.statlearning.com/)  
+Alternatives: [scikit-learn](https://scikit-learn.org/stable/index.html) · [ESL (PDF)](https://hastie.su.domains/ElemStatLearn/printings/ESLII_print12_toc.pdf) · [Interpretable ML](https://christophm.github.io/interpretable-ml-book/) · [FIMD](https://stefvanbuuren.name/fimd/)
+
+### Week 47 — Linear Regression & Validation (ISLR Ch.3/5)
+- What you’ll learn: Train/val/test, K-fold, leakage avoidance.
+- Role: Reliable evaluation.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Set up clean validation and report baselines.
+
+- Key terms explained
+  - Data leakage: Using information from validation/test in training by mistake.
+
+- Assignment & Pass: Baseline + CV scheme; brief report.  
+- Self-check: `tests/test_week47.py`.
+
+---
+
+### Week 48 — Classification, Metrics, Calibration (ISLR Ch.4)
+- What you’ll learn: ROC/PR-AUC; calibration; thresholding.
+- Role: Metric literacy.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Plot calibration and choose thresholds for business goals.
+
+- Key terms explained
+  - PR-AUC: Area under precision–recall—better for imbalanced data.
+
+- Assignment & Pass: Calibration curves + threshold analysis.  
+- Self-check: `tests/test_week48.py`.
+
+---
+
+### Week 49 — Regularization: Ridge/Lasso/ElasticNet (ISLR Ch.6)
+- What you’ll learn: Bias–variance; sparsity; HPO.
+- Role: Generalization improvements.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Tune regularization and justify choice.
+
+- Key terms explained
+  - Lasso: Encourages zeros (feature selection).  
+  - ElasticNet: Mix of Ridge and Lasso.
+
+- Assignment & Pass: HPO table + rationale.  
+- Self-check: `tests/test_week49.py`.
+
+---
+
+### Week 50 — Trees & Ensembles (RF/GBM) (ISLR Ch.8)
+- What you’ll learn: Trees; feature importance; interactions.
+- Role: Strong tabular baselines.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Compare RF/GBM and provide basic explanations.
+
+- Key terms explained
+  - SHAP/LIME: Techniques to explain feature contributions locally.
+
+- Assignment & Pass: RF/GBM comparison + SHAP/LIME intro.  
+- Self-check: `tests/test_week50.py`.
+
+---
+
+### Week 51 — SVM & Kernels (ISLR Ch.9)
+- What you’ll learn: Margin; C/γ tuning; kernels.
+- Role: Powerful non-linear classifiers.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Run a kernel sweep and choose appropriately.
+
+- Key terms explained
+  - Kernel: Function enabling non-linear decision boundaries in a linear model.
+
+- Assignment & Pass: Kernel sweep plots + selection rationale.  
+- Self-check: `tests/test_week51.py`.
+
+---
+
+### Week 52 — Dimensionality Reduction & Clustering (ISLR Ch.10)
+- What you’ll learn: PCA; KMeans/DBSCAN; visualization.
+- Role: Segmentation & EDA.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Build PCA+KMeans with silhouette score.
+
+- Key terms explained
+  - Silhouette score: How well clusters are separated (−1 to 1, higher is better).
+
+- Assignment & Pass: PCA+KMeans; silhouette report.  
+- Self-check: `tests/test_week52.py`.
+
+---
+
+### Week 53 — Missing Data & Imputation
+- What you’ll learn: MCAR/MAR/MNAR; multiple imputation; validation.
+- Role: Data pipeline integrity/fairness.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Implement multiple imputation and assess impact.
+
+- Key terms explained
+  - Multiple imputation: Fill NAs several times; combine results for uncertainty.
+
+- Assignment & Pass: Imputation pipeline + quality metrics.  
+- Self-check: `tests/test_week53.py`.
+
+---
+
+### Week 54 — Classical ML Mini-Project
+- What you’ll learn: End-to-end ML + explainability.
+- Role: Production-leaning habits.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Deliver a reproducible pipeline and model card.
+
+- Key terms explained
+  - Model card: Short document describing purpose, data, metrics, caveats.
+
+- Assignment & Pass: Full pipeline + explainability report.  
+- Self-check: `tests/test_week54.py`.
+
+Status: ISLR completed ✅
+
+---
+
+## PHASE 5 — Time Series & Forecasting (6 weeks) — complete FPP3
+Primary: [FPP3 (R)](https://otexts.com/fpp3/) · Alt: [FPP — Pythonic Way](https://otexts.com/fpppy/) · Advanced optional: [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
+
+### Week 55 — Decomposition, Seasonality, ETS (FPP3 Ch.2–7)
+- What you’ll learn: STL; ETS; seasonal patterns.
+- Role: Forecasting basics.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Decompose and fit ETS models.
+
+- Key terms explained
+  - ETS: Error, Trend, Seasonality components in exponential smoothing.
+
+- Assignment & Pass: ETS comparisons + short report.  
+- Self-check: `tests/test_week55.py`.
+
+---
+
+### Weeks 56–57 — ARIMA/SARIMA (FPP3 Ch.8–9)
+- What you’ll learn: Stationarity; ACF/PACF; model selection; diagnostics.
+- Role: Classic forecasting workhorse.
+- Time & Load: 2×12–14h
+- By the end of these weeks, you will be able to…  
+  - Fit SARIMA with justified orders and good diagnostics.
+
+- Key terms explained
+  - ACF/PACF: Autocorrelation/partial autocorrelation—help choose AR/MA orders.
+
+- Assignment & Pass: SARIMA with full diagnostics.  
+- Self-check: `tests/test_week56.py`, `tests/test_week57.py`.
+
+---
+
+### Week 58 — Time Series CV & Metrics
+- What you’ll learn: Rolling-origin CV; MASE/SMAPE.
+- Role: Reliable forecast comparison.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Compare models with tsCV and defend a choice.
+
+- Key terms explained
+  - MASE/SMAPE: Scale-free errors used in forecasting comparisons.
+
+- Assignment & Pass: tsCV comparison table + selection rationale.  
+- Self-check: `tests/test_week58.py`.
+
+---
+
+### Week 59 — ARIMAX/XREG, Multiple Series & Hierarchies
+- What you’ll learn: Exogenous regressors; multiple series; hierarchical reconciliation.
+- Role: Real-world forecasting at scale.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Improve ARIMA with XREG by ≥ 5% MASE.
+
+- Key terms explained
+  - XREG: External regressors (e.g., promotions, weather) to explain variation.
+
+- Assignment & Pass: XREG improves MASE ≥ 5% vs ARIMA baseline.  
+- Self-check: `tests/test_week59.py`.
+
+---
+
+### Week 60 — Time Series Mini-Project
+- What you’ll learn: End-to-end forecasting pipeline.
+- Role: Production-ready thinking.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Deliver forecasts with clear metrics and choices.
+
+- Key terms explained
+  - Hierarchical forecasts: Consistent totals across levels (e.g., product → category).
+
+- Assignment & Pass: Project + report (MASE/SMAPE).  
+- Self-check: `tests/test_week60.py`.
+
+Status: FPP3 completed ✅
+
+---
+
+## PHASE 6 — Deep Learning (8 weeks) — complete D2L
+Primary: [Dive into Deep Learning (D2L)](https://d2l.ai) · Alternatives: [Deep Learning (Goodfellow et al.)](https://www.deeplearningbook.org/) · [Applied ML Practices](https://github.com/eugeneyan/applied-ml)
+
+### Week 61 — Autograd & Training Loop
+- What you’ll learn: Tensors; autograd; training loop.
+- Role: Core DL training.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Build and verify a training loop.
+
+- Key terms explained
+  - Mini-batch: Small subset of data per step—stabilizes and speeds training.
+
+- Assignment & Pass: Training loop + gradient verification.  
+- Self-check: `tests/test_week61.py`.
+
+---
+
+### Week 62 — MLP, Regularization, Optimization
+- What you’ll learn: Weight decay; dropout; LR scheduling.
+- Role: Generalization/stability.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Show significant improvement via HPO (p<0.05).
+
+- Key terms explained
+  - Dropout: Randomly drop units at train time to reduce overfitting.
+
+- Assignment & Pass: HPO with significance.  
+- Self-check: `tests/test_week62.py`.
+
+---
+
+### Week 63 — CNN & Transfer Learning
+- What you’ll learn: Convolutions; augmentation; TL.
+- Role: Standard for vision tasks.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Improve top-1 accuracy by ≥ 5pp via transfer learning.
+
+- Key terms explained
+  - Transfer Learning: Start from a pretrained model and fine-tune.
+
+- Assignment & Pass: TL improvement ≥ 5pp vs scratch.  
+- Self-check: `tests/test_week63.py`.
+
+---
+
+### Week 64 — Sequence Models (RNN/GRU/LSTM)
+- What you’ll learn: Sequence modeling; regularization.
+- Role: NLP/time-series DL.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Build a text classification pipeline with metrics.
+
+- Key terms explained
+  - LSTM/GRU: RNN variants that remember long-term dependencies.
+
+- Assignment & Pass: Working pipeline + evaluation.  
+- Self-check: `tests/test_week64.py`.
+
+---
+
+### Week 65 — Attention & Transformers
+- What you’ll learn: Self-attention; encoder/decoder basics.
+- Role: Modern NLP/CV backbone.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Fine-tune a small HF model and report results.
+
+- Key terms explained
+  - Self-attention: Each token attends to others to gather context.
+
+- Assignment & Pass: Fine-tune + metrics.  
+- Self-check: `tests/test_week65.py`.
+
+---
+
+### Week 66 — Performance & Training Tricks
+- What you’ll learn: LR schedules; early stopping; mixed precision.
+- Role: Efficient, stable training.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Produce ablations with clear gains.
+
+- Key terms explained
+  - Mixed precision: Use float16 where safe to speed up training.
+
+- Assignment & Pass: Ablation + performance report.  
+- Self-check: `tests/test_week66.py`.
+
+---
+
+### Weeks 67–68 — DL Mini-Project (2 weeks)
+- What you’ll learn: CV or NLP PoC near production.
+- Role: From prototype to reliable system.
+- Time & Load: 2×8–10h
+- By the end of these weeks, you will be able to…  
+  - Deliver a reproducible DL project with metrics and lessons.
+
+- Key terms explained
+  - Early stopping: Stop when validation stops improving to avoid overfit.
+
+- Assignment & Pass: Project + report (metrics, ablation).  
+- Self-check: `tests/test_week67.py`, `tests/test_week68.py`.
+
+Status: D2L completed ✅
+
+---
+
+## PHASE 7 — MLOps (5 weeks) — complete MLOps Zoomcamp
+Primary: [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) · Alt: [Machine Learning Systems](https://mlsysbook.ai)
+
+### Week 69 — Experiment Tracking & Model Registry
+- What you’ll learn: MLflow runs; model registry; model cards; versioning basics.
+- Role: Reproducibility and governance.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Track experiments, register models, write a model card.
+
+- Key terms explained
+  - Model registry: Central store for versioned models ready for deployment.
+
+- Assignment & Pass: MLflow runs + registry + model card.  
+- Self-check: `tests/test_week69.py`.
+
+---
+
+### Week 70 — Data/Model Pipelines
+- What you’ll learn: DAGs; feature store; data contracts.
+- Role: Reliability at scale.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Build and document an end-to-end pipeline.
+
+- Key terms explained
+  - Data contract: Agreement on schema/fields (prevents breaking changes).
+
+- Assignment & Pass: Pipeline + documentation.  
+- Self-check: `tests/test_week70.py`.
+
+---
+
+### Week 71 — Deployment (FastAPI) & Docker
+- What you’ll learn: REST inference service; containerization; basic CI.
+- Role: Make models usable.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Serve a model and call it with curl from README.
+
+- Key terms explained
+  - Container image: Pack code + dependencies to run anywhere.
+
+- Assignment & Pass: Docker image + live endpoint (curl example).  
+- Self-check: `tests/test_week71.py`.
+
+---
+
+### Week 72 — Monitoring & Drift
+- What you’ll learn: Data/concept drift; thresholds; alerts; dashboards.
+- Role: Keep models healthy after deploy.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Create drift reports and set alerts.
+
+- Key terms explained
+  - Concept drift: Relationship between inputs and output changes over time.
+
+- Assignment & Pass: Drift report + dashboard screenshots + alert config notes.  
+- Self-check: `tests/test_week72.py`.
+
+---
+
+### Week 73 — Mini MLOps PoC
+- What you’ll learn: Small end-to-end production-like setup.
+- Role: Ops mindset.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Present a minimal production workflow with a runbook.
+
+- Key terms explained
+  - Runbook: Step-by-step “how to run/operate” instructions.
+
+- Assignment & Pass: PoC diagrams + README runbook.  
+- Self-check: `tests/test_week73.py`.
+
+Status: MLOps Zoomcamp completed ✅
+
+---
+
+## PHASE 8 — Data Engineering (5 weeks) — complete DE Zoomcamp
+Primary: [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) · Alt: [Data Mining: Concepts & Techniques (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
+
+### Week 74 — Orchestration & Data Quality
+- What you’ll learn: Airflow; schema contracts; Great Expectations/dbt checks.
+- Role: Trustworthy data feeds.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Orchestrate a DAG and validate data quality.
+
+- Key terms explained
+  - DAG (workflow): Directed steps with dependencies (e.g., extract → transform → load).
+
+- Assignment & Pass: Airflow DAG + quality report.  
+- Self-check: `tests/test_week74.py`.
+
+---
+
+### Week 75 — Batch ETL & Storage
+- What you’ll learn: File formats; partitioning; cost/scale.
+- Role: Efficient pipelines.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Build a batch ETL and reason about storage/cost.
+
+- Key terms explained
+  - Partitioning: Split large tables by date/key for faster queries and cheaper storage.
+
+- Assignment & Pass: Batch ETL + cost notes.  
+- Self-check: `tests/test_week75.py`.
+
+---
+
+### Week 76 — Streaming
+- What you’ll learn: Messaging; latency; exactly-once patterns.
+- Role: Real-time use cases.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Implement a minimal streaming demo and explain guarantees.
+
+- Key terms explained
+  - Exactly-once: Each event is processed once despite failures/dedup steps.
+
+- Assignment & Pass: Simple streaming pipeline + notes.  
+- Self-check: `tests/test_week76.py`.
+
+---
+
+### Weeks 77–78 — Mini Data Platform Project
+- What you’ll learn: Storage → ETL → Serving end-to-end.
+- Role: Connect DE with MLOps.
+- Time & Load: 2×8–10h
+- By the end of these weeks, you will be able to…  
+  - Deliver a small platform with diagrams and run steps.
+
+- Key terms explained
+  - Serving layer: Where cleaned data or model outputs are exposed to apps/users.
+
+- Assignment & Pass: README + diagrams + run instructions; small demo dataset.  
+- Self-check: `tests/test_week77.py`, `tests/test_week78.py`.
+
+Status: DE Zoomcamp completed ✅
+
+---
+
+## PHASE 9 — LLMs (3 weeks) — complete Hugging Face Course
+Primary: [Hugging Face Course](https://huggingface.co/course/chapter1) · Alts: [HF Docs (Pipelines/Trainer)](https://huggingface.co/docs) · [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+
+### Week 79 — HF Core Modules
+- What you’ll learn: Transformers; Datasets; Tokenizers; Pipelines.
+- Role: Modern NLP tooling.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Fine-tune a small model and report metrics.
+
+- Key terms explained
+  - Tokenizer: Splits text into tokens (sub-words) expected by models.
+
+- Assignment & Pass: Simple fine-tune + metrics report.  
+- Self-check: `tests/test_week79.py`.
+
+---
+
+### Week 80 — Tasks: Classification / QA / Summarization
+- What you’ll learn: Training; evaluation; stability checks.
+- Role: Practical NLP.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Reach a target score on at least one NLP task.
+
+- Key terms explained
+  - QA (Question Answering): Predict answer spans or generate answers from context.
+
+- Assignment & Pass: Achieve target score; brief error analysis.  
+- Self-check: `tests/test_week80.py`.
+
+---
+
+### Week 81 — Agents (Optional) & Integration
+- What you’ll learn: Agent chains; evaluation; safety/guardrails.
+- Role: Autonomous flows.
+- Time & Load: 8–10h
+- By the end of this week, you will be able to…  
+  - Build a small agent demo and document risks/guardrails.
+
+- Key terms explained
+  - Guardrails: Rules/sanitizers to keep outputs safe and on-policy.
+
+- Assignment & Pass: Agent demo + risk/guardrail notes.  
+- Self-check: `tests/test_week81.py`.
+
+Status: HF Course completed ✅
+
+---
+
+## PHASE 10 — Capstone (2–3 weeks)
+
+### Week 82 — Problem, Data, and Architecture
+- Sources: Primary: your domain data + earlier artifacts · Alt: [MLOps Zoomcamp (Design)](https://github.com/DataTalksClub/mlops-zoomcamp)
+- What you’ll learn: Requirements; KPIs; data contracts; architecture diagrams.
+- Role: Production planning.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Present a complete design doc ready for execution.
+
+- Key terms explained
+  - KPI: Metric that reflects business/mission impact (e.g., conversion rate).
+
+- Assignment & Pass: Design doc reviewed/approved.  
+- Self-check: `tests/test_week82.py` (lint/format/CI smoke).
+
+---
+
+### Week 83 — Modeling, Service, Monitoring
+- Sources: Primary: scikit-learn/TF/PyTorch + FastAPI + MLflow · Alt: [mlsysbook](https://mlsysbook.ai)
+- What you’ll learn: Model(s); API; monitoring dashboard; ethics/fairness note.
+- Role: End-to-end delivery.
+- Time & Load: 10–12h
+- By the end of this week, you will be able to…  
+  - Ship a working system with report and slides.
+
+- Key terms explained
+  - Fairness note: How you checked bias and mitigations considered.
+
+- Assignment & Pass: Working system + 6–10 page report + slides.  
+- Self-check: `tests/test_week83.py`.
+
+---
+
+### Week 84 (optional) — Presentation & Feedback Loop
+- Sources: Primary: project artifacts
+- What you’ll learn: Decision narrative; ROI/impact; iteration planning.
+- Role: Stakeholder communication.
+- Time & Load: 6–8h
+- By the end of this week, you will be able to…  
+  - Deliver a clear presentation and define next steps.
+
+- Key terms explained
+  - ROI: Return on investment—benefit vs cost.
+
+- Assignment & Pass: Presentation delivered; iteration plan captured.  
+- Self-check: Presentation checklist (scope, metrics, risks, ethics).
+
+---
+
+## Why this is the right roadmap to become a “data specialist”
+- Complete primary sources: MML, All of Statistics, Statistical Rethinking, Stock & Watson, ISLR, FPP3, D2L, MLOps & DE Zoomcamps, HF Course—each is explicitly covered and finished.
+- Dual inference then causality: Frequentist + Bayesian foundations, then identification (IV/DiD/RD/Panel) with DAG intuition.
+- Measurable progress: Weekly numeric thresholds and tests; Gap Weeks ensure no gaps remain.
+- End-to-end skills: Data pipelines (DE), modeling (classical/DL/TS), serving/monitoring (MLOps), LLM tasks—culminating in a production-flavored capstone.
+- Plain-language clarity: Unknown terms are defined where they appear, with tiny examples when helpful.
+
+If any main source needs more time, insert a Gap Week to finish remaining chapters/units and add a brief “What I finished” note before continuing.
+
+Good luck—and always explain not only what works, but why it works, under which assumptions, and how you verified it.
