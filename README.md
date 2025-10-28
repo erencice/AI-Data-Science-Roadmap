@@ -139,49 +139,49 @@ Week 10 — Linear Algebra II
 - 🛠️ How: `np.linalg.eig`; compute angle via normalized dot product.
 
 Week 11 — Decompositions & Geometry
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: QR vs normal equations for least squares
 - ✅ Pass: Solve `min ||Ax-b||` via normal equations and via QR; compare residual norms.
 - 🛠️ How: `np.linalg.qr(A)`; backsolve; `np.linalg.lstsq` for reference.
 
 Week 12 — Vector Calculus I
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Gradients/Jacobians; gradient descent on convex quadratic
 - ✅ Pass: Show monotone loss decrease for a suitable step size on `f(x)=1/2 x^T Q x + c^T x`.
 - 🛠️ How: analytic gradient `Qx+c`; fixed small step.
 
 Week 13 — Vector Calculus II
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Chain rule; finite-difference checks
 - ✅ Pass: Compare analytic vs central-difference gradient on a 2D function; max abs diff < 1e-4.
 - 🛠️ How: central differences with small `h`.
 
 Week 14 — Probability I
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: LLN/CLT simulations using distributions covered
 - ✅ Pass: For Binomial and Poisson sample means, show variance ≈ theory and QQ-plots trending more linear as n increases.
 - 🛠️ How: simulate many trials; compute sample mean variance; `scipy.stats.probplot` or manual quantiles.
 
 Week 15 — Probability II
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Covariance; correlation; dependence vs zero-correlation
 - ✅ Pass: Generate correlated Normals via Cholesky and recover covariance empirically with small Frobenius error (< 0.05).
 - 🛠️ How: `L = cholesky(Sigma)`; `X = Z @ L.T`; `np.cov`.
 
 Week 16 — Optimization I
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Convexity via Hessian; backtracking line search
 - ✅ Pass: Verify convexity by PSD Hessian for two functions and implement backtracking line search on a convex quadratic.
 - 🛠️ How: compute Hessian analytically or via finite differences; Armijo condition.
 
 Week 17 — Optimization II
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Compare first- vs second-order methods introduced in MML
 - ✅ Pass: Solve ridge-regularized least squares with Gradient Descent (with backtracking) vs Newton’s method; show iterations-to-tolerance.
 - 🛠️ How: add λI to Q; implement Newton step using Hessian; compare convergence curves.
 
 Week 18 — Review
-- 📖 [MML Book (PDF)](...)
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Concept map and short-link notes
 - ✅ Pass: A one-page map with ≥10 links from math concepts to later ML choices (e.g., regularization ↔ condition number).
 - 🛠️ How: diagram or bullet map; keep explicit link statements.
@@ -201,31 +201,31 @@ Week 19 — Think Stats Ch. 1
 - 🛠️ How: `np.sort`; `np.arange(1,n+1)/n`.
 
 Week 20 — Think Stats Ch. 2
-- 📖 [Think Stats (PDF)](...)
+- 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Robust vs classical descriptive stats
 - ✅ Pass: Report mean/SD vs median/MAD/trimmed mean on 2 datasets and explain divergence due to skew/outliers.
 - 🛠️ How: `scipy.stats.median_abs_deviation`; trimming via slice after sort.
 
 Week 21 — Think Stats Ch. 3–4
-- 📖 [Think Stats (PDF)](...)
+- 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Relationships; Pearson vs Spearman
 - ✅ Pass: Show an example where Pearson and Spearman diverge and explain monotone non-linear dependence.
 - 🛠️ How: `np.corrcoef`; `scipy.stats.spearmanr`.
 
 Week 22 — Think Stats Ch. 5–6
-- 📖 [Think Stats (PDF)](...)
+- 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Basic probability; simple Bayesian update
 - ✅ Pass: Compute a Beta–Binomial posterior mean/var analytically and confirm via simulation.
 - 🛠️ How: closed-form update; simulate posteriors.
 
 Week 23 — Think Stats Ch. 7–8
-- 📖 [Think Stats (PDF)](...)
+- 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Hypothesis testing
 - ✅ Pass: Simulate empirical Type I ≈ α and produce a power curve for a specified effect size.
 - 🛠️ How: repeated sampling; count rejections.
 
 Week 24 — Think Stats Ch. 9–10 (+wrap)
-- 📖 [Think Stats (PDF)](...)
+- 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Regression basics; diagnostics
 - ✅ Pass: Fit OLS; show residual mean ≈ 0, residual vs fitted plot, and compute VIFs; flag VIF > 10 if any.
 - 🛠️ How: `statsmodels.api.OLS`; `variance_inflation_factor`.
