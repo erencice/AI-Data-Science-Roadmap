@@ -1,6 +1,6 @@
 # AI & Data Science Weekly Plan — Activities, Practice, and Pass Criteria
 
-![Duration](https://img.shields.io/badge/duration-~154_weeks-6f42c1)
+![Duration](https://img.shields.io/badge/duration-~164_weeks-6f42c1)
 ![Pace](https://img.shields.io/badge/pace-8–10_h%2Fweek-0e8a16)
 ![Path](https://img.shields.io/badge/path-beginner%E2%86%92practitioner-0366d6)
 ![Style](https://img.shields.io/badge/style-cumulative%2C_concept%E2%86%92practice-555)
@@ -12,15 +12,16 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 - Phase 2 · Mathematics for ML
 - Phase 3 · Statistics Fundamentals
 - Phase 4 · Bayesian Statistics & Missing Data
-- Phase 5 · Classical ML
-- Phase 6 · Data Mining
-- Phase 7 · Econometrics & Time Series
-- Phase 8 · R for Data Science
-- Phase 9 · Web Scraping & SQL
-- Phase 10 · Deep Learning
-- Phase 11 · MLOps & Data Engineering
-- Phase 12 · LLMs & Open-Source AI
-- Phase 13 · Consolidation & Capstone
+- Phase 5 · Statistical Learning with Python (ISLP)
+- Phase 6 · Classical ML
+- Phase 7 · Data Mining
+- Phase 8 · Econometrics & Time Series
+- Phase 9 · R for Data Science
+- Phase 10 · Web Scraping & SQL
+- Phase 11 · Deep Learning
+- Phase 12 · MLOps & Data Engineering
+- Phase 13 · LLMs & Open-Source AI
+- Phase 14 · Consolidation & Capstone
 
 Legend
 - 📖 Activities (primary source)
@@ -30,7 +31,7 @@ Legend
 - 🔁 Flex (catch-up, spaced review)
 
 Duration and pacing
-- Duration: ~154 weeks (≈3.0 years), 8–10 h/week
+- Duration: ~164 weeks (≈3.1 years), 8–10 h/week
 - Weekly output: small practical tasks only
 - Frequent Flex Weeks between phases for consolidation
 
@@ -40,6 +41,7 @@ Main resources (cover-to-cover completion)
 - Think Stats — Allen B. Downey — [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - Think Bayes — Allen B. Downey — [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
 - Flexible Imputation of Missing Data — van Buuren — [FIMD](https://stefvanbuuren.name/fimd/)
+- An Introduction to Statistical Learning with Applications in Python — James, Witten, Hastie, Tibshirani — [ISLP](https://www.statlearning.com/)
 - Pattern Recognition and Machine Learning — Bishop — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - Interpretable Machine Learning — Molnar — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
 - Data Mining: Concepts and Techniques (3e) — Han, Kamber, Pei — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
@@ -256,15 +258,83 @@ Weeks 33–36 — Flexible Imputation of Missing Data (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 5 · Classical ML — Weeks 37–55 (Complete PRML, Interpretable ML)</b></summary>
+<summary><b>Phase 5 · Statistical Learning with Python — Weeks 37–46 (Complete ISLP)</b></summary>
 
-Weeks 37–50 — PRML (Ch. 1–13 + review)
+Week 37 — ISLP Ch. 1–2 (Intro + Statistical Learning)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Train/test split; bias–variance; basic metrics (RMSE, accuracy); simple baseline vs model comparison.
+- ✅ Pass: On a small dataset, implement a hold-out and 5-fold CV; report train vs test (or CV) gap and discuss bias–variance trade-off.
+- 🛠️ How: `train_test_split`; `KFold`/`cross_val_score`; `Pipeline`; fix `random_state`.
+
+Week 38 — ISLP Ch. 3 (Linear Regression)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: OLS; interaction and polynomial terms; diagnostics.
+- ✅ Pass: Fit baseline OLS, then with interactions/polynomials; show residual plots, R² vs adjusted R²; justify the chosen degree via CV.
+- 🛠️ How: `PolynomialFeatures`; `LinearRegression`; `cross_val_score`; residual plots.
+
+Week 39 — ISLP Ch. 4 (Classification)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Logistic regression, LDA/QDA, kNN; class imbalance handling.
+- ✅ Pass: Compare 3 classifiers with stratified 5-fold CV; report ROC AUC and confusion matrix on a hold-out; discuss class threshold choice.
+- 🛠️ How: `StratifiedKFold`; `LogisticRegression`; `LinearDiscriminantAnalysis`; `KNeighborsClassifier`.
+
+Week 40 — ISLP Ch. 5 (Resampling Methods)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Validation set; LOOCV; k-fold CV; bootstrap for statistics.
+- ✅ Pass: Estimate test error via LOOCV vs 10-fold; run bootstrap for coefficient SE on a linear model; compare to analytic SE when available.
+- 🛠️ How: `LeaveOneOut`; `KFold`; bootstrap with resampling; seed reproducibly.
+
+Week 41 — ISLP Ch. 6 (Model Selection & Regularization)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Subset selection (proxy), ridge, lasso, elastic net; regularization paths.
+- ✅ Pass: Plot ridge/lasso coefficient paths; pick λ via CV; compare test error to OLS; interpret sparsity.
+- 🛠️ How: `RidgeCV`; `LassoCV`; standardization; path plotting.
+
+Week 42 — ISLP Ch. 7 (Beyond Linearity)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Polynomial/step functions; splines; GAM-like components (where feasible).
+- ✅ Pass: Fit spline-based regression; show partial effect plots; compare to polynomial fit on test error.
+- 🛠️ How: `SplineTransformer` or `patsy`/`pygam` (if allowed); otherwise piecewise features.
+
+Week 43 — ISLP Ch. 8 (Tree-Based Methods)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: CART; bagging; random forests; gradient boosting.
+- ✅ Pass: Fit tree, RF, and GBM; compare OOB vs test metrics; plot feature importances and one PDP.
+- 🛠️ How: `DecisionTree*`, `RandomForest*`, `GradientBoosting*`/`XGB` (if allowed); `permutation_importance`.
+
+Week 44 — ISLP Ch. 9 (Support Vector Machines)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: Linear vs RBF kernels; hyperparameter tuning; margin intuition.
+- ✅ Pass: Tune C and gamma on a 2D toy dataset; visualize decision boundaries; report CV vs test performance.
+- 🛠️ How: `SVC`; `GridSearchCV`; contour plots.
+
+Week 45 — ISLP Ch. 10 (Unsupervised Learning)
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: PCA; k-means; hierarchical clustering; scaling choices.
+- ✅ Pass: Show PCA explained variance; cluster with k-means and hierarchical; evaluate with silhouette score and stability across seeds.
+- 🛠️ How: `StandardScaler`; `PCA`; `KMeans`; `AgglomerativeClustering`; `silhouette_score`.
+
+Week 46 — ISLP Labs/Wrap-up
+- 📖 Activities: [ISLP](https://www.statlearning.com/)
+- 🧪 Practice: End-to-end ML workflow on a tabular dataset using ISLP chapters.
+- ✅ Pass: Reproducible notebook with proper split, CV, tuned model, error analysis, and a short 1-page summary with decisions and risks.
+- 🛠️ How: `Pipeline`; `ColumnTransformer`; `cross_val_score`; fixed seeds; clean report.
+</details>
+
+🔁 Flex — Validation basics consolidation
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 6 · Classical ML — Weeks 47–65 (Complete PRML, Interpretable ML)</b></summary>
+
+Weeks 47–60 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - 🧪 Practice: Implement chapter-aligned core algorithms using only concepts introduced so far (e.g., logistic regression, linear regression with basis functions, naive Bayes, kernels for regression, EM for GMM, simple graphical model inference)
 - ✅ Pass (weekly): From-scratch implementation for that chapter demonstrates parity (within 2–5%) with a library baseline on a small toy dataset; include seeded reproducibility.
 - 🛠️ How: use sklearn purely as an oracle for comparison; fix `random_state`; limit to toy-scale experiments.
 
-Weeks 51–55 — Interpretable ML (complete)
+Weeks 61–65 — Interpretable ML (complete)
 - 📖 [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
 - 🧪 Practice: Global (PDP/ICE, permutation) and local (e.g., SHAP) methods as presented
 - ✅ Pass (weekly): Apply PDP/ICE and permutation importance; then SHAP to the same model; write a 1-page note on stability and limitations across 3 resamples.
@@ -276,9 +346,9 @@ Weeks 51–55 — Interpretable ML (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 6 · Data Mining — Weeks 56–64 (Complete DM 3e)</b></summary>
+<summary><b>Phase 7 · Data Mining — Weeks 66–74 (Complete DM 3e)</b></summary>
 
-Weeks 56–64 — Data Mining 3e (Ch. 1–12)
+Weeks 66–74 — Data Mining 3e (Ch. 1–12)
 - 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
 - 🧪 Practice: Per-chapter algorithmic work strictly matching the chapter (e.g., data preprocessing tasks; Apriori/FP-Growth; decision trees; k-means/DBSCAN; outlier detection)
 - ✅ Pass (weekly): Implement a minimal working version for the chapter’s focal algorithm OR replicate results using a library; verify correctness on a deterministic toy and compare performance on a small real dataset.
@@ -290,15 +360,15 @@ Weeks 56–64 — Data Mining 3e (Ch. 1–12)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 7 · Econometrics & Time Series — Weeks 65–86 (Complete Gujarati, Lütkepohl)</b></summary>
+<summary><b>Phase 8 · Econometrics & Time Series — Weeks 75–96 (Complete Gujarati, Lütkepohl)</b></summary>
 
-Weeks 65–76 — Basic Econometrics (complete)
+Weeks 75–86 — Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - 🧪 Practice: Reproduce a worked example per chapter using methods from that chapter only (OLS basics; classical assumption diagnostics; heteroskedasticity/autocorrelation remedies; functional form; limited dependent variables as presented)
 - ✅ Pass (weekly): Match the textbook example’s coefficients and standard errors (within rounding) and include one robustness check discussed in that chapter (e.g., robust/HAC SEs when appropriate).
 - 🛠️ How: `statsmodels` OLS/GLM, `cov_type="HC3"` or HAC if the chapter addresses it; include diagnostic plots taught there.
 
-Weeks 77–86 — Lütkepohl (complete)
+Weeks 87–96 — Lütkepohl (complete)
 - 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
 - 🧪 Practice: VAR/VECM workflow exactly as the book presents (lag selection, stability checks, IRFs/FEVD, cointegration where applicable)
 - ✅ Pass (weekly): Fit VAR/VECM on a macro dataset; pass residual diagnostics; include IRFs/FEVD; perform cointegration tests if required by the chapter.
@@ -310,9 +380,9 @@ Weeks 77–86 — Lütkepohl (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 8 · R for Data Science — Weeks 87–96 (Complete R4DS 2e)</b></summary>
+<summary><b>Phase 9 · R for Data Science — Weeks 97–106 (Complete R4DS 2e)</b></summary>
 
-Weeks 87–96 — R4DS (Complete)
+Weeks 97–106 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
 - 🧪 Practice: Weekly mini-analyses using only the chapters completed that week (wrangle → visualize → model or summary → render)
 - ✅ Pass (weekly): Render a Quarto/Rmd report that re-runs end-to-end with one command, using a seed and only functions introduced in the completed chapters.
@@ -324,21 +394,21 @@ Weeks 87–96 — R4DS (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 9 · Web Scraping & SQL — Weeks 97–102 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
+<summary><b>Phase 10 · Web Scraping & SQL — Weeks 107–112 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
 
-Week 97 — BeautifulSoup
+Week 107 — BeautifulSoup
 - 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - 🧪 Practice: Single static page scrape using only requests + bs4 (selectors, parsing, extraction)
 - ✅ Pass: Save structured CSV/JSON with documented schema; respect robots.txt; no 429s.
 - 🛠️ How: `requests.get`; `BeautifulSoup(html, "lxml")`; `.select` or `.find_all`; `time.sleep` backoff.
 
-Weeks 98–99 — Selenium
+Weeks 108–109 — Selenium
 - 📖 [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
 - 🧪 Practice: Dynamic page automation as per docs (waits, selectors, pagination/scroll)
 - ✅ Pass (weekly): Scrape a dynamic page (e.g., infinite scroll or simple login) and save a timestamped, deterministic snapshot with logs of retries/timeouts.
 - 🛠️ How: `WebDriverWait`; CSS/XPath selectors; consistent viewport and user agent.
 
-Weeks 100–102 — SQL Tutorial
+Weeks 110–112 — SQL Tutorial
 - 📖 [SQL Tutorial](https://www.sqltutorial.org/)
 - 🧪 Practice: Core SELECT/WHERE/JOIN; then subqueries/aggregations; then windows/CTEs (in tutorial order)
 - ✅ Pass (weekly): Execute ≥20 queries aligned to the week’s tutorial sections; final week includes a small analytics schema and ≥10 window/CTE queries.
@@ -350,21 +420,21 @@ Weeks 100–102 — SQL Tutorial
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 10 · Deep Learning — Weeks 103–122 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
+<summary><b>Phase 11 · Deep Learning — Weeks 113–132 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
 
-Weeks 103–110 — D2L (Fundamentals)
+Weeks 113–120 — D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
 - 🧪 Practice: Topic-specific small models exactly as covered (MLP, CNN, RNN; optimization; regularization; data pipelines)
 - ✅ Pass (weekly): Train the chapter’s model variant on a toy dataset with fixed seeds and one controlled ablation (optimizer OR regularization) taught in D2L; log curves/metrics.
 - 🛠️ How: Follow D2L’s PyTorch/MXNet examples; fix seeds; keep experiments minimal and reproducible.
 
-Week 111 — The Illustrated Transformer (Bridge)
+Week 121 — The Illustrated Transformer (Bridge)
 - 📖 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - 🧪 Practice: Self-attention mechanics (shapes, masks, scaling) as explained in the article
 - ✅ Pass: Implement toy self-attention and write unit tests for shape/mask/scaling behavior.
 - 🛠️ How: NumPy/PyTorch; `assert` shape checks; verify mask zeros attention to padded tokens.
 
-Weeks 112–122 — Deep Learning Book (Complete)
+Weeks 122–132 — Deep Learning Book (Complete)
 - 📖 [Deep Learning Book](https://www.deeplearningbook.org/)
 - 🧪 Practice: For each chapter, run a small experiment that demonstrates the chapter’s key concept using building blocks learned in D2L
 - ✅ Pass (weekly): Provide a controlled comparison or demonstration plot showing the expected qualitative effect (e.g., different inits, L2 vs dropout, step-size schedules).
@@ -376,21 +446,21 @@ Weeks 112–122 — Deep Learning Book (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 11 · MLOps & Data Engineering — Weeks 123–146 (Complete Zoomcamps, ML Systems)</b></summary>
+<summary><b>Phase 12 · MLOps & Data Engineering — Weeks 133–156 (Complete Zoomcamps, ML Systems)</b></summary>
 
-Weeks 123–130 — MLOps Zoomcamp
+Weeks 133–140 — MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - 🧪 Practice: Module-by-module implementation as taught (tracking, packaging, CI, serving, orchestration, monitoring)
 - ✅ Pass (weekly): A runnable local pipeline from clean state to served endpoint with tests passing for that week’s scope.
 - 🛠️ How: Docker/Compose; MLflow/W&B; `pytest`; minimal infra defined as per module.
 
-Weeks 131–138 — Machine Learning Systems
+Weeks 141–148 — Machine Learning Systems
 - 📖 [ML Systems](https://mlsysbook.ai)
 - 🧪 Practice: Write/extend a system design doc each week focusing only on that week’s concepts (SLA/SLOs; rollout/rollback; monitoring; data contracts; cost/reliability)
 - ✅ Pass (weekly): The doc includes concrete metrics, failure scenarios, and operational procedures aligned to the chapter.
 - 🛠️ How: ADR template; simple diagrams-as-code optional (e.g., Mermaid).
 
-Weeks 139–146 — Data Engineering Zoomcamp
+Weeks 149–156 — Data Engineering Zoomcamp
 - 📖 [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - 🧪 Practice: Module-by-module pipeline work (ingestion, storage, batch/stream, orchestration, analytics eng, testing) as taught in the course
 - ✅ Pass (weekly): Re-deployable pipeline from scratch with idempotent runs for that module’s scope.
@@ -402,15 +472,15 @@ Weeks 139–146 — Data Engineering Zoomcamp
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 12 · LLMs & Agents — Weeks 147–150 (Complete HF Course + Agents)</b></summary>
+<summary><b>Phase 13 · LLMs & Agents — Weeks 157–160 (Complete HF Course + Agents)</b></summary>
 
-Weeks 147–149 — Hugging Face Course
+Weeks 157–159 — Hugging Face Course
 - 📖 [HF Course](https://huggingface.co/course/chapter1)
 - 🧪 Practice: Datasets, tokenizers, training, inference as covered by the course units
 - ✅ Pass (weekly): Fine-tune or run inference with a small transformer; evaluate with a suitable metric; log configs exactly as the course demonstrates.
 - 🛠️ How: `transformers`, `datasets`, `accelerate`; keep to course-recommended scripts.
 
-Week 150 — HF Agents
+Week 160 — HF Agents
 - 📖 [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
 - 🧪 Practice: Tool-using agent with timeouts and error handling as per course
 - ✅ Pass: Agent completes a simple multi-step task within timeouts and handles one injected failure path gracefully; list safety checks.
@@ -420,19 +490,19 @@ Week 150 — HF Agents
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 13 · Consolidation, Capstone, Portfolio — Weeks 151–154</b></summary>
+<summary><b>Phase 14 · Consolidation, Capstone, Portfolio — Weeks 161–164</b></summary>
 
-Week 151 — statsmodels deep dive
+Week 161 — statsmodels deep dive
 - 📖 [statsmodels](https://www.statsmodels.org/stable/index.html)
 - 🧪 Practice: Reproduce two econometric analyses from earlier phases using only covered methods
 - ✅ Pass: Match reference coefficients/SEs within tolerance; include robust SEs where applicable.
 
-Week 152 — scikit-learn deep dive
+Week 162 — scikit-learn deep dive
 - 📖 [scikit-learn](https://scikit-learn.org/stable/index.html)
 - 🧪 Practice: Build a clean template ML pipeline using methods you have already learned (preprocess → CV → metric → calibration if relevant)
 - ✅ Pass: Deterministically re-runs and produces calibrated probabilities (if classification).
 
-Weeks 153–154 — Capstone & Portfolio
+Weeks 163–164 — Capstone & Portfolio
 - 📖 Integrate end-to-end skills only from prior phases
 - 🧪 Practice: Capstone with uncertainty quantification, interpretability, evaluation protocol, and non-technical brief
 - ✅ Pass: Reproducible project script; README with assumptions/risks; clear results and decisions.
@@ -446,22 +516,23 @@ Resource-to-Week Completion Map (cover-to-cover)
 - Think Stats — Weeks 19–24 — [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - Think Bayes — Weeks 25–32 — [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
 - Flexible Imputation of Missing Data — Weeks 33–36 — [FIMD](https://stefvanbuuren.name/fimd/)
-- PRML (Bishop) — Weeks 37–50 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-- Interpretable Machine Learning — Weeks 51–55 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
-- Data Mining: Concepts and Techniques (3e) — Weeks 56–64 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
-- Basic Econometrics (Gujarati) — Weeks 65–76 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
-- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 77–86 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- R for Data Science (2e) — Weeks 87–96 — [R for Data Science (2e)](https://r4ds.hadley.nz)
-- Beautiful Soup — Week 97 — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- Selenium (Python) — Weeks 98–99 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- SQL Tutorial — Weeks 100–102 — [SQL Tutorial](https://www.sqltutorial.org/)
-- Dive into Deep Learning — Weeks 103–110 — [D2L](https://d2l.ai)
-- The Illustrated Transformer — Week 111 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- Deep Learning — Weeks 112–122 — [Deep Learning Book](https://www.deeplearningbook.org/)
-- MLOps Zoomcamp — Weeks 123–130 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
-- Machine Learning Systems — Weeks 131–138 — [ML Systems](https://mlsysbook.ai)
-- Data Engineering Zoomcamp — Weeks 139–146 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
-- HF Course + HF Agents — Weeks 147–150 — [HF Course](https://huggingface.co/course/chapter1), [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
+- ISLP (Statistical Learning with Python) — Weeks 37–46 — [ISLP](https://www.statlearning.com/)
+- PRML (Bishop) — Weeks 47–60 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+- Interpretable Machine Learning — Weeks 61–65 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
+- Data Mining: Concepts and Techniques (3e) — Weeks 66–74 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
+- Basic Econometrics (Gujarati) — Weeks 75–86 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
+- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 87–96 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
+- R for Data Science (2e) — Weeks 97–106 — [R for Data Science (2e)](https://r4ds.hadley.nz)
+- Beautiful Soup — Week 107 — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- Selenium (Python) — Weeks 108–109 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
+- SQL Tutorial — Weeks 110–112 — [SQL Tutorial](https://www.sqltutorial.org/)
+- Dive into Deep Learning — Weeks 113–120 — [D2L](https://d2l.ai)
+- The Illustrated Transformer — Week 121 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- Deep Learning — Weeks 122–132 — [Deep Learning Book](https://www.deeplearningbook.org/)
+- MLOps Zoomcamp — Weeks 133–140 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- Machine Learning Systems — Weeks 141–148 — [ML Systems](https://mlsysbook.ai)
+- Data Engineering Zoomcamp — Weeks 149–156 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- HF Course + HF Agents — Weeks 157–160 — [HF Course](https://huggingface.co/course/chapter1), [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
 
 Notes
 - Keep work in any format; seed randomness for reproducibility.
