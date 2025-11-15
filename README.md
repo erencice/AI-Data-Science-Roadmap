@@ -75,8 +75,8 @@ Supporting references (selective)
 Week 1 — P4DA Ch. 1–2
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
 - 🧪 Practice: Read CSV; Series/DataFrame basics; indexing; simple plots (exactly from Ch.1–2 topics)
-- ✅ Pass: One notebook that loads a CSV, uses `.head()/.info()`, selects columns via `.loc/.iloc`, filters rows, and produces 4 labeled matplotlib/seaborn plots.
-- 🛠️ How: `pd.read_csv`, `.loc/.iloc`, boolean masks, `plot.hist()`, `seaborn.countplot`.
+- ✅ Pass: One notebook that loads a CSV, uses `.head()/.info()`, selects columns via `.loc/.iloc`, filters rows, and produces 4 labeled plots using pandas plotting methods.
+- 🛠️ How: `pd.read_csv`, `.loc/.iloc`, boolean masks, `df.plot.hist()`, `df.plot.bar()`, `df.plot.scatter()`.
 
 Week 2 — P4DA Ch. 3–4
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
@@ -186,7 +186,7 @@ Week 18 — Review
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - 🧪 Practice: Concept map and short-link notes
 - ✅ Pass: A one-page map with ≥10 links from math concepts to later ML choices (e.g., regularization ↔ condition number).
-- 🛠️ How: diagram or bullet map; keep explicit link statements.
+- 🛠️ How: Create diagram or bullet map; explicit link statements like "SVD → dimensionality reduction", "Hessian PSD → convex optimization".
 </details>
 
 🔁 Flex — Retrieval practice and summaries
@@ -218,19 +218,19 @@ Week 22 — Think Stats Ch. 5–6
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Basic probability; simple Bayesian update
 - ✅ Pass: Compute a Beta–Binomial posterior mean/var analytically and confirm via simulation.
-- 🛠️ How: closed-form update; simulate posteriors.
+- 🛠️ How: Beta conjugate prior update formulas; simulate posteriors with `np.random.beta` or `scipy.stats.beta`.
 
 Week 23 — Think Stats Ch. 7–8
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Hypothesis testing
 - ✅ Pass: Simulate empirical Type I ≈ α and produce a power curve for a specified effect size.
-- 🛠️ How: repeated sampling; count rejections.
+- 🛠️ How: repeated sampling under null and alternative; count rejections; `scipy.stats` for test statistics.
 
 Week 24 — Think Stats Ch. 9–10 (+wrap)
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
 - 🧪 Practice: Regression basics; diagnostics
 - ✅ Pass: Fit OLS; show residual mean ≈ 0, residual vs fitted plot, and compute VIFs; flag VIF > 10 if any.
-- 🛠️ How: `statsmodels.api.OLS`; `variance_inflation_factor`.
+- 🛠️ How: `statsmodels.api.OLS`; `statsmodels.stats.outliers_influence.variance_inflation_factor`.
 </details>
 
 🔁 Flex — Stats recap
@@ -274,9 +274,9 @@ Week 38 — ISLP Ch. 3 (Linear Regression)
 
 Week 39 — ISLP Ch. 4 (Classification)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Logistic regression, LDA/QDA, kNN; class imbalance handling.
-- ✅ Pass: Compare 3 classifiers with stratified 5-fold CV; report ROC AUC and confusion matrix on a hold-out; discuss class threshold choice.
-- 🛠️ How: `StratifiedKFold`; `LogisticRegression`; `LinearDiscriminantAnalysis`; `KNeighborsClassifier`.
+- 🧪 Practice: Logistic regression, LDA/QDA, kNN; comparing classifiers.
+- ✅ Pass: Compare 3 classifiers with 5-fold CV; report accuracy and confusion matrix on a hold-out; discuss classification threshold trade-offs.
+- 🛠️ How: `KFold`; `LogisticRegression`; `LinearDiscriminantAnalysis`; `KNeighborsClassifier`; `confusion_matrix`.
 
 Week 40 — ISLP Ch. 5 (Resampling Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
@@ -299,8 +299,8 @@ Week 42 — ISLP Ch. 7 (Beyond Linearity)
 Week 43 — ISLP Ch. 8 (Tree-Based Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: CART; bagging; random forests; gradient boosting.
-- ✅ Pass: Fit tree, RF, and GBM; compare OOB vs test metrics; plot feature importances and one PDP.
-- 🛠️ How: `DecisionTree*`, `RandomForest*`, `GradientBoosting*`/`XGB` (if allowed); `permutation_importance`.
+- ✅ Pass: Fit tree, RF, and GBM; compare OOB vs test metrics; plot feature importances.
+- 🛠️ How: `DecisionTree*`, `RandomForest*`, `GradientBoosting*`/`XGB` (if allowed); `permutation_importance` or `feature_importances_` attribute.
 
 Week 44 — ISLP Ch. 9 (Support Vector Machines)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
@@ -496,16 +496,19 @@ Week 161 — statsmodels deep dive
 - 📖 [statsmodels](https://www.statsmodels.org/stable/index.html)
 - 🧪 Practice: Reproduce two econometric analyses from earlier phases using only covered methods
 - ✅ Pass: Match reference coefficients/SEs within tolerance; include robust SEs where applicable.
+- 🛠️ How: `statsmodels.api.OLS`, `cov_type="HC3"` for robust SEs; diagnostic plots from econometrics phase.
 
 Week 162 — scikit-learn deep dive
 - 📖 [scikit-learn](https://scikit-learn.org/stable/index.html)
 - 🧪 Practice: Build a clean template ML pipeline using methods you have already learned (preprocess → CV → metric → calibration if relevant)
 - ✅ Pass: Deterministically re-runs and produces calibrated probabilities (if classification).
+- 🛠️ How: `Pipeline`, `ColumnTransformer`, `cross_val_score`, `CalibratedClassifierCV`, fixed `random_state`.
 
 Weeks 163–164 — Capstone & Portfolio
 - 📖 Integrate end-to-end skills only from prior phases
 - 🧪 Practice: Capstone with uncertainty quantification, interpretability, evaluation protocol, and non-technical brief
 - ✅ Pass: Reproducible project script; README with assumptions/risks; clear results and decisions.
+- 🛠️ How: Apply techniques from prior phases; bootstrap/cross-validation for uncertainty; PDP/SHAP for interpretability; proper train/test protocol.
 </details>
 
 ---------------------------------------------------------------------
