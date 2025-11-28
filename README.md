@@ -74,51 +74,51 @@ Supporting references (selective)
 
 Week 1 — P4DA Ch. 1–2
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Read CSV; Series/DataFrame basics; indexing; simple plots (exactly from Ch.1–2 topics)
-- ✅ Pass: One notebook that loads a CSV, uses `.head()/.info()`, selects columns via `.loc/.iloc`, filters rows, and produces 4 labeled matplotlib/seaborn plots.
-- 🛠️ How: `pd.read_csv`, `.loc/.iloc`, boolean masks, `plot.hist()`, `seaborn.countplot`.
+- 🧪 Practice: Set up Python environment (conda/pip); run IPython/Jupyter; practice Python basics (variables, control flow, functions); understand the data analysis ecosystem.
+- ✅ Pass: Create a notebook demonstrating Python fundamentals: define 3 functions, use list/dict comprehensions, write a simple script that reads command-line arguments, and explain the role of NumPy/pandas/matplotlib in the data stack.
+- 🛠️ How: Install Anaconda or miniconda; launch Jupyter; experiment with built-in types and control structures; skim the library overview in Ch.1.
 
 Week 2 — P4DA Ch. 3–4
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Aggregation with `groupby`, merges/joins, reshaping with `stack/unstack/pivot`
-- ✅ Pass: Build a summary table via `groupby().agg()`, merge it to a second table with `pd.merge`, and reshape it with `pivot_table`. Verify row/column counts at each step.
-- 🛠️ How: `groupby().agg({"col":"mean"})`, `pd.merge(left, right, on="key")`, `pd.pivot_table(values, index, columns, aggfunc)`.
+- 🧪 Practice: Work with tuples, lists, dicts, sets (Ch.3); create and manipulate NumPy ndarrays; practice array indexing, slicing, and vectorized operations (Ch.4).
+- ✅ Pass: Build a notebook that: (1) demonstrates list/dict/set operations; (2) creates 2D NumPy arrays, performs element-wise and matrix operations; (3) uses boolean indexing to filter data; (4) times vectorized vs loop-based computation.
+- 🛠️ How: `np.array`, `np.arange`, `np.reshape`, boolean masks, `np.where`, `%timeit` to compare performance.
 
 Week 3 — P4DA Ch. 5–6
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Text cleanup with `.str` methods; date parsing; dtype fixes
-- ✅ Pass: Convert a messy date column to `datetime64[ns]`, standardize a string categorical column (trim/lower), and produce a 10-line data dictionary describing each column and dtype.
-- 🛠️ How: `pd.to_datetime(..., errors="coerce")`, `df["col"].str.strip().str.lower()`, `df.astype`.
+- 🧪 Practice: Create Series and DataFrames; use `.loc/.iloc` indexing; load data from CSV/JSON/Excel files (Ch.5–6).
+- ✅ Pass: Load a dataset from CSV, inspect with `.head()/.info()/.describe()`, select columns via `.loc/.iloc`, filter rows with boolean masks, and export cleaned data to a new CSV.
+- 🛠️ How: `pd.read_csv`, `pd.read_json`, `df.loc[rows, cols]`, `df.iloc[row_idx, col_idx]`, `df.to_csv`.
 
 Week 4 — P4DA Ch. 7–8
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Time series indexing; resampling; rolling/window ops (as introduced in Ch.7–8)
-- ✅ Pass: Set a DateTimeIndex, resample to weekly means, and compute a 7-step rolling mean; plot original vs resampled vs rolling mean in one figure.
-- 🛠️ How: `df = df.set_index("date")`, `df.resample("W").mean()`, `.rolling(7).mean()`.
+- 🧪 Practice: Handle missing data; clean strings with `.str` methods; merge/join DataFrames; reshape with `stack/unstack/pivot/melt` (Ch.7–8).
+- ✅ Pass: Take a messy dataset and: (1) handle missing values (drop or fill); (2) standardize string columns (trim/lower); (3) merge with a second table; (4) pivot or melt the result; document row counts at each step.
+- 🛠️ How: `df.dropna`, `df.fillna`, `df["col"].str.strip().str.lower()`, `pd.merge`, `pd.pivot_table`, `pd.melt`.
 
 Week 5 — P4DA Ch. 9–10
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Categoricals; pivot tables; tidy summaries
-- ✅ Pass: Convert a string column to ordered `Categorical` and produce a pivot table summarizing a numeric metric by that category. Justify the order.
-- 🛠️ How: `pd.Categorical(df["cat"], categories=[...], ordered=True)`, `pd.pivot_table`.
+- 🧪 Practice: Create plots with matplotlib/seaborn (Ch.9); perform aggregation with `groupby` (Ch.10).
+- ✅ Pass: Produce 4 visualizations (histogram, scatter, line, bar) with proper labels/titles; use `groupby().agg()` to compute multi-column summaries; combine groupby results with plots.
+- 🛠️ How: `plt.plot`, `plt.hist`, `sns.scatterplot`, `df.groupby("col").agg({"num":"mean"})`, `plt.savefig`.
 
 Week 6 — P4DA Ch. 11–12 (+appendices)
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Functions and reuse; exporting artifacts; light performance care (vectorization where shown)
-- ✅ Pass: Turn your EDA steps into small functions at top of a notebook and parameterize the input filepath; saving 1 CSV and 2 plots. Re-run on a second dataset by changing one variable.
-- 🛠️ How: Define `load_data(path)`, `clean(df)`, `summarize(df)`; `df.to_csv`, `plt.savefig`.
+- 🧪 Practice: Work with time series: DateTimeIndex, resampling, rolling windows (Ch.11); explore advanced pandas: Categoricals, method chaining, performance (Ch.12).
+- ✅ Pass: Load time series data, set DateTimeIndex, resample to weekly/monthly, compute rolling statistics; convert a column to Categorical; refactor pipeline using method chaining; time vectorized vs apply.
+- 🛠️ How: `pd.to_datetime`, `df.set_index`, `df.resample("W").mean()`, `.rolling(7).mean()`, `pd.Categorical`, `.pipe()`.
 
 Week 7 — P4DA Project A
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: End-to-end EDA using only chapters 1–12 capabilities
-- ✅ Pass: Apply your parameterized EDA to a new dataset and write a 1-page memo with ≥3 insights, ≥2 hypotheses, and ≥1 data quality risk.
-- 🛠️ How: Reuse Week 6 functions; keep code idempotent.
+- 🧪 Practice: End-to-end EDA pipeline using all chapters 1–12: load, clean, transform, aggregate, visualize.
+- ✅ Pass: Apply a complete EDA workflow to a new dataset; produce ≥5 visualizations; write a 1-page summary with ≥3 insights, ≥2 hypotheses, and ≥1 data quality issue identified.
+- 🛠️ How: Combine prior weeks' functions into a reusable pipeline; keep code modular and well-documented.
 
 Week 8 — P4DA Project B
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Feature engineering strictly from transforms covered (dates, ratios, categories)
-- ✅ Pass: Create 5 features (date parts, ratios, interactions limited to arithmetic) and document rationale and potential leakage.
-- 🛠️ How: `df.assign(...)`, `pd.to_datetime(...).dt.month`, arithmetic features.
+- 🧪 Practice: Feature engineering using transforms from the book: date/time features, categorical encoding, ratios, binning.
+- ✅ Pass: Create ≥5 derived features (date parts, ratios, binned numerics, category combinations); document each feature's rationale, potential predictive value, and leakage risk.
+- 🛠️ How: `df["date"].dt.month`, `df.assign(ratio=lambda x: x["a"]/x["b"])`, `pd.cut`, `pd.get_dummies`.
 </details>
 
 🔁 Flex — Consolidate EDA template and notes
@@ -130,63 +130,63 @@ Week 8 — P4DA Project B
 
 Week 9 — Linear Algebra I
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Vectors, norms, matrix ops; SVD intro
-- ✅ Pass: Compute SVD on a toy matrix and reconstruct it from top-k components; report reconstruction error vs k.
-- 🛠️ How: `U,S,Vt = np.linalg.svd(A, full_matrices=False)`; `A_k = U[:,:k] @ np.diag(S[:k]) @ Vt[:k]`.
+- 🧪 Practice: Vectors (addition, scalar multiplication, norms); matrix operations (transpose, multiplication); linear independence and basis.
+- ✅ Pass: Implement vector/matrix operations from scratch; verify linear independence of a set of vectors; compute and interpret different vector norms (L1, L2, Linf).
+- 🛠️ How: `np.dot`, `np.linalg.norm`, `np.linalg.matrix_rank`; manually verify independence via row reduction.
 
 Week 10 — Linear Algebra II
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Eigenvalues/vectors; conditioning
-- ✅ Pass: Show eigenvector sensitivity by adding small Gaussian noise to a symmetric matrix and plotting angle change vs noise.
-- 🛠️ How: `np.linalg.eig`; compute angle via normalized dot product.
+- 🧪 Practice: Eigenvalues and eigenvectors; matrix diagonalization; positive definiteness; condition number.
+- ✅ Pass: Compute eigendecomposition of symmetric matrices; verify diagonalization A = PDP⁻¹; check positive definiteness via eigenvalues; interpret condition number for numerical stability.
+- 🛠️ How: `np.linalg.eig`, `np.linalg.eigh` for symmetric; `np.linalg.cond`; verify reconstruction.
 
 Week 11 — Decompositions & Geometry
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: QR vs normal equations for least squares
-- ✅ Pass: Solve `min ||Ax-b||` via normal equations and via QR; compare residual norms.
-- 🛠️ How: `np.linalg.qr(A)`; backsolve; `np.linalg.lstsq` for reference.
+- 🧪 Practice: SVD and its applications; orthogonal projections; analytic geometry (distances, angles, hyperplanes).
+- ✅ Pass: Compute SVD; reconstruct matrix from top-k components and plot reconstruction error vs k; project points onto a subspace; compute distances to hyperplanes.
+- 🛠️ How: `np.linalg.svd`; projection formula; `np.linalg.lstsq` for least squares via normal equations and QR.
 
 Week 12 — Vector Calculus I
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Gradients/Jacobians; gradient descent on convex quadratic
-- ✅ Pass: Show monotone loss decrease for a suitable step size on `f(x)=1/2 x^T Q x + c^T x`.
-- 🛠️ How: analytic gradient `Qx+c`; fixed small step.
+- 🧪 Practice: Partial derivatives; gradients of scalar functions; Jacobians of vector functions.
+- ✅ Pass: Compute gradients analytically for multivariate functions; verify with numerical finite differences; visualize gradient field on a contour plot.
+- 🛠️ How: Derive gradient by hand; implement central differences `(f(x+h)-f(x-h))/(2h)`; `plt.contour` with `plt.quiver`.
 
 Week 13 — Vector Calculus II
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Chain rule; finite-difference checks
-- ✅ Pass: Compare analytic vs central-difference gradient on a 2D function; max abs diff < 1e-4.
-- 🛠️ How: central differences with small `h`.
+- 🧪 Practice: Chain rule for composed functions; backpropagation intuition; Hessians and second-order derivatives.
+- ✅ Pass: Derive gradients of composed functions using chain rule; compute Hessian matrix; verify gradient computation with central-difference check (max abs diff < 1e-4).
+- 🛠️ How: Symbolic differentiation by hand; numerical Hessian via finite differences; check gradient correctness.
 
 Week 14 — Probability I
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: LLN/CLT simulations using distributions covered
-- ✅ Pass: For Binomial and Poisson sample means, show variance ≈ theory and QQ-plots trending more linear as n increases.
-- 🛠️ How: simulate many trials; compute sample mean variance; `scipy.stats.probplot` or manual quantiles.
+- 🧪 Practice: Random variables; probability distributions (discrete and continuous); expectation and variance; common distributions (Bernoulli, Binomial, Gaussian).
+- ✅ Pass: Simulate samples from common distributions; compute empirical vs theoretical mean/variance; verify Law of Large Numbers by plotting sample mean convergence.
+- 🛠️ How: `np.random`, `scipy.stats`; compare empirical moments to closed-form expressions.
 
 Week 15 — Probability II
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Covariance; correlation; dependence vs zero-correlation
-- ✅ Pass: Generate correlated Normals via Cholesky and recover covariance empirically with small Frobenius error (< 0.05).
-- 🛠️ How: `L = cholesky(Sigma)`; `X = Z @ L.T`; `np.cov`.
+- 🧪 Practice: Joint and marginal distributions; covariance and correlation; multivariate Gaussian; Gaussian conditioning and marginalization.
+- ✅ Pass: Generate correlated Normals via Cholesky decomposition; recover empirical covariance matrix; visualize 2D Gaussian contours; demonstrate conditioning a multivariate Gaussian.
+- 🛠️ How: `L = np.linalg.cholesky(Sigma)`; `X = Z @ L.T`; `np.cov`; contour plots for bivariate Gaussian.
 
 Week 16 — Optimization I
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Convexity via Hessian; backtracking line search
-- ✅ Pass: Verify convexity by PSD Hessian for two functions and implement backtracking line search on a convex quadratic.
-- 🛠️ How: compute Hessian analytically or via finite differences; Armijo condition.
+- 🧪 Practice: Convex functions and sets; gradient descent algorithm; learning rate selection; convergence analysis.
+- ✅ Pass: Implement gradient descent for a convex quadratic f(x)=½x^TQx+c^Tx; show monotone loss decrease; experiment with different step sizes and plot convergence curves.
+- 🛠️ How: Analytic gradient Qx+c; fixed and adaptive step sizes; plot loss vs iterations.
 
 Week 17 — Optimization II
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Compare first- vs second-order methods introduced in MML
-- ✅ Pass: Solve ridge-regularized least squares with Gradient Descent (with backtracking) vs Newton’s method; show iterations-to-tolerance.
-- 🛠️ How: add λI to Q; implement Newton step using Hessian; compare convergence curves.
+- 🧪 Practice: Newton's method; constrained optimization concepts; regularization and its geometric interpretation.
+- ✅ Pass: Implement Newton's method using Hessian; compare convergence (iterations to tolerance) with gradient descent; solve ridge regression and visualize how λ affects the solution.
+- 🛠️ How: Newton step: x_new = x - H⁻¹∇f; `scipy.optimize.minimize`; compare first-order vs second-order methods.
 
 Week 18 — Review
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Concept map and short-link notes
-- ✅ Pass: A one-page map with ≥10 links from math concepts to later ML choices (e.g., regularization ↔ condition number).
-- 🛠️ How: diagram or bullet map; keep explicit link statements.
+- 🧪 Practice: Create concept map linking all MML topics; write summary notes connecting math foundations to ML applications.
+- ✅ Pass: A one-page concept map with ≥10 explicit connections between math concepts and ML techniques (e.g., eigenvalues ↔ PCA, gradient descent ↔ neural network training, condition number ↔ numerical stability).
+- 🛠️ How: Use mind-mapping tool or hand-drawn diagram; include concrete examples for each link.
 </details>
 
 🔁 Flex — Retrieval practice and summaries
@@ -198,39 +198,39 @@ Week 18 — Review
 
 Week 19 — Think Stats Ch. 1
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: ECDF construction; histogram comparison
-- ✅ Pass: Implement ECDF on real data; verify it is non-decreasing and ends at 1.0; compare to histogram shape.
-- 🛠️ How: `np.sort`; `np.arange(1,n+1)/n`.
+- 🧪 Practice: Explore a dataset; compute summary statistics; build histograms and PMFs; construct ECDFs.
+- ✅ Pass: Implement ECDF from scratch on real data; verify it is non-decreasing and ends at 1.0; overlay histogram and ECDF to compare distributional insights; interpret outliers.
+- 🛠️ How: `np.sort`; `np.arange(1,n+1)/n`; `plt.step` for ECDF; `plt.hist` for histogram.
 
 Week 20 — Think Stats Ch. 2
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: Robust vs classical descriptive stats
-- ✅ Pass: Report mean/SD vs median/MAD/trimmed mean on 2 datasets and explain divergence due to skew/outliers.
-- 🛠️ How: `scipy.stats.median_abs_deviation`; trimming via slice after sort.
+- 🧪 Practice: Compute central tendency (mean, median, mode) and spread (variance, std, range, IQR); explore effect of outliers on these measures.
+- ✅ Pass: Compare mean/SD vs median/MAD/IQR on 2 datasets (one symmetric, one skewed); explain when each measure is appropriate; show outlier impact graphically.
+- 🛠️ How: `np.mean`, `np.median`, `np.std`; `scipy.stats.median_abs_deviation`; `np.percentile` for IQR.
 
 Week 21 — Think Stats Ch. 3–4
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: Relationships; Pearson vs Spearman
-- ✅ Pass: Show an example where Pearson and Spearman diverge and explain monotone non-linear dependence.
-- 🛠️ How: `np.corrcoef`; `scipy.stats.spearmanr`.
+- 🧪 Practice: Work with CDFs and PMFs; model data with probability distributions; compare empirical vs theoretical distributions.
+- ✅ Pass: Fit data to common distributions (Normal, Exponential); use CDF plots to assess fit; compute percentiles and quantiles; explain when to use PMF vs CDF.
+- 🛠️ How: `scipy.stats.norm.fit`, `scipy.stats.expon`; `probplot` for QQ plots; CDF comparison plots.
 
 Week 22 — Think Stats Ch. 5–6
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: Basic probability; simple Bayesian update
-- ✅ Pass: Compute a Beta–Binomial posterior mean/var analytically and confirm via simulation.
-- 🛠️ How: closed-form update; simulate posteriors.
+- 🧪 Practice: Model data with analytical distributions; explore relationships between variables; compute conditional probabilities.
+- ✅ Pass: Fit a parametric model to real data; compute and interpret correlation and covariance; demonstrate conditional probability with a contingency table.
+- 🛠️ How: `scipy.stats` distribution fitting; `np.corrcoef`; `pd.crosstab` for contingency tables.
 
 Week 23 — Think Stats Ch. 7–8
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: Hypothesis testing
-- ✅ Pass: Simulate empirical Type I ≈ α and produce a power curve for a specified effect size.
-- 🛠️ How: repeated sampling; count rejections.
+- 🧪 Practice: Estimate parameters with confidence intervals; perform hypothesis tests; understand p-values and statistical significance.
+- ✅ Pass: Compute confidence intervals via bootstrap and analytical methods; run a hypothesis test; simulate to show Type I error ≈ α; produce a power curve for detecting effect sizes.
+- 🛠️ How: Bootstrap resampling; `scipy.stats.ttest_ind`; simulation to count rejections under H₀ and H₁.
 
 Week 24 — Think Stats Ch. 9–10 (+wrap)
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- 🧪 Practice: Regression basics; diagnostics
-- ✅ Pass: Fit OLS; show residual mean ≈ 0, residual vs fitted plot, and compute VIFs; flag VIF > 10 if any.
-- 🛠️ How: `statsmodels.api.OLS`; `variance_inflation_factor`.
+- 🧪 Practice: Explore linear relationships; fit simple and multiple regression; interpret coefficients; check regression assumptions.
+- ✅ Pass: Fit OLS regression; interpret R², coefficients, and p-values; produce diagnostic plots (residuals vs fitted, QQ plot); compute VIFs and flag multicollinearity.
+- 🛠️ How: `statsmodels.api.OLS`; `statsmodels.stats.outliers_influence.variance_inflation_factor`; diagnostic plots.
 </details>
 
 🔁 Flex — Stats recap
@@ -242,9 +242,9 @@ Week 24 — Think Stats Ch. 9–10 (+wrap)
 
 Weeks 25–32 — Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
-- 🧪 Practice: Conjugates; posterior predictive checks; simple model comparison as presented in the book
-- ✅ Pass (weekly): Implement a book-aligned Bayesian model (e.g., Beta–Binomial, Gamma–Poisson, Normal–Normal) with prior sensitivity and a posterior predictive check. For comparison, use the approach discussed in the chapter (e.g., predictive performance or simple Bayes factors where applicable).
-- 🛠️ How: analytic posteriors when available; draw PPC replicates and compare a chosen statistic.
+- 🧪 Practice: Apply Bayes' theorem to update beliefs; implement conjugate prior models (Beta-Binomial, Gamma-Poisson, Normal-Normal); perform posterior predictive checks; compare models.
+- ✅ Pass (weekly): Implement a Bayesian model aligned with the chapter's topic; show prior sensitivity analysis (vary prior parameters and observe posterior changes); generate posterior predictive samples and compare to observed data using a suitable test statistic.
+- 🛠️ How: Use analytical posteriors when available; for PPC, draw samples from posterior, then from likelihood, and compare summary stats to data.
 
 Weeks 33–36 — Flexible Imputation of Missing Data (complete)
 - 📖 [FIMD](https://stefvanbuuren.name/fimd/)
@@ -262,63 +262,63 @@ Weeks 33–36 — Flexible Imputation of Missing Data (complete)
 
 Week 37 — ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Train/test split; bias–variance; basic metrics (RMSE, accuracy); simple baseline vs model comparison.
-- ✅ Pass: On a small dataset, implement a hold-out and 5-fold CV; report train vs test (or CV) gap and discuss bias–variance trade-off.
-- 🛠️ How: `train_test_split`; `KFold`/`cross_val_score`; `Pipeline`; fix `random_state`.
+- 🧪 Practice: Understand the statistical learning framework; implement train/test splits; explore the bias-variance trade-off with KNN at different k values.
+- ✅ Pass: On a dataset, demonstrate how training error decreases with model complexity while test error shows U-shape; implement 5-fold CV and compare to hold-out estimate; discuss flexibility vs interpretability.
+- 🛠️ How: `train_test_split`; `KFold`/`cross_val_score`; vary KNN's k parameter; plot training vs test error curves.
 
 Week 38 — ISLP Ch. 3 (Linear Regression)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: OLS; interaction and polynomial terms; diagnostics.
-- ✅ Pass: Fit baseline OLS, then with interactions/polynomials; show residual plots, R² vs adjusted R²; justify the chosen degree via CV.
-- 🛠️ How: `PolynomialFeatures`; `LinearRegression`; `cross_val_score`; residual plots.
+- 🧪 Practice: Fit simple and multiple linear regression; interpret coefficients; add interaction and polynomial terms; assess model fit with residual diagnostics.
+- ✅ Pass: Fit OLS with and without interaction/polynomial terms; compare R² vs adjusted R²; produce residual plots; select optimal polynomial degree via CV; interpret coefficient confidence intervals.
+- 🛠️ How: `LinearRegression`; `PolynomialFeatures`; `cross_val_score`; `statsmodels` for CIs; residual diagnostics.
 
 Week 39 — ISLP Ch. 4 (Classification)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Logistic regression, LDA/QDA, kNN; class imbalance handling.
-- ✅ Pass: Compare 3 classifiers with stratified 5-fold CV; report ROC AUC and confusion matrix on a hold-out; discuss class threshold choice.
-- 🛠️ How: `StratifiedKFold`; `LogisticRegression`; `LinearDiscriminantAnalysis`; `KNeighborsClassifier`.
+- 🧪 Practice: Implement logistic regression; understand LDA/QDA assumptions; apply KNN for classification; explore classification metrics beyond accuracy.
+- ✅ Pass: Compare logistic regression, LDA, QDA, and KNN using stratified 5-fold CV; report confusion matrix, precision, recall, and ROC-AUC; select optimal classification threshold based on problem context.
+- 🛠️ How: `LogisticRegression`; `LinearDiscriminantAnalysis`; `QuadraticDiscriminantAnalysis`; `KNeighborsClassifier`; `roc_curve` for threshold selection.
 
 Week 40 — ISLP Ch. 5 (Resampling Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Validation set; LOOCV; k-fold CV; bootstrap for statistics.
-- ✅ Pass: Estimate test error via LOOCV vs 10-fold; run bootstrap for coefficient SE on a linear model; compare to analytic SE when available.
-- 🛠️ How: `LeaveOneOut`; `KFold`; bootstrap with resampling; seed reproducibly.
+- 🧪 Practice: Compare validation approaches: hold-out, LOOCV, k-fold CV; use bootstrap for uncertainty estimation; understand variance-bias trade-off in resampling.
+- ✅ Pass: Compare test error estimates from LOOCV vs 5-fold vs 10-fold CV; implement bootstrap to estimate coefficient standard errors; compare bootstrap SEs to analytic SEs.
+- 🛠️ How: `LeaveOneOut`; `KFold`; implement bootstrap loop with `np.random.choice`; fix seeds for reproducibility.
 
 Week 41 — ISLP Ch. 6 (Model Selection & Regularization)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Subset selection (proxy), ridge, lasso, elastic net; regularization paths.
-- ✅ Pass: Plot ridge/lasso coefficient paths; pick λ via CV; compare test error to OLS; interpret sparsity.
-- 🛠️ How: `RidgeCV`; `LassoCV`; standardization; path plotting.
+- 🧪 Practice: Understand the motivation for regularization; implement ridge and lasso regression; interpret coefficient shrinkage and sparsity; tune regularization parameter via CV.
+- ✅ Pass: Plot ridge and lasso coefficient paths as λ varies; select optimal λ via CV; compare test error of OLS vs ridge vs lasso; explain when lasso produces sparse solutions.
+- 🛠️ How: `Ridge`; `Lasso`; `RidgeCV`; `LassoCV`; `StandardScaler` (scale features first); `lasso_path` for path plots.
 
 Week 42 — ISLP Ch. 7 (Beyond Linearity)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Polynomial/step functions; splines; GAM-like components (where feasible).
-- ✅ Pass: Fit spline-based regression; show partial effect plots; compare to polynomial fit on test error.
-- 🛠️ How: `SplineTransformer` or `patsy`/`pygam` (if allowed); otherwise piecewise features.
+- 🧪 Practice: Move beyond linearity with polynomial regression, step functions, and splines; understand degrees of freedom; fit GAM-style models.
+- ✅ Pass: Fit polynomial, step function, and spline models; compare their flexibility and test errors; produce partial dependence plots; select appropriate number of knots/degrees via CV.
+- 🛠️ How: `PolynomialFeatures`; `SplineTransformer`; `pd.cut` for step functions; compare MSE on held-out data.
 
 Week 43 — ISLP Ch. 8 (Tree-Based Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: CART; bagging; random forests; gradient boosting.
-- ✅ Pass: Fit tree, RF, and GBM; compare OOB vs test metrics; plot feature importances and one PDP.
-- 🛠️ How: `DecisionTree*`, `RandomForest*`, `GradientBoosting*`/`XGB` (if allowed); `permutation_importance`.
+- 🧪 Practice: Fit decision trees; understand bagging and the random forest algorithm; implement gradient boosting; interpret tree-based models.
+- ✅ Pass: Fit and prune a decision tree; compare single tree vs random forest vs gradient boosting on test error; show OOB error for RF; plot feature importances and partial dependence plots.
+- 🛠️ How: `DecisionTreeClassifier/Regressor`; `RandomForestClassifier/Regressor`; `GradientBoostingClassifier/Regressor`; `permutation_importance`; `plot_partial_dependence`.
 
 Week 44 — ISLP Ch. 9 (Support Vector Machines)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: Linear vs RBF kernels; hyperparameter tuning; margin intuition.
-- ✅ Pass: Tune C and gamma on a 2D toy dataset; visualize decision boundaries; report CV vs test performance.
-- 🛠️ How: `SVC`; `GridSearchCV`; contour plots.
+- 🧪 Practice: Understand maximal margin classifiers and support vectors; fit SVMs with linear and non-linear kernels; tune hyperparameters (C, gamma).
+- ✅ Pass: Fit SVM with linear and RBF kernels; tune C and gamma via grid search with CV; visualize decision boundaries on 2D data; identify and highlight support vectors; compare to logistic regression.
+- 🛠️ How: `SVC`; `GridSearchCV`; `plt.contourf` for decision boundaries; access `support_vectors_` attribute.
 
 Week 45 — ISLP Ch. 10 (Unsupervised Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: PCA; k-means; hierarchical clustering; scaling choices.
-- ✅ Pass: Show PCA explained variance; cluster with k-means and hierarchical; evaluate with silhouette score and stability across seeds.
-- 🛠️ How: `StandardScaler`; `PCA`; `KMeans`; `AgglomerativeClustering`; `silhouette_score`.
+- 🧪 Practice: Perform dimensionality reduction with PCA; apply k-means and hierarchical clustering; understand the importance of scaling; evaluate clustering quality.
+- ✅ Pass: Apply PCA and plot cumulative explained variance; choose number of components; cluster with k-means (elbow method for k) and hierarchical clustering (dendrogram); evaluate with silhouette score and compare cluster stability across random seeds.
+- 🛠️ How: `StandardScaler` (always scale first); `PCA`; `KMeans` with inertia plots; `AgglomerativeClustering`; `dendrogram`; `silhouette_score`.
 
 Week 46 — ISLP Labs/Wrap-up
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
-- 🧪 Practice: End-to-end ML workflow on a tabular dataset using ISLP chapters.
-- ✅ Pass: Reproducible notebook with proper split, CV, tuned model, error analysis, and a short 1-page summary with decisions and risks.
-- 🛠️ How: `Pipeline`; `ColumnTransformer`; `cross_val_score`; fixed seeds; clean report.
+- 🧪 Practice: Complete an end-to-end ML project using techniques from all ISLP chapters: EDA, preprocessing, model selection, hyperparameter tuning, evaluation, and interpretation.
+- ✅ Pass: Deliver a reproducible notebook with proper train/test split, cross-validation, model comparison, hyperparameter tuning, error analysis, and a 1-page summary documenting decisions, limitations, and risks.
+- 🛠️ How: `Pipeline`; `ColumnTransformer` for mixed feature types; `GridSearchCV`/`RandomizedSearchCV`; fixed `random_state` throughout; clean documentation.
 </details>
 
 🔁 Flex — Validation basics consolidation
@@ -330,15 +330,15 @@ Week 46 — ISLP Labs/Wrap-up
 
 Weeks 47–60 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-- 🧪 Practice: Implement chapter-aligned core algorithms using only concepts introduced so far (e.g., logistic regression, linear regression with basis functions, naive Bayes, kernels for regression, EM for GMM, simple graphical model inference)
-- ✅ Pass (weekly): From-scratch implementation for that chapter demonstrates parity (within 2–5%) with a library baseline on a small toy dataset; include seeded reproducibility.
-- 🛠️ How: use sklearn purely as an oracle for comparison; fix `random_state`; limit to toy-scale experiments.
+- 🧪 Practice: Implement core algorithms from each chapter from scratch: probability distributions, linear models, neural networks, kernel methods, graphical models, mixture models, EM algorithm, approximate inference, and sampling methods.
+- ✅ Pass (weekly): Implement the chapter's focal algorithm from scratch; verify correctness by comparing to sklearn/scipy baseline (within 2-5% accuracy); document mathematical derivations; use fixed seeds for reproducibility.
+- 🛠️ How: Use NumPy for implementations; sklearn only as verification oracle; work on toy datasets; keep detailed notes linking code to book equations.
 
 Weeks 61–65 — Interpretable ML (complete)
 - 📖 [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
-- 🧪 Practice: Global (PDP/ICE, permutation) and local (e.g., SHAP) methods as presented
-- ✅ Pass (weekly): Apply PDP/ICE and permutation importance; then SHAP to the same model; write a 1-page note on stability and limitations across 3 resamples.
-- 🛠️ How: `sklearn.inspection.partial_dependence/plot_partial_dependence` (or newer API), `permutation_importance`, `shap` for local explanations.
+- 🧪 Practice: Apply model-agnostic interpretation methods: PDP, ICE, permutation importance, LIME, SHAP; understand intrinsically interpretable models; explore feature interaction methods.
+- ✅ Pass (weekly): For a trained model, produce PDP/ICE plots for top features; compute permutation importance; generate SHAP values for individual predictions; write a 1-page analysis comparing methods' stability across 3 bootstrap resamples.
+- 🛠️ How: `sklearn.inspection.PartialDependenceDisplay`; `permutation_importance`; `shap.Explainer`; compare explanations across train/test sets.
 </details>
 
 🔁 Flex — Validation & interpretation synthesis
@@ -370,9 +370,9 @@ Weeks 75–86 — Basic Econometrics (complete)
 
 Weeks 87–96 — Lütkepohl (complete)
 - 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- 🧪 Practice: VAR/VECM workflow exactly as the book presents (lag selection, stability checks, IRFs/FEVD, cointegration where applicable)
-- ✅ Pass (weekly): Fit VAR/VECM on a macro dataset; pass residual diagnostics; include IRFs/FEVD; perform cointegration tests if required by the chapter.
-- 🛠️ How: `statsmodels.tsa.api.VAR/VECM`; rolling-origin evaluation for forecast sections.
+- 🧪 Practice: Implement multivariate time series analysis: VAR model specification, estimation, lag order selection, stability analysis, impulse response functions, forecast error variance decomposition, and cointegration/VECM.
+- ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
+- 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
 </details>
 
 🔁 Flex — Econometrics/time-series consolidation
@@ -384,9 +384,9 @@ Weeks 87–96 — Lütkepohl (complete)
 
 Weeks 97–106 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
-- 🧪 Practice: Weekly mini-analyses using only the chapters completed that week (wrangle → visualize → model or summary → render)
-- ✅ Pass (weekly): Render a Quarto/Rmd report that re-runs end-to-end with one command, using a seed and only functions introduced in the completed chapters.
-- 🛠️ How: `tidyverse` verbs for the covered chapters; `set.seed`; optional `targets/drake` for reproducible workflows.
+- 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
+- ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
+- 🛠️ How: `library(tidyverse)`; `read_csv`; `dplyr` verbs (`filter`, `mutate`, `summarize`, `group_by`); `ggplot2`; `set.seed()` for reproducibility.
 </details>
 
 🔁 Flex — R consolidation
@@ -398,15 +398,15 @@ Weeks 97–106 — R4DS (Complete)
 
 Week 107 — BeautifulSoup
 - 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- 🧪 Practice: Single static page scrape using only requests + bs4 (selectors, parsing, extraction)
-- ✅ Pass: Save structured CSV/JSON with documented schema; respect robots.txt; no 429s.
-- 🛠️ How: `requests.get`; `BeautifulSoup(html, "lxml")`; `.select` or `.find_all`; `time.sleep` backoff.
+- 🧪 Practice: Scrape static HTML pages: fetch with requests, parse with BeautifulSoup, navigate the DOM, extract data using CSS selectors and tag methods.
+- ✅ Pass: Scrape a static website and extract structured data; save as CSV/JSON with documented schema; check robots.txt before scraping; implement polite delays to avoid rate limiting (no HTTP 429 errors).
+- 🛠️ How: `requests.get(url)`; `BeautifulSoup(html, "lxml")`; `.select()` for CSS selectors; `.find_all()` for tag-based search; `time.sleep()` between requests.
 
 Weeks 108–109 — Selenium
 - 📖 [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- 🧪 Practice: Dynamic page automation as per docs (waits, selectors, pagination/scroll)
-- ✅ Pass (weekly): Scrape a dynamic page (e.g., infinite scroll or simple login) and save a timestamped, deterministic snapshot with logs of retries/timeouts.
-- 🛠️ How: `WebDriverWait`; CSS/XPath selectors; consistent viewport and user agent.
+- 🧪 Practice: Automate browser interactions for dynamic websites: handle JavaScript-rendered content, implement explicit waits, manage pagination and infinite scroll, fill forms.
+- ✅ Pass (weekly): Scrape a JavaScript-rendered page (e.g., infinite scroll or content behind clicks); implement proper waits and error handling; save timestamped data with retry/timeout logs; handle at least one failure scenario gracefully.
+- 🛠️ How: `webdriver.Chrome()`; `WebDriverWait` with `expected_conditions`; CSS/XPath selectors; `execute_script()` for scrolling; consistent viewport settings.
 
 Weeks 110–112 — SQL Tutorial
 - 📖 [SQL Tutorial](https://www.sqltutorial.org/)
@@ -430,9 +430,9 @@ Weeks 113–120 — D2L (Fundamentals)
 
 Week 121 — The Illustrated Transformer (Bridge)
 - 📖 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- 🧪 Practice: Self-attention mechanics (shapes, masks, scaling) as explained in the article
-- ✅ Pass: Implement toy self-attention and write unit tests for shape/mask/scaling behavior.
-- 🛠️ How: NumPy/PyTorch; `assert` shape checks; verify mask zeros attention to padded tokens.
+- 🧪 Practice: Understand the Transformer architecture: self-attention mechanism, multi-head attention, positional encoding, encoder-decoder structure.
+- ✅ Pass: Implement self-attention from scratch; verify tensor shapes at each step; implement attention masking; write unit tests for: (1) output shape correctness, (2) masked positions get zero attention, (3) attention weights sum to 1.
+- 🛠️ How: Use NumPy or PyTorch; implement Q, K, V projections; scaled dot-product attention; verify with `assert` statements and test cases.
 
 Weeks 122–132 — Deep Learning Book (Complete)
 - 📖 [Deep Learning Book](https://www.deeplearningbook.org/)
@@ -476,15 +476,15 @@ Weeks 149–156 — Data Engineering Zoomcamp
 
 Weeks 157–159 — Hugging Face Course
 - 📖 [HF Course](https://huggingface.co/course/chapter1)
-- 🧪 Practice: Datasets, tokenizers, training, inference as covered by the course units
-- ✅ Pass (weekly): Fine-tune or run inference with a small transformer; evaluate with a suitable metric; log configs exactly as the course demonstrates.
-- 🛠️ How: `transformers`, `datasets`, `accelerate`; keep to course-recommended scripts.
+- 🧪 Practice: Learn the Hugging Face ecosystem: load and preprocess datasets, understand tokenizers, fine-tune pretrained models, run inference, evaluate with appropriate metrics.
+- ✅ Pass (weekly): Complete the course exercises for that week's chapters; fine-tune a small transformer on a downstream task (e.g., text classification, NER); evaluate with task-appropriate metrics (accuracy, F1, etc.); log all configurations.
+- 🛠️ How: `transformers` library for models; `datasets` for data loading; `Trainer` API for fine-tuning; `accelerate` for distributed training; Weights & Biases or TensorBoard for logging.
 
 Week 160 — HF Agents
 - 📖 [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
-- 🧪 Practice: Tool-using agent with timeouts and error handling as per course
-- ✅ Pass: Agent completes a simple multi-step task within timeouts and handles one injected failure path gracefully; list safety checks.
-- 🛠️ How: Use course framework; implement guards/timeouts as shown.
+- 🧪 Practice: Build AI agents that use tools: understand agent architectures, implement tool calling, handle errors and timeouts, implement safety guardrails.
+- ✅ Pass: Build an agent that completes a multi-step task using external tools; implement proper timeout handling; test with an injected failure scenario and verify graceful degradation; document safety checks and limitations.
+- 🛠️ How: Use Hugging Face agents framework; implement `Tool` classes; set timeouts with `asyncio.timeout` or similar; log all tool calls and responses; implement input validation.
 </details>
 
 ---------------------------------------------------------------------
@@ -494,18 +494,21 @@ Week 160 — HF Agents
 
 Week 161 — statsmodels deep dive
 - 📖 [statsmodels](https://www.statsmodels.org/stable/index.html)
-- 🧪 Practice: Reproduce two econometric analyses from earlier phases using only covered methods
-- ✅ Pass: Match reference coefficients/SEs within tolerance; include robust SEs where applicable.
+- 🧪 Practice: Master statsmodels by reproducing analyses from earlier phases: OLS with diagnostics, GLMs, time series models (ARIMA, VAR), hypothesis testing.
+- ✅ Pass: Reproduce two econometric analyses matching original coefficients and standard errors; include full diagnostic suite (heteroskedasticity, autocorrelation tests); apply robust SEs where violations exist.
+- 🛠️ How: `statsmodels.api.OLS/GLM`; `statsmodels.tsa` for time series; `het_breuschpagan`, `acorr_ljungbox` for diagnostics; `cov_type="HC3"` for robust SEs.
 
 Week 162 — scikit-learn deep dive
 - 📖 [scikit-learn](https://scikit-learn.org/stable/index.html)
-- 🧪 Practice: Build a clean template ML pipeline using methods you have already learned (preprocess → CV → metric → calibration if relevant)
-- ✅ Pass: Deterministically re-runs and produces calibrated probabilities (if classification).
+- 🧪 Practice: Create a production-ready ML pipeline template: preprocessing (scaling, encoding), feature selection, model training with CV, hyperparameter tuning, probability calibration.
+- ✅ Pass: Build a complete Pipeline with ColumnTransformer for mixed types; implement nested CV for unbiased evaluation; apply probability calibration (Platt scaling or isotonic); ensure deterministic results with fixed seeds.
+- 🛠️ How: `Pipeline`; `ColumnTransformer`; `GridSearchCV`/`RandomizedSearchCV`; `CalibratedClassifierCV`; fixed `random_state` throughout.
 
 Weeks 163–164 — Capstone & Portfolio
 - 📖 Integrate end-to-end skills only from prior phases
-- 🧪 Practice: Capstone with uncertainty quantification, interpretability, evaluation protocol, and non-technical brief
-- ✅ Pass: Reproducible project script; README with assumptions/risks; clear results and decisions.
+- 🧪 Practice: Complete a capstone project demonstrating: problem framing, data pipeline, modeling with uncertainty quantification, model interpretation, rigorous evaluation, and stakeholder communication.
+- ✅ Pass: Deliver a fully reproducible project (single command to run); include README documenting problem, approach, assumptions, limitations, and risks; provide model interpretation (SHAP/PDP); write a 1-page non-technical summary for stakeholders.
+- 🛠️ How: Use Git for version control; Docker for reproducibility; include uncertainty estimates (bootstrap CIs or Bayesian); create visualizations for non-technical audience; document all decisions.
 </details>
 
 ---------------------------------------------------------------------
