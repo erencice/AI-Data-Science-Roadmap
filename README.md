@@ -410,7 +410,7 @@ Weeks 108–109 — Selenium
 
 Week 110 — SQL Basics & Data Retrieval
 - 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-- �� Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
+- 🧪 Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
 - ✅ Pass: Install and configure a SQL database system; create a sample database with at least 3 tables; write ≥20 SELECT queries demonstrating: simple selection, filtering with WHERE, multiple conditions with AND/OR, sorting ascending/descending, limiting results, removing duplicates, and pattern matching with LIKE; document each query with its purpose and expected row count.
 - 🛠️ How: Install SQLite (lightweight) or PostgreSQL (production-grade); use `CREATE TABLE`, `INSERT INTO` for sample data; practice `SELECT * FROM table`, `SELECT col1, col2 FROM table WHERE condition`, `ORDER BY col ASC/DESC`, `LIMIT n`, `DISTINCT col`, `WHERE col LIKE 'pattern%'`; use a SQL client (DBeaver, pgAdmin, or command line).
 
