@@ -50,7 +50,7 @@ Main resources (cover-to-cover completion)
 - R for Data Science (2e) — Wickham, Çetinkaya-Rundel, Grolemund — [R for Data Science (2e)](https://r4ds.hadley.nz)
 - Beautiful Soup docs — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - Selenium (Python) docs — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- SQL Tutorial — [SQL Tutorial](https://www.sqltutorial.org/)
+- SQL Roadmap — [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - Dive into Deep Learning — Zhang et al. — [D2L](https://d2l.ai)
 - Deep Learning — Goodfellow, Bengio, Courville — [Deep Learning Book](https://www.deeplearningbook.org/)
 - MLOps Zoomcamp — DataTalksClub — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
@@ -408,11 +408,24 @@ Weeks 108–109 — Selenium
 - ✅ Pass (weekly): Scrape a JavaScript-rendered page (e.g., infinite scroll or content behind clicks); implement proper waits and error handling; save timestamped data with retry/timeout logs; handle at least one failure scenario gracefully.
 - 🛠️ How: `webdriver.Chrome()`; `WebDriverWait` with `expected_conditions`; CSS/XPath selectors; `execute_script()` for scrolling; consistent viewport settings.
 
-Weeks 110–112 — SQL Tutorial
-- 📖 [SQL Tutorial](https://www.sqltutorial.org/)
-- 🧪 Practice: Core SELECT/WHERE/JOIN; then subqueries/aggregations; then windows/CTEs (in tutorial order)
-- ✅ Pass (weekly): Execute ≥20 queries aligned to the week’s tutorial sections; final week includes a small analytics schema and ≥10 window/CTE queries.
-- 🛠️ How: SQLite/Postgres with seeded sample DB; save each query with expected rowcount.
+Week 110 — SQL Basics & Data Retrieval
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- �� Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
+- ✅ Pass: Install and configure a SQL database system; create a sample database with at least 3 tables; write ≥20 SELECT queries demonstrating: simple selection, filtering with WHERE, multiple conditions with AND/OR, sorting ascending/descending, limiting results, removing duplicates, and pattern matching with LIKE; document each query with its purpose and expected row count.
+- 🛠️ How: Install SQLite (lightweight) or PostgreSQL (production-grade); use `CREATE TABLE`, `INSERT INTO` for sample data; practice `SELECT * FROM table`, `SELECT col1, col2 FROM table WHERE condition`, `ORDER BY col ASC/DESC`, `LIMIT n`, `DISTINCT col`, `WHERE col LIKE 'pattern%'`; use a SQL client (DBeaver, pgAdmin, or command line).
+
+Week 111 — SQL Joins, Aggregations & Subqueries
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- 🧪 Practice: Master different types of joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, SELF JOIN); understand when to use each join type; work with aggregate functions (COUNT, SUM, AVG, MIN, MAX); use GROUP BY for grouping data; filter grouped data with HAVING clause; write subqueries in SELECT, WHERE, and FROM clauses; understand correlated vs non-correlated subqueries; practice set operations (UNION, UNION ALL, INTERSECT, EXCEPT); work with NULL values (IS NULL, IS NOT NULL, COALESCE, NULLIF).
+- ✅ Pass: Create a relational schema with ≥3 related tables (e.g., customers, orders, products); write ≥25 queries demonstrating: all join types with explanations, aggregate functions with and without GROUP BY, HAVING clause filters, nested subqueries (at least 2 levels deep), correlated subqueries, set operations combining multiple queries, NULL handling in various contexts; include at least one complex multi-join query involving 3+ tables; document the business question each query answers.
+- 🛠️ How: Design schema with foreign key relationships; `INNER JOIN table2 ON table1.id = table2.fk_id`, `LEFT JOIN` for including unmatched rows; `SELECT COUNT(*), AVG(col) FROM table GROUP BY category`, `HAVING COUNT(*) > 5`; `WHERE col IN (SELECT...)`, `SELECT (SELECT...) AS subquery_col`; `UNION` to combine results; `COALESCE(col, 'default')` for NULL handling; visualize join results with Venn diagrams.
+
+Week 112 — Advanced SQL: Window Functions, CTEs & Performance
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- 🧪 Practice: Master window functions (ROW_NUMBER, RANK, DENSE_RANK, NTILE); use aggregate window functions (SUM, AVG, COUNT over partitions); apply LEAD and LAG for accessing adjacent rows; work with PARTITION BY and ORDER BY in window functions; write Common Table Expressions (CTEs) for readable complex queries; use recursive CTEs for hierarchical data; understand query execution plans and optimization; create and use indexes for performance; practice transactions (BEGIN, COMMIT, ROLLBACK); work with views and stored procedures; implement data manipulation (INSERT, UPDATE, DELETE) with complex conditions; understand constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK); explore date/time functions and string manipulation functions.
+- ✅ Pass: Build a complete analytics database schema with ≥4 tables and proper constraints; write ≥30 advanced queries including: ≥10 window function queries (ranking, running totals, moving averages, lag/lead analysis), ≥5 CTEs (including at least 1 recursive CTE for hierarchical data like org charts or category trees), ≥5 queries with EXPLAIN/ANALYZE showing index usage, ≥3 transactions demonstrating ACID properties, ≥3 views encapsulating complex logic, ≥5 DML operations (INSERT/UPDATE/DELETE with subqueries), date calculations (date differences, date parts, date formatting), and complex string manipulations; create indexes and demonstrate query performance improvement; document each query with execution time before/after optimization where applicable.
+- 🛠️ How: Window functions: `ROW_NUMBER() OVER (PARTITION BY col ORDER BY col2)`, `SUM(col) OVER (PARTITION BY category ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)` for running totals; CTEs: `WITH cte_name AS (SELECT...) SELECT * FROM cte_name`; Recursive CTE: `WITH RECURSIVE cte AS (base_case UNION ALL recursive_case) SELECT * FROM cte`; Indexes: `CREATE INDEX idx_name ON table(col)`; check execution plan with `EXPLAIN` (PostgreSQL) or `EXPLAIN QUERY PLAN` (SQLite); transactions: `BEGIN; UPDATE...; COMMIT;`; views: `CREATE VIEW view_name AS SELECT...`; use `EXTRACT`, `DATE_TRUNC`, `AGE` for dates; `CONCAT`, `SUBSTRING`, `REGEXP_REPLACE` for strings; optimize with proper WHERE clause ordering and index hints.
+
 </details>
 
 🔁 Flex — ETL mini-project
@@ -528,7 +541,7 @@ Resource-to-Week Completion Map (cover-to-cover)
 - R for Data Science (2e) — Weeks 97–106 — [R for Data Science (2e)](https://r4ds.hadley.nz)
 - Beautiful Soup — Week 107 — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - Selenium (Python) — Weeks 108–109 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- SQL Tutorial — Weeks 110–112 — [SQL Tutorial](https://www.sqltutorial.org/)
+- SQL Roadmap (GeeksforGeeks) — Weeks 110–112 — [SQL Roadmap](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - Dive into Deep Learning — Weeks 113–120 — [D2L](https://d2l.ai)
 - The Illustrated Transformer — Week 121 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - Deep Learning — Weeks 122–132 — [Deep Learning Book](https://www.deeplearningbook.org/)
