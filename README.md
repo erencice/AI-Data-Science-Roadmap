@@ -1,6 +1,6 @@
 # AI & Data Science Weekly Plan — Activities, Practice, and Pass Criteria
 
-![Duration](https://img.shields.io/badge/duration-~164_weeks-6f42c1)
+![Duration](https://img.shields.io/badge/duration-~170_weeks-6f42c1)
 ![Pace](https://img.shields.io/badge/pace-8–10_h%2Fweek-0e8a16)
 ![Path](https://img.shields.io/badge/path-beginner%E2%86%92practitioner-0366d6)
 ![Style](https://img.shields.io/badge/style-cumulative%2C_concept%E2%86%92practice-555)
@@ -11,17 +11,18 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 - Phase 1 · Data Analysis Foundations
 - Phase 2 · Mathematics for ML
 - Phase 3 · Statistics Fundamentals
-- Phase 4 · Bayesian Statistics & Missing Data
-- Phase 5 · Statistical Learning with Python (ISLP)
-- Phase 6 · Classical ML
-- Phase 7 · Data Mining
-- Phase 8 · Econometrics & Time Series
-- Phase 9 · R for Data Science
-- Phase 10 · Web Scraping & SQL
-- Phase 11 · Deep Learning
-- Phase 12 · MLOps & Data Engineering
-- Phase 13 · LLMs & Open-Source AI
-- Phase 14 · Consolidation & Capstone
+- Phase 4 · Applied Multivariate Statistics
+- Phase 5 · Bayesian Statistics & Missing Data
+- Phase 6 · Statistical Learning with Python (ISLP)
+- Phase 7 · Classical ML
+- Phase 8 · Data Mining
+- Phase 9 · Econometrics & Time Series
+- Phase 10 · R for Data Science
+- Phase 11 · Web Scraping & SQL
+- Phase 12 · Deep Learning
+- Phase 13 · MLOps & Data Engineering
+- Phase 14 · LLMs & Open-Source AI
+- Phase 15 · Consolidation & Capstone
 
 Legend
 - 📖 Activities (primary source)
@@ -31,7 +32,7 @@ Legend
 - 🔁 Flex (catch-up, spaced review)
 
 Duration and pacing
-- Duration: ~164 weeks (≈3.1 years), 8–10 h/week
+- Duration: ~170 weeks (≈3.3 years), 8–10 h/week
 - Weekly output: small practical tasks only
 - Frequent Flex Weeks between phases for consolidation
 
@@ -238,15 +239,59 @@ Week 24 — Think Stats Ch. 9–10 (+wrap)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 4 · Bayesian & Missing Data — Weeks 25–36 (Complete Think Bayes, FIMD)</b></summary>
+<summary><b>Phase 4 · Applied Multivariate Statistics — Weeks 25–30 (Complete PSU STAT 505)</b></summary>
 
-Weeks 25–32 — Think Bayes (Ch. 1–14, paced)
+Week 25 — Multivariate Normal Distribution & Geometry
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Understand multivariate normal distribution; compute Mahalanobis distance; visualize multivariate data with scatterplot matrices and contour plots; test for multivariate normality.
+- ✅ Pass: Generate samples from multivariate normal distribution; compute and interpret Mahalanobis distance vs Euclidean distance; create scatterplot matrix for a dataset with ≥4 variables; perform Mardia's test for multivariate normality and interpret results.
+- 🛠️ How: `scipy.stats.multivariate_normal`; `scipy.spatial.distance.mahalanobis`; `pd.plotting.scatter_matrix`; compute Mahalanobis distance using inverse covariance matrix; verify with test data.
+
+Week 26 — Multivariate Analysis of Variance (MANOVA)
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Perform one-way and two-way MANOVA; understand Wilks' Lambda, Pillai's trace, and other test statistics; conduct post-hoc tests; check MANOVA assumptions.
+- ✅ Pass: Run MANOVA on a dataset with ≥2 dependent variables and ≥3 groups; report test statistics (Wilks' Lambda, Pillai's trace, Hotelling-Lawley trace, Roy's largest root); perform follow-up univariate ANOVAs; check assumptions (homogeneity of covariance matrices via Box's M test, multivariate normality).
+- 🛠️ How: `statsmodels.multivariate.manova.MANOVA`; interpret output table; compare to separate univariate ANOVAs; visualize group centroids; verify assumptions before interpretation.
+
+Week 27 — Discriminant Analysis
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Perform linear and quadratic discriminant analysis; understand Fisher's linear discriminant; classify observations; evaluate classification performance; compare LDA/QDA to logistic regression.
+- ✅ Pass: Apply LDA and QDA to a classification problem; compute and interpret discriminant functions; classify held-out observations and report confusion matrix; compare error rates to logistic regression; visualize decision boundaries for 2D case; verify equal covariance assumption for LDA.
+- 🛠️ How: `sklearn.discriminant_analysis.LinearDiscriminantAnalysis/QuadraticDiscriminantAnalysis`; `classification_report`; plot decision boundaries; test covariance equality with Box's M test; cross-validate classification accuracy.
+
+Week 28 — Principal Component Analysis (PCA)
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Perform PCA; understand eigenvalues/eigenvectors interpretation; determine number of components via scree plot and cumulative variance; compute component scores; interpret loadings; create biplots.
+- ✅ Pass: Apply PCA to a dataset with ≥6 variables; create scree plot and report cumulative variance explained; select number of components using Kaiser criterion (eigenvalue > 1) and 80% variance threshold; interpret loadings for first 2-3 components; create biplot showing observations and variable loadings; reconstruct data from reduced components.
+- 🛠️ How: `sklearn.decomposition.PCA`; always standardize data first with `StandardScaler`; `explained_variance_ratio_`; create scree plot with elbow; biplot with `plt.arrow` for loadings; verify reconstruction error.
+
+Week 29 — Factor Analysis
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Perform exploratory factor analysis; understand the difference between PCA and factor analysis; estimate communalities and uniqueness; perform factor rotation (orthogonal and oblique); determine optimal number of factors.
+- ✅ Pass: Conduct factor analysis on a dataset; determine number of factors using parallel analysis or scree plot; extract factors using principal axis factoring or maximum likelihood; perform varimax (orthogonal) and promax (oblique) rotations; interpret factor loadings and name factors; report communalities and proportion of variance explained; compare unrotated vs rotated solutions.
+- 🛠️ How: `sklearn.decomposition.FactorAnalysis`; for rotation methods use `factor_analyzer` package (`pip install factor-analyzer`) or implement basic varimax rotation manually; compare eigenvalues to random data for parallel analysis; factor loadings matrix interpretation; cut-off of |loading| > 0.3 or 0.4 for interpretation.
+
+Week 30 — Cluster Analysis & Wrap-up
+- 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- 🧪 Practice: Apply hierarchical and k-means clustering in multivariate context; understand linkage methods; create dendrograms; validate clustering solutions; integrate concepts from all weeks.
+- ✅ Pass: Perform hierarchical clustering with ≥3 linkage methods (single, complete, average, Ward); create and interpret dendrogram; determine optimal number of clusters using dendrogram and silhouette analysis; perform k-means clustering and compare to hierarchical results; validate clusters using silhouette scores and within-cluster sum of squares; apply multivariate techniques (PCA, discriminant analysis) to visualize clusters; write 1-page summary connecting multivariate methods to prior statistical knowledge.
+- 🛠️ How: `scipy.cluster.hierarchy` for hierarchical clustering and dendrograms; `sklearn.cluster.KMeans`; `silhouette_score` and `silhouette_samples`; plot elbow curve for k-means; standardize data before clustering; use PCA for 2D visualization of high-dimensional clusters.
+</details>
+
+🔁 Flex — Multivariate stats consolidation
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 5 · Bayesian & Missing Data — Weeks 31–42 (Complete Think Bayes, FIMD)</b></summary>
+
+Weeks 31–38 — Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
 - 🧪 Practice: Apply Bayes' theorem to update beliefs; implement conjugate prior models (Beta-Binomial, Gamma-Poisson, Normal-Normal); perform posterior predictive checks; compare models.
 - ✅ Pass (weekly): Implement a Bayesian model aligned with the chapter's topic; show prior sensitivity analysis (vary prior parameters and observe posterior changes); generate posterior predictive samples and compare to observed data using a suitable test statistic.
 - 🛠️ How: Use analytical posteriors when available; for PPC, draw samples from posterior, then from likelihood, and compare summary stats to data.
 
-Weeks 33–36 — Flexible Imputation of Missing Data (complete)
+Weeks 39–42 — Flexible Imputation of Missing Data (complete)
 - 📖 [FIMD](https://stefvanbuuren.name/fimd/)
 - 🧪 Practice: Missingness mechanisms; MICE; sensitivity (as in book)
 - ✅ Pass (weekly): Run MICE (m≥5) on a dataset; report pooled estimates per Rubin’s rules; compare to complete-case; perform delta-adjustment sensitivity where relevant.
@@ -258,63 +303,63 @@ Weeks 33–36 — Flexible Imputation of Missing Data (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 5 · Statistical Learning with Python — Weeks 37–46 (Complete ISLP)</b></summary>
+<summary><b>Phase 6 · Statistical Learning with Python — Weeks 43–52 (Complete ISLP)</b></summary>
 
-Week 37 — ISLP Ch. 1–2 (Intro + Statistical Learning)
+Week 43 — ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand the statistical learning framework; implement train/test splits; explore the bias-variance trade-off with KNN at different k values.
 - ✅ Pass: On a dataset, demonstrate how training error decreases with model complexity while test error shows U-shape; implement 5-fold CV and compare to hold-out estimate; discuss flexibility vs interpretability.
 - 🛠️ How: `train_test_split`; `KFold`/`cross_val_score`; vary KNN's k parameter; plot training vs test error curves.
 
-Week 38 — ISLP Ch. 3 (Linear Regression)
+Week 44 — ISLP Ch. 3 (Linear Regression)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Fit simple and multiple linear regression; interpret coefficients; add interaction and polynomial terms; assess model fit with residual diagnostics.
 - ✅ Pass: Fit OLS with and without interaction/polynomial terms; compare R² vs adjusted R²; produce residual plots; select optimal polynomial degree via CV; interpret coefficient confidence intervals.
 - 🛠️ How: `LinearRegression`; `PolynomialFeatures`; `cross_val_score`; `statsmodels` for CIs; residual diagnostics.
 
-Week 39 — ISLP Ch. 4 (Classification)
+Week 45 — ISLP Ch. 4 (Classification)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Implement logistic regression; understand LDA/QDA assumptions; apply KNN for classification; explore classification metrics beyond accuracy.
 - ✅ Pass: Compare logistic regression, LDA, QDA, and KNN using stratified 5-fold CV; report confusion matrix, precision, recall, and ROC-AUC; select optimal classification threshold based on problem context.
 - 🛠️ How: `LogisticRegression`; `LinearDiscriminantAnalysis`; `QuadraticDiscriminantAnalysis`; `KNeighborsClassifier`; `roc_curve` for threshold selection.
 
-Week 40 — ISLP Ch. 5 (Resampling Methods)
+Week 46 — ISLP Ch. 5 (Resampling Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Compare validation approaches: hold-out, LOOCV, k-fold CV; use bootstrap for uncertainty estimation; understand variance-bias trade-off in resampling.
 - ✅ Pass: Compare test error estimates from LOOCV vs 5-fold vs 10-fold CV; implement bootstrap to estimate coefficient standard errors; compare bootstrap SEs to analytic SEs.
 - 🛠️ How: `LeaveOneOut`; `KFold`; implement bootstrap loop with `np.random.choice`; fix seeds for reproducibility.
 
-Week 41 — ISLP Ch. 6 (Model Selection & Regularization)
+Week 47 — ISLP Ch. 6 (Model Selection & Regularization)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand the motivation for regularization; implement ridge and lasso regression; interpret coefficient shrinkage and sparsity; tune regularization parameter via CV.
 - ✅ Pass: Plot ridge and lasso coefficient paths as λ varies; select optimal λ via CV; compare test error of OLS vs ridge vs lasso; explain when lasso produces sparse solutions.
 - 🛠️ How: `Ridge`; `Lasso`; `RidgeCV`; `LassoCV`; `StandardScaler` (scale features first); `lasso_path` for path plots.
 
-Week 42 — ISLP Ch. 7 (Beyond Linearity)
+Week 48 — ISLP Ch. 7 (Beyond Linearity)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Move beyond linearity with polynomial regression, step functions, and splines; understand degrees of freedom; fit GAM-style models.
 - ✅ Pass: Fit polynomial, step function, and spline models; compare their flexibility and test errors; produce partial dependence plots; select appropriate number of knots/degrees via CV.
 - 🛠️ How: `PolynomialFeatures`; `SplineTransformer`; `pd.cut` for step functions; compare MSE on held-out data.
 
-Week 43 — ISLP Ch. 8 (Tree-Based Methods)
+Week 49 — ISLP Ch. 8 (Tree-Based Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Fit decision trees; understand bagging and the random forest algorithm; implement gradient boosting; interpret tree-based models.
 - ✅ Pass: Fit and prune a decision tree; compare single tree vs random forest vs gradient boosting on test error; show OOB error for RF; plot feature importances and partial dependence plots.
 - 🛠️ How: `DecisionTreeClassifier/Regressor`; `RandomForestClassifier/Regressor`; `GradientBoostingClassifier/Regressor`; `permutation_importance`; `plot_partial_dependence`.
 
-Week 44 — ISLP Ch. 9 (Support Vector Machines)
+Week 50 — ISLP Ch. 9 (Support Vector Machines)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand maximal margin classifiers and support vectors; fit SVMs with linear and non-linear kernels; tune hyperparameters (C, gamma).
 - ✅ Pass: Fit SVM with linear and RBF kernels; tune C and gamma via grid search with CV; visualize decision boundaries on 2D data; identify and highlight support vectors; compare to logistic regression.
 - 🛠️ How: `SVC`; `GridSearchCV`; `plt.contourf` for decision boundaries; access `support_vectors_` attribute.
 
-Week 45 — ISLP Ch. 10 (Unsupervised Learning)
+Week 51 — ISLP Ch. 10 (Unsupervised Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Perform dimensionality reduction with PCA; apply k-means and hierarchical clustering; understand the importance of scaling; evaluate clustering quality.
 - ✅ Pass: Apply PCA and plot cumulative explained variance; choose number of components; cluster with k-means (elbow method for k) and hierarchical clustering (dendrogram); evaluate with silhouette score and compare cluster stability across random seeds.
 - 🛠️ How: `StandardScaler` (always scale first); `PCA`; `KMeans` with inertia plots; `AgglomerativeClustering`; `dendrogram`; `silhouette_score`.
 
-Week 46 — ISLP Labs/Wrap-up
+Week 52 — ISLP Labs/Wrap-up
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Complete an end-to-end ML project using techniques from all ISLP chapters: EDA, preprocessing, model selection, hyperparameter tuning, evaluation, and interpretation.
 - ✅ Pass: Deliver a reproducible notebook with proper train/test split, cross-validation, model comparison, hyperparameter tuning, error analysis, and a 1-page summary documenting decisions, limitations, and risks.
@@ -326,15 +371,15 @@ Week 46 — ISLP Labs/Wrap-up
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 6 · Classical ML — Weeks 47–65 (Complete PRML, Interpretable ML)</b></summary>
+<summary><b>Phase 7 · Classical ML — Weeks 53–71 (Complete PRML, Interpretable ML)</b></summary>
 
-Weeks 47–60 — PRML (Ch. 1–13 + review)
+Weeks 53–66 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - 🧪 Practice: Implement core algorithms from each chapter from scratch: probability distributions, linear models, neural networks, kernel methods, graphical models, mixture models, EM algorithm, approximate inference, and sampling methods.
 - ✅ Pass (weekly): Implement the chapter's focal algorithm from scratch; verify correctness by comparing to sklearn/scipy baseline (within 2-5% accuracy); document mathematical derivations; use fixed seeds for reproducibility.
 - 🛠️ How: Use NumPy for implementations; sklearn only as verification oracle; work on toy datasets; keep detailed notes linking code to book equations.
 
-Weeks 61–65 — Interpretable ML (complete)
+Weeks 67–71 — Interpretable ML (complete)
 - 📖 [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
 - 🧪 Practice: Apply model-agnostic interpretation methods: PDP, ICE, permutation importance, LIME, SHAP; understand intrinsically interpretable models; explore feature interaction methods.
 - ✅ Pass (weekly): For a trained model, produce PDP/ICE plots for top features; compute permutation importance; generate SHAP values for individual predictions; write a 1-page analysis comparing methods' stability across 3 bootstrap resamples.
@@ -346,9 +391,9 @@ Weeks 61–65 — Interpretable ML (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 7 · Data Mining — Weeks 66–74 (Complete DM 3e)</b></summary>
+<summary><b>Phase 8 · Data Mining — Weeks 72–80 (Complete DM 3e)</b></summary>
 
-Weeks 66–74 — Data Mining 3e (Ch. 1–12)
+Weeks 72–80 — Data Mining 3e (Ch. 1–12)
 - 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
 - 🧪 Practice: Per-chapter algorithmic work strictly matching the chapter (e.g., data preprocessing tasks; Apriori/FP-Growth; decision trees; k-means/DBSCAN; outlier detection)
 - ✅ Pass (weekly): Implement a minimal working version for the chapter’s focal algorithm OR replicate results using a library; verify correctness on a deterministic toy and compare performance on a small real dataset.
@@ -360,15 +405,15 @@ Weeks 66–74 — Data Mining 3e (Ch. 1–12)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 8 · Econometrics & Time Series — Weeks 75–96 (Complete Gujarati, Lütkepohl)</b></summary>
+<summary><b>Phase 9 · Econometrics & Time Series — Weeks 81–102 (Complete Gujarati, Lütkepohl)</b></summary>
 
-Weeks 75–86 — Basic Econometrics (complete)
+Weeks 81–92 — Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - 🧪 Practice: Reproduce a worked example per chapter using methods from that chapter only (OLS basics; classical assumption diagnostics; heteroskedasticity/autocorrelation remedies; functional form; limited dependent variables as presented)
 - ✅ Pass (weekly): Match the textbook example’s coefficients and standard errors (within rounding) and include one robustness check discussed in that chapter (e.g., robust/HAC SEs when appropriate).
 - 🛠️ How: `statsmodels` OLS/GLM, `cov_type="HC3"` or HAC if the chapter addresses it; include diagnostic plots taught there.
 
-Weeks 87–96 — Lütkepohl (complete)
+Weeks 93–102 — Lütkepohl (complete)
 - 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
 - 🧪 Practice: Implement multivariate time series analysis: VAR model specification, estimation, lag order selection, stability analysis, impulse response functions, forecast error variance decomposition, and cointegration/VECM.
 - ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
@@ -380,9 +425,9 @@ Weeks 87–96 — Lütkepohl (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 9 · R for Data Science — Weeks 97–106 (Complete R4DS 2e)</b></summary>
+<summary><b>Phase 10 · R for Data Science — Weeks 103–112 (Complete R4DS 2e)</b></summary>
 
-Weeks 97–106 — R4DS (Complete)
+Weeks 103–112 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
 - 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
 - ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
@@ -394,33 +439,33 @@ Weeks 97–106 — R4DS (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 10 · Web Scraping & SQL — Weeks 107–112 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
+<summary><b>Phase 11 · Web Scraping & SQL — Weeks 113–118 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
 
-Week 107 — BeautifulSoup
+Week 113 — BeautifulSoup
 - 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - 🧪 Practice: Scrape static HTML pages: fetch with requests, parse with BeautifulSoup, navigate the DOM, extract data using CSS selectors and tag methods.
 - ✅ Pass: Scrape a static website and extract structured data; save as CSV/JSON with documented schema; check robots.txt before scraping; implement polite delays to avoid rate limiting (no HTTP 429 errors).
 - 🛠️ How: `requests.get(url)`; `BeautifulSoup(html, "lxml")`; `.select()` for CSS selectors; `.find_all()` for tag-based search; `time.sleep()` between requests.
 
-Weeks 108–109 — Selenium
+Weeks 114–115 — Selenium
 - 📖 [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
 - 🧪 Practice: Automate browser interactions for dynamic websites: handle JavaScript-rendered content, implement explicit waits, manage pagination and infinite scroll, fill forms.
 - ✅ Pass (weekly): Scrape a JavaScript-rendered page (e.g., infinite scroll or content behind clicks); implement proper waits and error handling; save timestamped data with retry/timeout logs; handle at least one failure scenario gracefully.
 - 🛠️ How: `webdriver.Chrome()`; `WebDriverWait` with `expected_conditions`; CSS/XPath selectors; `execute_script()` for scrolling; consistent viewport settings.
 
-Week 110 — SQL Basics & Data Retrieval
+Week 116 — SQL Basics & Data Retrieval
 - 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - 🧪 Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
 - ✅ Pass: Install and configure a SQL database system; create a sample database with at least 3 tables; write ≥20 SELECT queries demonstrating: simple selection, filtering with WHERE, multiple conditions with AND/OR, sorting ascending/descending, limiting results, removing duplicates, and pattern matching with LIKE; document each query with its purpose and expected row count.
 - 🛠️ How: Install SQLite (lightweight) or PostgreSQL (production-grade); use `CREATE TABLE`, `INSERT INTO` for sample data; practice `SELECT * FROM table`, `SELECT col1, col2 FROM table WHERE condition`, `ORDER BY col ASC/DESC`, `LIMIT n`, `DISTINCT col`, `WHERE col LIKE 'pattern%'`; use a SQL client (DBeaver, pgAdmin, or command line).
 
-Week 111 — SQL Joins, Aggregations & Subqueries
+Week 117 — SQL Joins, Aggregations & Subqueries
 - 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - 🧪 Practice: Master different types of joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, SELF JOIN); understand when to use each join type; work with aggregate functions (COUNT, SUM, AVG, MIN, MAX); use GROUP BY for grouping data; filter grouped data with HAVING clause; write subqueries in SELECT, WHERE, and FROM clauses; understand correlated vs non-correlated subqueries; practice set operations (UNION, UNION ALL, INTERSECT, EXCEPT); work with NULL values (IS NULL, IS NOT NULL, COALESCE, NULLIF).
 - ✅ Pass: Create a relational schema with ≥3 related tables (e.g., customers, orders, products); write ≥25 queries demonstrating: all join types with explanations, aggregate functions with and without GROUP BY, HAVING clause filters, nested subqueries (at least 2 levels deep), correlated subqueries, set operations combining multiple queries, NULL handling in various contexts; include at least one complex multi-join query involving 3+ tables; document the business question each query answers.
 - 🛠️ How: Design schema with foreign key relationships; `INNER JOIN table2 ON table1.id = table2.fk_id`, `LEFT JOIN` for including unmatched rows; `SELECT COUNT(*), AVG(col) FROM table GROUP BY category`, `HAVING COUNT(*) > 5`; `WHERE col IN (SELECT...)`, `SELECT (SELECT...) AS subquery_col`; `UNION` to combine results; `COALESCE(col, 'default')` for NULL handling; visualize join results with Venn diagrams.
 
-Week 112 — Advanced SQL: Window Functions, CTEs & Performance
+Week 118 — Advanced SQL: Window Functions, CTEs & Performance
 - 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - 🧪 Practice: Master window functions (ROW_NUMBER, RANK, DENSE_RANK, NTILE); use aggregate window functions (SUM, AVG, COUNT over partitions); apply LEAD and LAG for accessing adjacent rows; work with PARTITION BY and ORDER BY in window functions; write Common Table Expressions (CTEs) for readable complex queries; use recursive CTEs for hierarchical data; understand query execution plans and optimization; create and use indexes for performance; practice transactions (BEGIN, COMMIT, ROLLBACK); work with views and stored procedures; implement data manipulation (INSERT, UPDATE, DELETE) with complex conditions; understand constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK); explore date/time functions and string manipulation functions.
 - ✅ Pass: Build a complete analytics database schema with ≥4 tables and proper constraints; write ≥30 advanced queries including: ≥10 window function queries (ranking, running totals, moving averages, lag/lead analysis), ≥5 CTEs (including at least 1 recursive CTE for hierarchical data like org charts or category trees), ≥5 queries with EXPLAIN/ANALYZE showing index usage, ≥3 transactions demonstrating ACID properties, ≥3 views encapsulating complex logic, ≥5 DML operations (INSERT/UPDATE/DELETE with subqueries), date calculations (date differences, date parts, date formatting), and complex string manipulations; create indexes and demonstrate query performance improvement; document each query with execution time before/after optimization where applicable.
@@ -433,21 +478,21 @@ Week 112 — Advanced SQL: Window Functions, CTEs & Performance
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 11 · Deep Learning — Weeks 113–132 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
+<summary><b>Phase 12 · Deep Learning — Weeks 119–138 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
 
-Weeks 113–120 — D2L (Fundamentals)
+Weeks 119–126 — D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
 - 🧪 Practice: Topic-specific small models exactly as covered (MLP, CNN, RNN; optimization; regularization; data pipelines)
 - ✅ Pass (weekly): Train the chapter’s model variant on a toy dataset with fixed seeds and one controlled ablation (optimizer OR regularization) taught in D2L; log curves/metrics.
 - 🛠️ How: Follow D2L’s PyTorch/MXNet examples; fix seeds; keep experiments minimal and reproducible.
 
-Week 121 — The Illustrated Transformer (Bridge)
+Week 127 — The Illustrated Transformer (Bridge)
 - 📖 [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - 🧪 Practice: Understand the Transformer architecture: self-attention mechanism, multi-head attention, positional encoding, encoder-decoder structure.
 - ✅ Pass: Implement self-attention from scratch; verify tensor shapes at each step; implement attention masking; write unit tests for: (1) output shape correctness, (2) masked positions get zero attention, (3) attention weights sum to 1.
 - 🛠️ How: Use NumPy or PyTorch; implement Q, K, V projections; scaled dot-product attention; verify with `assert` statements and test cases.
 
-Weeks 122–132 — Deep Learning Book (Complete)
+Weeks 128–138 — Deep Learning Book (Complete)
 - 📖 [Deep Learning Book](https://www.deeplearningbook.org/)
 - 🧪 Practice: For each chapter, run a small experiment that demonstrates the chapter’s key concept using building blocks learned in D2L
 - ✅ Pass (weekly): Provide a controlled comparison or demonstration plot showing the expected qualitative effect (e.g., different inits, L2 vs dropout, step-size schedules).
@@ -459,21 +504,21 @@ Weeks 122–132 — Deep Learning Book (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 12 · MLOps & Data Engineering — Weeks 133–156 (Complete Zoomcamps, ML Systems)</b></summary>
+<summary><b>Phase 13 · MLOps & Data Engineering — Weeks 139–162 (Complete Zoomcamps, ML Systems)</b></summary>
 
-Weeks 133–140 — MLOps Zoomcamp
+Weeks 139–146 — MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - 🧪 Practice: Module-by-module implementation as taught (tracking, packaging, CI, serving, orchestration, monitoring)
 - ✅ Pass (weekly): A runnable local pipeline from clean state to served endpoint with tests passing for that week’s scope.
 - 🛠️ How: Docker/Compose; MLflow/W&B; `pytest`; minimal infra defined as per module.
 
-Weeks 141–148 — Machine Learning Systems
+Weeks 147–154 — Machine Learning Systems
 - 📖 [ML Systems](https://mlsysbook.ai)
 - 🧪 Practice: Write/extend a system design doc each week focusing only on that week’s concepts (SLA/SLOs; rollout/rollback; monitoring; data contracts; cost/reliability)
 - ✅ Pass (weekly): The doc includes concrete metrics, failure scenarios, and operational procedures aligned to the chapter.
 - 🛠️ How: ADR template; simple diagrams-as-code optional (e.g., Mermaid).
 
-Weeks 149–156 — Data Engineering Zoomcamp
+Weeks 155–162 — Data Engineering Zoomcamp
 - 📖 [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - 🧪 Practice: Module-by-module pipeline work (ingestion, storage, batch/stream, orchestration, analytics eng, testing) as taught in the course
 - ✅ Pass (weekly): Re-deployable pipeline from scratch with idempotent runs for that module’s scope.
@@ -485,15 +530,15 @@ Weeks 149–156 — Data Engineering Zoomcamp
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 13 · LLMs & Agents — Weeks 157–160 (Complete HF Course + Agents)</b></summary>
+<summary><b>Phase 14 · LLMs & Agents — Weeks 163–166 (Complete HF Course + Agents)</b></summary>
 
-Weeks 157–159 — Hugging Face Course
+Weeks 163–165 — Hugging Face Course
 - 📖 [HF Course](https://huggingface.co/course/chapter1)
 - 🧪 Practice: Learn the Hugging Face ecosystem: load and preprocess datasets, understand tokenizers, fine-tune pretrained models, run inference, evaluate with appropriate metrics.
 - ✅ Pass (weekly): Complete the course exercises for that week's chapters; fine-tune a small transformer on a downstream task (e.g., text classification, NER); evaluate with task-appropriate metrics (accuracy, F1, etc.); log all configurations.
 - 🛠️ How: `transformers` library for models; `datasets` for data loading; `Trainer` API for fine-tuning; `accelerate` for distributed training; Weights & Biases or TensorBoard for logging.
 
-Week 160 — HF Agents
+Week 166 — HF Agents
 - 📖 [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
 - 🧪 Practice: Build AI agents that use tools: understand agent architectures, implement tool calling, handle errors and timeouts, implement safety guardrails.
 - ✅ Pass: Build an agent that completes a multi-step task using external tools; implement proper timeout handling; test with an injected failure scenario and verify graceful degradation; document safety checks and limitations.
@@ -503,21 +548,21 @@ Week 160 — HF Agents
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 14 · Consolidation, Capstone, Portfolio — Weeks 161–164</b></summary>
+<summary><b>Phase 15 · Consolidation, Capstone, Portfolio — Weeks 167–170</b></summary>
 
-Week 161 — statsmodels deep dive
+Week 167 — statsmodels deep dive
 - 📖 [statsmodels](https://www.statsmodels.org/stable/index.html)
 - 🧪 Practice: Master statsmodels by reproducing analyses from earlier phases: OLS with diagnostics, GLMs, time series models (ARIMA, VAR), hypothesis testing.
 - ✅ Pass: Reproduce two econometric analyses matching original coefficients and standard errors; include full diagnostic suite (heteroskedasticity, autocorrelation tests); apply robust SEs where violations exist.
 - 🛠️ How: `statsmodels.api.OLS/GLM`; `statsmodels.tsa` for time series; `het_breuschpagan`, `acorr_ljungbox` for diagnostics; `cov_type="HC3"` for robust SEs.
 
-Week 162 — scikit-learn deep dive
+Week 168 — scikit-learn deep dive
 - 📖 [scikit-learn](https://scikit-learn.org/stable/index.html)
 - 🧪 Practice: Create a production-ready ML pipeline template: preprocessing (scaling, encoding), feature selection, model training with CV, hyperparameter tuning, probability calibration.
 - ✅ Pass: Build a complete Pipeline with ColumnTransformer for mixed types; implement nested CV for unbiased evaluation; apply probability calibration (Platt scaling or isotonic); ensure deterministic results with fixed seeds.
 - 🛠️ How: `Pipeline`; `ColumnTransformer`; `GridSearchCV`/`RandomizedSearchCV`; `CalibratedClassifierCV`; fixed `random_state` throughout.
 
-Weeks 163–164 — Capstone & Portfolio
+Weeks 169–170 — Capstone & Portfolio
 - 📖 Integrate end-to-end skills only from prior phases
 - 🧪 Practice: Complete a capstone project demonstrating: problem framing, data pipeline, modeling with uncertainty quantification, model interpretation, rigorous evaluation, and stakeholder communication.
 - ✅ Pass: Deliver a fully reproducible project (single command to run); include README documenting problem, approach, assumptions, limitations, and risks; provide model interpretation (SHAP/PDP); write a 1-page non-technical summary for stakeholders.
@@ -530,25 +575,26 @@ Resource-to-Week Completion Map (cover-to-cover)
 - Python for Data Analysis — Weeks 1–8 — [Python for Data Analysis](https://wesmckinney.com/book/)
 - Mathematics for Machine Learning — Weeks 9–18 — [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
 - Think Stats — Weeks 19–24 — [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
-- Think Bayes — Weeks 25–32 — [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
-- Flexible Imputation of Missing Data — Weeks 33–36 — [FIMD](https://stefvanbuuren.name/fimd/)
-- ISLP (Statistical Learning with Python) — Weeks 37–46 — [ISLP](https://www.statlearning.com/)
-- PRML (Bishop) — Weeks 47–60 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-- Interpretable Machine Learning — Weeks 61–65 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
-- Data Mining: Concepts and Techniques (3e) — Weeks 66–74 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
-- Basic Econometrics (Gujarati) — Weeks 75–86 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
-- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 87–96 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- R for Data Science (2e) — Weeks 97–106 — [R for Data Science (2e)](https://r4ds.hadley.nz)
-- Beautiful Soup — Week 107 — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- Selenium (Python) — Weeks 108–109 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- SQL Roadmap (GeeksforGeeks) — Weeks 110–112 — [SQL Roadmap](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-- Dive into Deep Learning — Weeks 113–120 — [D2L](https://d2l.ai)
-- The Illustrated Transformer — Week 121 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- Deep Learning — Weeks 122–132 — [Deep Learning Book](https://www.deeplearningbook.org/)
-- MLOps Zoomcamp — Weeks 133–140 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
-- Machine Learning Systems — Weeks 141–148 — [ML Systems](https://mlsysbook.ai)
-- Data Engineering Zoomcamp — Weeks 149–156 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
-- HF Course + HF Agents — Weeks 157–160 — [HF Course](https://huggingface.co/course/chapter1), [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
+- PSU STAT 505 (Applied Multivariate Statistics) — Weeks 25–30 — [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- Think Bayes — Weeks 31–38 — [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
+- Flexible Imputation of Missing Data — Weeks 39–42 — [FIMD](https://stefvanbuuren.name/fimd/)
+- ISLP (Statistical Learning with Python) — Weeks 43–52 — [ISLP](https://www.statlearning.com/)
+- PRML (Bishop) — Weeks 53–66 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+- Interpretable Machine Learning — Weeks 67–71 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
+- Data Mining: Concepts and Techniques (3e) — Weeks 72–80 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
+- Basic Econometrics (Gujarati) — Weeks 81–92 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
+- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 93–102 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
+- R for Data Science (2e) — Weeks 103–112 — [R for Data Science (2e)](https://r4ds.hadley.nz)
+- Beautiful Soup — Week 113 — [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- Selenium (Python) — Weeks 114–115 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
+- SQL Roadmap (GeeksforGeeks) — Weeks 116–118 — [SQL Roadmap](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- Dive into Deep Learning — Weeks 119–126 — [D2L](https://d2l.ai)
+- The Illustrated Transformer — Week 127 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- Deep Learning — Weeks 128–138 — [Deep Learning Book](https://www.deeplearningbook.org/)
+- MLOps Zoomcamp — Weeks 139–146 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- Machine Learning Systems — Weeks 147–154 — [ML Systems](https://mlsysbook.ai)
+- Data Engineering Zoomcamp — Weeks 155–162 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- HF Course + HF Agents — Weeks 163–166 — [HF Course](https://huggingface.co/course/chapter1), [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
 
 Notes
 - Keep work in any format; seed randomness for reproducibility.
