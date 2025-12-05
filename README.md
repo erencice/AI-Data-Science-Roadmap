@@ -241,41 +241,41 @@ Week 24 — Think Stats Ch. 9–10 (+wrap)
 <details>
 <summary><b>Phase 4 · Applied Multivariate Statistics — Weeks 25–36 (Complete PSU STAT 505)</b></summary>
 
-Week 25 — Multivariate Normal Distribution & Geometry (Lesson 1)
+Week 25 — Multivariate Normal Distribution (Lesson 1)
 - 📖 Activities: [PSU STAT 505 Lesson 1](https://online.stat.psu.edu/stat505/lesson/1)
 - 🧪 Practice: Understand multivariate normal distribution; compute Mahalanobis distance; visualize multivariate data with scatterplot matrices and contour plots; test for multivariate normality.
 - ✅ Pass: Generate samples from multivariate normal distribution; compute and interpret Mahalanobis distance vs Euclidean distance; create scatterplot matrix for a dataset with ≥4 variables; perform Mardia's test for multivariate normality and interpret results. Complete PSU STAT 505 Lesson 1.
 - 🛠️ How: `scipy.stats.multivariate_normal`; `scipy.spatial.distance.mahalanobis`; `pd.plotting.scatter_matrix`; compute Mahalanobis distance using inverse covariance matrix; verify with test data.
 
-Week 26 — Multivariate Data & Graphics (Lesson 2)
+Week 26 — Plots and Inference for Multivariate Data (Lesson 2)
 - 📖 Activities: [PSU STAT 505 Lesson 2](https://online.stat.psu.edu/stat505/lesson/2)
-- 🧪 Practice: Explore multivariate data visualization techniques; create profile plots, scatter plot matrices, and 3D plots; understand matrix plots and biplots; assess multivariate relationships graphically.
-- ✅ Pass: Create comprehensive visualization suite for a multivariate dataset: profile plots for repeated measures, scatter plot matrix with correlation coefficients, 3D scatter plots for 3-variable relationships, and matrix plots for grouped data; identify patterns, outliers, and potential relationships. Complete PSU STAT 505 Lesson 2.
-- 🛠️ How: `pd.plotting.scatter_matrix`; `matplotlib.pyplot.plot` for profile plots; `mpl_toolkits.mplot3d.Axes3D` for 3D plots; `seaborn.pairplot` with hue parameter for grouped data; annotate correlations on scatter matrix.
+- 🧪 Practice: Explore multivariate data visualization techniques; create profile plots, scatter plot matrices, and 3D plots; perform Hotelling's T² tests for comparing mean vectors; construct simultaneous confidence intervals.
+- ✅ Pass: Create comprehensive visualization suite for a multivariate dataset: profile plots for repeated measures, scatter plot matrix with correlation coefficients, 3D scatter plots; perform one-sample and two-sample Hotelling's T² tests; compute and interpret simultaneous confidence intervals using Bonferroni correction; report test statistics, p-values, and effect sizes. Complete PSU STAT 505 Lesson 2.
+- 🛠️ How: `pd.plotting.scatter_matrix`; `matplotlib.pyplot.plot` for profile plots; `mpl_toolkits.mplot3d.Axes3D` for 3D plots; implement Hotelling's T² using matrix operations: `T2 = n * (xbar - mu0).T @ np.linalg.inv(S) @ (xbar - mu0)`; compare to F-distribution: `F = (n-p)/(p*(n-1)) * T2`.
 
-Week 27 — Hotelling's T² (Lesson 3)
+Week 27 — Multivariate Analysis of Variance (MANOVA) (Lesson 3)
 - 📖 Activities: [PSU STAT 505 Lesson 3](https://online.stat.psu.edu/stat505/lesson/3)
-- 🧪 Practice: Perform one-sample and two-sample Hotelling's T² tests; understand the multivariate extension of Student's t-test; test mean vectors; construct simultaneous confidence intervals; assess profile analysis.
-- ✅ Pass: Conduct one-sample Hotelling's T² test to compare a mean vector to a hypothesized value; perform two-sample Hotelling's T² test to compare two independent groups on multiple variables; compute and interpret simultaneous confidence intervals using Bonferroni correction; perform profile analysis for repeated measures; report test statistics, p-values, and effect sizes. Complete PSU STAT 505 Lesson 3.
-- 🛠️ How: Implement Hotelling's T² using matrix operations: `T2 = n * (xbar - mu0).T @ np.linalg.inv(S) @ (xbar - mu0)`; compare to F-distribution: `F = (n-p)/(p*(n-1)) * T2`; use `scipy.stats.f.cdf` for p-values; compute simultaneous CIs with Bonferroni adjustment.
-
-Week 28 — Multivariate Analysis of Variance (MANOVA) (Lesson 4)
-- 📖 Activities: [PSU STAT 505 Lesson 4](https://online.stat.psu.edu/stat505/lesson/4)
 - 🧪 Practice: Perform one-way and two-way MANOVA; understand Wilks' Lambda, Pillai's trace, and other test statistics; conduct post-hoc tests; check MANOVA assumptions.
-- ✅ Pass: Run MANOVA on a dataset with ≥2 dependent variables and ≥3 groups; report test statistics (Wilks' Lambda, Pillai's trace, Hotelling-Lawley trace, Roy's largest root); perform follow-up univariate ANOVAs; check assumptions (homogeneity of covariance matrices via Box's M test, multivariate normality). Complete PSU STAT 505 Lesson 4.
+- ✅ Pass: Run MANOVA on a dataset with ≥2 dependent variables and ≥3 groups; report test statistics (Wilks' Lambda, Pillai's trace, Hotelling-Lawley trace, Roy's largest root); perform follow-up univariate ANOVAs; check assumptions (homogeneity of covariance matrices via Box's M test, multivariate normality). Complete PSU STAT 505 Lesson 3.
 - 🛠️ How: `statsmodels.multivariate.manova.MANOVA`; interpret output table; compare to separate univariate ANOVAs; visualize group centroids; verify assumptions before interpretation.
 
-Week 29 — Discriminant Analysis (Lesson 5)
-- 📖 Activities: [PSU STAT 505 Lesson 5](https://online.stat.psu.edu/stat505/lesson/5)
+Week 28 — Discriminant Analysis (Lesson 4)
+- 📖 Activities: [PSU STAT 505 Lesson 4](https://online.stat.psu.edu/stat505/lesson/4)
 - 🧪 Practice: Perform linear and quadratic discriminant analysis; understand Fisher's linear discriminant; classify observations; evaluate classification performance; compare LDA/QDA to logistic regression.
-- ✅ Pass: Apply LDA and QDA to a classification problem; compute and interpret discriminant functions; classify held-out observations and report confusion matrix; compare error rates to logistic regression; visualize decision boundaries for 2D case; verify equal covariance assumption for LDA. Complete PSU STAT 505 Lesson 5.
+- ✅ Pass: Apply LDA and QDA to a classification problem; compute and interpret discriminant functions; classify held-out observations and report confusion matrix; compare error rates to logistic regression; visualize decision boundaries for 2D case; verify equal covariance assumption for LDA. Complete PSU STAT 505 Lesson 4.
 - 🛠️ How: `sklearn.discriminant_analysis.LinearDiscriminantAnalysis/QuadraticDiscriminantAnalysis`; `classification_report`; plot decision boundaries; test covariance equality with Box's M test; cross-validate classification accuracy.
 
-Week 30 — Multivariate Regression (Lesson 6)
-- 📖 Activities: [PSU STAT 505 Lesson 6](https://online.stat.psu.edu/stat505/lesson/6)
+Week 29 — Multivariate Regression (Lesson 5)
+- 📖 Activities: [PSU STAT 505 Lesson 5](https://online.stat.psu.edu/stat505/lesson/5)
 - 🧪 Practice: Fit multivariate multiple regression models with multiple response variables; test overall model significance; perform hypothesis tests on regression coefficients; compute residuals and fitted values; assess multivariate regression assumptions.
-- ✅ Pass: Fit multivariate regression with ≥2 response variables and ≥3 predictors; test overall model significance using Wilks' Lambda; test individual predictor significance; examine residual plots for each response; compute and interpret multivariate R²; compare to separate univariate regressions. Complete PSU STAT 505 Lesson 6.
+- ✅ Pass: Fit multivariate regression with ≥2 response variables and ≥3 predictors; test overall model significance using Wilks' Lambda; test individual predictor significance; examine residual plots for each response; compute and interpret multivariate R²; compare to separate univariate regressions. Complete PSU STAT 505 Lesson 5.
 - 🛠️ How: Implement using matrix formulation `B = (X.T @ X)^(-1) @ X.T @ Y` where Y is n×q response matrix; compute Wilks' Lambda for model test; use `statsmodels.multivariate.multivariate_ols.MultivariateLS` or implement manually; create residual plots for each response variable.
+
+Week 30 — Canonical Correlation Analysis (Lesson 6)
+- 📖 Activities: [PSU STAT 505 Lesson 6](https://online.stat.psu.edu/stat505/lesson/6)
+- 🧪 Practice: Perform canonical correlation analysis to study relationships between two sets of variables; compute canonical correlations and canonical variates; test significance of canonical correlations; interpret canonical loadings and cross-loadings.
+- ✅ Pass: Apply CCA to dataset with two variable sets (≥3 variables each); compute and test significance of all canonical correlations; interpret first 2-3 canonical variate pairs; compute and interpret canonical loadings (structure correlations); assess redundancy analysis; visualize canonical variates. Complete PSU STAT 505 Lesson 6.
+- 🛠️ How: Use `sklearn.cross_decomposition.CCA`; compute canonical correlations from `x_scores_` and `y_scores_`; implement Wilks' Lambda test for significance: `Lambda = prod(1 - r_i^2)`; compute structure correlations between original variables and canonical variates; standardize data before analysis.
 
 Week 31 — Principal Component Analysis (PCA) (Lesson 7)
 - 📖 Activities: [PSU STAT 505 Lesson 7](https://online.stat.psu.edu/stat505/lesson/7)
@@ -301,17 +301,17 @@ Week 34 — K-means and Model-Based Clustering (Lesson 10)
 - ✅ Pass: Apply k-means with different k values; create elbow plot and silhouette plot to select optimal k; fit Gaussian mixture model and use BIC/AIC for model selection; compare k-means vs GMM clustering results; visualize clusters using PCA; report within-cluster sum of squares and silhouette scores; compare to hierarchical clustering from Week 33. Complete PSU STAT 505 Lesson 10.
 - 🛠️ How: `sklearn.cluster.KMeans`; plot inertia vs k for elbow method; `sklearn.mixture.GaussianMixture` with `covariance_type` options; compute BIC/AIC for model comparison; `silhouette_score` and `silhouette_samples` for validation; use multiple random initializations.
 
-Week 35 — Canonical Correlation Analysis (Lesson 11)
+Week 35 — Multidimensional Scaling (Lesson 11)
 - 📖 Activities: [PSU STAT 505 Lesson 11](https://online.stat.psu.edu/stat505/lesson/11)
-- 🧪 Practice: Perform canonical correlation analysis to study relationships between two sets of variables; compute canonical correlations and canonical variates; test significance of canonical correlations; interpret canonical loadings and cross-loadings.
-- ✅ Pass: Apply CCA to dataset with two variable sets (≥3 variables each); compute and test significance of all canonical correlations; interpret first 2-3 canonical variate pairs; compute and interpret canonical loadings (structure correlations); assess redundancy analysis; visualize canonical variates. Complete PSU STAT 505 Lesson 11.
-- 🛠️ How: Use `sklearn.cross_decomposition.CCA`; compute canonical correlations from `x_scores_` and `y_scores_`; implement Wilks' Lambda test for significance: `Lambda = prod(1 - r_i^2)`; compute structure correlations between original variables and canonical variates; standardize data before analysis.
+- 🧪 Practice: Apply classical and non-metric multidimensional scaling; understand stress values and goodness-of-fit; create distance matrices from dissimilarity data; interpret MDS configurations; understand relationships to PCA.
+- ✅ Pass: Perform classical MDS on distance/dissimilarity matrix; create 2D configuration and interpret dimensions; compute stress values for different dimensionalities and create scree plot; apply non-metric MDS and compare to classical MDS; visualize results and interpret spatial relationships between observations. Complete PSU STAT 505 Lesson 11.
+- 🛠️ How: `sklearn.manifold.MDS` for both metric and non-metric MDS; `sklearn.decomposition.PCA` on centered distance matrix for classical MDS; compute stress = `sqrt(sum((distances_fitted - distances_original)^2) / sum(distances_original^2))`; create scree plot for stress vs dimensionality.
 
-Week 36 — Multidimensional Scaling & Correspondence Analysis (Lesson 12)
+Week 36 — Correspondence Analysis (Lesson 12)
 - 📖 Activities: [PSU STAT 505 Lesson 12](https://online.stat.psu.edu/stat505/lesson/12)
-- 🧪 Practice: Apply classical and non-metric multidimensional scaling; understand stress values and goodness-of-fit; perform correspondence analysis on contingency tables; interpret biplots and dimension meanings; understand relationships to PCA.
-- ✅ Pass: Perform classical MDS on distance/dissimilarity matrix; create 2D configuration and interpret dimensions; compute stress values for different dimensionalities and create scree plot; apply non-metric MDS and compare to classical MDS; perform correspondence analysis on contingency table; create and interpret CA biplot showing row and column categories; explain inertia and chi-square decomposition. Complete PSU STAT 505 Lesson 12.
-- 🛠️ How: `sklearn.manifold.MDS` for both metric and non-metric MDS; `sklearn.decomposition.PCA` on centered distance matrix for classical MDS; compute stress = `sqrt(sum((distances_fitted - distances_original)^2) / sum(distances_original^2))`; implement simple correspondence analysis using SVD on standardized residuals from contingency table; create biplot showing row/column positions.
+- 🧪 Practice: Perform correspondence analysis on contingency tables; understand chi-square decomposition and inertia; interpret biplots showing row and column categories; assess associations between categorical variables.
+- ✅ Pass: Perform correspondence analysis on contingency table; create and interpret CA biplot showing row and column categories; explain inertia and chi-square decomposition; compute row and column profiles; interpret dimension meanings and category associations; assess quality of representation for each category. Complete PSU STAT 505 Lesson 12.
+- 🛠️ How: Implement correspondence analysis using SVD on standardized residuals from contingency table: compute expected frequencies, standardized residuals, apply SVD; create biplot showing row/column positions; interpret principal inertias and cumulative inertia; `scipy.stats.chi2_contingency` for chi-square test.
 </details>
 
 🔁 Flex — Multivariate stats consolidation
