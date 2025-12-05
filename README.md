@@ -269,7 +269,7 @@ Week 29 — Factor Analysis
 - 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
 - 🧪 Practice: Perform exploratory factor analysis; understand the difference between PCA and factor analysis; estimate communalities and uniqueness; perform factor rotation (orthogonal and oblique); determine optimal number of factors.
 - ✅ Pass: Conduct factor analysis on a dataset; determine number of factors using parallel analysis or scree plot; extract factors using principal axis factoring or maximum likelihood; perform varimax (orthogonal) and promax (oblique) rotations; interpret factor loadings and name factors; report communalities and proportion of variance explained; compare unrotated vs rotated solutions.
-- 🛠️ How: `sklearn.decomposition.FactorAnalysis`; `factor_analyzer` package for rotation methods; compare eigenvalues to random data for parallel analysis; factor loadings matrix interpretation; cut-off of |loading| > 0.3 or 0.4 for interpretation.
+- 🛠️ How: `sklearn.decomposition.FactorAnalysis`; for rotation methods use `factor_analyzer` package (`pip install factor-analyzer`) or implement basic varimax rotation manually; compare eigenvalues to random data for parallel analysis; factor loadings matrix interpretation; cut-off of |loading| > 0.3 or 0.4 for interpretation.
 
 Week 30 — Cluster Analysis & Wrap-up
 - 📖 Activities: [PSU STAT 505](https://online.stat.psu.edu/stat505)
