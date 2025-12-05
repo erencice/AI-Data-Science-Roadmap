@@ -9,22 +9,22 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 
 — Quick jump —
 - Phase 1 · Data Analysis Foundations
-- Phase 14 · Web Scraping & SQL
-- Phase 2 · Mathematics for ML
-- Phase 11 · Convex Optimization
-- Phase 3 · Statistics Fundamentals
-- Phase 4 · Applied Multivariate Statistics
-- Phase 5 · Bayesian Statistics & Missing Data
-- Phase 6 · Statistical Learning with Python (ISLP)
-- Phase 8 · Data Mining
-- Phase 7 · Classical ML
-- Phase 12 · Elements of Statistical Learning
-- Phase 15 · Deep Learning
-- Phase 17 · LLMs & Open-Source AI
-- Phase 13 · R for Data Science
-- Phase 9 · Econometrics & Time Series
-- Phase 10 · Causal Inference
-- Phase 16 · MLOps & Data Engineering
+- Phase 2 · Web Scraping & SQL
+- Phase 3 · Mathematics for ML
+- Phase 4 · Convex Optimization
+- Phase 5 · Statistics Fundamentals
+- Phase 6 · Applied Multivariate Statistics
+- Phase 7 · Bayesian Statistics & Missing Data
+- Phase 8 · Statistical Learning with Python (ISLP)
+- Phase 9 · Data Mining
+- Phase 10 · Classical ML
+- Phase 11 · Elements of Statistical Learning
+- Phase 12 · Deep Learning
+- Phase 13 · LLMs & Open-Source AI
+- Phase 14 · R for Data Science
+- Phase 15 · Econometrics & Time Series
+- Phase 16 · Causal Inference
+- Phase 17 · MLOps & Data Engineering
 - Phase 18 · Consolidation & Capstone
 
 Legend
@@ -137,7 +137,7 @@ Week 8 — P4DA Project B
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 14 · Web Scraping & SQL — Weeks 152–157 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
+<summary><b>Phase 2 · Web Scraping & SQL — Weeks 152–157 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
 
 Week 152 — BeautifulSoup
 - 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
@@ -178,7 +178,7 @@ Week 157 — Advanced SQL: Window Functions, CTEs & Performance
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 2 · Mathematics for ML — Weeks 9–18 (Complete MML)</b></summary>
+<summary><b>Phase 3 · Mathematics for ML — Weeks 9–18 (Complete MML)</b></summary>
 
 Week 9 — Linear Algebra I
 - 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
@@ -248,7 +248,7 @@ Week 18 — Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 11 · Convex Optimization — Weeks 122–131 (Complete Boyd & Vandenberghe)</b></summary>
+<summary><b>Phase 4 · Convex Optimization — Weeks 122–131 (Complete Boyd & Vandenberghe)</b></summary>
 
 Week 122 — Mathematical Foundations & Convex Sets
 - 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
@@ -318,7 +318,7 @@ Week 131 — Integration & Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 3 · Statistics Fundamentals — Weeks 19–24 (Complete Think Stats)</b></summary>
+<summary><b>Phase 5 · Statistics Fundamentals — Weeks 19–24 (Complete Think Stats)</b></summary>
 
 Week 19 — Think Stats Ch. 1
 - 📖 [Think Stats (PDF)](https://greenteapress.com/thinkstats/thinkstats.pdf)
@@ -364,7 +364,7 @@ Week 24 — Think Stats Ch. 9–10 (+wrap)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 4 · Applied Multivariate Statistics — Weeks 25–39 (Complete PSU STAT 505)</b></summary>
+<summary><b>Phase 6 · Applied Multivariate Statistics — Weeks 25–39 (Complete PSU STAT 505)</b></summary>
 
 Week 25 — Measures of Central Tendency, Dispersion and Association (Lesson 1)
 - 📖 Activities: [PSU STAT 505 Lesson 1](https://online.stat.psu.edu/stat505/lesson/1)
@@ -464,7 +464,7 @@ Week 39 — Integration and Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 5 · Bayesian & Missing Data — Weeks 40–51 (Complete Think Bayes, FIMD)</b></summary>
+<summary><b>Phase 7 · Bayesian & Missing Data — Weeks 40–51 (Complete Think Bayes, FIMD)</b></summary>
 
 Weeks 40–47 — Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://open.umn.edu/opentextbooks/textbooks/think-bayes-bayesian-statistics-made-simple)
@@ -486,7 +486,7 @@ Weeks 48–51 — Flexible Imputation of Missing Data (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 6 · Statistical Learning with Python — Weeks 52–61 (Complete ISLP)</b></summary>
+<summary><b>Phase 8 · Statistical Learning with Python — Weeks 52–61 (Complete ISLP)</b></summary>
 
 Week 52 — ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
@@ -556,7 +556,7 @@ Week 61 — ISLP Labs/Wrap-up
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 8 · Data Mining — Weeks 81–89 (Complete DM 3e)</b></summary>
+<summary><b>Phase 9 · Data Mining — Weeks 81–89 (Complete DM 3e)</b></summary>
 
 Weeks 81–89 — Data Mining 3e (Ch. 1–12)
 - 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
@@ -572,7 +572,7 @@ Weeks 81–89 — Data Mining 3e (Ch. 1–12)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 7 · Classical ML — Weeks 62–80 (Complete PRML, Interpretable ML)</b></summary>
+<summary><b>Phase 10 · Classical ML — Weeks 62–80 (Complete PRML, Interpretable ML)</b></summary>
 
 Weeks 62–75 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
@@ -594,7 +594,7 @@ Weeks 76–80 — Interpretable ML (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 12 · Elements of Statistical Learning — Weeks 132–141 (Complete ESL)</b></summary>
+<summary><b>Phase 11 · Elements of Statistical Learning — Weeks 132–141 (Complete ESL)</b></summary>
 
 Week 132 — ESL Ch. 1–3: Introduction & Linear Methods
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
@@ -664,7 +664,7 @@ Week 141 — ESL Ch. 18 & Integration: High-Dimensional Problems
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 15 · Deep Learning — Weeks 158–177 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
+<summary><b>Phase 12 · Deep Learning — Weeks 158–177 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
 
 Weeks 158–165 — D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
@@ -692,7 +692,7 @@ Weeks 167–177 — Deep Learning Book (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 17 · LLMs & Agents — Weeks 202–205 (Complete HF Course + Agents)</b></summary>
+<summary><b>Phase 13 · LLMs & Agents — Weeks 202–205 (Complete HF Course + Agents)</b></summary>
 
 Weeks 202–204 — Hugging Face Course
 - 📖 [HF Course](https://huggingface.co/course/chapter1)
@@ -712,7 +712,7 @@ Week 205 — HF Agents
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 13 · R for Data Science — Weeks 142–151 (Complete R4DS 2e)</b></summary>
+<summary><b>Phase 14 · R for Data Science — Weeks 142–151 (Complete R4DS 2e)</b></summary>
 
 Weeks 142–151 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
@@ -728,7 +728,7 @@ Weeks 142–151 — R4DS (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 9 · Econometrics & Time Series — Weeks 90–111 (Complete Gujarati, Lütkepohl)</b></summary>
+<summary><b>Phase 15 · Econometrics & Time Series — Weeks 90–111 (Complete Gujarati, Lütkepohl)</b></summary>
 
 Weeks 90–101 — Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
@@ -750,7 +750,7 @@ Weeks 102–111 — Lütkepohl (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 10 · Causal Inference — Weeks 112–121 (Complete The Mixtape)</b></summary>
+<summary><b>Phase 16 · Causal Inference — Weeks 112–121 (Complete The Mixtape)</b></summary>
 
 Week 112 — Properties of Regression, DAGs, Potential Outcomes
 - 📖 [The Mixtape](https://mixtape.scunning.com)
@@ -820,7 +820,7 @@ Week 121 — Advanced Topics & Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 16 · MLOps & Data Engineering — Weeks 178–201 (Complete Zoomcamps, ML Systems)</b></summary>
+<summary><b>Phase 17 · MLOps & Data Engineering — Weeks 178–201 (Complete Zoomcamps, ML Systems)</b></summary>
 
 Weeks 178–185 — MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
