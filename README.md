@@ -9,22 +9,22 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 
 — Quick jump —
 - Phase 1 · Data Analysis Foundations
+- Phase 14 · Web Scraping & SQL
 - Phase 2 · Mathematics for ML
+- Phase 11 · Convex Optimization
 - Phase 3 · Statistics Fundamentals
 - Phase 4 · Applied Multivariate Statistics
 - Phase 5 · Bayesian Statistics & Missing Data
 - Phase 6 · Statistical Learning with Python (ISLP)
-- Phase 7 · Classical ML
 - Phase 8 · Data Mining
+- Phase 7 · Classical ML
+- Phase 12 · Elements of Statistical Learning
+- Phase 15 · Deep Learning
+- Phase 17 · LLMs & Open-Source AI
+- Phase 13 · R for Data Science
 - Phase 9 · Econometrics & Time Series
 - Phase 10 · Causal Inference
-- Phase 11 · Convex Optimization
-- Phase 12 · Elements of Statistical Learning
-- Phase 13 · R for Data Science
-- Phase 14 · Web Scraping & SQL
-- Phase 15 · Deep Learning
 - Phase 16 · MLOps & Data Engineering
-- Phase 17 · LLMs & Open-Source AI
 - Phase 18 · Consolidation & Capstone
 
 Legend
@@ -73,6 +73,8 @@ Supporting references (selective)
 - PSU STAT — [STAT portal](https://online.stat.psu.edu)
 - scikit-learn docs — [scikit-learn](https://scikit-learn.org/stable/index.html)
 - statsmodels docs — [statsmodels](https://www.statsmodels.org/stable/index.html)
+
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 
@@ -129,6 +131,49 @@ Week 8 — P4DA Project B
 </details>
 
 🔁 Flex — Consolidate EDA template and notes
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 14 · Web Scraping & SQL — Weeks 152–157 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
+
+Week 152 — BeautifulSoup
+- 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- 🧪 Practice: Scrape static HTML pages: fetch with requests, parse with BeautifulSoup, navigate the DOM, extract data using CSS selectors and tag methods.
+- ✅ Pass: Scrape a static website and extract structured data; save as CSV/JSON with documented schema; check robots.txt before scraping; implement polite delays to avoid rate limiting (no HTTP 429 errors).
+- 🛠️ How: `requests.get(url)`; `BeautifulSoup(html, "lxml")`; `.select()` for CSS selectors; `.find_all()` for tag-based search; `time.sleep()` between requests.
+
+Weeks 153–154 — Selenium
+- 📖 [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
+- 🧪 Practice: Automate browser interactions for dynamic websites: handle JavaScript-rendered content, implement explicit waits, manage pagination and infinite scroll, fill forms.
+- ✅ Pass (weekly): Scrape a JavaScript-rendered page (e.g., infinite scroll or content behind clicks); implement proper waits and error handling; save timestamped data with retry/timeout logs; handle at least one failure scenario gracefully.
+- 🛠️ How: `webdriver.Chrome()`; `WebDriverWait` with `expected_conditions`; CSS/XPath selectors; `execute_script()` for scrolling; consistent viewport settings.
+
+Week 155 — SQL Basics & Data Retrieval
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- 🧪 Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
+- ✅ Pass: Install and configure a SQL database system; create a sample database with at least 3 tables; write ≥20 SELECT queries demonstrating: simple selection, filtering with WHERE, multiple conditions with AND/OR, sorting ascending/descending, limiting results, removing duplicates, and pattern matching with LIKE; document each query with its purpose and expected row count.
+- 🛠️ How: Install SQLite (lightweight) or PostgreSQL (production-grade); use `CREATE TABLE`, `INSERT INTO` for sample data; practice `SELECT * FROM table`, `SELECT col1, col2 FROM table WHERE condition`, `ORDER BY col ASC/DESC`, `LIMIT n`, `DISTINCT col`, `WHERE col LIKE 'pattern%'`; use a SQL client (DBeaver, pgAdmin, or command line).
+
+Week 156 — SQL Joins, Aggregations & Subqueries
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- 🧪 Practice: Master different types of joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, SELF JOIN); understand when to use each join type; work with aggregate functions (COUNT, SUM, AVG, MIN, MAX); use GROUP BY for grouping data; filter grouped data with HAVING clause; write subqueries in SELECT, WHERE, and FROM clauses; understand correlated vs non-correlated subqueries; practice set operations (UNION, UNION ALL, INTERSECT, EXCEPT); work with NULL values (IS NULL, IS NOT NULL, COALESCE, NULLIF).
+- ✅ Pass: Create a relational schema with ≥3 related tables (e.g., customers, orders, products); write ≥25 queries demonstrating: all join types with explanations, aggregate functions with and without GROUP BY, HAVING clause filters, nested subqueries (at least 2 levels deep), correlated subqueries, set operations combining multiple queries, NULL handling in various contexts; include at least one complex multi-join query involving 3+ tables; document the business question each query answers.
+- 🛠️ How: Design schema with foreign key relationships; `INNER JOIN table2 ON table1.id = table2.fk_id`, `LEFT JOIN` for including unmatched rows; `SELECT COUNT(*), AVG(col) FROM table GROUP BY category`, `HAVING COUNT(*) > 5`; `WHERE col IN (SELECT...)`, `SELECT (SELECT...) AS subquery_col`; `UNION` to combine results; `COALESCE(col, 'default')` for NULL handling; visualize join results with Venn diagrams.
+
+Week 157 — Advanced SQL: Window Functions, CTEs & Performance
+- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
+- 🧪 Practice: Master window functions (ROW_NUMBER, RANK, DENSE_RANK, NTILE); use aggregate window functions (SUM, AVG, COUNT over partitions); apply LEAD and LAG for accessing adjacent rows; work with PARTITION BY and ORDER BY in window functions; write Common Table Expressions (CTEs) for readable complex queries; use recursive CTEs for hierarchical data; understand query execution plans and optimization; create and use indexes for performance; practice transactions (BEGIN, COMMIT, ROLLBACK); work with views and stored procedures; implement data manipulation (INSERT, UPDATE, DELETE) with complex conditions; understand constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK); explore date/time functions and string manipulation functions.
+- ✅ Pass: Build a complete analytics database schema with ≥4 tables and proper constraints; write ≥30 advanced queries including: ≥10 window function queries (ranking, running totals, moving averages, lag/lead analysis), ≥5 CTEs (including at least 1 recursive CTE for hierarchical data like org charts or category trees), ≥5 queries with EXPLAIN/ANALYZE showing index usage, ≥3 transactions demonstrating ACID properties, ≥3 views encapsulating complex logic, ≥5 DML operations (INSERT/UPDATE/DELETE with subqueries), date calculations (date differences, date parts, date formatting), and complex string manipulations; create indexes and demonstrate query performance improvement; document each query with execution time before/after optimization where applicable.
+- 🛠️ How: Window functions: `ROW_NUMBER() OVER (PARTITION BY col ORDER BY col2)`, `SUM(col) OVER (PARTITION BY category ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)` for running totals; CTEs: `WITH cte_name AS (SELECT...) SELECT * FROM cte_name`; Recursive CTE: `WITH RECURSIVE cte AS (base_case UNION ALL recursive_case) SELECT * FROM cte`; Indexes: `CREATE INDEX idx_name ON table(col)`; check execution plan with `EXPLAIN` (PostgreSQL) or `EXPLAIN QUERY PLAN` (SQLite); transactions: `BEGIN; UPDATE...; COMMIT;`; views: `CREATE VIEW view_name AS SELECT...`; use `EXTRACT`, `DATE_TRUNC`, `AGE` for dates; `CONCAT`, `SUBSTRING`, `REGEXP_REPLACE` for strings; optimize with proper WHERE clause ordering and index hints.
+
+</details>
+
+🔁 Flex — ETL mini-project
+
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 
@@ -200,6 +245,78 @@ Week 18 — Review
 
 ---------------------------------------------------------------------
 
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 11 · Convex Optimization — Weeks 122–131 (Complete Boyd & Vandenberghe)</b></summary>
+
+Week 122 — Mathematical Foundations & Convex Sets
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand vector spaces, norms, and topology; master convex sets (definition, operations, separating hyperplanes); work with cones (proper, dual); understand convex hulls and Carathéodory's theorem.
+- ✅ Pass: Prove convexity of specific sets analytically; verify convexity numerically for given sets; implement separating hyperplane algorithm; compute convex hull of finite point set; visualize 2D/3D convex sets and their intersections; verify that intersection of convex sets is convex through examples.
+- 🛠️ How: Check convexity: for x, y in set and θ ∈ [0,1], verify θx + (1-θ)y in set; `scipy.spatial.ConvexHull`; plot with `plt.fill` for 2D, `mpl_toolkits.mplot3d` for 3D; separating hyperplane via linear program or support vector methods.
+
+Week 123 — Convex Functions & Operations
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Define and verify convex functions; understand epigraphs and sublevel sets; master operations preserving convexity (nonnegative weighted sum, composition, pointwise maximum, perspective); work with conjugate functions and Fenchel duality.
+- ✅ Pass: Verify convexity via first-order condition (gradient) and second-order condition (Hessian PSD); compute epigraphs and sublevel sets; prove convexity of composed functions using composition rules; compute conjugate functions for common functions (norms, indicators, quadratics); visualize convex functions and their conjugates; implement perspective operation.
+- 🛠️ How: First-order: `f(y) ≥ f(x) + ∇f(x)ᵀ(y-x)` for all x,y; second-order: `∇²f(x) ⪰ 0`; check eigenvalues `np.linalg.eigvals(H) ≥ 0`; conjugate: `f*(y) = sup_x(yᵀx - f(x))`; 3D surface plots for visualization.
+
+Week 124 — Convex Optimization Problems
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Formulate optimization problems in standard form; understand linear programming (LP), quadratic programming (QP), and second-order cone programming (SOCP); work with geometric programming; understand quasiconvex optimization.
+- ✅ Pass: Formulate ≥5 real-world problems as convex programs (portfolio optimization, LP relaxation, robust optimization, etc.); solve using CVX/CVXPY; verify optimality conditions; convert non-convex problems to convex via transformation (log transform for GP); demonstrate equivalence of problem formulations.
+- 🛠️ How: `cvxpy` for modeling: `cp.Variable`, `cp.Minimize/Maximize`, `cp.Problem(objective, constraints).solve()`; verify KKT conditions at solution; transformations: log-transform for geometric programs; compare solution time across formulations.
+
+Week 125 — Duality Theory
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Derive Lagrange dual function and dual problem; understand weak and strong duality; apply Slater's condition for strong duality; work with KKT conditions for optimality; interpret dual variables as sensitivity (shadow prices).
+- ✅ Pass: Formulate Lagrangian for ≥3 optimization problems; derive dual problem; verify weak duality (dual objective ≤ primal objective); check Slater's condition and confirm strong duality; solve primal and dual numerically and verify zero duality gap; interpret dual variables and verify sensitivity interpretation via perturbation analysis; verify KKT conditions at optimum.
+- 🛠️ How: Lagrangian: `L(x,λ,ν) = f(x) + Σλᵢgᵢ(x) + Σνⱼhⱼ(x)`; dual function: `g(λ,ν) = inf_x L(x,λ,ν)`; solve primal/dual with `cvxpy`; access dual variables: `constraint.dual_value`; perturbation: resolve with modified constraint bounds, compare optimal values to dual variables.
+
+Week 126 — Unconstrained Optimization Algorithms
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Implement gradient descent with exact and backtracking line search; implement Newton's method and analyze convergence rates; understand quasi-Newton methods (BFGS); compare first-order vs second-order methods.
+- ✅ Pass: Implement gradient descent with backtracking line search from scratch; implement Newton's method with Hessian modification for non-convexity; compare convergence rates empirically (linear for GD, quadratic for Newton); implement BFGS and compare to exact Newton; plot objective value, gradient norm, and step size vs iterations; verify theoretical convergence rates on quadratic problems.
+- 🛠️ How: GD with backtracking: start with step size t, while `f(x - t∇f) > f(x) - αt||∇f||²` do `t = βt` (α=0.3, β=0.8); Newton: `x := x - [∇²f(x)]⁻¹∇f(x)`; Hessian modification: add λI if not PD; BFGS: update inverse Hessian approximation; `scipy.optimize.minimize(method='BFGS')` for comparison.
+
+Week 127 — Equality Constrained Optimization
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Solve equality-constrained problems via elimination and KKT system; implement Newton's method for equality-constrained problems; understand feasible and infeasible start methods.
+- ✅ Pass: Solve equality-constrained QP by forming and solving KKT system directly; implement Newton step for equality constraints (compute search direction solving KKT system); compare elimination method (reduce dimensions) vs Lagrange multiplier method; implement feasible start Newton (project onto feasible set) and infeasible start Newton (minimize feasibility and optimality); verify that solution satisfies primal and dual feasibility.
+- 🛠️ How: KKT system: `[H Aᵀ; A 0][Δx; Δν] = [-∇f; -h]` where Ax=b are equality constraints; solve with `np.linalg.solve`; elimination: express x = Fz + x₀ where Fx₀=b, AF=0, then minimize in z; feasibility measure: `||Ax-b||²`; verify solution: check `Ax=b` and `∇f + Aᵀν = 0`.
+
+Week 128 — Interior-Point Methods
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand barrier methods and central path; implement log-barrier method for inequality constraints; understand primal-dual interior-point methods; analyze complexity and convergence.
+- ✅ Pass: Implement log-barrier method for LP or QP with inequality constraints; track central path by solving sequence of problems for decreasing t; implement primal-dual interior-point method computing Newton steps in primal-dual space; compare to barrier method; plot duality gap vs iterations; verify polynomial-time complexity empirically; compare to simplex method for LP.
+- 🛠️ How: Barrier function: `φ(x) = -Σ log(-fᵢ(x))`; minimize `t·f₀(x) + φ(x)` for increasing t; primal-dual: solve KKT system with perturbed complementarity `λᵢfᵢ(x) = -1/t`; Newton step: `[H+∇²φ Aᵀ; A 0][Δx;Δν] = [-t∇f-∇φ; -Ax+b]`; track `η = m/t` (duality gap upper bound).
+
+Week 129 — Applications to Machine Learning
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Formulate ML problems as convex optimization: SVM (hinge loss, soft margin), logistic regression, Lasso and elastic net, matrix completion, robust PCA; understand regularization from optimization perspective.
+- ✅ Pass: Formulate and solve SVM dual problem; implement coordinate descent for Lasso; formulate logistic regression as convex problem and solve with Newton's method; implement matrix completion via nuclear norm minimization; solve robust PCA (low-rank + sparse decomposition); compare custom implementations to sklearn baselines; visualize regularization paths and decision boundaries.
+- 🛠️ How: SVM dual: `max Σαᵢ - ½ΣΣαᵢαⱼyᵢyⱼK(xᵢ,xⱼ)` subject to `0 ≤ α ≤ C`, `Σαᵢyᵢ=0`; Lasso coordinate descent: update one coefficient at a time with soft thresholding; nuclear norm: `||X||* = Σσᵢ`; robust PCA: `min ||L||* + λ||S||₁` subject to `L+S=M`; use `cvxpy` for verification.
+
+Week 130 — Advanced Topics: Distributed & Stochastic Methods
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand decomposition methods (dual decomposition, ADMM); implement stochastic gradient methods; work with proximal operators and proximal gradient method; understand operator splitting methods.
+- ✅ Pass: Implement ADMM for a separable problem (e.g., Lasso, consensus optimization); implement stochastic gradient descent with diminishing and constant step sizes; compare convergence to batch GD; implement proximal gradient method for composite objectives (smooth + nonsmooth); derive and implement proximal operators for common functions (L1 norm, indicator functions); demonstrate ADMM convergence to consensus.
+- 🛠️ How: ADMM: iterate `x := argmin L_ρ(x,z,u)`, `z := argmin L_ρ(x,z,u)`, `u := u + ρ(Ax+Bz-c)` where `L_ρ = f(x)+g(z)+uᵀ(Ax+Bz-c)+ρ/2||Ax+Bz-c||²`; SGD: sample minibatch, update with gradient estimate; proximal operator: `prox_f(x) = argmin_u (f(u) + ½||u-x||²)`; proximal gradient: `x := prox_{tg}(x - t∇f(x))`.
+
+Week 131 — Integration & Review
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Integrate all topics; formulate and solve complex real-world problems; understand when to use each algorithm; compare optimization formulations.
+- ✅ Pass: Complete a comprehensive project applying convex optimization to a real problem; formulate in ≥2 different ways (primal/dual, different variables); solve with ≥3 algorithms comparing convergence and computation time; verify optimality via KKT conditions and duality gap; produce detailed report documenting problem formulation, algorithm selection rationale, convergence analysis, and sensitivity analysis; include visualizations of feasible set, level sets, and optimization trajectory.
+- 🛠️ How: Select problem from application domain (portfolio, control, signal processing, ML); compare custom implementations to industrial solvers (CVXPY, Gurobi, MOSEK); profiling with `cProfile` or `line_profiler`; convergence plots (objective, constraint violation, KKT residual); sensitivity: perturb problem data and track optimal value.
+</details>
+
+🔁 Flex — Convex optimization consolidation
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
 <details>
 <summary><b>Phase 3 · Statistics Fundamentals — Weeks 19–24 (Complete Think Stats)</b></summary>
 
@@ -241,6 +358,8 @@ Week 24 — Think Stats Ch. 9–10 (+wrap)
 </details>
 
 🔁 Flex — Stats recap
+
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 
@@ -342,6 +461,8 @@ Week 39 — Integration and Review
 
 ---------------------------------------------------------------------
 
+---------------------------------------------------------------------
+
 <details>
 <summary><b>Phase 5 · Bayesian & Missing Data — Weeks 40–51 (Complete Think Bayes, FIMD)</b></summary>
 
@@ -359,6 +480,8 @@ Weeks 48–51 — Flexible Imputation of Missing Data (complete)
 </details>
 
 🔁 Flex — Consolidate Bayesian + MI
+
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 
@@ -430,6 +553,24 @@ Week 61 — ISLP Labs/Wrap-up
 
 ---------------------------------------------------------------------
 
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 8 · Data Mining — Weeks 81–89 (Complete DM 3e)</b></summary>
+
+Weeks 81–89 — Data Mining 3e (Ch. 1–12)
+- 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
+- 🧪 Practice: Per-chapter algorithmic work strictly matching the chapter (e.g., data preprocessing tasks; Apriori/FP-Growth; decision trees; k-means/DBSCAN; outlier detection)
+- ✅ Pass (weekly): Implement a minimal working version for the chapter’s focal algorithm OR replicate results using a library; verify correctness on a deterministic toy and compare performance on a small real dataset.
+- 🛠️ How: construct small synthetic datasets with known ground truth (fixed seeds); assert counts/clusters/rules match expectation.
+</details>
+
+🔁 Flex — Mining recap
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
 <details>
 <summary><b>Phase 7 · Classical ML — Weeks 62–80 (Complete PRML, Interpretable ML)</b></summary>
 
@@ -449,174 +590,6 @@ Weeks 76–80 — Interpretable ML (complete)
 🔁 Flex — Validation & interpretation synthesis
 
 ---------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 8 · Data Mining — Weeks 81–89 (Complete DM 3e)</b></summary>
-
-Weeks 81–89 — Data Mining 3e (Ch. 1–12)
-- 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
-- 🧪 Practice: Per-chapter algorithmic work strictly matching the chapter (e.g., data preprocessing tasks; Apriori/FP-Growth; decision trees; k-means/DBSCAN; outlier detection)
-- ✅ Pass (weekly): Implement a minimal working version for the chapter’s focal algorithm OR replicate results using a library; verify correctness on a deterministic toy and compare performance on a small real dataset.
-- 🛠️ How: construct small synthetic datasets with known ground truth (fixed seeds); assert counts/clusters/rules match expectation.
-</details>
-
-🔁 Flex — Mining recap
-
----------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 9 · Econometrics & Time Series — Weeks 90–111 (Complete Gujarati, Lütkepohl)</b></summary>
-
-Weeks 90–101 — Basic Econometrics (complete)
-- 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
-- 🧪 Practice: Reproduce a worked example per chapter using methods from that chapter only (OLS basics; classical assumption diagnostics; heteroskedasticity/autocorrelation remedies; functional form; limited dependent variables as presented)
-- ✅ Pass (weekly): Match the textbook example’s coefficients and standard errors (within rounding) and include one robustness check discussed in that chapter (e.g., robust/HAC SEs when appropriate).
-- 🛠️ How: `statsmodels` OLS/GLM, `cov_type="HC3"` or HAC if the chapter addresses it; include diagnostic plots taught there.
-
-Weeks 102–111 — Lütkepohl (complete)
-- 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- 🧪 Practice: Implement multivariate time series analysis: VAR model specification, estimation, lag order selection, stability analysis, impulse response functions, forecast error variance decomposition, and cointegration/VECM.
-- ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
-- 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
-</details>
-
-🔁 Flex — Econometrics/time-series consolidation
-
----------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 10 · Causal Inference — Weeks 112–121 (Complete The Mixtape)</b></summary>
-
-Week 112 — Properties of Regression, DAGs, Potential Outcomes
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand Simpson's paradox and collider bias; draw and analyze directed acyclic graphs (DAGs); master potential outcomes framework; understand Average Treatment Effect (ATE) and selection bias.
-- ✅ Pass: Implement Simpson's paradox example showing reversal of association; construct ≥3 DAGs identifying confounders, mediators, and colliders; derive ATE under different selection mechanisms; demonstrate selection bias analytically and via simulation.
-- 🛠️ How: Use `networkx` or `dagitty` for DAG visualization; simulate counterfactuals with fixed treatment assignments; compute `E[Y¹] - E[Y⁰]` vs observed difference-in-means; show bias = `E[Y⁰|D=1] - E[Y⁰|D=0]`.
-
-Week 113 — Randomized Controlled Trials & Matching
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand randomization inference; implement exact matching, propensity score matching (PSM), and coarsened exact matching; check covariate balance; assess common support.
-- ✅ Pass: Analyze an RCT dataset computing ATE with randomization inference (permutation test); implement PSM with ≥3 matching algorithms (nearest neighbor, caliper, kernel); produce balance tables and Love plots before/after matching; check common support with density plots; report treatment effects with bootstrapped standard errors.
-- 🛠️ How: Permutation test: shuffle treatment vector 1000+ times, recompute difference-in-means; `sklearn.neighbors.NearestNeighbors` for matching; logistic regression for propensity scores; standardized mean differences for balance; `seaborn.kdeplot` for common support.
-
-Week 114 — Regression Discontinuity Design (RDD)
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand sharp and fuzzy RDD; check continuity assumptions; select bandwidth using cross-validation and optimal methods; test for manipulation of running variable; implement local polynomial regression.
-- ✅ Pass: Apply RDD to real or simulated data with a known cutoff; test for discontinuity at the threshold using local linear regression with ≥3 bandwidths; perform McCrary density test for manipulation; produce RDD plots showing outcome vs running variable with fitted lines; report local average treatment effect (LATE) with robust standard errors; conduct placebo tests at false cutoffs.
-- 🛠️ How: Local linear regression within bandwidth h: `Y ~ D + (X-c) + D*(X-c)` for |X-c| < h; optimal bandwidth via `rdrobust` (R) or manual cross-validation; McCrary test: fit separate densities left/right of cutoff and test for jump; bootstrap for inference.
-
-Week 115 — Instrumental Variables (IV)
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand endogeneity and IV identification; implement two-stage least squares (2SLS); test instrument relevance and exogeneity; understand weak instruments problem; compute local average treatment effect (LATE) with compliance types.
-- ✅ Pass: Identify a valid instrument and justify exclusion restriction; implement 2SLS manually (first stage, second stage) and compare to built-in IV estimator; test instrument strength (F-stat > 10 rule of thumb, Cragg-Donald); perform overidentification test when multiple instruments available; compute LATE and interpret in terms of compliers; conduct sensitivity analysis for violation of exclusion restriction.
-- 🛠️ How: Manual 2SLS: regress X on Z (first stage), predict X̂, regress Y on X̂ (second stage); `statsmodels.sandbox.regression.gmm.IV2SLS` or `linearmodels.iv.IV2SLS`; first-stage F-stat for relevance; Hansen J-stat for overidentification; bound analysis for exclusion restriction violations.
-
-Week 116 — Panel Data & Fixed Effects
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand within-group variation; implement fixed effects (FE) and first differences (FD); test fixed vs random effects (Hausman test); handle time-varying treatments; understand parallel trends assumption.
-- ✅ Pass: Estimate panel data model with entity and time fixed effects; compare pooled OLS, FE, and random effects; perform Hausman test; demean data manually and verify equivalence to FE estimator; produce event study plots for dynamic treatment effects; test parallel trends visually and formally; cluster standard errors at appropriate level.
-- 🛠️ How: FE via demeaning: `Y_it - Ȳ_i = (X_it - X̄_i)β + (ε_it - ε̄_i)`; `linearmodels.panel.PanelOLS` with `entity_effects=True`; Hausman test compares FE vs RE; event study: include leads/lags of treatment; plot coefficients with 95% CIs; cluster SEs: `cov_type='clustered'`.
-
-Week 117 — Difference-in-Differences (DiD)
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Implement canonical 2×2 DiD; test parallel trends assumption; handle staggered treatment adoption; understand two-way fixed effects (TWFE) issues with heterogeneous treatment effects; apply robust DiD estimators.
-- ✅ Pass: Estimate 2×2 DiD with interaction term and verify equivalence to group-time means; test parallel trends with pre-treatment period placebo tests; visualize trends with event study; implement staggered DiD using TWFE and compare to Callaway-Sant'Anna or Sun-Abraham estimators to avoid bias from heterogeneous effects; report treatment effects with wild cluster bootstrap standard errors.
-- 🛠️ How: DiD: `Y = β₀ + β₁·Treated + β₂·Post + β₃·(Treated×Post)`; parallel trends: plot group-specific trends pre-treatment; placebo DiD on earlier periods; for staggered adoption, never-treated as control group; decompose TWFE weights; wild bootstrap: `clustered_bootstrap` with Rademacher weights.
-
-Week 118 — Synthetic Control Method
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand synthetic control as data-driven matching on pre-treatment outcomes; implement synthetic control optimization; conduct permutation-based inference; assess fit quality; handle multiple treated units.
-- ✅ Pass: Apply synthetic control to a policy intervention; construct synthetic control by optimizing weights on donor pool to match pre-treatment outcomes; report weights and predictor balance; visualize treated vs synthetic trends; conduct placebo tests by reassigning treatment to each donor; compute p-values from permutation distribution; assess robustness by excluding donors iteratively; report pre/post-treatment RMSPE ratio.
-- 🛠️ How: Synthetic control: minimize `||X₁ - X₀W||` subject to `W ≥ 0`, `∑W = 1`, where X₁ is treated unit pre-treatment outcomes, X₀ is donor matrix; use `scipy.optimize.minimize` with constraints or quadratic programming; permutation inference: apply method to each control unit, rank treatment effect; gap plot showing treated - synthetic over time; leave-one-out for robustness.
-
-Week 119 — Regression Kink Design & Bunching
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Understand regression kink design (RKD) as derivative discontinuity; implement bunching estimator for detecting behavioral responses; test for slope changes; estimate elasticities.
-- ✅ Pass: Apply RKD to a policy with kinked schedule (e.g., tax, subsidy); test for change in slope at kink point using local polynomial regression on subsamples; visualize kink with binned scatter plot; implement bunching estimator by comparing empirical distribution to counterfactual; estimate excess mass and implied elasticity; conduct robustness checks varying excluded region and polynomial order.
-- 🛠️ How: RKD: estimate `dY/dX` separately left/right of kink, test equality; local linear separately each side: `Y ~ (X-k) + covariates` for X near k; binned scatter: equal-sized bins, plot means; bunching: integrate empirical density, fit counterfactual excluding region around kink (polynomial fit), excess mass = observed - counterfactual; elasticity from excess mass and tax change.
-
-Week 120 — Regression Sensitivity & Bounds
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Assess robustness using omitted variable bias (OVB) formulas; implement Oster (2019) bounds; conduct sensitivity analysis for unobserved confounding; use Rosenbaum bounds for matching estimators; understand partial identification.
-- ✅ Pass: Apply OVB formula to show direction/magnitude of bias from omitted confounder; implement Oster method computing δ (relative importance of unobservables) for null result; produce sensitivity plots showing treatment effect as function of confounder strength; apply Rosenbaum bounds to PSM estimates varying Γ; report identified set and discuss assumption needed for causal claim; compare naïve, conditional, and bounded estimates.
-- 🛠️ How: OVB: `β̂ = β + γ·δ` where γ is effect of omitted U on Y, δ is coefficient from X ~ U; Oster δ: `δ = [R²max - R̃²]/[R̃² - R°²] · [β̃ - β*]/[β° - β̃]`; plot treatment effect vs confounding strength; Rosenbaum Γ: recompute p-value under assumption of hidden bias; identified set: report range of treatment effects consistent with assumptions.
-
-Week 121 — Advanced Topics & Review
-- 📖 [The Mixtape](https://mixtape.scunning.com)
-- 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
-- ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
-- 🛠️ How: Compare DiD, IV, RDD on same outcome; assess common support, parallel trends, instrument strength; double ML: use cross-fitting with `DoubleMLPLR` or manual implementation (Lasso for Y~X, D~X, residualize); causal forest: `grf` package (R) or `econml.dml.CausalForestDML` (Python); plot distribution of treatment effects; report heterogeneity by subgroups; synthesis table with all estimates.
-</details>
-
-🔁 Flex — Causal inference consolidation
-
----------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 11 · Convex Optimization — Weeks 122–131 (Complete Boyd & Vandenberghe)</b></summary>
-
-Week 122 — Mathematical Foundations & Convex Sets
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand vector spaces, norms, and topology; master convex sets (definition, operations, separating hyperplanes); work with cones (proper, dual); understand convex hulls and Carathéodory's theorem.
-- ✅ Pass: Prove convexity of specific sets analytically; verify convexity numerically for given sets; implement separating hyperplane algorithm; compute convex hull of finite point set; visualize 2D/3D convex sets and their intersections; verify that intersection of convex sets is convex through examples.
-- 🛠️ How: Check convexity: for x, y in set and θ ∈ [0,1], verify θx + (1-θ)y in set; `scipy.spatial.ConvexHull`; plot with `plt.fill` for 2D, `mpl_toolkits.mplot3d` for 3D; separating hyperplane via linear program or support vector methods.
-
-Week 123 — Convex Functions & Operations
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Define and verify convex functions; understand epigraphs and sublevel sets; master operations preserving convexity (nonnegative weighted sum, composition, pointwise maximum, perspective); work with conjugate functions and Fenchel duality.
-- ✅ Pass: Verify convexity via first-order condition (gradient) and second-order condition (Hessian PSD); compute epigraphs and sublevel sets; prove convexity of composed functions using composition rules; compute conjugate functions for common functions (norms, indicators, quadratics); visualize convex functions and their conjugates; implement perspective operation.
-- 🛠️ How: First-order: `f(y) ≥ f(x) + ∇f(x)ᵀ(y-x)` for all x,y; second-order: `∇²f(x) ⪰ 0`; check eigenvalues `np.linalg.eigvals(H) ≥ 0`; conjugate: `f*(y) = sup_x(yᵀx - f(x))`; 3D surface plots for visualization.
-
-Week 124 — Convex Optimization Problems
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Formulate optimization problems in standard form; understand linear programming (LP), quadratic programming (QP), and second-order cone programming (SOCP); work with geometric programming; understand quasiconvex optimization.
-- ✅ Pass: Formulate ≥5 real-world problems as convex programs (portfolio optimization, LP relaxation, robust optimization, etc.); solve using CVX/CVXPY; verify optimality conditions; convert non-convex problems to convex via transformation (log transform for GP); demonstrate equivalence of problem formulations.
-- 🛠️ How: `cvxpy` for modeling: `cp.Variable`, `cp.Minimize/Maximize`, `cp.Problem(objective, constraints).solve()`; verify KKT conditions at solution; transformations: log-transform for geometric programs; compare solution time across formulations.
-
-Week 125 — Duality Theory
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Derive Lagrange dual function and dual problem; understand weak and strong duality; apply Slater's condition for strong duality; work with KKT conditions for optimality; interpret dual variables as sensitivity (shadow prices).
-- ✅ Pass: Formulate Lagrangian for ≥3 optimization problems; derive dual problem; verify weak duality (dual objective ≤ primal objective); check Slater's condition and confirm strong duality; solve primal and dual numerically and verify zero duality gap; interpret dual variables and verify sensitivity interpretation via perturbation analysis; verify KKT conditions at optimum.
-- 🛠️ How: Lagrangian: `L(x,λ,ν) = f(x) + Σλᵢgᵢ(x) + Σνⱼhⱼ(x)`; dual function: `g(λ,ν) = inf_x L(x,λ,ν)`; solve primal/dual with `cvxpy`; access dual variables: `constraint.dual_value`; perturbation: resolve with modified constraint bounds, compare optimal values to dual variables.
-
-Week 126 — Unconstrained Optimization Algorithms
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Implement gradient descent with exact and backtracking line search; implement Newton's method and analyze convergence rates; understand quasi-Newton methods (BFGS); compare first-order vs second-order methods.
-- ✅ Pass: Implement gradient descent with backtracking line search from scratch; implement Newton's method with Hessian modification for non-convexity; compare convergence rates empirically (linear for GD, quadratic for Newton); implement BFGS and compare to exact Newton; plot objective value, gradient norm, and step size vs iterations; verify theoretical convergence rates on quadratic problems.
-- 🛠️ How: GD with backtracking: start with step size t, while `f(x - t∇f) > f(x) - αt||∇f||²` do `t = βt` (α=0.3, β=0.8); Newton: `x := x - [∇²f(x)]⁻¹∇f(x)`; Hessian modification: add λI if not PD; BFGS: update inverse Hessian approximation; `scipy.optimize.minimize(method='BFGS')` for comparison.
-
-Week 127 — Equality Constrained Optimization
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Solve equality-constrained problems via elimination and KKT system; implement Newton's method for equality-constrained problems; understand feasible and infeasible start methods.
-- ✅ Pass: Solve equality-constrained QP by forming and solving KKT system directly; implement Newton step for equality constraints (compute search direction solving KKT system); compare elimination method (reduce dimensions) vs Lagrange multiplier method; implement feasible start Newton (project onto feasible set) and infeasible start Newton (minimize feasibility and optimality); verify that solution satisfies primal and dual feasibility.
-- 🛠️ How: KKT system: `[H Aᵀ; A 0][Δx; Δν] = [-∇f; -h]` where Ax=b are equality constraints; solve with `np.linalg.solve`; elimination: express x = Fz + x₀ where Fx₀=b, AF=0, then minimize in z; feasibility measure: `||Ax-b||²`; verify solution: check `Ax=b` and `∇f + Aᵀν = 0`.
-
-Week 128 — Interior-Point Methods
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand barrier methods and central path; implement log-barrier method for inequality constraints; understand primal-dual interior-point methods; analyze complexity and convergence.
-- ✅ Pass: Implement log-barrier method for LP or QP with inequality constraints; track central path by solving sequence of problems for decreasing t; implement primal-dual interior-point method computing Newton steps in primal-dual space; compare to barrier method; plot duality gap vs iterations; verify polynomial-time complexity empirically; compare to simplex method for LP.
-- 🛠️ How: Barrier function: `φ(x) = -Σ log(-fᵢ(x))`; minimize `t·f₀(x) + φ(x)` for increasing t; primal-dual: solve KKT system with perturbed complementarity `λᵢfᵢ(x) = -1/t`; Newton step: `[H+∇²φ Aᵀ; A 0][Δx;Δν] = [-t∇f-∇φ; -Ax+b]`; track `η = m/t` (duality gap upper bound).
-
-Week 129 — Applications to Machine Learning
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Formulate ML problems as convex optimization: SVM (hinge loss, soft margin), logistic regression, Lasso and elastic net, matrix completion, robust PCA; understand regularization from optimization perspective.
-- ✅ Pass: Formulate and solve SVM dual problem; implement coordinate descent for Lasso; formulate logistic regression as convex problem and solve with Newton's method; implement matrix completion via nuclear norm minimization; solve robust PCA (low-rank + sparse decomposition); compare custom implementations to sklearn baselines; visualize regularization paths and decision boundaries.
-- 🛠️ How: SVM dual: `max Σαᵢ - ½ΣΣαᵢαⱼyᵢyⱼK(xᵢ,xⱼ)` subject to `0 ≤ α ≤ C`, `Σαᵢyᵢ=0`; Lasso coordinate descent: update one coefficient at a time with soft thresholding; nuclear norm: `||X||* = Σσᵢ`; robust PCA: `min ||L||* + λ||S||₁` subject to `L+S=M`; use `cvxpy` for verification.
-
-Week 130 — Advanced Topics: Distributed & Stochastic Methods
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand decomposition methods (dual decomposition, ADMM); implement stochastic gradient methods; work with proximal operators and proximal gradient method; understand operator splitting methods.
-- ✅ Pass: Implement ADMM for a separable problem (e.g., Lasso, consensus optimization); implement stochastic gradient descent with diminishing and constant step sizes; compare convergence to batch GD; implement proximal gradient method for composite objectives (smooth + nonsmooth); derive and implement proximal operators for common functions (L1 norm, indicator functions); demonstrate ADMM convergence to consensus.
-- 🛠️ How: ADMM: iterate `x := argmin L_ρ(x,z,u)`, `z := argmin L_ρ(x,z,u)`, `u := u + ρ(Ax+Bz-c)` where `L_ρ = f(x)+g(z)+uᵀ(Ax+Bz-c)+ρ/2||Ax+Bz-c||²`; SGD: sample minibatch, update with gradient estimate; proximal operator: `prox_f(x) = argmin_u (f(u) + ½||u-x||²)`; proximal gradient: `x := prox_{tg}(x - t∇f(x))`.
-
-Week 131 — Integration & Review
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Integrate all topics; formulate and solve complex real-world problems; understand when to use each algorithm; compare optimization formulations.
-- ✅ Pass: Complete a comprehensive project applying convex optimization to a real problem; formulate in ≥2 different ways (primal/dual, different variables); solve with ≥3 algorithms comparing convergence and computation time; verify optimality via KKT conditions and duality gap; produce detailed report documenting problem formulation, algorithm selection rationale, convergence analysis, and sensitivity analysis; include visualizations of feasible set, level sets, and optimization trajectory.
-- 🛠️ How: Select problem from application domain (portfolio, control, signal processing, ML); compare custom implementations to industrial solvers (CVXPY, Gurobi, MOSEK); profiling with `cProfile` or `line_profiler`; convergence plots (objective, constraint violation, KKT residual); sensitivity: perturb problem data and track optimal value.
-</details>
-
-🔁 Flex — Convex optimization consolidation
 
 ---------------------------------------------------------------------
 
@@ -688,57 +661,6 @@ Week 141 — ESL Ch. 18 & Integration: High-Dimensional Problems
 
 ---------------------------------------------------------------------
 
-<details>
-<summary><b>Phase 13 · R for Data Science — Weeks 142–151 (Complete R4DS 2e)</b></summary>
-
-Weeks 142–151 — R4DS (Complete)
-- 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
-- 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
-- ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
-- 🛠️ How: `library(tidyverse)`; `read_csv`; `dplyr` verbs (`filter`, `mutate`, `summarize`, `group_by`); `ggplot2`; `set.seed()` for reproducibility.
-</details>
-
-🔁 Flex — R consolidation
-
----------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 14 · Web Scraping & SQL — Weeks 152–157 (Complete BeautifulSoup, Selenium, SQL)</b></summary>
-
-Week 152 — BeautifulSoup
-- 📖 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- 🧪 Practice: Scrape static HTML pages: fetch with requests, parse with BeautifulSoup, navigate the DOM, extract data using CSS selectors and tag methods.
-- ✅ Pass: Scrape a static website and extract structured data; save as CSV/JSON with documented schema; check robots.txt before scraping; implement polite delays to avoid rate limiting (no HTTP 429 errors).
-- 🛠️ How: `requests.get(url)`; `BeautifulSoup(html, "lxml")`; `.select()` for CSS selectors; `.find_all()` for tag-based search; `time.sleep()` between requests.
-
-Weeks 153–154 — Selenium
-- 📖 [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
-- 🧪 Practice: Automate browser interactions for dynamic websites: handle JavaScript-rendered content, implement explicit waits, manage pagination and infinite scroll, fill forms.
-- ✅ Pass (weekly): Scrape a JavaScript-rendered page (e.g., infinite scroll or content behind clicks); implement proper waits and error handling; save timestamped data with retry/timeout logs; handle at least one failure scenario gracefully.
-- 🛠️ How: `webdriver.Chrome()`; `WebDriverWait` with `expected_conditions`; CSS/XPath selectors; `execute_script()` for scrolling; consistent viewport settings.
-
-Week 155 — SQL Basics & Data Retrieval
-- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-- 🧪 Practice: Set up SQL environment (SQLite/PostgreSQL/MySQL); understand database structure (tables, rows, columns); master SELECT statement; use WHERE clause with comparison operators (=, !=, <, >, <=, >=); apply logical operators (AND, OR, NOT); sort results with ORDER BY; limit results with LIMIT/TOP; use DISTINCT to remove duplicates; practice basic string matching with LIKE and wildcards (%, _).
-- ✅ Pass: Install and configure a SQL database system; create a sample database with at least 3 tables; write ≥20 SELECT queries demonstrating: simple selection, filtering with WHERE, multiple conditions with AND/OR, sorting ascending/descending, limiting results, removing duplicates, and pattern matching with LIKE; document each query with its purpose and expected row count.
-- 🛠️ How: Install SQLite (lightweight) or PostgreSQL (production-grade); use `CREATE TABLE`, `INSERT INTO` for sample data; practice `SELECT * FROM table`, `SELECT col1, col2 FROM table WHERE condition`, `ORDER BY col ASC/DESC`, `LIMIT n`, `DISTINCT col`, `WHERE col LIKE 'pattern%'`; use a SQL client (DBeaver, pgAdmin, or command line).
-
-Week 156 — SQL Joins, Aggregations & Subqueries
-- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-- 🧪 Practice: Master different types of joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, SELF JOIN); understand when to use each join type; work with aggregate functions (COUNT, SUM, AVG, MIN, MAX); use GROUP BY for grouping data; filter grouped data with HAVING clause; write subqueries in SELECT, WHERE, and FROM clauses; understand correlated vs non-correlated subqueries; practice set operations (UNION, UNION ALL, INTERSECT, EXCEPT); work with NULL values (IS NULL, IS NOT NULL, COALESCE, NULLIF).
-- ✅ Pass: Create a relational schema with ≥3 related tables (e.g., customers, orders, products); write ≥25 queries demonstrating: all join types with explanations, aggregate functions with and without GROUP BY, HAVING clause filters, nested subqueries (at least 2 levels deep), correlated subqueries, set operations combining multiple queries, NULL handling in various contexts; include at least one complex multi-join query involving 3+ tables; document the business question each query answers.
-- 🛠️ How: Design schema with foreign key relationships; `INNER JOIN table2 ON table1.id = table2.fk_id`, `LEFT JOIN` for including unmatched rows; `SELECT COUNT(*), AVG(col) FROM table GROUP BY category`, `HAVING COUNT(*) > 5`; `WHERE col IN (SELECT...)`, `SELECT (SELECT...) AS subquery_col`; `UNION` to combine results; `COALESCE(col, 'default')` for NULL handling; visualize join results with Venn diagrams.
-
-Week 157 — Advanced SQL: Window Functions, CTEs & Performance
-- 📖 [SQL Roadmap (GeeksforGeeks)](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-- 🧪 Practice: Master window functions (ROW_NUMBER, RANK, DENSE_RANK, NTILE); use aggregate window functions (SUM, AVG, COUNT over partitions); apply LEAD and LAG for accessing adjacent rows; work with PARTITION BY and ORDER BY in window functions; write Common Table Expressions (CTEs) for readable complex queries; use recursive CTEs for hierarchical data; understand query execution plans and optimization; create and use indexes for performance; practice transactions (BEGIN, COMMIT, ROLLBACK); work with views and stored procedures; implement data manipulation (INSERT, UPDATE, DELETE) with complex conditions; understand constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK); explore date/time functions and string manipulation functions.
-- ✅ Pass: Build a complete analytics database schema with ≥4 tables and proper constraints; write ≥30 advanced queries including: ≥10 window function queries (ranking, running totals, moving averages, lag/lead analysis), ≥5 CTEs (including at least 1 recursive CTE for hierarchical data like org charts or category trees), ≥5 queries with EXPLAIN/ANALYZE showing index usage, ≥3 transactions demonstrating ACID properties, ≥3 views encapsulating complex logic, ≥5 DML operations (INSERT/UPDATE/DELETE with subqueries), date calculations (date differences, date parts, date formatting), and complex string manipulations; create indexes and demonstrate query performance improvement; document each query with execution time before/after optimization where applicable.
-- 🛠️ How: Window functions: `ROW_NUMBER() OVER (PARTITION BY col ORDER BY col2)`, `SUM(col) OVER (PARTITION BY category ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)` for running totals; CTEs: `WITH cte_name AS (SELECT...) SELECT * FROM cte_name`; Recursive CTE: `WITH RECURSIVE cte AS (base_case UNION ALL recursive_case) SELECT * FROM cte`; Indexes: `CREATE INDEX idx_name ON table(col)`; check execution plan with `EXPLAIN` (PostgreSQL) or `EXPLAIN QUERY PLAN` (SQLite); transactions: `BEGIN; UPDATE...; COMMIT;`; views: `CREATE VIEW view_name AS SELECT...`; use `EXTRACT`, `DATE_TRUNC`, `AGE` for dates; `CONCAT`, `SUBSTRING`, `REGEXP_REPLACE` for strings; optimize with proper WHERE clause ordering and index hints.
-
-</details>
-
-🔁 Flex — ETL mini-project
-
 ---------------------------------------------------------------------
 
 <details>
@@ -764,6 +686,136 @@ Weeks 167–177 — Deep Learning Book (Complete)
 </details>
 
 🔁 Flex — DL recap + tracked mini project
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 17 · LLMs & Agents — Weeks 202–205 (Complete HF Course + Agents)</b></summary>
+
+Weeks 202–204 — Hugging Face Course
+- 📖 [HF Course](https://huggingface.co/course/chapter1)
+- 🧪 Practice: Learn the Hugging Face ecosystem: load and preprocess datasets, understand tokenizers, fine-tune pretrained models, run inference, evaluate with appropriate metrics.
+- ✅ Pass (weekly): Complete the course exercises for that week's chapters; fine-tune a small transformer on a downstream task (e.g., text classification, NER); evaluate with task-appropriate metrics (accuracy, F1, etc.); log all configurations.
+- 🛠️ How: `transformers` library for models; `datasets` for data loading; `Trainer` API for fine-tuning; `accelerate` for distributed training; Weights & Biases or TensorBoard for logging.
+
+Week 205 — HF Agents
+- 📖 [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
+- 🧪 Practice: Build AI agents that use tools: understand agent architectures, implement tool calling, handle errors and timeouts, implement safety guardrails.
+- ✅ Pass: Build an agent that completes a multi-step task using external tools; implement proper timeout handling; test with an injected failure scenario and verify graceful degradation; document safety checks and limitations.
+- 🛠️ How: Use Hugging Face agents framework; implement `Tool` classes; set timeouts with `asyncio.timeout` or similar; log all tool calls and responses; implement input validation.
+</details>
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 13 · R for Data Science — Weeks 142–151 (Complete R4DS 2e)</b></summary>
+
+Weeks 142–151 — R4DS (Complete)
+- 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
+- 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
+- ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
+- 🛠️ How: `library(tidyverse)`; `read_csv`; `dplyr` verbs (`filter`, `mutate`, `summarize`, `group_by`); `ggplot2`; `set.seed()` for reproducibility.
+</details>
+
+🔁 Flex — R consolidation
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 9 · Econometrics & Time Series — Weeks 90–111 (Complete Gujarati, Lütkepohl)</b></summary>
+
+Weeks 90–101 — Basic Econometrics (complete)
+- 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
+- 🧪 Practice: Reproduce a worked example per chapter using methods from that chapter only (OLS basics; classical assumption diagnostics; heteroskedasticity/autocorrelation remedies; functional form; limited dependent variables as presented)
+- ✅ Pass (weekly): Match the textbook example’s coefficients and standard errors (within rounding) and include one robustness check discussed in that chapter (e.g., robust/HAC SEs when appropriate).
+- 🛠️ How: `statsmodels` OLS/GLM, `cov_type="HC3"` or HAC if the chapter addresses it; include diagnostic plots taught there.
+
+Weeks 102–111 — Lütkepohl (complete)
+- 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
+- 🧪 Practice: Implement multivariate time series analysis: VAR model specification, estimation, lag order selection, stability analysis, impulse response functions, forecast error variance decomposition, and cointegration/VECM.
+- ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
+- 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
+</details>
+
+🔁 Flex — Econometrics/time-series consolidation
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 10 · Causal Inference — Weeks 112–121 (Complete The Mixtape)</b></summary>
+
+Week 112 — Properties of Regression, DAGs, Potential Outcomes
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand Simpson's paradox and collider bias; draw and analyze directed acyclic graphs (DAGs); master potential outcomes framework; understand Average Treatment Effect (ATE) and selection bias.
+- ✅ Pass: Implement Simpson's paradox example showing reversal of association; construct ≥3 DAGs identifying confounders, mediators, and colliders; derive ATE under different selection mechanisms; demonstrate selection bias analytically and via simulation.
+- 🛠️ How: Use `networkx` or `dagitty` for DAG visualization; simulate counterfactuals with fixed treatment assignments; compute `E[Y¹] - E[Y⁰]` vs observed difference-in-means; show bias = `E[Y⁰|D=1] - E[Y⁰|D=0]`.
+
+Week 113 — Randomized Controlled Trials & Matching
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand randomization inference; implement exact matching, propensity score matching (PSM), and coarsened exact matching; check covariate balance; assess common support.
+- ✅ Pass: Analyze an RCT dataset computing ATE with randomization inference (permutation test); implement PSM with ≥3 matching algorithms (nearest neighbor, caliper, kernel); produce balance tables and Love plots before/after matching; check common support with density plots; report treatment effects with bootstrapped standard errors.
+- 🛠️ How: Permutation test: shuffle treatment vector 1000+ times, recompute difference-in-means; `sklearn.neighbors.NearestNeighbors` for matching; logistic regression for propensity scores; standardized mean differences for balance; `seaborn.kdeplot` for common support.
+
+Week 114 — Regression Discontinuity Design (RDD)
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand sharp and fuzzy RDD; check continuity assumptions; select bandwidth using cross-validation and optimal methods; test for manipulation of running variable; implement local polynomial regression.
+- ✅ Pass: Apply RDD to real or simulated data with a known cutoff; test for discontinuity at the threshold using local linear regression with ≥3 bandwidths; perform McCrary density test for manipulation; produce RDD plots showing outcome vs running variable with fitted lines; report local average treatment effect (LATE) with robust standard errors; conduct placebo tests at false cutoffs.
+- 🛠️ How: Local linear regression within bandwidth h: `Y ~ D + (X-c) + D*(X-c)` for |X-c| < h; optimal bandwidth via `rdrobust` (R) or manual cross-validation; McCrary test: fit separate densities left/right of cutoff and test for jump; bootstrap for inference.
+
+Week 115 — Instrumental Variables (IV)
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand endogeneity and IV identification; implement two-stage least squares (2SLS); test instrument relevance and exogeneity; understand weak instruments problem; compute local average treatment effect (LATE) with compliance types.
+- ✅ Pass: Identify a valid instrument and justify exclusion restriction; implement 2SLS manually (first stage, second stage) and compare to built-in IV estimator; test instrument strength (F-stat > 10 rule of thumb, Cragg-Donald); perform overidentification test when multiple instruments available; compute LATE and interpret in terms of compliers; conduct sensitivity analysis for violation of exclusion restriction.
+- 🛠️ How: Manual 2SLS: regress X on Z (first stage), predict X̂, regress Y on X̂ (second stage); `statsmodels.sandbox.regression.gmm.IV2SLS` or `linearmodels.iv.IV2SLS`; first-stage F-stat for relevance; Hansen J-stat for overidentification; bound analysis for exclusion restriction violations.
+
+Week 116 — Panel Data & Fixed Effects
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand within-group variation; implement fixed effects (FE) and first differences (FD); test fixed vs random effects (Hausman test); handle time-varying treatments; understand parallel trends assumption.
+- ✅ Pass: Estimate panel data model with entity and time fixed effects; compare pooled OLS, FE, and random effects; perform Hausman test; demean data manually and verify equivalence to FE estimator; produce event study plots for dynamic treatment effects; test parallel trends visually and formally; cluster standard errors at appropriate level.
+- 🛠️ How: FE via demeaning: `Y_it - Ȳ_i = (X_it - X̄_i)β + (ε_it - ε̄_i)`; `linearmodels.panel.PanelOLS` with `entity_effects=True`; Hausman test compares FE vs RE; event study: include leads/lags of treatment; plot coefficients with 95% CIs; cluster SEs: `cov_type='clustered'`.
+
+Week 117 — Difference-in-Differences (DiD)
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Implement canonical 2×2 DiD; test parallel trends assumption; handle staggered treatment adoption; understand two-way fixed effects (TWFE) issues with heterogeneous treatment effects; apply robust DiD estimators.
+- ✅ Pass: Estimate 2×2 DiD with interaction term and verify equivalence to group-time means; test parallel trends with pre-treatment period placebo tests; visualize trends with event study; implement staggered DiD using TWFE and compare to Callaway-Sant'Anna or Sun-Abraham estimators to avoid bias from heterogeneous effects; report treatment effects with wild cluster bootstrap standard errors.
+- 🛠️ How: DiD: `Y = β₀ + β₁·Treated + β₂·Post + β₃·(Treated×Post)`; parallel trends: plot group-specific trends pre-treatment; placebo DiD on earlier periods; for staggered adoption, never-treated as control group; decompose TWFE weights; wild bootstrap: `clustered_bootstrap` with Rademacher weights.
+
+Week 118 — Synthetic Control Method
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand synthetic control as data-driven matching on pre-treatment outcomes; implement synthetic control optimization; conduct permutation-based inference; assess fit quality; handle multiple treated units.
+- ✅ Pass: Apply synthetic control to a policy intervention; construct synthetic control by optimizing weights on donor pool to match pre-treatment outcomes; report weights and predictor balance; visualize treated vs synthetic trends; conduct placebo tests by reassigning treatment to each donor; compute p-values from permutation distribution; assess robustness by excluding donors iteratively; report pre/post-treatment RMSPE ratio.
+- 🛠️ How: Synthetic control: minimize `||X₁ - X₀W||` subject to `W ≥ 0`, `∑W = 1`, where X₁ is treated unit pre-treatment outcomes, X₀ is donor matrix; use `scipy.optimize.minimize` with constraints or quadratic programming; permutation inference: apply method to each control unit, rank treatment effect; gap plot showing treated - synthetic over time; leave-one-out for robustness.
+
+Week 119 — Regression Kink Design & Bunching
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Understand regression kink design (RKD) as derivative discontinuity; implement bunching estimator for detecting behavioral responses; test for slope changes; estimate elasticities.
+- ✅ Pass: Apply RKD to a policy with kinked schedule (e.g., tax, subsidy); test for change in slope at kink point using local polynomial regression on subsamples; visualize kink with binned scatter plot; implement bunching estimator by comparing empirical distribution to counterfactual; estimate excess mass and implied elasticity; conduct robustness checks varying excluded region and polynomial order.
+- 🛠️ How: RKD: estimate `dY/dX` separately left/right of kink, test equality; local linear separately each side: `Y ~ (X-k) + covariates` for X near k; binned scatter: equal-sized bins, plot means; bunching: integrate empirical density, fit counterfactual excluding region around kink (polynomial fit), excess mass = observed - counterfactual; elasticity from excess mass and tax change.
+
+Week 120 — Regression Sensitivity & Bounds
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Assess robustness using omitted variable bias (OVB) formulas; implement Oster (2019) bounds; conduct sensitivity analysis for unobserved confounding; use Rosenbaum bounds for matching estimators; understand partial identification.
+- ✅ Pass: Apply OVB formula to show direction/magnitude of bias from omitted confounder; implement Oster method computing δ (relative importance of unobservables) for null result; produce sensitivity plots showing treatment effect as function of confounder strength; apply Rosenbaum bounds to PSM estimates varying Γ; report identified set and discuss assumption needed for causal claim; compare naïve, conditional, and bounded estimates.
+- 🛠️ How: OVB: `β̂ = β + γ·δ` where γ is effect of omitted U on Y, δ is coefficient from X ~ U; Oster δ: `δ = [R²max - R̃²]/[R̃² - R°²] · [β̃ - β*]/[β° - β̃]`; plot treatment effect vs confounding strength; Rosenbaum Γ: recompute p-value under assumption of hidden bias; identified set: report range of treatment effects consistent with assumptions.
+
+Week 121 — Advanced Topics & Review
+- 📖 [The Mixtape](https://mixtape.scunning.com)
+- 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
+- ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
+- 🛠️ How: Compare DiD, IV, RDD on same outcome; assess common support, parallel trends, instrument strength; double ML: use cross-fitting with `DoubleMLPLR` or manual implementation (Lasso for Y~X, D~X, residualize); causal forest: `grf` package (R) or `econml.dml.CausalForestDML` (Python); plot distribution of treatment effects; report heterogeneity by subgroups; synthesis table with all estimates.
+</details>
+
+🔁 Flex — Causal inference consolidation
+
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 
@@ -793,22 +845,6 @@ Weeks 194–201 — Data Engineering Zoomcamp
 
 ---------------------------------------------------------------------
 
-<details>
-<summary><b>Phase 17 · LLMs & Agents — Weeks 202–205 (Complete HF Course + Agents)</b></summary>
-
-Weeks 202–204 — Hugging Face Course
-- 📖 [HF Course](https://huggingface.co/course/chapter1)
-- 🧪 Practice: Learn the Hugging Face ecosystem: load and preprocess datasets, understand tokenizers, fine-tune pretrained models, run inference, evaluate with appropriate metrics.
-- ✅ Pass (weekly): Complete the course exercises for that week's chapters; fine-tune a small transformer on a downstream task (e.g., text classification, NER); evaluate with task-appropriate metrics (accuracy, F1, etc.); log all configurations.
-- 🛠️ How: `transformers` library for models; `datasets` for data loading; `Trainer` API for fine-tuning; `accelerate` for distributed training; Weights & Biases or TensorBoard for logging.
-
-Week 205 — HF Agents
-- 📖 [HF Agents](https://huggingface.co/learn/agents-course/unit0/introduction)
-- 🧪 Practice: Build AI agents that use tools: understand agent architectures, implement tool calling, handle errors and timeouts, implement safety guardrails.
-- ✅ Pass: Build an agent that completes a multi-step task using external tools; implement proper timeout handling; test with an injected failure scenario and verify graceful degradation; document safety checks and limitations.
-- 🛠️ How: Use Hugging Face agents framework; implement `Tool` classes; set timeouts with `asyncio.timeout` or similar; log all tool calls and responses; implement input validation.
-</details>
-
 ---------------------------------------------------------------------
 
 <details>
@@ -832,6 +868,9 @@ Weeks 208–209 — Capstone & Portfolio
 - ✅ Pass: Deliver a fully reproducible project (single command to run); include README documenting problem, approach, assumptions, limitations, and risks; provide model interpretation (SHAP/PDP); write a 1-page non-technical summary for stakeholders.
 - 🛠️ How: Use Git for version control; Docker for reproducibility; include uncertainty estimates (bootstrap CIs or Bayesian); create visualizations for non-technical audience; document all decisions.
 </details>
+
+---------------------------------------------------------------------
+
 
 ---------------------------------------------------------------------
 
