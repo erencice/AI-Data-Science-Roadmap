@@ -779,11 +779,29 @@ Weeks 166–175 — Lütkepohl (complete)
 - ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
 - 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
 
-Weeks 176–179 — Financial Econometrics (complete)
+Week 176 — Financial Econometrics: Volatility Modeling
 - 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- 🧪 Practice: Master financial econometrics: volatility modeling (ARCH/GARCH), multivariate GARCH, realized volatility, high-frequency data analysis, factor models, portfolio optimization, option pricing models, risk management.
-- ✅ Pass (weekly): Week 176: Fit ARCH/GARCH models to financial returns; compare model specifications using information criteria; forecast volatility and construct prediction intervals; verify model adequacy with standardized residuals diagnostics. Week 177: Implement multivariate GARCH models (CCC, DCC, BEKK); estimate dynamic correlations; compute value-at-risk (VaR) and expected shortfall (ES); backtest risk measures. Week 178: Analyze high-frequency data; compute realized volatility measures; implement market microstructure models; handle non-synchronous trading and microstructure noise. Week 179: Apply factor models (CAPM, Fama-French); estimate risk premia; conduct portfolio optimization with various objectives (mean-variance, risk parity, minimum variance); implement option pricing models (Black-Scholes, binomial trees); calibrate models to market data.
-- 🛠️ How: `arch` package for GARCH models: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; multivariate GARCH: `arch.univariate.ConstantMean`, `arch.multivariate`; realized volatility: sum of squared intraday returns; factor models: `statsmodels` for regression; portfolio optimization: `scipy.optimize.minimize` with constraints; VaR: `np.percentile(returns, alpha)`; Black-Scholes: implement formula and Greeks; model diagnostics: Ljung-Box test on squared standardized residuals.
+- 🧪 Practice: Master ARCH/GARCH models for volatility modeling; understand volatility clustering; compare different GARCH specifications (GARCH, EGARCH, GJR-GARCH); forecast volatility.
+- ✅ Pass: Fit ARCH/GARCH models to financial returns data; compare model specifications using information criteria (AIC, BIC); forecast volatility and construct prediction intervals; verify model adequacy with standardized residuals diagnostics (Ljung-Box test on squared residuals); plot conditional volatility over time.
+- 🛠️ How: `arch` package: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; compare specifications: `arch_model(returns, vol='EGARCH')`, `vol='GJRGARCH'`; forecast: `model.forecast(horizon=10)`; diagnostics: `statsmodels.stats.diagnostic.acorr_ljungbox` on standardized residuals squared.
+
+Week 177 — Financial Econometrics: Multivariate Models & Risk
+- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
+- 🧪 Practice: Implement multivariate GARCH models; estimate dynamic correlations between assets; understand risk measures (Value-at-Risk, Expected Shortfall); backtest risk models.
+- ✅ Pass: Implement multivariate GARCH models (CCC, DCC, BEKK) for portfolio of ≥3 assets; estimate and plot dynamic correlations; compute value-at-risk (VaR) at 95% and 99% confidence levels; compute expected shortfall (ES); backtest risk measures using historical data and report violation rates.
+- 🛠️ How: Multivariate GARCH: `arch.univariate.ConstantMean`, `arch.multivariate` for DCC; dynamic correlations from DCC output; VaR: `np.percentile(returns, alpha)` or parametric via normal with estimated volatility; ES: `returns[returns < VaR].mean()`; backtesting: count violations where losses exceed VaR.
+
+Week 178 — Financial Econometrics: High-Frequency Data
+- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
+- 🧪 Practice: Analyze high-frequency financial data; compute realized volatility measures; understand market microstructure effects; handle non-synchronous trading and microstructure noise.
+- ✅ Pass: Load high-frequency tick data; clean and align timestamps; compute realized volatility (sum of squared intraday returns); implement realized kernel estimator to handle microstructure noise; compare realized volatility to GARCH-based estimates; compute bipower variation to separate jump and diffusion components.
+- 🛠️ How: Realized volatility: `RV = np.sum(intraday_returns**2)`; handle microstructure noise with realized kernel or subsampling; bipower variation: `BV = (π/2) * Σ|r_t| * |r_{t-1}|`; non-synchronous trading: use refresh time or previous tick methods; compare RV to model-based volatility forecasts.
+
+Week 179 — Financial Econometrics: Asset Pricing & Portfolio Optimization
+- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
+- 🧪 Practice: Apply factor models for asset pricing; estimate risk premia; conduct portfolio optimization with various objectives; implement option pricing models; calibrate models to market data.
+- ✅ Pass: Apply factor models (CAPM, Fama-French 3-factor, 5-factor); estimate factor loadings and risk premia via time-series and cross-sectional regressions; test pricing errors; conduct portfolio optimization with mean-variance, minimum variance, and risk parity objectives using estimated covariance matrix; implement Black-Scholes option pricing; compute Greeks (delta, gamma, vega, theta); calibrate implied volatility surface from option prices.
+- 🛠️ How: Factor models: `statsmodels.api.OLS` for time-series regression of excess returns on factors; portfolio optimization: `scipy.optimize.minimize` with constraints `w.sum()=1`, `w≥0` (long-only); mean-variance: maximize Sharpe ratio `(w@μ) / sqrt(w@Σ@w)`; Black-Scholes: implement formula; Greeks via finite differences or analytical formulas; implied volatility: solve BS equation for σ using `scipy.optimize.brentq`.
 </details>
 
 🔁 Flex — Econometrics/time-series consolidation
