@@ -1,6 +1,6 @@
 # AI & Data Science Weekly Plan — Activities, Practice, and Pass Criteria
 
-![Duration](https://img.shields.io/badge/duration-~217_weeks-6f42c1)
+![Duration](https://img.shields.io/badge/duration-~219_weeks-6f42c1)
 ![Pace](https://img.shields.io/badge/pace-8–10_h%2Fweek-0e8a16)
 ![Path](https://img.shields.io/badge/path-beginner%E2%86%92practitioner-0366d6)
 ![Style](https://img.shields.io/badge/style-cumulative%2C_concept%E2%86%92practice-555)
@@ -11,22 +11,22 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 - Phase 1 · Data Analysis Foundations
 - Phase 2 · Web Scraping & SQL
 - Phase 3 · Mathematics for ML
-- Phase 4 · Convex Optimization
-- Phase 4.5 · Introduction to Probability
-- Phase 5 · Statistics Fundamentals
-- Phase 6 · Applied Multivariate Statistics
-- Phase 7 · Bayesian Statistics & Missing Data
-- Phase 8 · Statistical Learning with Python (ISLP)
-- Phase 9 · Data Mining
-- Phase 10 · Classical ML
-- Phase 11 · Elements of Statistical Learning
-- Phase 12 · Deep Learning
-- Phase 13 · LLMs & Open-Source AI
-- Phase 14 · R for Data Science
-- Phase 15 · Econometrics, Time Series & Financial Econometrics
-- Phase 16 · Causal Inference
-- Phase 17 · MLOps & Data Engineering
-- Phase 18 · Consolidation & Capstone
+- Phase 4 · Introduction to Probability
+- Phase 5 · Convex Optimization
+- Phase 6 · Statistics Fundamentals
+- Phase 7 · Applied Multivariate Statistics
+- Phase 8 · Bayesian Statistics & Missing Data
+- Phase 9 · Statistical Learning with Python (ISLP)
+- Phase 10 · Data Mining
+- Phase 11 · Classical ML
+- Phase 12 · Elements of Statistical Learning
+- Phase 13 · Deep Learning
+- Phase 14 · LLMs & Open-Source AI
+- Phase 15 · R for Data Science
+- Phase 16 · Econometrics, Time Series & Financial Econometrics
+- Phase 17 · Causal Inference
+- Phase 18 · MLOps & Data Engineering
+- Phase 19 · Consolidation & Capstone
 
 Legend
 - 📖 Activities (primary source)
@@ -36,7 +36,7 @@ Legend
 - 🔁 Flex (catch-up, spaced review)
 
 Duration and pacing
-- Duration: ~217 weeks (≈4.2 years), 8–10 h/week
+- Duration: ~219 weeks (≈4.2 years), 8–10 h/week
 - Weekly output: small practical tasks only
 - Frequent Flex Weeks between phases for consolidation
 
@@ -250,97 +250,27 @@ Week 24 — Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 4 · Convex Optimization — Weeks 25–34 (Complete Boyd & Vandenberghe)</b></summary>
+<summary><b>Phase 4 · Introduction to Probability — Weeks 25–28 (Complete Grinstead & Snell)</b></summary>
 
-Week 25 — Mathematical Foundations & Convex Sets
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand vector spaces, norms, and topology; master convex sets (definition, operations, separating hyperplanes); work with cones (proper, dual); understand convex hulls and Carathéodory's theorem.
-- ✅ Pass: Prove convexity of specific sets analytically; verify convexity numerically for given sets; implement separating hyperplane algorithm; compute convex hull of finite point set; visualize 2D/3D convex sets and their intersections; verify that intersection of convex sets is convex through examples.
-- 🛠️ How: Check convexity: for x, y in set and θ ∈ [0,1], verify θx + (1-θ)y in set; `scipy.spatial.ConvexHull`; plot with `plt.fill` for 2D, `mpl_toolkits.mplot3d` for 3D; separating hyperplane via linear program or support vector methods.
-
-Week 26 — Convex Functions & Operations
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Define and verify convex functions; understand epigraphs and sublevel sets; master operations preserving convexity (nonnegative weighted sum, composition, pointwise maximum, perspective); work with conjugate functions and Fenchel duality.
-- ✅ Pass: Verify convexity via first-order condition (gradient) and second-order condition (Hessian PSD); compute epigraphs and sublevel sets; prove convexity of composed functions using composition rules; compute conjugate functions for common functions (norms, indicators, quadratics); visualize convex functions and their conjugates; implement perspective operation.
-- 🛠️ How: First-order: `f(y) ≥ f(x) + ∇f(x)ᵀ(y-x)` for all x,y; second-order: `∇²f(x) ⪰ 0`; check eigenvalues `np.linalg.eigvals(H) ≥ 0`; conjugate: `f*(y) = sup_x(yᵀx - f(x))`; 3D surface plots for visualization.
-
-Week 27 — Convex Optimization Problems
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Formulate optimization problems in standard form; understand linear programming (LP), quadratic programming (QP), and second-order cone programming (SOCP); work with geometric programming; understand quasiconvex optimization.
-- ✅ Pass: Formulate ≥5 real-world problems as convex programs (portfolio optimization, LP relaxation, robust optimization, etc.); solve using CVX/CVXPY; verify optimality conditions; convert non-convex problems to convex via transformation (log transform for GP); demonstrate equivalence of problem formulations.
-- 🛠️ How: `cvxpy` for modeling: `cp.Variable`, `cp.Minimize/Maximize`, `cp.Problem(objective, constraints).solve()`; verify KKT conditions at solution; transformations: log-transform for geometric programs; compare solution time across formulations.
-
-Week 28 — Duality Theory
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Derive Lagrange dual function and dual problem; understand weak and strong duality; apply Slater's condition for strong duality; work with KKT conditions for optimality; interpret dual variables as sensitivity (shadow prices).
-- ✅ Pass: Formulate Lagrangian for ≥3 optimization problems; derive dual problem; verify weak duality (dual objective ≤ primal objective); check Slater's condition and confirm strong duality; solve primal and dual numerically and verify zero duality gap; interpret dual variables and verify sensitivity interpretation via perturbation analysis; verify KKT conditions at optimum.
-- 🛠️ How: Lagrangian: `L(x,λ,ν) = f(x) + Σλᵢgᵢ(x) + Σνⱼhⱼ(x)`; dual function: `g(λ,ν) = inf_x L(x,λ,ν)`; solve primal/dual with `cvxpy`; access dual variables: `constraint.dual_value`; perturbation: resolve with modified constraint bounds, compare optimal values to dual variables.
-
-Week 29 — Unconstrained Optimization Algorithms
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Implement gradient descent with exact and backtracking line search; implement Newton's method and analyze convergence rates; understand quasi-Newton methods (BFGS); compare first-order vs second-order methods.
-- ✅ Pass: Implement gradient descent with backtracking line search from scratch; implement Newton's method with Hessian modification for non-convexity; compare convergence rates empirically (linear for GD, quadratic for Newton); implement BFGS and compare to exact Newton; plot objective value, gradient norm, and step size vs iterations; verify theoretical convergence rates on quadratic problems.
-- 🛠️ How: GD with backtracking: start with step size t, while `f(x - t∇f) > f(x) - αt||∇f||²` do `t = βt` (α=0.3, β=0.8); Newton: `x := x - [∇²f(x)]⁻¹∇f(x)`; Hessian modification: add λI if not PD; BFGS: update inverse Hessian approximation; `scipy.optimize.minimize(method='BFGS')` for comparison.
-
-Week 30 — Equality Constrained Optimization
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Solve equality-constrained problems via elimination and KKT system; implement Newton's method for equality-constrained problems; understand feasible and infeasible start methods.
-- ✅ Pass: Solve equality-constrained QP by forming and solving KKT system directly; implement Newton step for equality constraints (compute search direction solving KKT system); compare elimination method (reduce dimensions) vs Lagrange multiplier method; implement feasible start Newton (project onto feasible set) and infeasible start Newton (minimize feasibility and optimality); verify that solution satisfies primal and dual feasibility.
-- 🛠️ How: KKT system: `[H Aᵀ; A 0][Δx; Δν] = [-∇f; -h]` where Ax=b are equality constraints; solve with `np.linalg.solve`; elimination: express x = Fz + x₀ where Fx₀=b, AF=0, then minimize in z; feasibility measure: `||Ax-b||²`; verify solution: check `Ax=b` and `∇f + Aᵀν = 0`.
-
-Week 31 — Interior-Point Methods
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand barrier methods and central path; implement log-barrier method for inequality constraints; understand primal-dual interior-point methods; analyze complexity and convergence.
-- ✅ Pass: Implement log-barrier method for LP or QP with inequality constraints; track central path by solving sequence of problems for decreasing t; implement primal-dual interior-point method computing Newton steps in primal-dual space; compare to barrier method; plot duality gap vs iterations; verify polynomial-time complexity empirically; compare to simplex method for LP.
-- 🛠️ How: Barrier function: `φ(x) = -Σ log(-fᵢ(x))`; minimize `t·f₀(x) + φ(x)` for increasing t; primal-dual: solve KKT system with perturbed complementarity `λᵢfᵢ(x) = -1/t`; Newton step: `[H+∇²φ Aᵀ; A 0][Δx;Δν] = [-t∇f-∇φ; -Ax+b]`; track `η = m/t` (duality gap upper bound).
-
-Week 32 — Applications to Machine Learning
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Formulate ML problems as convex optimization: SVM (hinge loss, soft margin), logistic regression, Lasso and elastic net, matrix completion, robust PCA; understand regularization from optimization perspective.
-- ✅ Pass: Formulate and solve SVM dual problem; implement coordinate descent for Lasso; formulate logistic regression as convex problem and solve with Newton's method; implement matrix completion via nuclear norm minimization; solve robust PCA (low-rank + sparse decomposition); compare custom implementations to sklearn baselines; visualize regularization paths and decision boundaries.
-- 🛠️ How: SVM dual: `max Σαᵢ - ½ΣΣαᵢαⱼyᵢyⱼK(xᵢ,xⱼ)` subject to `0 ≤ α ≤ C`, `Σαᵢyᵢ=0`; Lasso coordinate descent: update one coefficient at a time with soft thresholding; nuclear norm: `||X||* = Σσᵢ`; robust PCA: `min ||L||* + λ||S||₁` subject to `L+S=M`; use `cvxpy` for verification.
-
-Week 33 — Advanced Topics: Distributed & Stochastic Methods
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Understand decomposition methods (dual decomposition, ADMM); implement stochastic gradient methods; work with proximal operators and proximal gradient method; understand operator splitting methods.
-- ✅ Pass: Implement ADMM for a separable problem (e.g., Lasso, consensus optimization); implement stochastic gradient descent with diminishing and constant step sizes; compare convergence to batch GD; implement proximal gradient method for composite objectives (smooth + nonsmooth); derive and implement proximal operators for common functions (L1 norm, indicator functions); demonstrate ADMM convergence to consensus.
-- 🛠️ How: ADMM: iterate `x := argmin L_ρ(x,z,u)`, `z := argmin L_ρ(x,z,u)`, `u := u + ρ(Ax+Bz-c)` where `L_ρ = f(x)+g(z)+uᵀ(Ax+Bz-c)+ρ/2||Ax+Bz-c||²`; SGD: sample minibatch, update with gradient estimate; proximal operator: `prox_f(x) = argmin_u (f(u) + ½||u-x||²)`; proximal gradient: `x := prox_{tg}(x - t∇f(x))`.
-
-Week 34 — Integration & Review
-- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- 🧪 Practice: Integrate all topics; formulate and solve complex real-world problems; understand when to use each algorithm; compare optimization formulations.
-- ✅ Pass: Complete a comprehensive project applying convex optimization to a real problem; formulate in ≥2 different ways (primal/dual, different variables); solve with ≥3 algorithms comparing convergence and computation time; verify optimality via KKT conditions and duality gap; produce detailed report documenting problem formulation, algorithm selection rationale, convergence analysis, and sensitivity analysis; include visualizations of feasible set, level sets, and optimization trajectory.
-- 🛠️ How: Select problem from application domain (portfolio, control, signal processing, ML); compare custom implementations to industrial solvers (CVXPY, Gurobi, MOSEK); profiling with `cProfile` or `line_profiler`; convergence plots (objective, constraint violation, KKT residual); sensitivity: perturb problem data and track optimal value.
-</details>
-
-🔁 Flex — Convex optimization consolidation
-
----------------------------------------------------------------------
-
----------------------------------------------------------------------
-
-<details>
-<summary><b>Phase 4.5 · Introduction to Probability — Weeks 35–38 (Complete Grinstead & Snell)</b></summary>
-
-Week 35 — Probability Ch. 1–2 (Discrete Probability, Continuous Probability)
+Week 25 — Probability Ch. 1–2 (Discrete Probability, Continuous Probability)
 - 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 - 🧪 Practice: Understand sample spaces, events, and probability axioms; work with discrete and continuous random variables; compute probabilities using counting methods; master conditional probability and independence; apply Bayes' theorem.
 - ✅ Pass: Solve ≥10 probability problems covering: sample space construction, probability calculations using combinations/permutations, conditional probability, independence tests, and Bayes' theorem applications; verify solutions analytically and via simulation; demonstrate Law of Total Probability.
 - 🛠️ How: Use combinatorics: `math.comb(n,k)`, `math.perm(n,k)`; simulate outcomes with `np.random.choice`; verify `P(A|B) = P(A∩B)/P(B)`; Bayes: `P(A|B) = P(B|A)P(A)/P(B)`; compare analytical vs empirical probabilities.
 
-Week 36 — Probability Ch. 3–4 (Expectation, Distributions)
+Week 26 — Probability Ch. 3–4 (Expectation, Distributions)
 - 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 - 🧪 Practice: Compute expected values and variance; work with common discrete distributions (Bernoulli, Binomial, Geometric, Poisson); understand continuous distributions (Uniform, Exponential, Normal); apply moment generating functions; explore distribution relationships.
 - ✅ Pass: Compute expectations analytically for ≥5 distributions; derive variance from definition; generate samples and verify empirical moments match theoretical values (within 5% for n≥1000); use MGFs to derive moments; demonstrate Central Limit Theorem convergence with visualizations.
 - 🛠️ How: `scipy.stats` for distributions; `np.random.binomial`, `np.random.poisson`, `np.random.normal`; empirical mean: `np.mean(samples)`; plot sampling distributions; CLT: plot standardized sample means for increasing n.
 
-Week 37 — Probability Ch. 5–7 (Markov Chains, Random Walks)
+Week 27 — Probability Ch. 5–7 (Markov Chains, Random Walks)
 - 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 - 🧪 Practice: Understand Markov chain fundamentals: states, transitions, transition matrices; compute stationary distributions; classify states (transient, recurrent, absorbing); work with random walks; understand gambler's ruin problem; explore applications.
 - ✅ Pass: Implement discrete-time Markov chain simulator; compute n-step transition probabilities via matrix powers; find stationary distribution by solving πP = π; classify states and compute expected hitting times; simulate random walks and verify theoretical properties (e.g., return probabilities); solve gambler's ruin analytically and verify via simulation.
 - 🛠️ How: Transition matrix: `P = np.array([[p11, p12,...], [...]])`; n-step: `np.linalg.matrix_power(P, n)`; stationary: eigenvalue problem with `np.linalg.eig`, find eigenvector for λ=1; simulation: iterate `state = np.random.choice(states, p=P[state])`; random walk: `positions = np.cumsum(steps)`.
 
-Week 38 — Probability Ch. 8–10 (Law of Large Numbers, Limit Theorems)
+Week 28 — Probability Ch. 8–10 (Law of Large Numbers, Limit Theorems)
 - 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 - 🧪 Practice: Understand weak and strong law of large numbers; master Central Limit Theorem and its applications; work with generating functions for sums; understand convergence concepts; apply limit theorems to approximation problems.
 - ✅ Pass: Demonstrate Law of Large Numbers: plot sample mean convergence to theoretical mean for increasing sample sizes; verify CLT: show standardized sum converges to Normal via QQ plots and hypothesis tests for n=[10,30,100,1000]; use generating functions to compute distribution of sums; apply continuity correction for Normal approximation to Binomial; compute confidence intervals using CLT.
@@ -355,7 +285,77 @@ Week 38 — Probability Ch. 8–10 (Law of Large Numbers, Limit Theorems)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 5 · Statistics Fundamentals — Weeks 39–44 (Complete Think Stats)</b></summary>
+<summary><b>Phase 5 · Convex Optimization — Weeks 29–38 (Complete Boyd & Vandenberghe)</b></summary>
+
+Week 29 — Mathematical Foundations & Convex Sets
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand vector spaces, norms, and topology; master convex sets (definition, operations, separating hyperplanes); work with cones (proper, dual); understand convex hulls and Carathéodory's theorem.
+- ✅ Pass: Prove convexity of specific sets analytically; verify convexity numerically for given sets; implement separating hyperplane algorithm; compute convex hull of finite point set; visualize 2D/3D convex sets and their intersections; verify that intersection of convex sets is convex through examples.
+- 🛠️ How: Check convexity: for x, y in set and θ ∈ [0,1], verify θx + (1-θ)y in set; `scipy.spatial.ConvexHull`; plot with `plt.fill` for 2D, `mpl_toolkits.mplot3d` for 3D; separating hyperplane via linear program or support vector methods.
+
+Week 30 — Convex Functions & Operations
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Define and verify convex functions; understand epigraphs and sublevel sets; master operations preserving convexity (nonnegative weighted sum, composition, pointwise maximum, perspective); work with conjugate functions and Fenchel duality.
+- ✅ Pass: Verify convexity via first-order condition (gradient) and second-order condition (Hessian PSD); compute epigraphs and sublevel sets; prove convexity of composed functions using composition rules; compute conjugate functions for common functions (norms, indicators, quadratics); visualize convex functions and their conjugates; implement perspective operation.
+- 🛠️ How: First-order: `f(y) ≥ f(x) + ∇f(x)ᵀ(y-x)` for all x,y; second-order: `∇²f(x) ⪰ 0`; check eigenvalues `np.linalg.eigvals(H) ≥ 0`; conjugate: `f*(y) = sup_x(yᵀx - f(x))`; 3D surface plots for visualization.
+
+Week 31 — Convex Optimization Problems
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Formulate optimization problems in standard form; understand linear programming (LP), quadratic programming (QP), and second-order cone programming (SOCP); work with geometric programming; understand quasiconvex optimization.
+- ✅ Pass: Formulate ≥5 real-world problems as convex programs (portfolio optimization, LP relaxation, robust optimization, etc.); solve using CVX/CVXPY; verify optimality conditions; convert non-convex problems to convex via transformation (log transform for GP); demonstrate equivalence of problem formulations.
+- 🛠️ How: `cvxpy` for modeling: `cp.Variable`, `cp.Minimize/Maximize`, `cp.Problem(objective, constraints).solve()`; verify KKT conditions at solution; transformations: log-transform for geometric programs; compare solution time across formulations.
+
+Week 32 — Duality Theory
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Derive Lagrange dual function and dual problem; understand weak and strong duality; apply Slater's condition for strong duality; work with KKT conditions for optimality; interpret dual variables as sensitivity (shadow prices).
+- ✅ Pass: Formulate Lagrangian for ≥3 optimization problems; derive dual problem; verify weak duality (dual objective ≤ primal objective); check Slater's condition and confirm strong duality; solve primal and dual numerically and verify zero duality gap; interpret dual variables and verify sensitivity interpretation via perturbation analysis; verify KKT conditions at optimum.
+- 🛠️ How: Lagrangian: `L(x,λ,ν) = f(x) + Σλᵢgᵢ(x) + Σνⱼhⱼ(x)`; dual function: `g(λ,ν) = inf_x L(x,λ,ν)`; solve primal/dual with `cvxpy`; access dual variables: `constraint.dual_value`; perturbation: resolve with modified constraint bounds, compare optimal values to dual variables.
+
+Week 33 — Unconstrained Optimization Algorithms
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Implement gradient descent with exact and backtracking line search; implement Newton's method and analyze convergence rates; understand quasi-Newton methods (BFGS); compare first-order vs second-order methods.
+- ✅ Pass: Implement gradient descent with backtracking line search from scratch; implement Newton's method with Hessian modification for non-convexity; compare convergence rates empirically (linear for GD, quadratic for Newton); implement BFGS and compare to exact Newton; plot objective value, gradient norm, and step size vs iterations; verify theoretical convergence rates on quadratic problems.
+- 🛠️ How: GD with backtracking: start with step size t, while `f(x - t∇f) > f(x) - αt||∇f||²` do `t = βt` (α=0.3, β=0.8); Newton: `x := x - [∇²f(x)]⁻¹∇f(x)`; Hessian modification: add λI if not PD; BFGS: update inverse Hessian approximation; `scipy.optimize.minimize(method='BFGS')` for comparison.
+
+Week 34 — Equality Constrained Optimization
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Solve equality-constrained problems via elimination and KKT system; implement Newton's method for equality-constrained problems; understand feasible and infeasible start methods.
+- ✅ Pass: Solve equality-constrained QP by forming and solving KKT system directly; implement Newton step for equality constraints (compute search direction solving KKT system); compare elimination method (reduce dimensions) vs Lagrange multiplier method; implement feasible start Newton (project onto feasible set) and infeasible start Newton (minimize feasibility and optimality); verify that solution satisfies primal and dual feasibility.
+- 🛠️ How: KKT system: `[H Aᵀ; A 0][Δx; Δν] = [-∇f; -h]` where Ax=b are equality constraints; solve with `np.linalg.solve`; elimination: express x = Fz + x₀ where Fx₀=b, AF=0, then minimize in z; feasibility measure: `||Ax-b||²`; verify solution: check `Ax=b` and `∇f + Aᵀν = 0`.
+
+Week 35 — Interior-Point Methods
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand barrier methods and central path; implement log-barrier method for inequality constraints; understand primal-dual interior-point methods; analyze complexity and convergence.
+- ✅ Pass: Implement log-barrier method for LP or QP with inequality constraints; track central path by solving sequence of problems for decreasing t; implement primal-dual interior-point method computing Newton steps in primal-dual space; compare to barrier method; plot duality gap vs iterations; verify polynomial-time complexity empirically; compare to simplex method for LP.
+- 🛠️ How: Barrier function: `φ(x) = -Σ log(-fᵢ(x))`; minimize `t·f₀(x) + φ(x)` for increasing t; primal-dual: solve KKT system with perturbed complementarity `λᵢfᵢ(x) = -1/t`; Newton step: `[H+∇²φ Aᵀ; A 0][Δx;Δν] = [-t∇f-∇φ; -Ax+b]`; track `η = m/t` (duality gap upper bound).
+
+Week 36 — Applications to Machine Learning
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Formulate ML problems as convex optimization: SVM (hinge loss, soft margin), logistic regression, Lasso and elastic net, matrix completion, robust PCA; understand regularization from optimization perspective.
+- ✅ Pass: Formulate and solve SVM dual problem; implement coordinate descent for Lasso; formulate logistic regression as convex problem and solve with Newton's method; implement matrix completion via nuclear norm minimization; solve robust PCA (low-rank + sparse decomposition); compare custom implementations to sklearn baselines; visualize regularization paths and decision boundaries.
+- 🛠️ How: SVM dual: `max Σαᵢ - ½ΣΣαᵢαⱼyᵢyⱼK(xᵢ,xⱼ)` subject to `0 ≤ α ≤ C`, `Σαᵢyᵢ=0`; Lasso coordinate descent: update one coefficient at a time with soft thresholding; nuclear norm: `||X||* = Σσᵢ`; robust PCA: `min ||L||* + λ||S||₁` subject to `L+S=M`; use `cvxpy` for verification.
+
+Week 37 — Advanced Topics: Distributed & Stochastic Methods
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Understand decomposition methods (dual decomposition, ADMM); implement stochastic gradient methods; work with proximal operators and proximal gradient method; understand operator splitting methods.
+- ✅ Pass: Implement ADMM for a separable problem (e.g., Lasso, consensus optimization); implement stochastic gradient descent with diminishing and constant step sizes; compare convergence to batch GD; implement proximal gradient method for composite objectives (smooth + nonsmooth); derive and implement proximal operators for common functions (L1 norm, indicator functions); demonstrate ADMM convergence to consensus.
+- 🛠️ How: ADMM: iterate `x := argmin L_ρ(x,z,u)`, `z := argmin L_ρ(x,z,u)`, `u := u + ρ(Ax+Bz-c)` where `L_ρ = f(x)+g(z)+uᵀ(Ax+Bz-c)+ρ/2||Ax+Bz-c||²`; SGD: sample minibatch, update with gradient estimate; proximal operator: `prox_f(x) = argmin_u (f(u) + ½||u-x||²)`; proximal gradient: `x := prox_{tg}(x - t∇f(x))`.
+
+Week 38 — Integration & Review
+- 📖 [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+- 🧪 Practice: Integrate all topics; formulate and solve complex real-world problems; understand when to use each algorithm; compare optimization formulations.
+- ✅ Pass: Complete a comprehensive project applying convex optimization to a real problem; formulate in ≥2 different ways (primal/dual, different variables); solve with ≥3 algorithms comparing convergence and computation time; verify optimality via KKT conditions and duality gap; produce detailed report documenting problem formulation, algorithm selection rationale, convergence analysis, and sensitivity analysis; include visualizations of feasible set, level sets, and optimization trajectory.
+- 🛠️ How: Select problem from application domain (portfolio, control, signal processing, ML); compare custom implementations to industrial solvers (CVXPY, Gurobi, MOSEK); profiling with `cProfile` or `line_profiler`; convergence plots (objective, constraint violation, KKT residual); sensitivity: perturb problem data and track optimal value.
+</details>
+
+🔁 Flex — Convex optimization consolidation
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+<details>
+<summary><b>Phase 6 · Statistics Fundamentals — Weeks 39–44 (Complete Think Stats)</b></summary>
 
 Week 39 — Think Stats Ch. 1
 - 📖 [Think Stats](https://allendowney.github.io/ThinkStats/)
@@ -401,7 +401,7 @@ Week 44 — Think Stats Ch. 9–10 (+wrap)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 6 · Applied Multivariate Statistics — Weeks 45–59 (Complete PSU STAT 505)</b></summary>
+<summary><b>Phase 7 · Applied Multivariate Statistics — Weeks 45–59 (Complete PSU STAT 505)</b></summary>
 
 Week 45 — Measures of Central Tendency, Dispersion and Association (Lesson 1)
 - 📖 Activities: [PSU STAT 505 Lesson 1](https://online.stat.psu.edu/stat505/lesson/1)
@@ -501,7 +501,7 @@ Week 59 — Integration and Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 7 · Bayesian & Missing Data — Weeks 60–71 (Complete Think Bayes, FIMD)</b></summary>
+<summary><b>Phase 8 · Bayesian & Missing Data — Weeks 60–71 (Complete Think Bayes, FIMD)</b></summary>
 
 Weeks 60–67 — Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
@@ -523,7 +523,7 @@ Weeks 68–71 — Flexible Imputation of Missing Data (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 8 · Statistical Learning with Python — Weeks 72–81 (Complete ISLP)</b></summary>
+<summary><b>Phase 9 · Statistical Learning with Python — Weeks 72–81 (Complete ISLP)</b></summary>
 
 Week 72 — ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
@@ -593,7 +593,7 @@ Week 81 — ISLP Labs/Wrap-up
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 9 · Data Mining — Weeks 82–90 (Complete DM 3e)</b></summary>
+<summary><b>Phase 10 · Data Mining — Weeks 82–90 (Complete DM 3e)</b></summary>
 
 Weeks 82–90 — Data Mining 3e (Ch. 1–12)
 - 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
@@ -609,7 +609,7 @@ Weeks 82–90 — Data Mining 3e (Ch. 1–12)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 10 · Classical ML — Weeks 91–109 (Complete PRML, Interpretable ML)</b></summary>
+<summary><b>Phase 11 · Classical ML — Weeks 91–109 (Complete PRML, Interpretable ML)</b></summary>
 
 Weeks 91–104 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
@@ -631,7 +631,7 @@ Weeks 105–109 — Interpretable ML (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 11 · Elements of Statistical Learning — Weeks 110–119 (Complete ESL)</b></summary>
+<summary><b>Phase 12 · Elements of Statistical Learning — Weeks 110–119 (Complete ESL)</b></summary>
 
 Week 110 — ESL Ch. 1–3: Introduction & Linear Methods
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
@@ -701,7 +701,7 @@ Week 119 — ESL Ch. 18 & Integration: High-Dimensional Problems
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 12 · Deep Learning — Weeks 120–139 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
+<summary><b>Phase 13 · Deep Learning — Weeks 120–139 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
 
 Weeks 120–127 — D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
@@ -729,7 +729,7 @@ Weeks 129–139 — Deep Learning Book (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 13 · LLMs & Agents — Weeks 140–143 (Complete HF Course + Agents)</b></summary>
+<summary><b>Phase 14 · LLMs & Agents — Weeks 140–143 (Complete HF Course + Agents)</b></summary>
 
 Weeks 140–142 — Hugging Face Course
 - 📖 [HF Course](https://huggingface.co/course/chapter1)
@@ -749,7 +749,7 @@ Week 143 — HF Agents
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 14 · R for Data Science — Weeks 144–153 (Complete R4DS 2e)</b></summary>
+<summary><b>Phase 15 · R for Data Science — Weeks 144–153 (Complete R4DS 2e)</b></summary>
 
 Weeks 144–153 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
@@ -765,7 +765,7 @@ Weeks 144–153 — R4DS (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 15 · Econometrics & Time Series — Weeks 154–179 (Complete Gujarati, Lütkepohl, Financial Econometrics)</b></summary>
+<summary><b>Phase 16 · Econometrics, Time Series & Financial Econometrics — Weeks 154–181 (Complete Gujarati, Lütkepohl, Financial Econometrics)</b></summary>
 
 Weeks 154–165 — Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
@@ -779,29 +779,11 @@ Weeks 166–175 — Lütkepohl (complete)
 - ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
 - 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
 
-Week 176 — Financial Econometrics: Volatility Modeling
+Weeks 176–181 — Financial Econometrics (complete)
 - 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- 🧪 Practice: Master ARCH/GARCH models for volatility modeling; understand volatility clustering; compare different GARCH specifications (GARCH, EGARCH, GJR-GARCH); forecast volatility.
-- ✅ Pass: Fit ARCH/GARCH models to financial returns data; compare model specifications using information criteria (AIC, BIC); forecast volatility and construct prediction intervals; verify model adequacy with standardized residuals diagnostics (Ljung-Box test on squared residuals); plot conditional volatility over time.
-- 🛠️ How: `arch` package: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; compare specifications: `arch_model(returns, vol='EGARCH')`, `vol='GJRGARCH'`; forecast: `model.forecast(horizon=10)`; diagnostics: `statsmodels.stats.diagnostic.acorr_ljungbox` on standardized residuals squared.
-
-Week 177 — Financial Econometrics: Multivariate Models & Risk
-- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- 🧪 Practice: Implement multivariate GARCH models; estimate dynamic correlations between assets; understand risk measures (Value-at-Risk, Expected Shortfall); backtest risk models.
-- ✅ Pass: Implement multivariate GARCH models (CCC, DCC, BEKK) for portfolio of ≥3 assets; estimate and plot dynamic correlations; compute value-at-risk (VaR) at 95% and 99% confidence levels; compute expected shortfall (ES); backtest risk measures using historical data and report violation rates.
-- 🛠️ How: Multivariate GARCH: `arch.univariate.ConstantMean`, `arch.multivariate` for DCC; dynamic correlations from DCC output; VaR: `np.percentile(returns, alpha)` or parametric via normal with estimated volatility; ES: `returns[returns < VaR].mean()`; backtesting: count violations where losses exceed VaR.
-
-Week 178 — Financial Econometrics: High-Frequency Data
-- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- 🧪 Practice: Analyze high-frequency financial data; compute realized volatility measures; understand market microstructure effects; handle non-synchronous trading and microstructure noise.
-- ✅ Pass: Load high-frequency tick data; clean and align timestamps; compute realized volatility (sum of squared intraday returns); implement realized kernel estimator to handle microstructure noise; compare realized volatility to GARCH-based estimates; compute bipower variation to separate jump and diffusion components.
-- 🛠️ How: Realized volatility: `RV = np.sum(intraday_returns**2)`; handle microstructure noise with realized kernel or subsampling; bipower variation: `BV = (π/2) * Σ|r_t| * |r_{t-1}|`; non-synchronous trading: use refresh time or previous tick methods; compare RV to model-based volatility forecasts.
-
-Week 179 — Financial Econometrics: Asset Pricing & Portfolio Optimization
-- 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- 🧪 Practice: Apply factor models for asset pricing; estimate risk premia; conduct portfolio optimization with various objectives; implement option pricing models; calibrate models to market data.
-- ✅ Pass: Apply factor models (CAPM, Fama-French 3-factor, 5-factor); estimate factor loadings and risk premia via time-series and cross-sectional regressions; test pricing errors; conduct portfolio optimization with mean-variance, minimum variance, and risk parity objectives using estimated covariance matrix; implement Black-Scholes option pricing; compute Greeks (delta, gamma, vega, theta); calibrate implied volatility surface from option prices.
-- 🛠️ How: Factor models: `statsmodels.api.OLS` for time-series regression of excess returns on factors; portfolio optimization: `scipy.optimize.minimize` with constraints `w.sum()=1`, `w≥0` (long-only); mean-variance: maximize Sharpe ratio `(w@μ) / sqrt(w@Σ@w)`; Black-Scholes: implement formula; Greeks via finite differences or analytical formulas; implied volatility: solve BS equation for σ using `scipy.optimize.brentq`.
+- 🧪 Practice: Master financial econometrics progressively: volatility modeling (ARCH/GARCH family), multivariate GARCH models, realized volatility and high-frequency data analysis, factor models for asset pricing, portfolio optimization, option pricing and risk management.
+- ✅ Pass (weekly): Reproduce examples from the text using methods from each section; implement ARCH/GARCH models and forecast volatility; estimate multivariate GARCH (CCC, DCC, BEKK) and compute risk measures (VaR, ES); analyze high-frequency data and compute realized volatility; apply factor models (CAPM, Fama-French) and optimize portfolios; implement Black-Scholes pricing and calibrate volatility surfaces; verify model specifications using information criteria and diagnostic tests.
+- 🛠️ How: `arch` package for GARCH models: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; multivariate models: `arch.multivariate`; realized volatility from intraday returns; factor regressions: `statsmodels.api.OLS`; portfolio optimization: `scipy.optimize.minimize` with constraints; VaR: `np.percentile(returns, alpha)`; Black-Scholes implementation; diagnostics: Ljung-Box test on residuals and squared residuals; model selection via AIC/BIC.
 </details>
 
 🔁 Flex — Econometrics/time-series consolidation
@@ -811,63 +793,63 @@ Week 179 — Financial Econometrics: Asset Pricing & Portfolio Optimization
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 16 · Causal Inference — Weeks 180–189 (Complete The Mixtape)</b></summary>
+<summary><b>Phase 17 · Causal Inference — Weeks 182–191 (Complete The Mixtape)</b></summary>
 
-Week 180 — Properties of Regression, DAGs, Potential Outcomes
+Week 182 — Properties of Regression, DAGs, Potential Outcomes
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand Simpson's paradox and collider bias; draw and analyze directed acyclic graphs (DAGs); master potential outcomes framework; understand Average Treatment Effect (ATE) and selection bias.
 - ✅ Pass: Implement Simpson's paradox example showing reversal of association; construct ≥3 DAGs identifying confounders, mediators, and colliders; derive ATE under different selection mechanisms; demonstrate selection bias analytically and via simulation.
 - 🛠️ How: Use `networkx` or `dagitty` for DAG visualization; simulate counterfactuals with fixed treatment assignments; compute `E[Y¹] - E[Y⁰]` vs observed difference-in-means; show bias = `E[Y⁰|D=1] - E[Y⁰|D=0]`.
 
-Week 181 — Randomized Controlled Trials & Matching
+Week 183 — Randomized Controlled Trials & Matching
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand randomization inference; implement exact matching, propensity score matching (PSM), and coarsened exact matching; check covariate balance; assess common support.
 - ✅ Pass: Analyze an RCT dataset computing ATE with randomization inference (permutation test); implement PSM with ≥3 matching algorithms (nearest neighbor, caliper, kernel); produce balance tables and Love plots before/after matching; check common support with density plots; report treatment effects with bootstrapped standard errors.
 - 🛠️ How: Permutation test: shuffle treatment vector 1000+ times, recompute difference-in-means; `sklearn.neighbors.NearestNeighbors` for matching; logistic regression for propensity scores; standardized mean differences for balance; `seaborn.kdeplot` for common support.
 
-Week 182 — Regression Discontinuity Design (RDD)
+Week 184 — Regression Discontinuity Design (RDD)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand sharp and fuzzy RDD; check continuity assumptions; select bandwidth using cross-validation and optimal methods; test for manipulation of running variable; implement local polynomial regression.
 - ✅ Pass: Apply RDD to real or simulated data with a known cutoff; test for discontinuity at the threshold using local linear regression with ≥3 bandwidths; perform McCrary density test for manipulation; produce RDD plots showing outcome vs running variable with fitted lines; report local average treatment effect (LATE) with robust standard errors; conduct placebo tests at false cutoffs.
 - 🛠️ How: Local linear regression within bandwidth h: `Y ~ D + (X-c) + D*(X-c)` for |X-c| < h; optimal bandwidth via `rdrobust` (R) or manual cross-validation; McCrary test: fit separate densities left/right of cutoff and test for jump; bootstrap for inference.
 
-Week 183 — Instrumental Variables (IV)
+Week 185 — Instrumental Variables (IV)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand endogeneity and IV identification; implement two-stage least squares (2SLS); test instrument relevance and exogeneity; understand weak instruments problem; compute local average treatment effect (LATE) with compliance types.
 - ✅ Pass: Identify a valid instrument and justify exclusion restriction; implement 2SLS manually (first stage, second stage) and compare to built-in IV estimator; test instrument strength (F-stat > 10 rule of thumb, Cragg-Donald); perform overidentification test when multiple instruments available; compute LATE and interpret in terms of compliers; conduct sensitivity analysis for violation of exclusion restriction.
 - 🛠️ How: Manual 2SLS: regress X on Z (first stage), predict X̂, regress Y on X̂ (second stage); `statsmodels.sandbox.regression.gmm.IV2SLS` or `linearmodels.iv.IV2SLS`; first-stage F-stat for relevance; Hansen J-stat for overidentification; bound analysis for exclusion restriction violations.
 
-Week 184 — Panel Data & Fixed Effects
+Week 186 — Panel Data & Fixed Effects
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand within-group variation; implement fixed effects (FE) and first differences (FD); test fixed vs random effects (Hausman test); handle time-varying treatments; understand parallel trends assumption.
 - ✅ Pass: Estimate panel data model with entity and time fixed effects; compare pooled OLS, FE, and random effects; perform Hausman test; demean data manually and verify equivalence to FE estimator; produce event study plots for dynamic treatment effects; test parallel trends visually and formally; cluster standard errors at appropriate level.
 - 🛠️ How: FE via demeaning: `Y_it - Ȳ_i = (X_it - X̄_i)β + (ε_it - ε̄_i)`; `linearmodels.panel.PanelOLS` with `entity_effects=True`; Hausman test compares FE vs RE; event study: include leads/lags of treatment; plot coefficients with 95% CIs; cluster SEs: `cov_type='clustered'`.
 
-Week 185 — Difference-in-Differences (DiD)
+Week 187 — Difference-in-Differences (DiD)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Implement canonical 2×2 DiD; test parallel trends assumption; handle staggered treatment adoption; understand two-way fixed effects (TWFE) issues with heterogeneous treatment effects; apply robust DiD estimators.
 - ✅ Pass: Estimate 2×2 DiD with interaction term and verify equivalence to group-time means; test parallel trends with pre-treatment period placebo tests; visualize trends with event study; implement staggered DiD using TWFE and compare to Callaway-Sant'Anna or Sun-Abraham estimators to avoid bias from heterogeneous effects; report treatment effects with wild cluster bootstrap standard errors.
 - 🛠️ How: DiD: `Y = β₀ + β₁·Treated + β₂·Post + β₃·(Treated×Post)`; parallel trends: plot group-specific trends pre-treatment; placebo DiD on earlier periods; for staggered adoption, never-treated as control group; decompose TWFE weights; wild bootstrap: `clustered_bootstrap` with Rademacher weights.
 
-Week 186 — Synthetic Control Method
+Week 188 — Synthetic Control Method
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand synthetic control as data-driven matching on pre-treatment outcomes; implement synthetic control optimization; conduct permutation-based inference; assess fit quality; handle multiple treated units.
 - ✅ Pass: Apply synthetic control to a policy intervention; construct synthetic control by optimizing weights on donor pool to match pre-treatment outcomes; report weights and predictor balance; visualize treated vs synthetic trends; conduct placebo tests by reassigning treatment to each donor; compute p-values from permutation distribution; assess robustness by excluding donors iteratively; report pre/post-treatment RMSPE ratio.
 - 🛠️ How: Synthetic control: minimize `||X₁ - X₀W||` subject to `W ≥ 0`, `∑W = 1`, where X₁ is treated unit pre-treatment outcomes, X₀ is donor matrix; use `scipy.optimize.minimize` with constraints or quadratic programming; permutation inference: apply method to each control unit, rank treatment effect; gap plot showing treated - synthetic over time; leave-one-out for robustness.
 
-Week 187 — Regression Kink Design & Bunching
+Week 189 — Regression Kink Design & Bunching
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand regression kink design (RKD) as derivative discontinuity; implement bunching estimator for detecting behavioral responses; test for slope changes; estimate elasticities.
 - ✅ Pass: Apply RKD to a policy with kinked schedule (e.g., tax, subsidy); test for change in slope at kink point using local polynomial regression on subsamples; visualize kink with binned scatter plot; implement bunching estimator by comparing empirical distribution to counterfactual; estimate excess mass and implied elasticity; conduct robustness checks varying excluded region and polynomial order.
 - 🛠️ How: RKD: estimate `dY/dX` separately left/right of kink, test equality; local linear separately each side: `Y ~ (X-k) + covariates` for X near k; binned scatter: equal-sized bins, plot means; bunching: integrate empirical density, fit counterfactual excluding region around kink (polynomial fit), excess mass = observed - counterfactual; elasticity from excess mass and tax change.
 
-Week 188 — Regression Sensitivity & Bounds
+Week 190 — Regression Sensitivity & Bounds
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Assess robustness using omitted variable bias (OVB) formulas; implement Oster (2019) bounds; conduct sensitivity analysis for unobserved confounding; use Rosenbaum bounds for matching estimators; understand partial identification.
 - ✅ Pass: Apply OVB formula to show direction/magnitude of bias from omitted confounder; implement Oster method computing δ (relative importance of unobservables) for null result; produce sensitivity plots showing treatment effect as function of confounder strength; apply Rosenbaum bounds to PSM estimates varying Γ; report identified set and discuss assumption needed for causal claim; compare naïve, conditional, and bounded estimates.
 - 🛠️ How: OVB: `β̂ = β + γ·δ` where γ is effect of omitted U on Y, δ is coefficient from X ~ U; Oster δ: `δ = [R²max - R̃²]/[R̃² - R°²] · [β̃ - β*]/[β° - β̃]`; plot treatment effect vs confounding strength; Rosenbaum Γ: recompute p-value under assumption of hidden bias; identified set: report range of treatment effects consistent with assumptions.
 
-Week 189 — Advanced Topics & Review
+Week 191 — Advanced Topics & Review
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
 - ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
@@ -881,21 +863,21 @@ Week 189 — Advanced Topics & Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 17 · MLOps & Data Engineering — Weeks 190–213 (Complete Zoomcamps, ML Systems)</b></summary>
+<summary><b>Phase 18 · MLOps & Data Engineering — Weeks 192–215 (Complete Zoomcamps, ML Systems)</b></summary>
 
-Weeks 190–197 — MLOps Zoomcamp
+Weeks 192–199 — MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - 🧪 Practice: Module-by-module implementation as taught (tracking, packaging, CI, serving, orchestration, monitoring)
 - ✅ Pass (weekly): A runnable local pipeline from clean state to served endpoint with tests passing for that week’s scope.
 - 🛠️ How: Docker/Compose; MLflow/W&B; `pytest`; minimal infra defined as per module.
 
-Weeks 198–205 — Machine Learning Systems
+Weeks 200–207 — Machine Learning Systems
 - 📖 [ML Systems](https://mlsysbook.ai)
 - 🧪 Practice: Write/extend a system design doc each week focusing only on that week’s concepts (SLA/SLOs; rollout/rollback; monitoring; data contracts; cost/reliability)
 - ✅ Pass (weekly): The doc includes concrete metrics, failure scenarios, and operational procedures aligned to the chapter.
 - 🛠️ How: ADR template; simple diagrams-as-code optional (e.g., Mermaid).
 
-Weeks 206–213 — Data Engineering Zoomcamp
+Weeks 208–215 — Data Engineering Zoomcamp
 - 📖 [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - 🧪 Practice: Module-by-module pipeline work (ingestion, storage, batch/stream, orchestration, analytics eng, testing) as taught in the course
 - ✅ Pass (weekly): Re-deployable pipeline from scratch with idempotent runs for that module’s scope.
@@ -909,21 +891,21 @@ Weeks 206–213 — Data Engineering Zoomcamp
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 18 · Consolidation, Capstone, Portfolio — Weeks 214–217</b></summary>
+<summary><b>Phase 19 · Consolidation, Capstone, Portfolio — Weeks 216–219</b></summary>
 
-Week 214 — statsmodels deep dive
+Week 216 — statsmodels deep dive
 - 📖 [statsmodels](https://www.statsmodels.org/stable/index.html)
 - 🧪 Practice: Master statsmodels by reproducing analyses from earlier phases: OLS with diagnostics, GLMs, time series models (ARIMA, VAR), hypothesis testing.
 - ✅ Pass: Reproduce two econometric analyses matching original coefficients and standard errors; include full diagnostic suite (heteroskedasticity, autocorrelation tests); apply robust SEs where violations exist.
 - 🛠️ How: `statsmodels.api.OLS/GLM`; `statsmodels.tsa` for time series; `het_breuschpagan`, `acorr_ljungbox` for diagnostics; `cov_type="HC3"` for robust SEs.
 
-Week 215 — scikit-learn deep dive
+Week 217 — scikit-learn deep dive
 - 📖 [scikit-learn](https://scikit-learn.org/stable/index.html)
 - 🧪 Practice: Create a production-ready ML pipeline template: preprocessing (scaling, encoding), feature selection, model training with CV, hyperparameter tuning, probability calibration.
 - ✅ Pass: Build a complete Pipeline with ColumnTransformer for mixed types; implement nested CV for unbiased evaluation; apply probability calibration (Platt scaling or isotonic); ensure deterministic results with fixed seeds.
 - 🛠️ How: `Pipeline`; `ColumnTransformer`; `GridSearchCV`/`RandomizedSearchCV`; `CalibratedClassifierCV`; fixed `random_state` throughout.
 
-Weeks 216–217 — Capstone & Portfolio
+Weeks 218–219 — Capstone & Portfolio
 - 📖 Integrate end-to-end skills only from prior phases
 - 🧪 Practice: Complete a capstone project demonstrating: problem framing, data pipeline, modeling with uncertainty quantification, model interpretation, rigorous evaluation, and stakeholder communication.
 - ✅ Pass: Deliver a fully reproducible project (single command to run); include README documenting problem, approach, assumptions, limitations, and risks; provide model interpretation (SHAP/PDP); write a 1-page non-technical summary for stakeholders.
@@ -941,8 +923,8 @@ Resource-to-Week Completion Map (cover-to-cover)
 - Selenium (Python) — Weeks 10–11 — [Selenium (Python)](https://selenium-python.readthedocs.io/index.html)
 - SQL Roadmap (GeeksforGeeks) — Weeks 12–14 — [SQL Roadmap](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 - Mathematics for Machine Learning — Weeks 15–24 — [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- Convex Optimization (Boyd & Vandenberghe) — Weeks 25–34 — [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
-- Introduction to Probability (Grinstead & Snell) — Weeks 35–38 — [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
+- Introduction to Probability (Grinstead & Snell) — Weeks 25–28 — [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
+- Convex Optimization (Boyd & Vandenberghe) — Weeks 29–38 — [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
 - Think Stats — Weeks 39–44 — [Think Stats](https://allendowney.github.io/ThinkStats/)
 - PSU STAT 505 (Applied Multivariate Statistics) — Weeks 45–59 — [PSU STAT 505](https://online.stat.psu.edu/stat505)
 - Think Bayes — Weeks 60–67 — [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
@@ -959,11 +941,11 @@ Resource-to-Week Completion Map (cover-to-cover)
 - R for Data Science (2e) — Weeks 144–153 — [R for Data Science (2e)](https://r4ds.hadley.nz)
 - Basic Econometrics (Gujarati) — Weeks 154–165 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - New Introduction to Multiple Time Series (Lütkepohl) — Weeks 166–175 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- Financial Econometrics (Sheppard) — Weeks 176–179 — [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- Causal Inference: The Mixtape (Cunningham) — Weeks 180–189 — [The Mixtape](https://mixtape.scunning.com)
-- MLOps Zoomcamp — Weeks 190–197 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
-- Machine Learning Systems — Weeks 198–205 — [ML Systems](https://mlsysbook.ai)
-- Data Engineering Zoomcamp — Weeks 206–213 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- Financial Econometrics (Sheppard) — Weeks 176–181 — [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
+- Causal Inference: The Mixtape (Cunningham) — Weeks 182–191 — [The Mixtape](https://mixtape.scunning.com)
+- MLOps Zoomcamp — Weeks 192–199 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- Machine Learning Systems — Weeks 200–207 — [ML Systems](https://mlsysbook.ai)
+- Data Engineering Zoomcamp — Weeks 208–215 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
 Notes
 - Keep work in any format; seed randomness for reproducibility.
