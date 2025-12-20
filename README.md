@@ -1,6 +1,6 @@
 # AI & Data Science Weekly Plan — Activities, Practice, and Pass Criteria
 
-![Duration](https://img.shields.io/badge/duration-~217_weeks-6f42c1)
+![Duration](https://img.shields.io/badge/duration-~221_weeks-6f42c1)
 ![Pace](https://img.shields.io/badge/pace-8–10_h%2Fweek-0e8a16)
 ![Path](https://img.shields.io/badge/path-beginner%E2%86%92practitioner-0366d6)
 ![Style](https://img.shields.io/badge/style-cumulative%2C_concept%E2%86%92practice-555)
@@ -35,7 +35,7 @@ Legend
 - 🔁 Flex (catch-up, spaced review)
 
 Duration and pacing
-- Duration: ~217 weeks (≈4.2 years), 8–10 h/week
+- Duration: ~221 weeks (≈4.2 years), 8–10 h/week
 - Weekly output: small practical tasks only
 - Frequent Flex Weeks between phases for consolidation
 
@@ -362,43 +362,67 @@ Week 44 — Think Stats Ch. 9–10 (+wrap)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 7 · Mathematical Statistics — Weeks 45–50 (Complete Devore)</b></summary>
+<summary><b>Phase 7 · Mathematical Statistics — Weeks 45–54 (Complete Devore)</b></summary>
 
-Week 45 — Probability Distributions & Random Variables
+Week 45 — Discrete Random Variables & Distributions
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Review discrete and continuous random variables; master probability mass functions (PMFs) and probability density functions (PDFs); work with cumulative distribution functions (CDFs); understand joint, marginal, and conditional distributions; compute expectations, variances, and covariances.
-- ✅ Pass: Derive PMF/PDF/CDF for ≥5 distributions (discrete and continuous); compute expectations and variances analytically; generate samples and verify empirical moments match theoretical values (within 5% for n≥1000); work with joint distributions and compute marginal/conditional distributions; verify independence conditions.
-- 🛠️ How: `scipy.stats` for distributions; derive moments using integration/summation; `np.random` for sampling; compute empirical means/variances; joint distributions via simulation; conditional expectation using Bayes' theorem.
+- 🧪 Practice: Master discrete random variables and probability mass functions (PMFs); work with cumulative distribution functions (CDFs); compute expectations and variances; understand common discrete distributions (Bernoulli, Binomial, Geometric, Negative Binomial, Hypergeometric, Poisson).
+- ✅ Pass: Derive PMF/PDF/CDF for ≥3 discrete distributions; compute E[X], Var(X), and E[g(X)] analytically; implement simulations to verify theoretical moments (within 5% for n≥1000); demonstrate memoryless property of Geometric distribution; show Poisson approximation to Binomial.
+- 🛠️ How: `scipy.stats.binom`, `scipy.stats.poisson`, `scipy.stats.geom` for distributions; derive moments using summation; `np.random` for sampling; compute empirical means/variances with `np.mean()`, `np.var()`; compare theoretical vs empirical.
 
-Week 46 — Special Distributions & Transformations
+Week 46 — Continuous Random Variables & Distributions
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Master important discrete distributions (Binomial, Poisson, Hypergeometric, Negative Binomial); understand continuous distributions (Normal, Exponential, Gamma, Beta, Weibull, Lognormal); apply moment generating functions (MGFs); work with transformations of random variables; understand order statistics.
-- ✅ Pass: Derive MGFs for ≥4 distributions and use them to compute moments; apply transformations to random variables (Y=g(X)) and derive resulting distributions using Jacobian method; implement order statistics (min, max, median) and verify distributions match theory; demonstrate distribution relationships (e.g., sum of Normals, Poisson as limit of Binomial); compute percentiles and quantiles.
-- 🛠️ How: Derive MGF: `M_X(t) = E[e^(tX)]`; transformation: use `f_Y(y) = f_X(x)|dx/dy|`; order statistics from sorted samples; `scipy.stats` for verification; plot empirical vs theoretical distributions.
+- 🧪 Practice: Master continuous random variables and probability density functions (PDFs); work with CDFs and quantile functions; understand Uniform, Exponential, Gamma, Beta, Normal, Lognormal, and Weibull distributions; compute percentiles and probabilities.
+- ✅ Pass: Derive PDF/CDF for ≥3 continuous distributions; compute expectations and variances using integration; implement inverse transform method for random variate generation; demonstrate memoryless property of Exponential distribution; verify Normal distribution properties (68-95-99.7 rule).
+- 🛠️ How: `scipy.stats.norm`, `scipy.stats.expon`, `scipy.stats.gamma` for distributions; derive moments using integration; inverse CDF: `F^(-1)(U)` where U ~ Uniform(0,1); QQ plots with `scipy.stats.probplot`; visualize PDFs and CDFs.
 
-Week 47 — Point Estimation & Properties of Estimators
+Week 47 — Joint Distributions & Transformations
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Understand point estimation methods: method of moments (MoM), maximum likelihood estimation (MLE); evaluate estimator properties: unbiasedness, consistency, efficiency, sufficiency; apply Cramér-Rao lower bound; work with sufficient statistics and Rao-Blackwell theorem.
-- ✅ Pass: Implement MoM and MLE for ≥4 distributions (Normal, Exponential, Poisson, Binomial); verify unbiasedness via simulation (empirical mean of estimates ≈ true parameter for n=1000 samples); compute and compare mean squared error (MSE) of different estimators; derive and verify Cramér-Rao lower bound; identify sufficient statistics using factorization theorem; improve estimators using Rao-Blackwell theorem.
-- 🛠️ How: MoM: solve `sample moments = population moments`; MLE: maximize `L(θ) = ∏f(xᵢ|θ)` or equivalently maximize log-likelihood; score function: `∂log L/∂θ = 0`; Fisher information: `I(θ) = -E[∂²log L/∂θ²]`; CRLB: `Var(θ̂) ≥ 1/I(θ)`; simulate estimators 1000+ times and compute bias/variance.
+- 🧪 Practice: Understand joint, marginal, and conditional distributions; compute covariance and correlation; apply transformations of random variables using Jacobian method; understand order statistics and their distributions.
+- ✅ Pass: Work with bivariate distributions: compute marginal and conditional distributions; verify independence conditions; derive distribution of Y=g(X) for monotonic transformations; implement order statistics (min, max, median) and verify distributions match theory; demonstrate sum of independent Normals is Normal.
+- 🛠️ How: Joint distributions via simulation; conditional expectation using Bayes' theorem; transformation: `f_Y(y) = f_X(x)|dx/dy|`; order statistics from sorted samples; `np.cov`, `np.corrcoef` for covariance/correlation; visualize with scatter plots and contour plots.
 
-Week 48 — Interval Estimation & Confidence Intervals
+Week 48 — Moment Generating Functions & Limit Theorems
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Construct confidence intervals for means, variances, proportions, and differences; understand interpretation and coverage probability; work with t-distribution, chi-square, and F-distribution; implement large-sample confidence intervals using CLT; understand bootstrap confidence intervals.
-- ✅ Pass: Construct confidence intervals for: (1) mean of Normal population (σ known and unknown), (2) variance of Normal population, (3) difference of two means (independent and paired samples), (4) proportion and difference of proportions; verify coverage probability via simulation (95% CI should contain true parameter ≈95% of times in 1000 simulations); compare exact vs large-sample intervals; implement percentile and BCa bootstrap confidence intervals.
-- 🛠️ How: Mean (σ known): `x̄ ± z_(α/2) · σ/√n`; mean (σ unknown): `x̄ ± t_(α/2,n-1) · s/√n`; variance: `(n-1)s²/χ²_(α/2,n-1), (n-1)s²/χ²_(1-α/2,n-1)`; proportion: `p̂ ± z_(α/2)√(p̂(1-p̂)/n)`; bootstrap: resample with replacement, compute statistic, take quantiles; simulate to verify coverage.
+- 🧪 Practice: Master moment generating functions (MGFs) and their applications; understand MGF uniqueness theorem; apply MGFs to derive distributions of sums; understand Law of Large Numbers and Central Limit Theorem; work with distribution convergence concepts.
+- ✅ Pass: Derive MGFs for ≥4 distributions and use them to compute moments; use MGFs to find distribution of sum of independent random variables; demonstrate LLN convergence with sample size; verify CLT with standardized sample means for n=[10,30,100,1000]; create QQ plots showing convergence to normality.
+- 🛠️ How: MGF: `M_X(t) = E[e^(tX)]`; moment recovery: `E[X^k] = M_X^(k)(0)`; MGF of sum: `M_{X+Y}(t) = M_X(t)M_Y(t)` if independent; LLN: plot running mean vs n; CLT: `(X̄ - μ)/(σ/√n)` ~ N(0,1) for large n.
 
-Week 49 — Hypothesis Testing & Power
+Week 49 — Point Estimation I: Methods
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Understand hypothesis testing framework: null and alternative hypotheses, test statistics, p-values, Type I and Type II errors; conduct tests for means, variances, and proportions; understand power functions and sample size calculations; apply likelihood ratio tests; understand the relationship between tests and confidence intervals.
-- ✅ Pass: Implement hypothesis tests for: (1) one-sample mean (z-test and t-test), (2) two-sample means (independent and paired), (3) variance and ratio of variances (F-test), (4) proportions and difference of proportions; compute power functions and create power curves showing power vs effect size for fixed n and α; determine sample size needed to achieve specified power; verify Type I error rate via simulation (reject H₀ when true ≈ α); implement likelihood ratio test for nested models.
-- 🛠️ How: Test statistic forms: `z = (x̄-μ₀)/(σ/√n)`, `t = (x̄-μ₀)/(s/√n)`, `F = s₁²/s₂²`; p-value: `P(|T| > |t_obs| | H₀)`; power: `β(θ) = P(reject H₀ | θ)`; sample size: solve for n in power equation; simulate Type I error: generate data under H₀, count rejections; LRT: `-2log(L(θ₀)/L(θ̂)) ~ χ²`.
+- 🧪 Practice: Understand point estimation; apply method of moments (MoM); master maximum likelihood estimation (MLE); understand likelihood function and log-likelihood; work with numerical optimization for MLE.
+- ✅ Pass: Implement MoM for ≥3 distributions (Normal, Exponential, Gamma); derive MLE analytically for ≥3 distributions (Normal, Exponential, Poisson, Binomial); verify estimates via simulation; use numerical methods (e.g., Newton-Raphson) to find MLE when no closed form exists; compare MoM vs MLE estimates on same data.
+- 🛠️ How: MoM: solve `sample moments = population moments`; MLE: maximize `L(θ) = ∏f(xᵢ|θ)` via `∂log L/∂θ = 0`; `scipy.stats.fit` for built-in MLE; `scipy.optimize.minimize` for numerical optimization; simulate data with known parameters to verify estimators.
 
-Week 50 — Review & Integration
+Week 50 — Point Estimation II: Properties
 - 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- 🧪 Practice: Integrate all mathematical statistics concepts; understand connections between estimation and testing; apply concepts to real data analysis problems; review key theorems and their applications.
-- ✅ Pass: Complete a comprehensive problem set covering: probability distributions, transformations, point and interval estimation, hypothesis testing, and power analysis; demonstrate ≥5 connections between topics (e.g., duality of CIs and tests, sufficiency and MLE, MGFs and CLT); apply full statistical inference pipeline to a real dataset: explore data, select appropriate model, estimate parameters with MLE, construct confidence intervals, test hypotheses, assess power, and validate assumptions; document all steps and interpret results in context.
-- 🛠️ How: Create concept map linking topics; practice problems from each chapter; end-to-end analysis: `scipy.stats.fit`, `statsmodels` for inference; diagnostic plots (QQ plots, residuals); sensitivity analysis varying assumptions.
+- 🧪 Practice: Evaluate estimator properties: unbiasedness, consistency, efficiency; understand mean squared error (MSE); apply Cramér-Rao lower bound (CRLB); work with sufficient statistics and Rao-Blackwell theorem; understand completeness and minimum variance unbiased estimators (MVUE).
+- ✅ Pass: Verify unbiasedness via simulation (empirical mean of estimates ≈ true parameter for n=1000 samples); compute and compare MSE of different estimators; derive Fisher information and CRLB for ≥2 distributions; identify sufficient statistics using factorization theorem; apply Rao-Blackwell to improve an estimator; demonstrate MLE efficiency asymptotically.
+- 🛠️ How: Bias: `E[θ̂] - θ`; MSE: `E[(θ̂-θ)²] = Var(θ̂) + Bias²`; Fisher information: `I(θ) = -E[∂²log L/∂θ²]`; CRLB: `Var(θ̂) ≥ 1/(nI(θ))`; factorization: `f(x|θ) = g(T(x),θ)h(x)`; simulate estimators 1000+ times and compute empirical bias/variance.
+
+Week 51 — Interval Estimation
+- 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
+- 🧪 Practice: Construct confidence intervals for means, variances, and proportions; understand confidence level vs coverage probability; work with pivotal quantities; use t-distribution, chi-square, and F-distribution; implement large-sample CIs using CLT; compare bootstrap confidence intervals.
+- ✅ Pass: Construct CIs for: (1) mean of Normal population (σ known and unknown), (2) variance of Normal population, (3) difference of two means (independent and paired), (4) proportion and difference of proportions; verify coverage probability via simulation (95% CI should contain true parameter ≈95% of times in 1000 simulations); implement percentile, basic, and BCa bootstrap CIs; compare exact vs approximate intervals.
+- 🛠️ How: Pivotal method: find `Q(X,θ)` with known distribution; Mean (σ known): `x̄ ± z_(α/2) · σ/√n`; mean (σ unknown): `x̄ ± t_(α/2,n-1) · s/√n`; variance: `[(n-1)s²/χ²_(α/2,n-1), (n-1)s²/χ²_(1-α/2,n-1)]`; bootstrap: resample B times, compute statistic each time, take quantiles.
+
+Week 68 — Hypothesis Testing I: Fundamentals
+- 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
+- 🧪 Practice: Understand hypothesis testing framework: null (H₀) and alternative (H₁) hypotheses; understand test statistics, rejection regions, and p-values; distinguish Type I (α) and Type II (β) errors; conduct one-sample tests for means and proportions.
+- ✅ Pass: Formulate hypotheses for practical problems; implement one-sample tests: z-test (σ known), t-test (σ unknown), proportion test; compute p-values and make decisions at α=0.05; verify Type I error rate via simulation (reject H₀ when true ≈ α for 10000 trials); understand relationship between CIs and two-sided tests.
+- 🛠️ How: Test statistic: `z = (x̄-μ₀)/(σ/√n)` or `t = (x̄-μ₀)/(s/√n)`; p-value: `P(|T| > |t_obs| | H₀ true)`; decision rule: reject H₀ if p-value < α; `scipy.stats.ttest_1samp`, `scipy.stats.ztest` (via statsmodels); simulate Type I error: generate data under H₀, count rejections.
+
+Week 69 — Hypothesis Testing II: Applications & Power
+- 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
+- 🧪 Practice: Conduct two-sample tests (independent and paired); test for variances (chi-square, F-test); understand power functions and power curves; perform sample size calculations; apply likelihood ratio tests; understand Neyman-Pearson lemma.
+- ✅ Pass: Implement two-sample t-tests (independent and paired), F-test for variance equality; compute power function β(θ) for various alternatives; create power curves showing power vs effect size for fixed n and α; determine sample size needed to achieve power=0.80 for detecting specific effect; verify Type II error rate via simulation; implement likelihood ratio test for nested models.
+- 🛠️ How: Two-sample t: `scipy.stats.ttest_ind`, `scipy.stats.ttest_rel`; F-test: `scipy.stats.f`; power: `β(μ₁) = P(reject H₀ | μ=μ₁)`; sample size via power analysis formulas or simulation; LRT: `-2log(L(θ₀)/L(θ̂_MLE))` ~ χ²; plot power curves varying effect size and sample size.
+
+Week 66 — Review, Integration & Applications
+- 📖 Activities: [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
+- 🧪 Practice: Integrate all mathematical statistics concepts; understand connections between distributions, estimation, and testing; apply complete statistical inference pipeline to real data; review key theorems (LLN, CLT, CRLB, Neyman-Pearson).
+- ✅ Pass: Complete comprehensive problem set covering all topics; demonstrate ≥5 connections between topics (e.g., MLE and sufficiency, CIs and hypothesis tests, Fisher information and CRLB, MGFs and CLT); conduct end-to-end analysis on real dataset: formulate problem, explore data, select appropriate distribution/model, estimate parameters with MLE, construct CIs, test hypotheses, assess power, validate assumptions with diagnostic plots; document complete workflow with interpretations.
+- 🛠️ How: Create concept map linking all topics; work through book examples and exercises; end-to-end pipeline: `scipy.stats.fit` for MLE, `statsmodels` for hypothesis tests, QQ plots for normality checks, bootstrap for uncertainty; sensitivity analysis varying assumptions; cross-validate findings using multiple methods.
 </details>
 
 🔁 Flex — Mathematical statistics consolidation
@@ -408,93 +432,93 @@ Week 50 — Review & Integration
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 8 · Applied Multivariate Statistics — Weeks 51–65 (Complete PSU STAT 505)</b></summary>
+<summary><b>Phase 8 · Applied Multivariate Statistics — Weeks 55–69 (Complete PSU STAT 505)</b></summary>
 
-Week 51 — Measures of Central Tendency, Dispersion and Association (Lesson 1)
+Week 67 — Measures of Central Tendency, Dispersion and Association (Lesson 1)
 - 📖 Activities: [PSU STAT 505 Lesson 1](https://online.stat.psu.edu/stat505/lesson/1)
 - 🧪 Practice: Compute multivariate measures of central tendency (mean vectors); understand dispersion (covariance matrices, generalized variance); compute association measures (correlation matrices); interpret relationships between variables.
 - ✅ Pass: Calculate mean vectors and covariance matrices for multivariate data; compute correlation matrices and interpret relationships; calculate generalized variance and total variation; compare variance-covariance structures across groups. Complete PSU STAT 505 Lesson 1.
 - 🛠️ How: `np.mean(axis=0)` for mean vectors; `np.cov` for covariance matrices; `np.corrcoef` for correlation; `np.linalg.det` for generalized variance; visualize with heatmaps.
 
-Week 52 — Linear Combinations of Random Variables (Lesson 2)
+Week 68 — Linear Combinations of Random Variables (Lesson 2)
 - 📖 Activities: [PSU STAT 505 Lesson 2](https://online.stat.psu.edu/stat505/lesson/2)
 - 🧪 Practice: Understand properties of linear combinations of random vectors; compute means and covariances of linear combinations; work with linear transformations; understand independence and correlation.
 - ✅ Pass: Compute mean and covariance of linear combinations; verify properties of linear transformations; demonstrate how linear combinations preserve or change correlation structure; apply to dimensionality reduction scenarios. Complete PSU STAT 505 Lesson 2.
 - 🛠️ How: Matrix operations for linear combinations `Y = AX + b`; compute `E[Y] = AE[X] + b` and `Cov(Y) = A Cov(X) A^T`; verify independence conditions; visualize transformations.
 
-Week 53 — Graphical Display of Multivariate Data (Lesson 3)
+Week 69 — Graphical Display of Multivariate Data (Lesson 3)
 - 📖 Activities: [PSU STAT 505 Lesson 3](https://online.stat.psu.edu/stat505/lesson/3)
 - 🧪 Practice: Create various multivariate visualizations; produce scatter plot matrices, star plots, profile plots; understand 3D plots and contour plots; interpret patterns and relationships visually.
 - ✅ Pass: Create comprehensive visualization suite: scatter plot matrix with correlations, 3D scatter plots, profile plots for repeated measures, star plots for multivariate observations, contour plots for bivariate distributions; identify patterns, outliers, and relationships. Complete PSU STAT 505 Lesson 3.
 - 🛠️ How: `pd.plotting.scatter_matrix`; `mpl_toolkits.mplot3d` for 3D plots; `plt.plot` for profile plots; `seaborn.pairplot`; custom star/radar plots with `plt.subplot(projection='polar')`.
 
-Week 54 — Multivariate Normal Distribution (Lesson 4)
+Week 66 — Multivariate Normal Distribution (Lesson 4)
 - 📖 Activities: [PSU STAT 505 Lesson 4](https://online.stat.psu.edu/stat505/lesson/4)
 - 🧪 Practice: Understand multivariate normal distribution properties; compute Mahalanobis distance; generate samples from MVN; test for multivariate normality; understand conditional and marginal distributions.
 - ✅ Pass: Generate samples from multivariate normal; compute and interpret Mahalanobis distance vs Euclidean distance; perform Mardia's test for multivariate normality; compute marginal and conditional distributions; visualize MVN with contour plots. Complete PSU STAT 505 Lesson 4.
 - 🛠️ How: `scipy.stats.multivariate_normal`; `scipy.spatial.distance.mahalanobis`; Mardia's skewness and kurtosis tests; compute conditionals using partitioned covariance matrices.
 
-Week 55 — Sample Mean Vector and Sample Correlation (Lesson 5)
+Week 67 — Sample Mean Vector and Sample Correlation (Lesson 5)
 - 📖 Activities: [PSU STAT 505 Lesson 5](https://online.stat.psu.edu/stat505/lesson/5)
 - 🧪 Practice: Estimate mean vectors and covariance matrices from samples; understand sampling distributions; perform inference on mean vectors; test hypotheses about correlations; construct confidence regions.
 - ✅ Pass: Estimate mean vectors and covariance matrices; derive sampling distributions; construct confidence ellipses for mean vectors; test hypotheses about population means; compute standard errors for correlations. Complete PSU STAT 505 Lesson 5.
 - 🛠️ How: Sample statistics with `np.mean`, `np.cov`; Wishart distribution for covariance; confidence ellipses using eigenvalues/eigenvectors; bootstrap for inference.
 
-Week 56 — Multivariate Conditional Distribution and Partial Correlation (Lesson 6)
+Week 68 — Multivariate Conditional Distribution and Partial Correlation (Lesson 6)
 - 📖 Activities: [PSU STAT 505 Lesson 6](https://online.stat.psu.edu/stat505/lesson/6)
 - 🧪 Practice: Compute conditional distributions from joint multivariate normal; calculate partial correlations; understand the difference between marginal and partial correlation; interpret conditional independence.
 - ✅ Pass: Partition covariance matrices to compute conditional distributions; calculate and interpret partial correlations; compare partial vs marginal correlations; test for conditional independence; visualize relationships controlling for other variables. Complete PSU STAT 505 Lesson 6.
 - 🛠️ How: Use partitioned covariance matrices `Σ = [[Σ11, Σ12], [Σ21, Σ22]]`; conditional mean `μ1 + Σ12 Σ22^-1 (x2 - μ2)`; conditional covariance `Σ11 - Σ12 Σ22^-1 Σ21`; `pingouin.partial_corr` for partial correlations.
 
-Week 57 — Inferences Regarding Multivariate Population Mean (Lesson 7)
+Week 69 — Inferences Regarding Multivariate Population Mean (Lesson 7)
 - 📖 Activities: [PSU STAT 505 Lesson 7](https://online.stat.psu.edu/stat505/lesson/7)
 - 🧪 Practice: Perform Hotelling's T² tests for one-sample and two-sample problems; construct simultaneous confidence intervals; understand multivariate hypothesis testing; compare with univariate t-tests.
 - ✅ Pass: Conduct one-sample Hotelling's T² test; perform two-sample Hotelling's T² test; construct simultaneous confidence intervals using Bonferroni correction; compare multivariate vs univariate approaches; interpret test statistics, p-values, and effect sizes. Complete PSU STAT 505 Lesson 7.
 - 🛠️ How: Implement `T² = n(x̄ - μ0)^T S^-1 (x̄ - μ0)`; convert to F-statistic: `F = (n-p)T²/((n-1)p)`; `scipy.stats.f` for p-values; Bonferroni intervals: `t_(α/2p, n-1)`.
 
-Week 58 — Multivariate Analysis of Variance (MANOVA) (Lesson 8)
+Week 66 — Multivariate Analysis of Variance (MANOVA) (Lesson 8)
 - 📖 Activities: [PSU STAT 505 Lesson 8](https://online.stat.psu.edu/stat505/lesson/8)
 - 🧪 Practice: Perform one-way and two-way MANOVA; understand Wilks' Lambda, Pillai's trace, and other test statistics; conduct post-hoc tests; check MANOVA assumptions; compare to univariate ANOVA.
 - ✅ Pass: Run MANOVA with ≥2 dependent variables and ≥3 groups; report test statistics (Wilks' Lambda, Pillai's trace, Hotelling-Lawley trace, Roy's largest root); perform follow-up univariate ANOVAs and discriminant analysis; check assumptions (Box's M test, multivariate normality). Complete PSU STAT 505 Lesson 8.
 - 🛠️ How: `statsmodels.multivariate.manova.MANOVA`; interpret output; visualize group centroids; check assumptions before interpretation; compare effect sizes across responses.
 
-Week 59 — Repeated Measures Analysis (Lesson 9)
+Week 67 — Repeated Measures Analysis (Lesson 9)
 - 📖 Activities: [PSU STAT 505 Lesson 9](https://online.stat.psu.edu/stat505/lesson/9)
 - 🧪 Practice: Analyze repeated measures data using multivariate approach; understand sphericity and compound symmetry; perform profile analysis; test for parallelism, coincidence, and flatness; handle within-subject factors.
 - ✅ Pass: Analyze repeated measures design with multivariate approach; test sphericity assumption (Mauchly's test); perform profile analysis testing parallelism, levels, and flatness hypotheses; compare multivariate vs univariate repeated measures ANOVA; interpret within-subject and between-subject effects. Complete PSU STAT 505 Lesson 9.
 - 🛠️ How: `statsmodels` for repeated measures; test sphericity; profile plots with error bars; Greenhouse-Geisser correction when sphericity violated; contrast matrices for specific comparisons.
 
-Week 60 — Discriminant Analysis (Lesson 10)
+Week 68 — Discriminant Analysis (Lesson 10)
 - 📖 Activities: [PSU STAT 505 Lesson 10](https://online.stat.psu.edu/stat505/lesson/10)
 - 🧪 Practice: Perform linear and quadratic discriminant analysis; understand Fisher's linear discriminant; classify observations; evaluate classification performance; understand relationship to MANOVA; compare LDA/QDA assumptions.
 - ✅ Pass: Apply LDA and QDA to classification problem; compute discriminant functions and classify held-out observations; report confusion matrix and misclassification rates; visualize decision boundaries; compare LDA/QDA to logistic regression; verify equal covariance assumption. Complete PSU STAT 505 Lesson 10.
 - 🛠️ How: `sklearn.discriminant_analysis.LinearDiscriminantAnalysis/QuadraticDiscriminantAnalysis`; `classification_report`; ROC curves; cross-validation for error estimation; Box's M test for covariance equality.
 
-Week 61 — Principal Components Analysis (Lesson 11)
+Week 69 — Principal Components Analysis (Lesson 11)
 - 📖 Activities: [PSU STAT 505 Lesson 11](https://online.stat.psu.edu/stat505/lesson/11)
 - 🧪 Practice: Perform PCA on correlation and covariance matrices; understand eigenvalues/eigenvectors interpretation; determine number of components; compute component scores; interpret loadings; create biplots; understand variance explained.
 - ✅ Pass: Apply PCA to dataset with ≥6 variables; create scree plot; select components using Kaiser criterion (eigenvalue > 1) and cumulative variance (80%); interpret loadings for first 2-3 PCs; create biplot; reconstruct data; compare PCA on correlation vs covariance. Complete PSU STAT 505 Lesson 11.
 - 🛠️ How: `sklearn.decomposition.PCA`; standardize with `StandardScaler`; `explained_variance_ratio_`; scree plot; biplot with `plt.arrow`; verify reconstruction error.
 
-Week 62 — Factor Analysis (Lesson 12)
+Week 66 — Factor Analysis (Lesson 12)
 - 📖 Activities: [PSU STAT 505 Lesson 12](https://online.stat.psu.edu/stat505/lesson/12)
 - 🧪 Practice: Perform exploratory factor analysis; understand factor model and common vs specific variance; estimate communalities and uniqueness; perform factor rotations (varimax, promax); determine number of factors; interpret factor loadings.
 - ✅ Pass: Conduct factor analysis; determine number of factors using parallel analysis and scree plot; extract factors using maximum likelihood or principal axis factoring; perform varimax and promax rotations; interpret and name factors; report communalities and variance explained; compare to PCA. Complete PSU STAT 505 Lesson 12.
 - 🛠️ How: `sklearn.decomposition.FactorAnalysis`; `factor_analyzer` package for rotations; parallel analysis comparing eigenvalues to random data; factor loading interpretation with cutoff |loading| > 0.3.
 
-Week 63 — Canonical Correlation Analysis (Lesson 13)
+Week 67 — Canonical Correlation Analysis (Lesson 13)
 - 📖 Activities: [PSU STAT 505 Lesson 13](https://online.stat.psu.edu/stat505/lesson/13)
 - 🧪 Practice: Perform canonical correlation analysis between two sets of variables; compute canonical correlations and canonical variates; test significance; interpret canonical loadings and cross-loadings; assess redundancy.
 - ✅ Pass: Apply CCA to dataset with two variable sets (≥3 variables each); compute all canonical correlations and test significance; interpret first 2-3 canonical variate pairs; compute canonical loadings (structure correlations); perform redundancy analysis; visualize canonical variates. Complete PSU STAT 505 Lesson 13.
 - 🛠️ How: `sklearn.cross_decomposition.CCA`; Wilks' Lambda test: `Λ = ∏(1 - r²)`; canonical loadings as correlations between original variables and canonical variates; redundancy index.
 
-Week 64 — Cluster Analysis (Lesson 14)
+Week 68 — Cluster Analysis (Lesson 14)
 - 📖 Activities: [PSU STAT 505 Lesson 14](https://online.stat.psu.edu/stat505/lesson/14)
 - 🧪 Practice: Apply hierarchical clustering with different linkage methods; perform k-means clustering; understand distance measures and similarity metrics; determine optimal number of clusters; validate clustering solutions; compare clustering methods.
 - ✅ Pass: Perform hierarchical clustering with ≥3 linkage methods (single, complete, average, Ward); create dendrograms; apply k-means with multiple k values; determine optimal k using elbow method, silhouette analysis, and gap statistic; validate with silhouette scores; visualize clusters using PCA; compare hierarchical vs partitioning methods. Complete PSU STAT 505 Lesson 14.
 - 🛠️ How: `scipy.cluster.hierarchy` for hierarchical clustering; `sklearn.cluster.KMeans`; distance metrics: Euclidean, Manhattan, Mahalanobis; silhouette analysis; dendrogram interpretation; standardize data before clustering.
 
-Week 65 — Integration and Review
+Week 69 — Integration and Review
 - 📖 Activities: Review all PSU STAT 505 lessons
 - 🧪 Practice: Integrate multivariate methods in comprehensive analysis; understand when to use each technique; compare and contrast methods; apply multiple techniques to same dataset.
 - ✅ Pass: Complete end-to-end multivariate analysis applying ≥5 techniques from course; write comprehensive report connecting methods; explain method selection rationale; interpret results in context; discuss assumptions and limitations; compare insights from different methods.
@@ -508,15 +532,15 @@ Week 65 — Integration and Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 9 · Bayesian Statistics & Missing Data — Weeks 66–77 (Complete Think Bayes, FIMD)</b></summary>
+<summary><b>Phase 9 · Bayesian Statistics & Missing Data — Weeks 70–81 (Complete Think Bayes, FIMD)</b></summary>
 
-Weeks 66–73 — Think Bayes (Ch. 1–14, paced)
+Weeks 70–77 — Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
 - 🧪 Practice: Apply Bayes' theorem to update beliefs; implement conjugate prior models (Beta-Binomial, Gamma-Poisson, Normal-Normal); perform posterior predictive checks; compare models.
 - ✅ Pass (weekly): Implement a Bayesian model aligned with the chapter's topic; show prior sensitivity analysis (vary prior parameters and observe posterior changes); generate posterior predictive samples and compare to observed data using a suitable test statistic.
 - 🛠️ How: Use analytical posteriors when available; for PPC, draw samples from posterior, then from likelihood, and compare summary stats to data.
 
-Weeks 74–77 — Flexible Imputation of Missing Data (complete)
+Weeks 78–81 — Flexible Imputation of Missing Data (complete)
 - 📖 [FIMD](https://stefvanbuuren.name/fimd/)
 - 🧪 Practice: Missingness mechanisms; MICE; sensitivity (as in book)
 - ✅ Pass (weekly): Run MICE (m≥5) on a dataset; report pooled estimates per Rubin’s rules; compare to complete-case; perform delta-adjustment sensitivity where relevant.
@@ -530,63 +554,63 @@ Weeks 74–77 — Flexible Imputation of Missing Data (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 10 · Statistical Learning with Python — Weeks 78–87 (Complete ISLP)</b></summary>
+<summary><b>Phase 10 · Statistical Learning with Python — Weeks 82–91 (Complete ISLP)</b></summary>
 
-Week 78 — ISLP Ch. 1–2 (Intro + Statistical Learning)
+Week 90 — ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand the statistical learning framework; implement train/test splits; explore the bias-variance trade-off with KNN at different k values.
 - ✅ Pass: On a dataset, demonstrate how training error decreases with model complexity while test error shows U-shape; implement 5-fold CV and compare to hold-out estimate; discuss flexibility vs interpretability.
 - 🛠️ How: `train_test_split`; `KFold`/`cross_val_score`; vary KNN's k parameter; plot training vs test error curves.
 
-Week 79 — ISLP Ch. 3 (Linear Regression)
+Week 91 — ISLP Ch. 3 (Linear Regression)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Fit simple and multiple linear regression; interpret coefficients; add interaction and polynomial terms; assess model fit with residual diagnostics.
 - ✅ Pass: Fit OLS with and without interaction/polynomial terms; compare R² vs adjusted R²; produce residual plots; select optimal polynomial degree via CV; interpret coefficient confidence intervals.
 - 🛠️ How: `LinearRegression`; `PolynomialFeatures`; `cross_val_score`; `statsmodels` for CIs; residual diagnostics.
 
-Week 80 — ISLP Ch. 4 (Classification)
+Week 88 — ISLP Ch. 4 (Classification)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Implement logistic regression; understand LDA/QDA assumptions; apply KNN for classification; explore classification metrics beyond accuracy.
 - ✅ Pass: Compare logistic regression, LDA, QDA, and KNN using stratified 5-fold CV; report confusion matrix, precision, recall, and ROC-AUC; select optimal classification threshold based on problem context.
 - 🛠️ How: `LogisticRegression`; `LinearDiscriminantAnalysis`; `QuadraticDiscriminantAnalysis`; `KNeighborsClassifier`; `roc_curve` for threshold selection.
 
-Week 81 — ISLP Ch. 5 (Resampling Methods)
+Week 89 — ISLP Ch. 5 (Resampling Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Compare validation approaches: hold-out, LOOCV, k-fold CV; use bootstrap for uncertainty estimation; understand variance-bias trade-off in resampling.
 - ✅ Pass: Compare test error estimates from LOOCV vs 5-fold vs 10-fold CV; implement bootstrap to estimate coefficient standard errors; compare bootstrap SEs to analytic SEs.
 - 🛠️ How: `LeaveOneOut`; `KFold`; implement bootstrap loop with `np.random.choice`; fix seeds for reproducibility.
 
-Week 82 — ISLP Ch. 6 (Model Selection & Regularization)
+Week 90 — ISLP Ch. 6 (Model Selection & Regularization)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand the motivation for regularization; implement ridge and lasso regression; interpret coefficient shrinkage and sparsity; tune regularization parameter via CV.
 - ✅ Pass: Plot ridge and lasso coefficient paths as λ varies; select optimal λ via CV; compare test error of OLS vs ridge vs lasso; explain when lasso produces sparse solutions.
 - 🛠️ How: `Ridge`; `Lasso`; `RidgeCV`; `LassoCV`; `StandardScaler` (scale features first); `lasso_path` for path plots.
 
-Week 83 — ISLP Ch. 7 (Beyond Linearity)
+Week 91 — ISLP Ch. 7 (Beyond Linearity)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Move beyond linearity with polynomial regression, step functions, and splines; understand degrees of freedom; fit GAM-style models.
 - ✅ Pass: Fit polynomial, step function, and spline models; compare their flexibility and test errors; produce partial dependence plots; select appropriate number of knots/degrees via CV.
 - 🛠️ How: `PolynomialFeatures`; `SplineTransformer`; `pd.cut` for step functions; compare MSE on held-out data.
 
-Week 84 — ISLP Ch. 8 (Tree-Based Methods)
+Week 88 — ISLP Ch. 8 (Tree-Based Methods)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Fit decision trees; understand bagging and the random forest algorithm; implement gradient boosting; interpret tree-based models.
 - ✅ Pass: Fit and prune a decision tree; compare single tree vs random forest vs gradient boosting on test error; show OOB error for RF; plot feature importances and partial dependence plots.
 - 🛠️ How: `DecisionTreeClassifier/Regressor`; `RandomForestClassifier/Regressor`; `GradientBoostingClassifier/Regressor`; `permutation_importance`; `plot_partial_dependence`.
 
-Week 85 — ISLP Ch. 9 (Support Vector Machines)
+Week 89 — ISLP Ch. 9 (Support Vector Machines)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Understand maximal margin classifiers and support vectors; fit SVMs with linear and non-linear kernels; tune hyperparameters (C, gamma).
 - ✅ Pass: Fit SVM with linear and RBF kernels; tune C and gamma via grid search with CV; visualize decision boundaries on 2D data; identify and highlight support vectors; compare to logistic regression.
 - 🛠️ How: `SVC`; `GridSearchCV`; `plt.contourf` for decision boundaries; access `support_vectors_` attribute.
 
-Week 86 — ISLP Ch. 10 (Unsupervised Learning)
+Week 90 — ISLP Ch. 10 (Unsupervised Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Perform dimensionality reduction with PCA; apply k-means and hierarchical clustering; understand the importance of scaling; evaluate clustering quality.
 - ✅ Pass: Apply PCA and plot cumulative explained variance; choose number of components; cluster with k-means (elbow method for k) and hierarchical clustering (dendrogram); evaluate with silhouette score and compare cluster stability across random seeds.
 - 🛠️ How: `StandardScaler` (always scale first); `PCA`; `KMeans` with inertia plots; `AgglomerativeClustering`; `dendrogram`; `silhouette_score`.
 
-Week 87 — ISLP Labs/Wrap-up
+Week 91 — ISLP Labs/Wrap-up
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
 - 🧪 Practice: Complete an end-to-end ML project using techniques from all ISLP chapters: EDA, preprocessing, model selection, hyperparameter tuning, evaluation, and interpretation.
 - ✅ Pass: Deliver a reproducible notebook with proper train/test split, cross-validation, model comparison, hyperparameter tuning, error analysis, and a 1-page summary documenting decisions, limitations, and risks.
@@ -600,9 +624,9 @@ Week 87 — ISLP Labs/Wrap-up
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 11 · Data Mining — Weeks 88–96 (Complete DM 3e)</b></summary>
+<summary><b>Phase 11 · Data Mining — Weeks 92–100 (Complete DM 3e)</b></summary>
 
-Weeks 88–96 — Data Mining 3e (Ch. 1–12)
+Weeks 92–100 — Data Mining 3e (Ch. 1–12)
 - 📖 [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
 - 🧪 Practice: Per-chapter algorithmic work strictly matching the chapter (e.g., data preprocessing tasks; Apriori/FP-Growth; decision trees; k-means/DBSCAN; outlier detection)
 - ✅ Pass (weekly): Implement a minimal working version for the chapter’s focal algorithm OR replicate results using a library; verify correctness on a deterministic toy and compare performance on a small real dataset.
@@ -616,15 +640,15 @@ Weeks 88–96 — Data Mining 3e (Ch. 1–12)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 12 · Classical Machine Learning — Weeks 97–115 (Complete PRML, Interpretable ML)</b></summary>
+<summary><b>Phase 12 · Classical Machine Learning — Weeks 101–119 (Complete PRML, Interpretable ML)</b></summary>
 
-Weeks 97–110 — PRML (Ch. 1–13 + review)
+Weeks 101–114 — PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - 🧪 Practice: Implement core algorithms from each chapter from scratch: probability distributions, linear models, neural networks, kernel methods, graphical models, mixture models, EM algorithm, approximate inference, and sampling methods.
 - ✅ Pass (weekly): Implement the chapter's focal algorithm from scratch; verify correctness by comparing to sklearn/scipy baseline (within 2-5% accuracy); document mathematical derivations; use fixed seeds for reproducibility.
 - 🛠️ How: Use NumPy for implementations; sklearn only as verification oracle; work on toy datasets; keep detailed notes linking code to book equations.
 
-Weeks 111–115 — Interpretable ML (complete)
+Weeks 115–119 — Interpretable ML (complete)
 - 📖 [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
 - 🧪 Practice: Apply model-agnostic interpretation methods: PDP, ICE, permutation importance, LIME, SHAP; understand intrinsically interpretable models; explore feature interaction methods.
 - ✅ Pass (weekly): For a trained model, produce PDP/ICE plots for top features; compute permutation importance; generate SHAP values for individual predictions; write a 1-page analysis comparing methods' stability across 3 bootstrap resamples.
@@ -638,63 +662,63 @@ Weeks 111–115 — Interpretable ML (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 13 · Elements of Statistical Learning — Weeks 116–125 (Complete ESL)</b></summary>
+<summary><b>Phase 13 · Elements of Statistical Learning — Weeks 120–129 (Complete ESL)</b></summary>
 
-Week 116 — ESL Ch. 1–3: Introduction & Linear Methods
+Week 128 — ESL Ch. 1–3: Introduction & Linear Methods
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Review statistical learning framework; master linear regression theory (bias-variance decomposition, Gauss-Markov theorem); implement subset selection, ridge, and lasso from scratch; understand effective degrees of freedom.
 - ✅ Pass: Derive bias-variance decomposition analytically; prove Gauss-Markov theorem; implement best subset selection via exhaustive search for p ≤ 10; implement ridge and lasso with coordinate descent; compute effective degrees of freedom `df(λ) = tr[X(XᵀX + λI)⁻¹Xᵀ]` and verify empirically; compare subset selection, ridge, and lasso on test error and coefficient paths.
 - 🛠️ How: Bias-variance: `E[(Y-f̂)²] = Bias²(f̂) + Var(f̂) + σ²`; Gauss-Markov: show OLS has minimum variance among linear unbiased estimators; subset selection: iterate over all 2^p subsets; ridge: `β̂ = (XᵀX + λI)⁻¹Xᵀy`; lasso coordinate descent: soft thresholding `S(z,γ) = sign(z)(|z|-γ)₊`; effective df from hat matrix trace.
 
-Week 117 — ESL Ch. 4–5: Linear Classification & Basis Expansions
+Week 129 — ESL Ch. 4–5: Linear Classification & Basis Expansions
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Master linear discriminant analysis (LDA), quadratic discriminant analysis (QDA), logistic regression, and separating hyperplanes; understand basis expansions (polynomial, splines, wavelets); implement natural cubic splines.
 - ✅ Pass: Derive LDA decision boundary assuming equal covariance; implement QDA allowing separate covariances; fit logistic regression via Newton-Raphson (IRLS); implement linear separating hyperplane via perceptron algorithm; construct natural cubic spline basis manually and fit regression; compare polynomial vs spline fits showing boundary bias and variance; derive and verify degrees of freedom for smoothing splines.
 - 🛠️ How: LDA: estimate class means μₖ and pooled covariance Σ, classify via `argmax_k log P(G=k) - ½(x-μₖ)ᵀΣ⁻¹(x-μₖ)`; QDA: separate Σₖ for each class; logistic IRLS: iterate `β := β + (XᵀWX)⁻¹Xᵀ(y-p)` where W=diag(p(1-p)); perceptron: `β := β + ηyᵢxᵢ` for misclassified points; natural spline: impose constraints for linearity beyond boundary knots.
 
-Week 118 — ESL Ch. 6–7: Kernel Methods & Model Assessment
+Week 126 — ESL Ch. 6–7: Kernel Methods & Model Assessment
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Understand kernel smoothing and local regression; implement k-nearest neighbors, Nadaraya-Watson estimator, local polynomial regression; master cross-validation theory (GCV, leave-one-out shortcuts); understand bootstrap for model selection; derive and implement optimism estimators (Cp, AIC, BIC).
 - ✅ Pass: Implement Nadaraya-Watson kernel regression with Gaussian kernel and bandwidth selection via CV; implement local linear regression (LOESS) and show boundary bias correction compared to Nadaraya-Watson; derive and implement leave-one-out CV shortcut for linear smoothers via hat matrix; implement 0.632 bootstrap estimator; compute Cp, AIC, BIC for nested models and verify consistency of BIC; compare all model selection criteria on a common dataset.
 - 🛠️ How: Nadaraya-Watson: `f̂(x₀) = Σ K((xᵢ-x₀)/h)yᵢ / Σ K((xᵢ-x₀)/h)`; LOESS: weighted least squares in local neighborhood; LOO shortcut: `CV = (1/n)Σ(yᵢ-f̂(xᵢ))²/(1-hᵢᵢ)²` where hᵢᵢ is diagonal of hat matrix; Cp: `RSS/σ² + 2d`; AIC: `-2log-likelihood + 2d`; BIC: `-2log-likelihood + log(n)d`.
 
-Week 119 — ESL Ch. 8–9: Model Inference & Additive Models
+Week 127 — ESL Ch. 8–9: Model Inference & Additive Models
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Understand bootstrap for inference (standard errors, confidence intervals, percentile and BCa methods); implement permutation tests; master generalized additive models (GAMs) with backfitting algorithm; understand tree-based models and CART algorithm.
 - ✅ Pass: Implement bootstrap confidence intervals (normal, percentile, BCa) and compare coverage on simulations; implement permutation test for independence and verify Type I error rate; implement GAM backfitting algorithm from scratch for additive model with spline components; fit and prune CART tree using cost-complexity pruning; compare tree to GAM on same dataset; prove backfitting convergence for additive models.
 - 🛠️ How: BCa: bias-correction `z₀` and acceleration `a` from jackknife; percentile: 2.5% and 97.5% quantiles of bootstrap distribution; permutation: shuffle one variable, recompute test statistic; backfitting: iterate `f̂ⱼ := S_j[Y - Σₖ≠ⱼf̂ₖ]` where Sⱼ is smoother; CART: recursive binary splits minimizing RSS or Gini; cost-complexity: `min_T Σ(yᵢ-ŷₜ)² + α|T|`.
 
-Week 120 — ESL Ch. 10: Boosting & Additive Models
+Week 128 — ESL Ch. 10: Boosting & Additive Models
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Understand AdaBoost algorithm and its connection to exponential loss; implement gradient boosting from scratch; understand forward stagewise additive modeling; derive L2Boosting and show connection to gradient descent in function space; implement shrinkage and early stopping for regularization.
 - ✅ Pass: Implement AdaBoost with decision stumps from scratch; show connection to exponential loss by deriving weight updates; implement gradient boosting with squared loss and deviance loss; demonstrate that gradient boosting is steepest descent in function space; compare learning rates and early stopping for regularization; implement stochastic gradient boosting (subsampling); produce learning curves showing train/validation error vs boosting iterations.
 - 🛠️ How: AdaBoost: iterate `err_m = Σw_i I(y_i≠G_m(x_i))/Σw_i`, `α_m = log((1-err_m)/err_m)`, `w_i := w_i exp(α_m I(y_i≠G_m))`, final: `G = sign(Σα_m G_m)`; gradient boosting: `f_m = f_{m-1} + ν·h_m` where `h_m` fits residuals `-∂L/∂f`; derive for squared loss: residuals are `y-f`; for deviance: residuals are gradients of log-likelihood.
 
-Week 121 — ESL Ch. 11–12: Neural Networks & Support Vector Machines
+Week 129 — ESL Ch. 11–12: Neural Networks & Support Vector Machines
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Implement feedforward neural network with backpropagation from scratch; understand universal approximation; derive and implement weight decay and early stopping; implement SVM via quadratic programming; understand kernel trick and mercer kernels; compare SVM to logistic regression and neural networks.
 - ✅ Pass: Implement multi-layer perceptron with one hidden layer from scratch including backpropagation; verify gradient computation with finite differences; train on classification and regression tasks with weight decay; implement SVM dual problem and solve with quadratic programming; implement kernel SVM with RBF kernel; visualize decision boundaries; compare SVM, logistic regression, and neural network on nonlinearly separable data; demonstrate kernel trick equivalence.
 - 🛠️ How: Backprop: forward pass compute activations, backward pass compute gradients via chain rule; weight update: `w := w - η∂L/∂w`; SVM dual: `max Σαᵢ - ½ΣΣαᵢαⱼyᵢyⱼxᵢᵀxⱼ` subject to `0≤α≤C`, `Σαᵢyᵢ=0`; kernel trick: replace `xᵢᵀxⱼ` with `K(xᵢ,xⱼ)`; use `cvxopt.solvers.qp` or `scipy.optimize.minimize` for QP.
 
-Week 122 — ESL Ch. 13–14: Prototype Methods & Unsupervised Learning
+Week 126 — ESL Ch. 13–14: Prototype Methods & Unsupervised Learning
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Implement k-means, k-medoids, and Gaussian mixture models (GMM) via EM; understand learning vector quantization (LVQ); implement hierarchical clustering with different linkages; understand self-organizing maps (SOM); derive EM algorithm for GMM from first principles.
 - ✅ Pass: Implement k-means from scratch and prove convergence (monotonic decrease of objective); implement k-medoids (PAM algorithm); derive EM algorithm for GMM (E-step: compute responsibilities, M-step: update parameters); implement GMM-EM and compare to k-means; implement hierarchical clustering with single, complete, and average linkage; compute cophenetic correlation; implement LVQ and compare to k-means; visualize dendrograms and cluster quality metrics (silhouette, Davies-Bouldin).
 - 🛠️ How: k-means: iterate assign-to-nearest-centroid, update-centroids; objective: `Σᵢ Σₖ rᵢₖ||xᵢ-μₖ||²`; EM for GMM: `γᵢₖ = πₖ N(xᵢ|μₖ,Σₖ) / Σⱼ πⱼ N(xᵢ|μⱼ,Σⱼ)`, update `πₖ = Σγᵢₖ/n`, `μₖ = Σγᵢₖxᵢ/Σγᵢₖ`, `Σₖ = Σγᵢₖ(xᵢ-μₖ)(xᵢ-μₖ)ᵀ/Σγᵢₖ`; hierarchical: `scipy.cluster.hierarchy`; cophenetic: correlation between pairwise distances and dendrogram heights.
 
-Week 123 — ESL Ch. 15: Random Forests
+Week 127 — ESL Ch. 15: Random Forests
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Understand bagging and its variance reduction; implement random forests from scratch with bootstrap sampling and feature subsampling; compute out-of-bag (OOB) error as unbiased test error estimate; understand variable importance measures (permutation, Gini); analyze effect of correlation between trees.
 - ✅ Pass: Implement random forest from scratch (bootstrap samples, random feature subset at each split, majority vote/averaging); compute OOB error and compare to test error and cross-validation; implement variable importance via permutation (OOB samples) and Gini decrease; demonstrate variance reduction compared to single tree via bias-variance decomposition; analyze effect of number of features sampled (mtry) on correlation between trees and forest performance; produce partial dependence plots.
 - 🛠️ How: Random forest: build B trees each on bootstrap sample with feature subsampling (√p for classification, p/3 for regression); OOB error: for each observation, average predictions from trees not containing it in bootstrap sample; permutation importance: shuffle feature j in OOB data, compute increase in OOB error; Gini importance: sum Gini decrease when splitting on feature across all trees; correlation: compute pairwise correlation of tree predictions.
 
-Week 124 — ESL Ch. 16–17: Ensemble Learning & Graphical Models
+Week 128 — ESL Ch. 16–17: Ensemble Learning & Graphical Models
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Master ensemble methods theory; understand stacking and super learner; implement Bayesian model averaging; explore undirected graphical models (Markov networks); understand conditional independence and the Hammersley-Clifford theorem; implement graphical lasso for sparse inverse covariance estimation.
 - ✅ Pass: Implement stacked generalization (train meta-learner on out-of-fold predictions); implement super learner with cross-validation-based weighting; compute Bayesian model averaging weights using BIC approximation; implement graphical lasso (L1-penalized precision matrix estimation) and visualize resulting network; test conditional independence using partial correlations; compare ensemble methods (bagging, boosting, stacking) on same dataset with ≥5 base learners; produce detailed analysis of why and when each ensemble method excels.
 - 🛠️ How: Stacking: train base learners, collect out-of-fold predictions, train meta-learner on these; super learner: non-negative weights minimizing CV error `min Σ(yᵢ - Σαₖf̂ₖ⁽⁻ⁱ⁾)²` subject to `α≥0`, `Σα=1`; BMA weights: `w_k ∝ exp(-BIC_k/2)`; graphical lasso: `max log det Θ - tr(SΘ) - λ||Θ||₁`; use `sklearn_glasso` or ADMM implementation; zero entries in Θ imply conditional independence.
 
-Week 125 — ESL Ch. 18 & Integration: High-Dimensional Problems
+Week 129 — ESL Ch. 18 & Integration: High-Dimensional Problems
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
 - 🧪 Practice: Understand challenges in high-dimensional settings (p >> n); implement elastic net combining L1 and L2 penalties; understand the Lasso path and LARS algorithm; implement fused lasso for spatial/temporal smoothing; master multiple testing correction (FDR, FWER); understand compressed sensing and restricted isometry property.
 - ✅ Pass: Implement elastic net and demonstrate scenarios where it outperforms pure lasso or ridge; implement LARS algorithm and verify equivalence to lasso path; implement fused lasso for 1D signal denoising; apply multiple testing corrections (Bonferroni, Holm, Benjamini-Hochberg) and compare false discovery rates via simulation; demonstrate compressed sensing recovery with RIP-satisfying matrices; integrate ≥5 ESL techniques in comprehensive analysis comparing interpretability, prediction accuracy, computational cost, and theoretical guarantees.
@@ -708,7 +732,7 @@ Week 125 — ESL Ch. 18 & Integration: High-Dimensional Problems
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 14 · Deep Learning — Weeks 126–145 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
+<summary><b>Phase 14 · Deep Learning — Weeks 130–149 (Complete D2L fundamentals, Goodfellow DL)</b></summary>
 
 Weeks 120–127 — D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
@@ -736,9 +760,9 @@ Weeks 129–139 — Deep Learning Book (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 15 · R for Data Science — Weeks 146–155 (Complete R4DS 2e)</b></summary>
+<summary><b>Phase 15 · R for Data Science — Weeks 150–159 (Complete R4DS 2e)</b></summary>
 
-Weeks 146–155 — R4DS (Complete)
+Weeks 150–159 — R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
 - 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
 - ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
@@ -752,21 +776,21 @@ Weeks 146–155 — R4DS (Complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 16 · Econometrics, Time Series & Financial Econometrics — Weeks 156–183 (Complete Gujarati, Lütkepohl, Financial Econometrics)</b></summary>
+<summary><b>Phase 16 · Econometrics, Time Series & Financial Econometrics — Weeks 160–187 (Complete Gujarati, Lütkepohl, Financial Econometrics)</b></summary>
 
-Weeks 156–167 — Basic Econometrics (complete)
+Weeks 160–171 — Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
 - 🧪 Practice: Reproduce a worked example per chapter using methods from that chapter only (OLS basics; classical assumption diagnostics; heteroskedasticity/autocorrelation remedies; functional form; limited dependent variables as presented)
 - ✅ Pass (weekly): Match the textbook example’s coefficients and standard errors (within rounding) and include one robustness check discussed in that chapter (e.g., robust/HAC SEs when appropriate).
 - 🛠️ How: `statsmodels` OLS/GLM, `cov_type="HC3"` or HAC if the chapter addresses it; include diagnostic plots taught there.
 
-Weeks 168–177 — Lütkepohl (complete)
+Weeks 172–181 — Lütkepohl (complete)
 - 📖 [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
 - 🧪 Practice: Implement multivariate time series analysis: VAR model specification, estimation, lag order selection, stability analysis, impulse response functions, forecast error variance decomposition, and cointegration/VECM.
 - ✅ Pass (weekly): Fit VAR/VECM to macroeconomic data; select lag order using information criteria; verify stability (roots inside unit circle); compute and plot IRFs with confidence bands; perform Johansen cointegration test when applicable.
 - 🛠️ How: `statsmodels.tsa.api.VAR`; `statsmodels.tsa.vector_ar.vecm.VECM`; `irf()` for impulse responses; rolling-window forecasts for evaluation.
 
-Weeks 178–183 — Financial Econometrics (complete)
+Weeks 182–187 — Financial Econometrics (complete)
 - 📖 [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
 - 🧪 Practice: Master financial econometrics progressively: volatility modeling (ARCH/GARCH family), multivariate GARCH models, realized volatility and high-frequency data analysis, factor models for asset pricing, portfolio optimization, option pricing and risk management.
 - ✅ Pass (weekly): Reproduce examples from the text using methods from each section; implement ARCH/GARCH models and forecast volatility; estimate multivariate GARCH (CCC, DCC, BEKK) and compute risk measures (VaR, ES); analyze high-frequency data and compute realized volatility; apply factor models (CAPM, Fama-French) and optimize portfolios; implement Black-Scholes pricing and calibrate volatility surfaces; verify model specifications using information criteria and diagnostic tests.
@@ -780,63 +804,63 @@ Weeks 178–183 — Financial Econometrics (complete)
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 17 · Causal Inference — Weeks 184–193 (Complete The Mixtape)</b></summary>
+<summary><b>Phase 17 · Causal Inference — Weeks 188–197 (Complete The Mixtape)</b></summary>
 
-Week 192 — Properties of Regression, DAGs, Potential Outcomes
+Week 196 — Properties of Regression, DAGs, Potential Outcomes
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand Simpson's paradox and collider bias; draw and analyze directed acyclic graphs (DAGs); master potential outcomes framework; understand Average Treatment Effect (ATE) and selection bias.
 - ✅ Pass: Implement Simpson's paradox example showing reversal of association; construct ≥3 DAGs identifying confounders, mediators, and colliders; derive ATE under different selection mechanisms; demonstrate selection bias analytically and via simulation.
 - 🛠️ How: Use `networkx` or `dagitty` for DAG visualization; simulate counterfactuals with fixed treatment assignments; compute `E[Y¹] - E[Y⁰]` vs observed difference-in-means; show bias = `E[Y⁰|D=1] - E[Y⁰|D=0]`.
 
-Week 193 — Randomized Controlled Trials & Matching
+Week 197 — Randomized Controlled Trials & Matching
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand randomization inference; implement exact matching, propensity score matching (PSM), and coarsened exact matching; check covariate balance; assess common support.
 - ✅ Pass: Analyze an RCT dataset computing ATE with randomization inference (permutation test); implement PSM with ≥3 matching algorithms (nearest neighbor, caliper, kernel); produce balance tables and Love plots before/after matching; check common support with density plots; report treatment effects with bootstrapped standard errors.
 - 🛠️ How: Permutation test: shuffle treatment vector 1000+ times, recompute difference-in-means; `sklearn.neighbors.NearestNeighbors` for matching; logistic regression for propensity scores; standardized mean differences for balance; `seaborn.kdeplot` for common support.
 
-Week 192 — Regression Discontinuity Design (RDD)
+Week 196 — Regression Discontinuity Design (RDD)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand sharp and fuzzy RDD; check continuity assumptions; select bandwidth using cross-validation and optimal methods; test for manipulation of running variable; implement local polynomial regression.
 - ✅ Pass: Apply RDD to real or simulated data with a known cutoff; test for discontinuity at the threshold using local linear regression with ≥3 bandwidths; perform McCrary density test for manipulation; produce RDD plots showing outcome vs running variable with fitted lines; report local average treatment effect (LATE) with robust standard errors; conduct placebo tests at false cutoffs.
 - 🛠️ How: Local linear regression within bandwidth h: `Y ~ D + (X-c) + D*(X-c)` for |X-c| < h; optimal bandwidth via `rdrobust` (R) or manual cross-validation; McCrary test: fit separate densities left/right of cutoff and test for jump; bootstrap for inference.
 
-Week 193 — Instrumental Variables (IV)
+Week 197 — Instrumental Variables (IV)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand endogeneity and IV identification; implement two-stage least squares (2SLS); test instrument relevance and exogeneity; understand weak instruments problem; compute local average treatment effect (LATE) with compliance types.
 - ✅ Pass: Identify a valid instrument and justify exclusion restriction; implement 2SLS manually (first stage, second stage) and compare to built-in IV estimator; test instrument strength (F-stat > 10 rule of thumb, Cragg-Donald); perform overidentification test when multiple instruments available; compute LATE and interpret in terms of compliers; conduct sensitivity analysis for violation of exclusion restriction.
 - 🛠️ How: Manual 2SLS: regress X on Z (first stage), predict X̂, regress Y on X̂ (second stage); `statsmodels.sandbox.regression.gmm.IV2SLS` or `linearmodels.iv.IV2SLS`; first-stage F-stat for relevance; Hansen J-stat for overidentification; bound analysis for exclusion restriction violations.
 
-Week 192 — Panel Data & Fixed Effects
+Week 196 — Panel Data & Fixed Effects
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand within-group variation; implement fixed effects (FE) and first differences (FD); test fixed vs random effects (Hausman test); handle time-varying treatments; understand parallel trends assumption.
 - ✅ Pass: Estimate panel data model with entity and time fixed effects; compare pooled OLS, FE, and random effects; perform Hausman test; demean data manually and verify equivalence to FE estimator; produce event study plots for dynamic treatment effects; test parallel trends visually and formally; cluster standard errors at appropriate level.
 - 🛠️ How: FE via demeaning: `Y_it - Ȳ_i = (X_it - X̄_i)β + (ε_it - ε̄_i)`; `linearmodels.panel.PanelOLS` with `entity_effects=True`; Hausman test compares FE vs RE; event study: include leads/lags of treatment; plot coefficients with 95% CIs; cluster SEs: `cov_type='clustered'`.
 
-Week 193 — Difference-in-Differences (DiD)
+Week 197 — Difference-in-Differences (DiD)
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Implement canonical 2×2 DiD; test parallel trends assumption; handle staggered treatment adoption; understand two-way fixed effects (TWFE) issues with heterogeneous treatment effects; apply robust DiD estimators.
 - ✅ Pass: Estimate 2×2 DiD with interaction term and verify equivalence to group-time means; test parallel trends with pre-treatment period placebo tests; visualize trends with event study; implement staggered DiD using TWFE and compare to Callaway-Sant'Anna or Sun-Abraham estimators to avoid bias from heterogeneous effects; report treatment effects with wild cluster bootstrap standard errors.
 - 🛠️ How: DiD: `Y = β₀ + β₁·Treated + β₂·Post + β₃·(Treated×Post)`; parallel trends: plot group-specific trends pre-treatment; placebo DiD on earlier periods; for staggered adoption, never-treated as control group; decompose TWFE weights; wild bootstrap: `clustered_bootstrap` with Rademacher weights.
 
-Week 192 — Synthetic Control Method
+Week 196 — Synthetic Control Method
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand synthetic control as data-driven matching on pre-treatment outcomes; implement synthetic control optimization; conduct permutation-based inference; assess fit quality; handle multiple treated units.
 - ✅ Pass: Apply synthetic control to a policy intervention; construct synthetic control by optimizing weights on donor pool to match pre-treatment outcomes; report weights and predictor balance; visualize treated vs synthetic trends; conduct placebo tests by reassigning treatment to each donor; compute p-values from permutation distribution; assess robustness by excluding donors iteratively; report pre/post-treatment RMSPE ratio.
 - 🛠️ How: Synthetic control: minimize `||X₁ - X₀W||` subject to `W ≥ 0`, `∑W = 1`, where X₁ is treated unit pre-treatment outcomes, X₀ is donor matrix; use `scipy.optimize.minimize` with constraints or quadratic programming; permutation inference: apply method to each control unit, rank treatment effect; gap plot showing treated - synthetic over time; leave-one-out for robustness.
 
-Week 193 — Regression Kink Design & Bunching
+Week 197 — Regression Kink Design & Bunching
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Understand regression kink design (RKD) as derivative discontinuity; implement bunching estimator for detecting behavioral responses; test for slope changes; estimate elasticities.
 - ✅ Pass: Apply RKD to a policy with kinked schedule (e.g., tax, subsidy); test for change in slope at kink point using local polynomial regression on subsamples; visualize kink with binned scatter plot; implement bunching estimator by comparing empirical distribution to counterfactual; estimate excess mass and implied elasticity; conduct robustness checks varying excluded region and polynomial order.
 - 🛠️ How: RKD: estimate `dY/dX` separately left/right of kink, test equality; local linear separately each side: `Y ~ (X-k) + covariates` for X near k; binned scatter: equal-sized bins, plot means; bunching: integrate empirical density, fit counterfactual excluding region around kink (polynomial fit), excess mass = observed - counterfactual; elasticity from excess mass and tax change.
 
-Week 192 — Regression Sensitivity & Bounds
+Week 196 — Regression Sensitivity & Bounds
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Assess robustness using omitted variable bias (OVB) formulas; implement Oster (2019) bounds; conduct sensitivity analysis for unobserved confounding; use Rosenbaum bounds for matching estimators; understand partial identification.
 - ✅ Pass: Apply OVB formula to show direction/magnitude of bias from omitted confounder; implement Oster method computing δ (relative importance of unobservables) for null result; produce sensitivity plots showing treatment effect as function of confounder strength; apply Rosenbaum bounds to PSM estimates varying Γ; report identified set and discuss assumption needed for causal claim; compare naïve, conditional, and bounded estimates.
 - 🛠️ How: OVB: `β̂ = β + γ·δ` where γ is effect of omitted U on Y, δ is coefficient from X ~ U; Oster δ: `δ = [R²max - R̃²]/[R̃² - R°²] · [β̃ - β*]/[β° - β̃]`; plot treatment effect vs confounding strength; Rosenbaum Γ: recompute p-value under assumption of hidden bias; identified set: report range of treatment effects consistent with assumptions.
 
-Week 193 — Advanced Topics & Review
+Week 197 — Advanced Topics & Review
 - 📖 [The Mixtape](https://mixtape.scunning.com)
 - 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
 - ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
@@ -850,21 +874,21 @@ Week 193 — Advanced Topics & Review
 ---------------------------------------------------------------------
 
 <details>
-<summary><b>Phase 18 · MLOps & Data Engineering — Weeks 194–217 (Complete Zoomcamps, ML Systems)</b></summary>
+<summary><b>Phase 18 · MLOps & Data Engineering — Weeks 198–221 (Complete Zoomcamps, ML Systems)</b></summary>
 
-Weeks 194–201 — MLOps Zoomcamp
+Weeks 198–205 — MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
 - 🧪 Practice: Module-by-module implementation as taught (tracking, packaging, CI, serving, orchestration, monitoring)
 - ✅ Pass (weekly): A runnable local pipeline from clean state to served endpoint with tests passing for that week’s scope.
 - 🛠️ How: Docker/Compose; MLflow/W&B; `pytest`; minimal infra defined as per module.
 
-Weeks 202–209 — Machine Learning Systems
+Weeks 206–213 — Machine Learning Systems
 - 📖 [ML Systems](https://mlsysbook.ai)
 - 🧪 Practice: Write/extend a system design doc each week focusing only on that week’s concepts (SLA/SLOs; rollout/rollback; monitoring; data contracts; cost/reliability)
 - ✅ Pass (weekly): The doc includes concrete metrics, failure scenarios, and operational procedures aligned to the chapter.
 - 🛠️ How: ADR template; simple diagrams-as-code optional (e.g., Mermaid).
 
-Weeks 210–217 — Data Engineering Zoomcamp
+Weeks 214–221 — Data Engineering Zoomcamp
 - 📖 [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 - 🧪 Practice: Module-by-module pipeline work (ingestion, storage, batch/stream, orchestration, analytics eng, testing) as taught in the course
 - ✅ Pass (weekly): Re-deployable pipeline from scratch with idempotent runs for that module’s scope.
@@ -887,26 +911,26 @@ Resource-to-Week Completion Map (cover-to-cover)
 - Introduction to Probability (Grinstead & Snell) — Weeks 25–28 — [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 - Convex Optimization (Boyd & Vandenberghe) — Weeks 29–38 — [Convex Optimization (PDF)](https://stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
 - Think Stats — Weeks 39–44 — [Think Stats](https://allendowney.github.io/ThinkStats/)
-- Modern Mathematical Statistics with Applications (Devore) — Weeks 45–50 — [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
-- PSU STAT 505 (Applied Multivariate Statistics) — Weeks 51–65 — [PSU STAT 505](https://online.stat.psu.edu/stat505)
-- Think Bayes — Weeks 66–73 — [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
-- Flexible Imputation of Missing Data — Weeks 74–77 — [FIMD](https://stefvanbuuren.name/fimd/)
-- ISLP (Statistical Learning with Python) — Weeks 78–87 — [ISLP](https://www.statlearning.com/)
-- Data Mining: Concepts and Techniques (3e) — Weeks 88–96 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
-- PRML (Bishop) — Weeks 97–110 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-- Interpretable Machine Learning — Weeks 111–115 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
-- The Elements of Statistical Learning (Hastie, Tibshirani, Friedman) — Weeks 116–125 — [ESL](https://hastie.su.domains/ElemStatLearn/)
-- Dive into Deep Learning — Weeks 126–133 — [D2L](https://d2l.ai)
-- The Illustrated Transformer — Week 134 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- Deep Learning — Weeks 135–145 — [Deep Learning Book](https://www.deeplearningbook.org/)
-- R for Data Science (2e) — Weeks 146–155 — [R for Data Science (2e)](https://r4ds.hadley.nz)
-- Basic Econometrics (Gujarati) — Weeks 156–167 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
-- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 168–177 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
-- Financial Econometrics (Sheppard) — Weeks 178–183 — [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
-- Causal Inference: The Mixtape (Cunningham) — Weeks 184–193 — [The Mixtape](https://mixtape.scunning.com)
-- MLOps Zoomcamp — Weeks 194–201 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
-- Machine Learning Systems — Weeks 202–209 — [ML Systems](https://mlsysbook.ai)
-- Data Engineering Zoomcamp — Weeks 210–217 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+- Modern Mathematical Statistics with Applications (Devore) — Weeks 45–54 — [Modern Mathematical Statistics with Applications](https://archive.org/details/modernmathematic0000devo/)
+- PSU STAT 505 (Applied Multivariate Statistics) — Weeks 55–69 — [PSU STAT 505](https://online.stat.psu.edu/stat505)
+- Think Bayes — Weeks 70–77 — [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
+- Flexible Imputation of Missing Data — Weeks 78–81 — [FIMD](https://stefvanbuuren.name/fimd/)
+- ISLP (Statistical Learning with Python) — Weeks 82–91 — [ISLP](https://www.statlearning.com/)
+- Data Mining: Concepts and Techniques (3e) — Weeks 92–100 — [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
+- PRML (Bishop) — Weeks 101–114 — [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
+- Interpretable Machine Learning — Weeks 115–119 — [Interpretable ML](https://christophm.github.io/interpretable-ml-book/)
+- The Elements of Statistical Learning (Hastie, Tibshirani, Friedman) — Weeks 120–129 — [ESL](https://hastie.su.domains/ElemStatLearn/)
+- Dive into Deep Learning — Weeks 130–137 — [D2L](https://d2l.ai)
+- The Illustrated Transformer — Week 138 — [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- Deep Learning — Weeks 139–149 — [Deep Learning Book](https://www.deeplearningbook.org/)
+- R for Data Science (2e) — Weeks 150–159 — [R for Data Science (2e)](https://r4ds.hadley.nz)
+- Basic Econometrics (Gujarati) — Weeks 160–171 — [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
+- New Introduction to Multiple Time Series (Lütkepohl) — Weeks 172–181 — [Lütkepohl (PDF)](https://www.cur.ac.rw/mis/main/library/documents/book_file/2005_Book_NewIntroductionToMultipleTimeS.pdf)
+- Financial Econometrics (Sheppard) — Weeks 182–187 — [Financial Econometrics (PDF)](https://bashtage.github.io/kevinsheppard.com/files/teaching/mfe/notes/financial-econometrics-2020-2021.pdf)
+- Causal Inference: The Mixtape (Cunningham) — Weeks 188–197 — [The Mixtape](https://mixtape.scunning.com)
+- MLOps Zoomcamp — Weeks 198–205 — [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
+- Machine Learning Systems — Weeks 206–213 — [ML Systems](https://mlsysbook.ai)
+- Data Engineering Zoomcamp — Weeks 214–221 — [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
 Notes
 - Keep work in any format; seed randomness for reproducibility.
