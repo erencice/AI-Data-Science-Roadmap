@@ -10,23 +10,22 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 — Quick jump —
 - Phase 1 · Data Analysis Foundations
 - Phase 2 · Web Scraping & SQL
-- Phase 3 · Mathematics for ML
+- Phase 3 · Mathematics for Machine Learning
 - Phase 4 · Introduction to Probability
 - Phase 5 · Convex Optimization
 - Phase 6 · Statistics Fundamentals
-- Phase 7 · Applied Multivariate Statistics
-- Phase 8 · Bayesian Statistics & Missing Data
-- Phase 9 · Statistical Learning with Python (ISLP)
-- Phase 10 · Data Mining
-- Phase 11 · Classical ML
-- Phase 12 · Elements of Statistical Learning
-- Phase 13 · Deep Learning
-- Phase 14 · LLMs & Open-Source AI
+- Phase 7 · Mathematical Statistics
+- Phase 8 · Applied Multivariate Statistics
+- Phase 9 · Bayesian Statistics & Missing Data
+- Phase 10 · Statistical Learning with Python (ISLP)
+- Phase 11 · Data Mining
+- Phase 12 · Classical Machine Learning
+- Phase 13 · Elements of Statistical Learning
+- Phase 14 · Deep Learning
 - Phase 15 · R for Data Science
 - Phase 16 · Econometrics, Time Series & Financial Econometrics
 - Phase 17 · Causal Inference
 - Phase 18 · MLOps & Data Engineering
-- Phase 19 · Consolidation & Capstone
 
 Legend
 - 📖 Activities (primary source)
