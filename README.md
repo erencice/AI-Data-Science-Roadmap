@@ -46,9 +46,9 @@ Duration and pacing
 
 Week 1 — P4DA Ch. 1–2
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
-- 🧪 Practice: Set up Python environment (conda/pip); run IPython/Jupyter; practice Python basics (variables, control flow, functions); understand the data analysis ecosystem.
-- ✅ Pass: Create a notebook demonstrating Python fundamentals: define 3 functions, use return keyword and print functions.
-- 🛠️ How: Install Anaconda or Miniconda; launch Jupyter; experiment with built-in types and control constructs; check out the library overview in Ch.1 and see Ch.2.
+- 🧪 Practice: Review basic Python usage (variables, simple control flow, functions) and revisit the relevant chapters.
+- ✅ Pass: Create a simple notebook that shows basic Python syntax (a few variables, a simple function, and basic output).
+- 🛠️ How: Open Jupyter and review examples from the relevant sections in Ch.1 and Ch.2; no advanced setup or libraries required.
 
 Week 2 — P4DA Ch. 3–4
 - 📖 Activities: [Python for Data Analysis](https://wesmckinney.com/book/)
