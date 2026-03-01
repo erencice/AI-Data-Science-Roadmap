@@ -132,64 +132,64 @@ Week 11 — Advanced Functions, Performance & Advanced SQL Features
 <summary><b>Phase 3 · Mathematics for ML — Weeks 12–21 (Complete MML)</b></summary>
 
 Week 12 — Linear Algebra I
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Vectors (addition, scalar multiplication, norms); matrix operations (transpose, multiplication); linear independence and basis.
-- ✅ Pass: Implement vector/matrix operations from scratch; verify linear independence of a set of vectors; compute and interpret different vector norms (L1, L2, Linf).
-- 🛠️ How: `np.dot`, `np.linalg.norm`, `np.linalg.matrix_rank`; manually verify independence via row reduction.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 2, §2.1–2.5
+- 🧪 Practice: Systems of linear equations and their geometric interpretation (§2.1); matrix addition, multiplication, and transpose (§2.2); Gaussian elimination and row echelon form (§2.3); vector spaces and subspaces (§2.4); linear independence and span (§2.5).
+- ✅ Pass: Solve a 3×3 system Ax=b by hand using Gaussian elimination; confirm the solution via `np.linalg.solve`; determine whether three given vectors in ℝ³ are linearly independent using row reduction and rank check.
+- 🛠️ How: `np.linalg.solve`, `np.linalg.matrix_rank`; `sympy.Matrix.rref()` for row echelon form; compare rank to number of columns to test independence.
 
 Week 13 — Linear Algebra II
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Eigenvalues and eigenvectors; matrix diagonalization; positive definiteness; condition number.
-- ✅ Pass: Compute eigendecomposition of symmetric matrices; verify diagonalization A = PDP⁻¹; check positive definiteness via eigenvalues; interpret condition number for numerical stability.
-- 🛠️ How: `np.linalg.eig`, `np.linalg.eigh` for symmetric; `np.linalg.cond`; verify reconstruction.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 2, §2.6–2.8; Ch. 3
+- 🧪 Practice: Basis and rank (§2.6); linear mappings and transformation matrices (§2.7); affine spaces (§2.8); norms and inner products (§3.1–3.2); orthogonality, orthonormal bases, and orthogonal projections (§3.4–3.8).
+- ✅ Pass: Find a basis for the column space and null space of a matrix; perform a change of basis; project a vector onto a subspace using the projection formula; verify orthonormality of a Gram-Schmidt result.
+- 🛠️ How: `scipy.linalg.null_space`, `np.linalg.matrix_rank`; implement Gram-Schmidt manually; projection formula P = A(AᵀA)⁻¹Aᵀ.
 
-Week 14 — Decompositions & Geometry
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: SVD and its applications; orthogonal projections; analytic geometry (distances, angles, hyperplanes).
-- ✅ Pass: Compute SVD; reconstruct matrix from top-k components and plot reconstruction error vs k; project points onto a subspace; compute distances to hyperplanes.
-- 🛠️ How: `np.linalg.svd`; projection formula; `np.linalg.lstsq` for least squares via normal equations and QR.
+Week 14 — Matrix Decompositions
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 4
+- 🧪 Practice: Determinant and trace (§4.1); eigenvalues and eigenvectors (§4.2); Cholesky decomposition (§4.3); eigendecomposition A=PDP⁻¹ and positive definiteness (§4.4); Singular Value Decomposition (§4.5); low-rank matrix approximation (§4.6).
+- ✅ Pass: Compute eigendecomposition of a symmetric matrix; verify A=PDP⁻¹ by reconstruction; compute full SVD; reconstruct the matrix from its top-k singular values and plot Frobenius reconstruction error vs k.
+- 🛠️ How: `np.linalg.eigh` for symmetric matrices, `np.linalg.eig` for general; `np.linalg.svd`; `np.linalg.cholesky`; Frobenius error `np.linalg.norm(A - Ak, 'fro')`.
 
 Week 15 — Vector Calculus I
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Partial derivatives; gradients of scalar functions; Jacobians of vector functions.
-- ✅ Pass: Compute gradients analytically for multivariate functions; verify with numerical finite differences; visualize gradient field on a contour plot.
-- 🛠️ How: Derive gradient by hand; implement central differences `(f(x+h)-f(x-h))/(2h)`; `plt.contour` with `plt.quiver`.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 5, §5.1–5.4
+- 🧪 Practice: Differentiation of univariate functions (§5.1); partial derivatives and gradients of scalar-valued functions (§5.2); Jacobians of vector-valued functions (§5.3); gradients of matrices (§5.4).
+- ✅ Pass: Compute the gradient of f(x,y)=x²y+sin(y) analytically; verify each partial derivative with central differences; compute the Jacobian of g(x,y)=[x²+y, xy] analytically and compare each entry to the numerical Jacobian.
+- 🛠️ How: Central differences `(f(x+h)−f(x−h))/(2h)` per component; `sympy.diff` for symbolic verification; compute each column of the numerical Jacobian by perturbing one input variable at a time and differencing each output component (∂gᵢ/∂xⱼ ≈ (gᵢ(x+heⱼ)−gᵢ(x−heⱼ))/(2h)).
 
 Week 16 — Vector Calculus II
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Chain rule for composed functions; backpropagation intuition; Hessians and second-order derivatives.
-- ✅ Pass: Derive gradients of composed functions using chain rule; compute Hessian matrix; verify gradient computation with central-difference check (max abs diff < 1e-4).
-- 🛠️ How: Symbolic differentiation by hand; numerical Hessian via finite differences; check gradient correctness.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 5, §5.5–5.8
+- 🧪 Practice: Useful gradient identities (§5.5); backpropagation and automatic differentiation (§5.6); higher-order derivatives and Hessians (§5.7); linearization and multivariate Taylor series (§5.8).
+- ✅ Pass: Derive gradients of composed functions using chain rule; compute the Hessian of a multivariate function and verify positive/negative definiteness; implement a 2-layer forward and backward pass and verify all gradients against central differences (max abs diff < 1e-4).
+- 🛠️ How: Chain rule by hand; numerical Hessian via finite differences; `torch.autograd` or the `autograd` library for automatic differentiation verification.
 
 Week 17 — Probability I
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Random variables; probability distributions (discrete and continuous); expectation and variance; common distributions (Bernoulli, Binomial, Gaussian).
-- ✅ Pass: Simulate samples from common distributions; compute empirical vs theoretical mean/variance; verify Law of Large Numbers by plotting sample mean convergence.
-- 🛠️ How: `np.random`, `scipy.stats`; compare empirical moments to closed-form expressions.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 6, §6.1–6.4
+- 🧪 Practice: Probability spaces, sample spaces, and events (§6.1); discrete and continuous probabilities (§6.2); sum rule, product rule, and Bayes' theorem (§6.3); expectation, variance, covariance, and correlation as summary statistics (§6.4).
+- ✅ Pass: Apply Bayes' theorem to a disease-testing scenario; compute joint, marginal, and conditional probabilities from a 2×2 contingency table; verify both the Bayes' theorem result and the contingency table probabilities via simulation; confirm Law of Large Numbers by plotting sample mean convergence.
+- 🛠️ How: `np.random`, `scipy.stats`; verify `P(A|B)=P(A∩B)/P(B)`; Bayes: `P(A|B)=P(B|A)P(A)/P(B)`; compare empirical moments to closed-form expressions.
 
 Week 18 — Probability II
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Joint and marginal distributions; covariance and correlation; multivariate Gaussian; Gaussian conditioning and marginalization.
-- ✅ Pass: Generate correlated Normals via Cholesky decomposition; recover empirical covariance matrix; visualize 2D Gaussian contours; demonstrate conditioning a multivariate Gaussian.
-- 🛠️ How: `L = np.linalg.cholesky(Sigma)`; `X = Z @ L.T`; `np.cov`; contour plots for bivariate Gaussian.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 6, §6.5–6.7
+- 🧪 Practice: Univariate and multivariate Gaussian distributions (§6.5); conjugacy and exponential family (§6.6); change of variables and the inverse-CDF method (§6.7).
+- ✅ Pass: Sample from a multivariate Gaussian via Cholesky decomposition; recover the empirical covariance matrix and compare it to Σ; visualize 2D Gaussian contours; implement inverse-CDF sampling for an Exponential distribution and verify with a Q-Q plot.
+- 🛠️ How: `L = np.linalg.cholesky(Sigma)`, `X = Z @ L.T`; `np.cov`; inverse CDF: `scipy.stats.expon.ppf`; `scipy.stats.probplot` for Q-Q verification.
 
 Week 19 — Optimization I
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Convex functions and sets; gradient descent algorithm; learning rate selection; convergence analysis.
-- ✅ Pass: Implement gradient descent for a convex quadratic f(x)=½x^TQx+c^Tx; show monotone loss decrease; experiment with different step sizes and plot convergence curves.
-- 🛠️ How: Analytic gradient Qx+c; fixed and adaptive step sizes; plot loss vs iterations.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 7, §7.1–7.2
+- 🧪 Practice: Gradient descent algorithm and step-size selection (§7.1); constrained optimization and Lagrange multipliers (§7.2).
+- ✅ Pass: Implement gradient descent for f(x)=½xᵀQx+cᵀx; demonstrate monotone loss decrease; compare convergence (iterations to tolerance) for three step sizes; solve an equality-constrained problem analytically using Lagrange multipliers and verify KKT conditions.
+- 🛠️ How: Analytic gradient Qx+c; fixed and backtracking line-search step sizes; plot loss vs iterations; verify stationarity of Lagrangian ∇L=0.
 
 Week 20 — Optimization II
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Newton's method; constrained optimization concepts; regularization and its geometric interpretation.
-- ✅ Pass: Implement Newton's method using Hessian; compare convergence (iterations to tolerance) with gradient descent; solve ridge regression and visualize how λ affects the solution.
-- 🛠️ How: Newton step: x_new = x - H⁻¹∇f; `scipy.optimize.minimize`; compare first-order vs second-order methods.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — Ch. 7, §7.3; Ch. 9–10
+- 🧪 Practice: Convex sets and convex functions, second-order conditions (§7.3); linear regression as maximum likelihood estimation (Ch. 9); dimensionality reduction with PCA (Ch. 10).
+- ✅ Pass: Verify convexity of a function using the second-order condition; derive the closed-form normal equation for linear regression and compare to gradient descent; implement PCA via SVD on a 2D dataset and plot variance explained by each principal component.
+- 🛠️ How: `scipy.optimize.minimize`; normal equation `w=(XᵀX)⁻¹Xᵀy`; `np.linalg.svd` for PCA; compare to `sklearn.decomposition.PCA`.
 
 Week 21 — Review
-- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf)
-- 🧪 Practice: Create concept map linking all MML topics; write summary notes connecting math foundations to ML applications.
-- ✅ Pass: A one-page concept map with ≥10 explicit connections between math concepts and ML techniques (e.g., eigenvalues ↔ PCA, gradient descent ↔ neural network training, condition number ↔ numerical stability).
-- 🛠️ How: Use mind-mapping tool or hand-drawn diagram; include concrete examples for each link.
+- 📖 [MML Book (PDF)](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) — All chapters
+- 🧪 Practice: Connect all MML topics (Ch. 2 Linear Algebra → Ch. 3 Geometry → Ch. 4 Decompositions → Ch. 5 Calculus → Ch. 6 Probability → Ch. 7 Optimization → Ch. 8–12 ML Applications); identify how each foundational concept appears in a concrete ML algorithm.
+- ✅ Pass: A one-page concept map with ≥10 explicit connections between math concepts and ML techniques, each labeled with the relevant MML chapter (e.g., SVD §4.5 ↔ PCA §10.2; multivariate Gaussian §6.5 ↔ GMMs §11.3; Lagrange multipliers §7.2 ↔ SVM §12.2; eigendecomposition §4.4 ↔ dimensionality reduction §10.3).
+- 🛠️ How: Use mind-mapping tool or hand-drawn diagram; annotate each connection with the relevant MML section number; write one sentence per link explaining the relationship.
 </details>
 
 🔁 Flex — Retrieval practice and summaries
