@@ -32,12 +32,10 @@ Legend
 - 🧪 Practice (small tasks)
 - ✅ Pass (weekly pass criterion)
 - 🛠️ How (implementation hint)
-- 🔁 Flex (catch-up, spaced review)
 
 Duration and pacing
 - Duration: ~162 weeks (≈4.2 years), 8–10 h/week
 - Weekly output: small practical tasks only
-- Frequent Flex Weeks between phases for consolidation
 
 ---------------------------------------------------------------------
 
@@ -99,8 +97,6 @@ Week 9 — Phase 1 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Consolidate EDA template and notes
-
 <details>
 <summary><b>Phase 2 · SQL — Weeks 10–13</b></summary>
   
@@ -129,8 +125,6 @@ Week 13 — Phase 2 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — ETL mini-project
 
 <details>
 <summary><b>Phase 3 · Mathematics for Machine Learning and Data Science — Weeks 14–23</b></summary>
@@ -196,7 +190,6 @@ Week 23 — Phase 3 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Mathematics for Machine Learning and Data Science consolidation
 <details>
 <summary><b>Phase 4 · Introduction to Probability — Weeks 24–28</b></summary>
 
@@ -231,8 +224,6 @@ Week 28 — Phase 4 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Probability consolidation
 
 <details>
 <summary><b>Phase 5 · Statistics Fundamentals — Weeks 29–35</b></summary>
@@ -279,8 +270,6 @@ Week 35 — Phase 5 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Stats recap
 
 <details>
 <summary><b>Phase 6 · Mathematical Statistics — Weeks 36–46</b></summary>
@@ -352,8 +341,6 @@ Week 46 — Phase 6 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Mathematical Statistics consolidation
-
 <details>
 <summary><b>Phase 7 · Applied Multivariate Statistics — Weeks 47–50</b></summary>
 
@@ -382,7 +369,6 @@ Week 50 — Phase 7 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Multivariate stats consolidation
 <details>
 <summary><b>Phase 8 · Bayesian Statistics & Missing Data — Weeks 51–53</b></summary>
 
@@ -404,8 +390,6 @@ Week 53 — Phase 8 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Consolidate Bayesian + MI
 
 <details>
 <summary><b>Phase 9 · Statistical Learning with Python (ISLP) — Weeks 54–64</b></summary>
@@ -477,8 +461,6 @@ Week 64 — Phase 9 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Validation basics consolidation
-
 <details>
 <summary><b>Phase 10 · Data Mining — Weeks 65–67</b></summary>
 
@@ -501,7 +483,6 @@ Week 67 — Phase 10 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Mining recap
 <details>
 <summary><b>Phase 11 · Classical Machine Learning — Weeks 68–70</b></summary>
 
@@ -523,8 +504,6 @@ Week 70 — Phase 11 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Validation & interpretation synthesis
 
 <details>
 <summary><b>Phase 12 · Elements of Statistical Learning — Weeks 71–81</b></summary>
@@ -596,8 +575,6 @@ Week 81 — Phase 12 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Statistical learning theory consolidation
-
 <details>
 <summary><b>Phase 13 · Deep Learning — Weeks 82–85</b></summary>
 
@@ -626,8 +603,6 @@ Week 85 — Phase 13 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — DL recap + tracked mini project
-
 <details>
 <summary><b>Phase 14 · R for Data Science — Weeks 86–87</b></summary>
 
@@ -643,8 +618,6 @@ Week 87 — Phase 14 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — R consolidation
 
 <details>
 <summary><b>Phase 15 · Econometrics, Time Series & Financial Econometrics — Weeks 88–91</b></summary>
@@ -673,8 +646,6 @@ Week 91 — Phase 15 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Econometrics/time-series consolidation
 
 <details>
 <summary><b>Phase 16 · Causal Inference — Weeks 92–102</b></summary>
@@ -746,8 +717,6 @@ Week 102 — Phase 16 — End-to-End Mini Project
 
 </details>
 
-🔁 Flex — Causal inference consolidation
-
 <details>
 <summary><b>Phase 17 · MLOps & Data Engineering — Weeks 103–106</b></summary>
 
@@ -775,8 +744,6 @@ Week 106 — Phase 17 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Ops/engineering consolidation
 
 <details>
 <summary><b>Phase 18 · Flow Matching and Diffusion Models — Weeks 107–112</b></summary>
@@ -817,5 +784,3 @@ Week 112 — Phase 18 — End-to-End Mini Project
 - 🛠️ How: Produce a standalone Jupyter Notebook or script demonstrating the concepts end-to-end.
 
 </details>
-
-🔁 Flex — Flow Matching consolidation
