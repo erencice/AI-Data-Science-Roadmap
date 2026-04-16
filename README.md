@@ -10,7 +10,7 @@ Zero prior knowledge is assumed. Learning order is strictly top-to-bottom. Each 
 — Quick jump —
 - Phase 1 · Data Analysis Foundations
 - Phase 2 · SQL
-- Phase 3 · Mathematics for Machine Learning and Data Science
+- Phase 3 · Mathematics for Machine Learning and Data Science [OPTIONAL]
 - Phase 4 · Introduction to Probability
 - Phase 5 · Statistics Fundamentals
 - Phase 6 · Mathematical Statistics
@@ -127,7 +127,7 @@ Week 13 — Phase 2 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 3 · Mathematics for Machine Learning and Data Science — Weeks 14–23</b></summary>
+<summary><b>Phase 3 · Mathematics for Machine Learning and Data Science — Weeks 14–23 -  [OPTIONAL]</b></summary>
 
 Week 14 — Linear Algebra (Course 1, Part 1)
 - 📖 Activities: [Course 1: Linear Algebra](https://learn.deeplearning.ai/specializations/mathematics-for-machine-learning-and-data-science/information?tab=0)
