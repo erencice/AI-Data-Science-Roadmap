@@ -193,29 +193,29 @@ Week 23 — Phase 3 — End-to-End Mini Project
 <details>
 <summary><b>Phase 4 · Introduction to Probability — Weeks 24–28</b></summary>
 
-Week 24 — Probability Ch. 1–2 (Discrete Probability, Continuous Probability)
-- 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
-- 🧪 Practice: Understand sample spaces, events, and probability axioms; work with discrete and continuous random variables; compute probabilities using counting methods; master conditional probability and independence; apply Bayes' theorem.
-- ✅ Pass: Solve ≥10 probability problems covering: sample space construction, probability calculations using combinations/permutations, conditional probability, independence tests, and Bayes' theorem applications; verify solutions analytically and via simulation; demonstrate Law of Total Probability.
-- 🛠️ How: Use combinatorics: `math.comb(n,k)`, `math.perm(n,k)`; simulate outcomes with `np.random.choice`; verify `P(A|B) = P(A∩B)/P(B)`; Bayes: `P(A|B) = P(B|A)P(A)/P(B)`; compare analytical vs empirical probabilities.
+Week 24 — Stat 110 Lectures 1–9 (Probability Foundations & Conditional Probability)
+- 📖 [Statistics 110: Probability (Harvard YouTube)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&si=15SiQZ2-ytzbLCD6) + [probabilitybook.net Ch. 1–2](http://probabilitybook.net)
+- 🧪 Practice: Understand sample spaces, events, and probability axioms; work with discrete and continuous random variables; compute probabilities using counting methods; master conditional probability and independence; apply Bayes' theorem; explore naive definition vs axiomatic approach.
+- ✅ Pass: Solve ≥10 probability problems covering: sample space construction, probability calculations using combinations/permutations, conditional probability, independence tests, and Bayes' theorem applications; verify solutions analytically and via simulation; demonstrate Law of Total Probability with real-world examples.
+- 🛠️ How: Use combinatorics: `math.comb(n,k)`, `math.perm(n,k)`; simulate outcomes with `np.random.choice`; verify `P(A|B) = P(A∩B)/P(B)`; Bayes: `P(A|B) = P(B|A)P(A)/P(B)`; compare analytical vs empirical probabilities; implement pebble world visualizations.
 
-Week 25 — Probability Ch. 3–4 (Expectation, Distributions)
-- 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
-- 🧪 Practice: Compute expected values and variance; work with common discrete distributions (Bernoulli, Binomial, Geometric, Poisson); understand continuous distributions (Uniform, Exponential, Normal); apply moment generating functions; explore distribution relationships.
-- ✅ Pass: Compute expectations analytically for ≥5 distributions; derive variance from definition; generate samples and verify empirical moments match theoretical values (within 5% for n≥1000); use MGFs to derive moments; demonstrate Central Limit Theorem convergence with visualizations.
-- 🛠️ How: `scipy.stats` for distributions; `np.random.binomial`, `np.random.poisson`, `np.random.normal`; empirical mean: `np.mean(samples)`; plot sampling distributions; CLT: plot standardized sample means for increasing n.
+Week 25 — Stat 110 Lectures 10–15 (Expectation, Variance, Named Distributions)
+- 📖 [Statistics 110: Probability (Harvard YouTube)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&si=15SiQZ2-ytzbLCD6) + [probabilitybook.net Ch. 3–4](http://probabilitybook.net)
+- 🧪 Practice: Compute expected values and variance; work with common discrete distributions (Bernoulli, Binomial, Geometric, Poisson); understand continuous distributions (Uniform, Exponential, Normal); apply moment generating functions; explore distribution relationships and symmetries.
+- ✅ Pass: Compute expectations analytically for ≥5 distributions; derive variance from definition; generate samples and verify empirical moments match theoretical values (within 5% for n≥1000); use MGFs to derive moments; demonstrate Central Limit Theorem convergence with visualizations; apply law of total expectation.
+- 🛠️ How: `scipy.stats` for distributions; `np.random.binomial`, `np.random.poisson`, `np.random.normal`; empirical mean: `np.mean(samples)`; plot sampling distributions; CLT: plot standardized sample means for increasing n; verify `E[E[X|Y]] = E[X]` via simulation.
 
-Week 26 — Probability Ch. 5–7 (Markov Chains, Random Walks)
-- 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
-- 🧪 Practice: Understand Markov chain fundamentals: states, transitions, transition matrices; compute stationary distributions; classify states (transient, recurrent, absorbing); work with random walks; understand gambler's ruin problem; explore applications.
-- ✅ Pass: Implement discrete-time Markov chain simulator; compute n-step transition probabilities via matrix powers; find stationary distribution by solving πP = π; classify states and compute expected hitting times; simulate random walks and verify theoretical properties (e.g., return probabilities); solve gambler's ruin analytically and verify via simulation.
-- 🛠️ How: Transition matrix: `P = np.array([[p11, p12,...], [...]])`; n-step: `np.linalg.matrix_power(P, n)`; stationary: eigenvalue problem with `np.linalg.eig`, find eigenvector for λ=1; simulation: iterate `state = np.random.choice(states, p=P[state])`; random walk: `positions = np.cumsum(steps)`.
+Week 26 — Stat 110 Lectures 16–22 (Markov Chains, Random Walks, Gambler's Ruin)
+- 📖 [Statistics 110: Probability (Harvard YouTube)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&si=15SiQZ2-ytzbLCD6) + [probabilitybook.net Ch. 5–7](http://probabilitybook.net)
+- 🧪 Practice: Understand Markov chain fundamentals: states, transitions, transition matrices; compute stationary distributions; classify states (transient, recurrent, absorbing); work with random walks; understand gambler's ruin problem; explore real-world applications (weather, stock prices, random surfer).
+- ✅ Pass: Implement discrete-time Markov chain simulator; compute n-step transition probabilities via matrix powers; find stationary distribution by solving πP = π; classify states and compute expected hitting times; simulate random walks and verify theoretical properties (e.g., return probabilities); solve gambler's ruin analytically and verify via simulation; apply to real dataset.
+- 🛠️ How: Transition matrix: `P = np.array([[p11, p12,...], [...]])`; n-step: `np.linalg.matrix_power(P, n)`; stationary: eigenvalue problem with `np.linalg.eig`, find eigenvector for λ=1; simulation: iterate `state = np.random.choice(states, p=P[state])`; random walk: `positions = np.cumsum(steps)`; gambler's ruin: solve via difference equations.
 
-Week 27 — Probability Ch. 8–10 (Law of Large Numbers, Limit Theorems)
-- 📖 [Probability (PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf)
-- 🧪 Practice: Understand weak and strong law of large numbers; master Central Limit Theorem and its applications; work with generating functions for sums; understand convergence concepts; apply limit theorems to approximation problems.
-- ✅ Pass: Demonstrate Law of Large Numbers: plot sample mean convergence to theoretical mean for increasing sample sizes; verify CLT: show standardized sum converges to Normal via QQ plots and hypothesis tests for n=[10,30,100,1000]; use generating functions to compute distribution of sums; apply continuity correction for Normal approximation to Binomial; compute confidence intervals using CLT.
-- 🛠️ How: LLN: `running_mean = np.cumsum(samples)/np.arange(1, n+1)`; plot vs theoretical mean; CLT: `(sum(samples) - n*mu)/(sigma*sqrt(n))` should be N(0,1); `scipy.stats.normaltest` for normality; `scipy.stats.probplot` for QQ plots; confidence intervals: `mean ± z*SE`.
+Week 27 — Stat 110 Lectures 23–35 (Convergence, Limit Theorems, Final Applications)
+- 📖 [Statistics 110: Probability (Harvard YouTube)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo&si=15SiQZ2-ytzbLCD6) + [probabilitybook.net Ch. 8–10](http://probabilitybook.net)
+- 🧪 Practice: Understand weak and strong law of large numbers; master Central Limit Theorem and its applications; work with generating functions for sums; understand convergence concepts; apply limit theorems to approximation problems; explore applications to real data and simulation.
+- ✅ Pass: Demonstrate Law of Large Numbers: plot sample mean convergence to theoretical mean for increasing sample sizes; verify CLT: show standardized sum converges to Normal via QQ plots and hypothesis tests for n=[10,30,100,1000]; use generating functions to compute distribution of sums; apply continuity correction for Normal approximation to Binomial; compute confidence intervals using CLT; synthesize all Stat 110 concepts into coherent framework.
+- 🛠️ How: LLN: `running_mean = np.cumsum(samples)/np.arange(1, n+1)`; plot vs theoretical mean; CLT: `(sum(samples) - n*mu)/(sigma*sqrt(n))` should be N(0,1); `scipy.stats.normaltest` for normality; `scipy.stats.probplot` for QQ plots; confidence intervals: `mean ± z*SE`; create visual summary of all distributions & relationships.
 
 Week 28 — Phase 4 — End-to-End Mini Project
 - 📖 Activities: Phase 4 Project Synthesis
