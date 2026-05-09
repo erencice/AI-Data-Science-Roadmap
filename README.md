@@ -88,6 +88,7 @@ Week 8 — P4DA Project B
 - 🧪 Practice: Feature engineering using transforms from the book: date/time features, categorical encoding, ratios, binning.
 - ✅ Pass: Create ≥5 derived features (date parts, ratios, binned numerics, category combinations); document each feature's rationale, potential predictive value, and leakage risk.
 - 🛠️ How: `df["date"].dt.month`, `df.assign(ratio=lambda x: x["a"]/x["b"])`, `pd.cut`, `pd.get_dummies`.
+
 Week 9 — Phase 1 — End-to-End Mini Project
 - 📖 Activities: Phase 1 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 1.
@@ -204,6 +205,7 @@ Week 25 — Think Stats Ch. 9–10 (+wrap)
 - 🧪 Practice: Explore linear relationships; fit simple and multiple regression; interpret coefficients; check regression assumptions.
 - ✅ Pass: Fit OLS regression; interpret R², coefficients, and p-values; produce diagnostic plots (residuals vs fitted, QQ plot); compute VIFs and flag multicollinearity.
 - 🛠️ How: Use `scipy.stats.linregress` for simple regression; compute multiple regression coefficients via normal equations `np.linalg.inv(X.T @ X) @ X.T @ y`.
+
 Week 26 — Phase 4 — End-to-End Mini Project
 - 📖 Activities: Phase 4 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing statistical inference and hypothesis testing learned in Phase 4.
@@ -274,6 +276,7 @@ Week 36 Freund's Ch. 13–14: Review & Nonparametric Methods
 - 🧪 Practice: Review all statistical inference concepts; master distribution-free nonparametric methods: sign test, Wilcoxon signed-rank test, Mann-Whitney U test, Kruskal-Wallis test, runs test; understand when to use parametric vs nonparametric tests; compare power of parametric vs nonparametric tests.
 - ✅ Pass: Solve ≥15 problems covering: sign test for median, Wilcoxon signed-rank test for paired data, Mann-Whitney U test for two independent samples, Kruskal-Wallis test for multiple groups, Spearman rank correlation, runs test for randomness; compare results of parametric vs nonparametric tests on same data; conduct power analysis via simulation showing power loss of nonparametric tests under normality and power gain under non-normality; verify test assumptions and justify method selection; integrate all inference concepts from Chapters 1-14 in a comprehensive analysis.
 - 🛠️ How: `scipy.stats.wilcoxon`, `mannwhitneyu`, `kruskal`, `spearmanr`; sign test: compare median to hypothesized value using binomial; runs test for independence; simulate data from normal and heavy-tailed distributions, apply both parametric and nonparametric tests, compare power; decision tree for test selection based on assumptions.
+
 Week 37 Phase 5 — End-to-End Mini Project
 - 📖 Activities: Phase 6 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 6.
@@ -302,6 +305,7 @@ Week 40 Discriminant Analysis (LDA & QDA)
 - 🧪 Practice: Perform linear and quadratic discriminant analysis.
 - ✅ Pass: Apply LDA and QDA to classification problem.
 - 🛠️ How: Compute class means and pooled covariance matrix manually; evaluate classification rules via matrix operations.
+
 Week 41 Phase 6 — End-to-End Mini Project
 - 📖 Activities: Phase 7 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 7.
@@ -324,6 +328,7 @@ Week 43 Flexible Imputation of Missing Data (complete)
 - 🧪 Practice: Missingness mechanisms; MICE; sensitivity (as in book)
 - ✅ Pass (weekly): Run MICE (m≥5) on a dataset; report pooled estimates per Rubin’s rules; compare to complete-case; perform delta-adjustment sensitivity where relevant.
 - 🛠️ How: Write a basic iterative imputation loop in Python: estimate missing values using chained equations and simple models.
+
 Week 44 Phase 7 — End-to-End Mini Project
 - 📖 Activities: Phase 8 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 8.
@@ -394,6 +399,7 @@ Week 54 ISLP Labs/Wrap-up
 - 🧪 Practice: Complete an end-to-end ML project using techniques from all ISLP chapters: EDA, preprocessing, model selection, hyperparameter tuning, evaluation, and interpretation.
 - ✅ Pass: Deliver a reproducible notebook with proper train/test split, cross-validation, model comparison, hyperparameter tuning, error analysis, and a 1-page summary documenting decisions, limitations, and risks.
 - 🛠️ How: `Pipeline`; `ColumnTransformer` for mixed feature types; `GridSearchCV`/`RandomizedSearchCV`; fixed `random_state` throughout; clean documentation.
+
 Week 55 Phase 8 — End-to-End Mini Project
 - 📖 Activities: Phase 9 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 9.
@@ -416,6 +422,7 @@ Week 57 Classification & Cluster Analysis
 - 🧪 Practice: Evaluate decision trees and k-means/DBSCAN algorithms.
 - ✅ Pass: Implement DBSCAN or tree logic and compare against a library.
 - 🛠️ How: Compare custom tree splits vs library nodes.
+
 Week 58 Phase 9 — End-to-End Mini Project
 - 📖 Activities: Phase 10 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 10.
@@ -438,6 +445,7 @@ Week 60 Interpretable ML (complete)
 - 🧪 Practice: Apply model-agnostic interpretation methods: PDP, ICE, permutation importance, LIME, SHAP; understand intrinsically interpretable models; explore feature interaction methods.
 - ✅ Pass (weekly): For a trained model, produce PDP/ICE plots for top features; compute permutation importance; generate SHAP values for individual predictions; write a 1-page analysis comparing methods' stability across 3 bootstrap resamples.
 - 🛠️ How: `sklearn.inspection.PartialDependenceDisplay`; `permutation_importance`; `shap.Explainer`; compare explanations across train/test sets.
+
 Week 61 Phase 10 — End-to-End Mini Project
 - 📖 Activities: Phase 11 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 11.
@@ -536,6 +544,7 @@ Week 75 Deep Learning Book (Complete)
 - 🧪 Practice: For each chapter, run a small experiment that demonstrates the chapter’s key concept using building blocks learned in D2L
 - ✅ Pass (weekly): Provide a controlled comparison or demonstration plot showing the expected qualitative effect (e.g., different inits, L2 vs dropout, step-size schedules).
 - 🛠️ How: Small synthetic or standard toy datasets; fixed seeds; log and compare curves cleanly.
+
 Week 76 Phase 12 — End-to-End Mini Project
 - 📖 Activities: Phase 13 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 13.
@@ -580,6 +589,7 @@ Week 81 Financial Econometrics (complete)
 - 🧪 Practice: Master financial econometrics progressively: volatility modeling (ARCH/GARCH family), multivariate GARCH models, realized volatility and high-frequency data analysis, factor models for asset pricing, portfolio optimization, option pricing and risk management.
 - ✅ Pass (weekly): Reproduce examples from the text using methods from each section; implement ARCH/GARCH models and forecast volatility; estimate multivariate GARCH (CCC, DCC, BEKK) and compute risk measures (VaR, ES); analyze high-frequency data and compute realized volatility; apply factor models (CAPM, Fama-French) and optimize portfolios; implement Black-Scholes pricing and calibrate volatility surfaces; verify model specifications using information criteria and diagnostic tests.
 - 🛠️ How: `arch` package for GARCH models: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; multivariate models: `arch.multivariate`; realized volatility from intraday returns; factor regressions: `statsmodels.api.OLS`; portfolio optimization: `scipy.optimize.minimize` with constraints; VaR: `np.percentile(returns, alpha)`; Black-Scholes implementation; diagnostics: Ljung-Box test on residuals and squared residuals; model selection via AIC/BIC.
+
 Week 82 Phase 14 — End-to-End Mini Project
 - 📖 Activities: Phase 15 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 15.
@@ -650,6 +660,7 @@ Week 92 Advanced Topics & Review
 - 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
 - ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
 - 🛠️ How: Compare DiD, IV, RDD on same outcome; assess common support, parallel trends, instrument strength; double ML: use cross-fitting with `DoubleMLPLR` or manual implementation (Lasso for Y~X, D~X, residualize); causal forest: `grf` package (R) or `econml.dml.CausalForestDML` (Python); plot distribution of treatment effects; report heterogeneity by subgroups; synthesis table with all estimates.
+
 Week 93 Phase 15 — End-to-End Mini Project
 - 📖 Activities: Phase 16 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 16.
@@ -718,6 +729,7 @@ Week 102 Advanced Applications
 - 🧪 Practice: Image editing, inpainting, and inversion.
 - ✅ Pass: Perform image inpainting using the trained latent diffusion model.
 - 🛠️ How: Masked latent updates during sampling steps.
+
 Week 103 Phase 17 — End-to-End Mini Project
 - 📖 Activities: Phase 18 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 18.
