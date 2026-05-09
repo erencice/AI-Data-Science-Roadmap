@@ -1,6 +1,6 @@
 # AI & Data Science Weekly Plan — Activities, Practice, and Pass Criteria
 
-![Duration](https://img.shields.io/badge/duration-~152_weeks-6f42c1)
+![Duration](https://img.shields.io/badge/duration-~103_weeks-6f42c1)
 ![Pace](https://img.shields.io/badge/pace-8–10_h%2Fweek-0e8a16)
 ![Path](https://img.shields.io/badge/path-beginner%E2%86%92practitioner-0366d6)
 ![Style](https://img.shields.io/badge/style-cumulative%2C_concept%E2%86%92practice-555)
@@ -33,7 +33,7 @@ Legend
 - 🛠️ How (implementation hint)
 
 Duration and pacing
-- Duration: ~152 weeks (≈3 years), 8–10 h/week
+- Duration: ~103 weeks (≈2 years), 8–10 h/week
 - Weekly output: small practical tasks only
 
 ---------------------------------------------------------------------
@@ -274,7 +274,7 @@ Week 36 Freund's Ch. 13–14: Review & Nonparametric Methods
 - 🧪 Practice: Review all statistical inference concepts; master distribution-free nonparametric methods: sign test, Wilcoxon signed-rank test, Mann-Whitney U test, Kruskal-Wallis test, runs test; understand when to use parametric vs nonparametric tests; compare power of parametric vs nonparametric tests.
 - ✅ Pass: Solve ≥15 problems covering: sign test for median, Wilcoxon signed-rank test for paired data, Mann-Whitney U test for two independent samples, Kruskal-Wallis test for multiple groups, Spearman rank correlation, runs test for randomness; compare results of parametric vs nonparametric tests on same data; conduct power analysis via simulation showing power loss of nonparametric tests under normality and power gain under non-normality; verify test assumptions and justify method selection; integrate all inference concepts from Chapters 1-14 in a comprehensive analysis.
 - 🛠️ How: `scipy.stats.wilcoxon`, `mannwhitneyu`, `kruskal`, `spearmanr`; sign test: compare median to hypothesized value using binomial; runs test for independence; simulate data from normal and heavy-tailed distributions, apply both parametric and nonparametric tests, compare power; decision tree for test selection based on assumptions.
-Week 37 Phase 6 — End-to-End Mini Project
+Week 37 Phase 5 — End-to-End Mini Project
 - 📖 Activities: Phase 6 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 6.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -283,7 +283,7 @@ Week 37 Phase 6 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 6 · Applied Multivariate Statistics — Weeks 47–50</b></summary>
+<summary><b>Phase 6 · Applied Multivariate Statistics — Weeks 38–41</b></summary>
 
 Week 38 Principal Components Analysis
 - 📖 Activities: [PSU STAT 505 Lesson 11](https://online.stat.psu.edu/stat505/lesson/11)
@@ -302,7 +302,7 @@ Week 40 Discriminant Analysis (LDA & QDA)
 - 🧪 Practice: Perform linear and quadratic discriminant analysis.
 - ✅ Pass: Apply LDA and QDA to classification problem.
 - 🛠️ How: Compute class means and pooled covariance matrix manually; evaluate classification rules via matrix operations.
-Week 41 Phase 7 — End-to-End Mini Project
+Week 41 Phase 6 — End-to-End Mini Project
 - 📖 Activities: Phase 7 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 7.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -311,7 +311,7 @@ Week 41 Phase 7 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 7 · Bayesian Statistics & Missing Data — Weeks 51–53</b></summary>
+<summary><b>Phase 7 · Bayesian Statistics & Missing Data — Weeks 42–44</b></summary>
 
 Week 42 Think Bayes (Ch. 1–14, paced)
 - 📖 [Think Bayes](https://allendowney.github.io/ThinkBayes2/)
@@ -324,7 +324,7 @@ Week 43 Flexible Imputation of Missing Data (complete)
 - 🧪 Practice: Missingness mechanisms; MICE; sensitivity (as in book)
 - ✅ Pass (weekly): Run MICE (m≥5) on a dataset; report pooled estimates per Rubin’s rules; compare to complete-case; perform delta-adjustment sensitivity where relevant.
 - 🛠️ How: Write a basic iterative imputation loop in Python: estimate missing values using chained equations and simple models.
-Week 44 Phase 8 — End-to-End Mini Project
+Week 44 Phase 7 — End-to-End Mini Project
 - 📖 Activities: Phase 8 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 8.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -333,7 +333,7 @@ Week 44 Phase 8 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 8 · Statistical Learning with Python (ISLP) — Weeks 54–64</b></summary>
+<summary><b>Phase 8 · Statistical Learning with Python (ISLP) — Weeks 45–55</b></summary>
 
 Week 45 ISLP Ch. 1–2 (Intro + Statistical Learning)
 - 📖 Activities: [ISLP](https://www.statlearning.com/)
@@ -394,7 +394,7 @@ Week 54 ISLP Labs/Wrap-up
 - 🧪 Practice: Complete an end-to-end ML project using techniques from all ISLP chapters: EDA, preprocessing, model selection, hyperparameter tuning, evaluation, and interpretation.
 - ✅ Pass: Deliver a reproducible notebook with proper train/test split, cross-validation, model comparison, hyperparameter tuning, error analysis, and a 1-page summary documenting decisions, limitations, and risks.
 - 🛠️ How: `Pipeline`; `ColumnTransformer` for mixed feature types; `GridSearchCV`/`RandomizedSearchCV`; fixed `random_state` throughout; clean documentation.
-Week 55 Phase 9 — End-to-End Mini Project
+Week 55 Phase 8 — End-to-End Mini Project
 - 📖 Activities: Phase 9 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 9.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -403,7 +403,7 @@ Week 55 Phase 9 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 9 · Data Mining — Weeks 65–67</b></summary>
+<summary><b>Phase 9 · Data Mining — Weeks 56–58</b></summary>
 
 Week 56 Data Preprocessing & Frequent Patterns
 - 📖 Activities: [Data Mining 3e (PDF)](https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf)
@@ -416,7 +416,7 @@ Week 57 Classification & Cluster Analysis
 - 🧪 Practice: Evaluate decision trees and k-means/DBSCAN algorithms.
 - ✅ Pass: Implement DBSCAN or tree logic and compare against a library.
 - 🛠️ How: Compare custom tree splits vs library nodes.
-Week 58 Phase 10 — End-to-End Mini Project
+Week 58 Phase 9 — End-to-End Mini Project
 - 📖 Activities: Phase 10 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 10.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -425,7 +425,7 @@ Week 58 Phase 10 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 10 · Classical Machine Learning — Weeks 68–70</b></summary>
+<summary><b>Phase 10 · Classical Machine Learning — Weeks 59–61</b></summary>
 
 Week 59 PRML (Ch. 1–13 + review)
 - 📖 [PRML (PDF)](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
@@ -438,7 +438,7 @@ Week 60 Interpretable ML (complete)
 - 🧪 Practice: Apply model-agnostic interpretation methods: PDP, ICE, permutation importance, LIME, SHAP; understand intrinsically interpretable models; explore feature interaction methods.
 - ✅ Pass (weekly): For a trained model, produce PDP/ICE plots for top features; compute permutation importance; generate SHAP values for individual predictions; write a 1-page analysis comparing methods' stability across 3 bootstrap resamples.
 - 🛠️ How: `sklearn.inspection.PartialDependenceDisplay`; `permutation_importance`; `shap.Explainer`; compare explanations across train/test sets.
-Week 61 Phase 11 — End-to-End Mini Project
+Week 61 Phase 10 — End-to-End Mini Project
 - 📖 Activities: Phase 11 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 11.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -447,7 +447,7 @@ Week 61 Phase 11 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 11 · Elements of Statistical Learning — Weeks 71–81</b></summary>
+<summary><b>Phase 11 · Elements of Statistical Learning — Weeks 62–72</b></summary>
 
 Week 62 ESL Ch. 1–3: Introduction & Linear Methods
 - 📖 [ESL](https://hastie.su.domains/ElemStatLearn/)
@@ -508,7 +508,7 @@ Week 71 ESL Ch. 18 & Integration: High-Dimensional Problems
 - 🧪 Practice: Understand challenges in high-dimensional settings (p >> n); implement elastic net combining L1 and L2 penalties; understand the Lasso path and LARS algorithm; implement fused lasso for spatial/temporal smoothing; master multiple testing correction (FDR, FWER); understand compressed sensing and restricted isometry property.
 - ✅ Pass: Implement elastic net and demonstrate scenarios where it outperforms pure lasso or ridge; implement LARS algorithm and verify equivalence to lasso path; implement fused lasso for 1D signal denoising; apply multiple testing corrections (Bonferroni, Holm, Benjamini-Hochberg) and compare false discovery rates via simulation; demonstrate compressed sensing recovery with RIP-satisfying matrices; integrate ≥5 ESL techniques in comprehensive analysis comparing interpretability, prediction accuracy, computational cost, and theoretical guarantees.
 - 🛠️ How: Elastic net: `min ||y-Xβ||² + λ₁||β||₁ + λ₂||β||²`; LARS: forward stagewise that adds most correlated predictor and moves in equiangular direction; fused lasso: `min ||y-β||² + λ₁||β||₁ + λ₂Σ|βᵢ-βᵢ₊₁|`; FDR: Benjamini-Hochberg procedure sorting p-values; compressed sensing: recover sparse signal from few measurements when sensing matrix satisfies RIP; compare convergence and solution paths.
-Week 72 Phase 12 — End-to-End Mini Project
+Week 72 Phase 11 — End-to-End Mini Project
 - 📖 Activities: Phase 12 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 12.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -517,7 +517,7 @@ Week 72 Phase 12 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 12 · Deep Learning — Weeks 82–85</b></summary>
+<summary><b>Phase 12 · Deep Learning — Weeks 73–76</b></summary>
 
 Week 73 D2L (Fundamentals)
 - 📖 [D2L](https://d2l.ai)
@@ -536,7 +536,7 @@ Week 75 Deep Learning Book (Complete)
 - 🧪 Practice: For each chapter, run a small experiment that demonstrates the chapter’s key concept using building blocks learned in D2L
 - ✅ Pass (weekly): Provide a controlled comparison or demonstration plot showing the expected qualitative effect (e.g., different inits, L2 vs dropout, step-size schedules).
 - 🛠️ How: Small synthetic or standard toy datasets; fixed seeds; log and compare curves cleanly.
-Week 76 Phase 13 — End-to-End Mini Project
+Week 76 Phase 12 — End-to-End Mini Project
 - 📖 Activities: Phase 13 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 13.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -545,14 +545,14 @@ Week 76 Phase 13 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 13 · R for Data Science — Weeks 86–87</b></summary>
+<summary><b>Phase 13 · R for Data Science — Weeks 77–78</b></summary>
 
 Week 77 R4DS (Complete)
 - 📖 [R for Data Science (2e)](https://r4ds.hadley.nz)
 - 🧪 Practice: Learn R and tidyverse progressively: data import, tidying (pivot_longer/wider), transformation (dplyr verbs), visualization (ggplot2), strings, factors, dates, functions, iteration, and communication (Quarto/RMarkdown).
 - ✅ Pass (weekly): Complete a mini-analysis using only functions from chapters covered that week; produce a Quarto/RMarkdown report that renders end-to-end; include at least one visualization and one summary table.
 - 🛠️ How: `library(tidyverse)`; `read_csv`; `dplyr` verbs (`filter`, `mutate`, `summarize`, `group_by`); `ggplot2`; `set.seed()` for reproducibility.
-Week 78 Phase 14 — End-to-End Mini Project
+Week 78 Phase 13 — End-to-End Mini Project
 - 📖 Activities: Phase 14 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 14.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -561,7 +561,7 @@ Week 78 Phase 14 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 14 · Econometrics, Time Series & Financial Econometrics — Weeks 88–91</b></summary>
+<summary><b>Phase 14 · Econometrics, Time Series & Financial Econometrics — Weeks 79–82</b></summary>
 
 Week 79 Basic Econometrics (complete)
 - 📖 [Gujarati (PDF)](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf)
@@ -580,7 +580,7 @@ Week 81 Financial Econometrics (complete)
 - 🧪 Practice: Master financial econometrics progressively: volatility modeling (ARCH/GARCH family), multivariate GARCH models, realized volatility and high-frequency data analysis, factor models for asset pricing, portfolio optimization, option pricing and risk management.
 - ✅ Pass (weekly): Reproduce examples from the text using methods from each section; implement ARCH/GARCH models and forecast volatility; estimate multivariate GARCH (CCC, DCC, BEKK) and compute risk measures (VaR, ES); analyze high-frequency data and compute realized volatility; apply factor models (CAPM, Fama-French) and optimize portfolios; implement Black-Scholes pricing and calibrate volatility surfaces; verify model specifications using information criteria and diagnostic tests.
 - 🛠️ How: `arch` package for GARCH models: `arch_model(returns, vol='GARCH', p=1, q=1).fit()`; multivariate models: `arch.multivariate`; realized volatility from intraday returns; factor regressions: `statsmodels.api.OLS`; portfolio optimization: `scipy.optimize.minimize` with constraints; VaR: `np.percentile(returns, alpha)`; Black-Scholes implementation; diagnostics: Ljung-Box test on residuals and squared residuals; model selection via AIC/BIC.
-Week 82 Phase 15 — End-to-End Mini Project
+Week 82 Phase 14 — End-to-End Mini Project
 - 📖 Activities: Phase 15 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 15.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -589,7 +589,7 @@ Week 82 Phase 15 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 15 · Causal Inference — Weeks 92–102</b></summary>
+<summary><b>Phase 15 · Causal Inference — Weeks 83–93</b></summary>
 
 Week 83 Properties of Regression, DAGs, Potential Outcomes
 - 📖 [The Mixtape](https://mixtape.scunning.com)
@@ -650,7 +650,7 @@ Week 92 Advanced Topics & Review
 - 🧪 Practice: Integrate multiple identification strategies; understand machine learning for causal inference (double/debiased ML, causal forests); review all methods; conduct sensitivity analysis across multiple methods.
 - ✅ Pass: Apply ≥3 causal methods to the same research question; compare point estimates and confidence intervals; discuss relative credibility of each design; implement double ML for treatment effect estimation in high-dimensional setting; report model-averaged treatment effects and conduct multi-method sensitivity analysis; produce comprehensive writeup documenting identification assumptions, threats to validity, and robustness.
 - 🛠️ How: Compare DiD, IV, RDD on same outcome; assess common support, parallel trends, instrument strength; double ML: use cross-fitting with `DoubleMLPLR` or manual implementation (Lasso for Y~X, D~X, residualize); causal forest: `grf` package (R) or `econml.dml.CausalForestDML` (Python); plot distribution of treatment effects; report heterogeneity by subgroups; synthesis table with all estimates.
-Week 93 Phase 16 — End-to-End Mini Project
+Week 93 Phase 15 — End-to-End Mini Project
 - 📖 Activities: Phase 16 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 16.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -659,7 +659,7 @@ Week 93 Phase 16 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 16 · MLOps & Data Engineering — Weeks 103–106</b></summary>
+<summary><b>Phase 16 · MLOps & Data Engineering — Weeks 94–97</b></summary>
 
 Week 94 MLOps Zoomcamp
 - 📖 [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp)
@@ -678,7 +678,7 @@ Week 96 Data Engineering Zoomcamp
 - 🧪 Practice: Module-by-module pipeline work (ingestion, storage, batch/stream, orchestration, analytics eng, testing) as taught in the course
 - ✅ Pass (weekly): Re-deployable pipeline from scratch with idempotent runs for that module’s scope.
 - 🛠️ How: Terraform/Docker where required, dbt, Airflow/Prefect according to the module.
-Week 97 Phase 17 — End-to-End Mini Project
+Week 97 Phase 16 — End-to-End Mini Project
 - 📖 Activities: Phase 17 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 17.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
@@ -687,7 +687,7 @@ Week 97 Phase 17 — End-to-End Mini Project
 </details>
 
 <details>
-<summary><b>Phase 17 · Flow Matching and Diffusion Models — Weeks 107–112</b></summary>
+<summary><b>Phase 17 · Flow Matching and Diffusion Models — Weeks 98–103</b></summary>
 
 Week 98 Flow Matching Fundamentals
 - 📖 Activities: [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html)
@@ -718,7 +718,7 @@ Week 102 Advanced Applications
 - 🧪 Practice: Image editing, inpainting, and inversion.
 - ✅ Pass: Perform image inpainting using the trained latent diffusion model.
 - 🛠️ How: Masked latent updates during sampling steps.
-Week 103 Phase 18 — End-to-End Mini Project
+Week 103 Phase 17 — End-to-End Mini Project
 - 📖 Activities: Phase 18 Project Synthesis
 - 🧪 Practice: Execute an end-to-end task utilizing only the tools learned up to Phase 18.
 - ✅ Pass: Implement a complete pipeline representing this phase's core concepts, documenting findings.
