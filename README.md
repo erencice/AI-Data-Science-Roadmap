@@ -14,26 +14,26 @@
 
 ## 📋 Roadmap Overview
 
-| Phase | Name | Duration |
-|-------|------|----------|
-| 1 | Data Analysis Foundations | 8 weeks |
-| 2 | SQL | 4 weeks |
-| 3 | Introduction to Probability & Linear Algebra | 16 weeks |
-| 4 | Statistics Fundamentals | 6 weeks |
-| 5 | Mathematical Statistics | 12 weeks |
-| 6 | Applied Multivariate Statistics | 8 weeks |
-| 7 | Bayesian Statistics & Missing Data | 9 weeks |
-| 8 | Statistical Learning with Python (ISLP) | 12 weeks |
-| 9 | Data Mining | 10 weeks |
-| 10 | Classical Machine Learning | 16 weeks |
-| 11 | Elements of Statistical Learning | 14 weeks |
-| 12 | Deep Learning | 20 weeks |
-| 13 | R for Data Science | 7 weeks |
-| 14 | Econometrics, Time Series & Financial Econometrics | 16 weeks |
-| 15 | Causal Inference | 10 weeks |
-| 16 | MLOps & Data Engineering | 16 weeks |
-| 17 | Flow Matching & Diffusion Models | 8 weeks |
-| | **TOTAL** | **~192 weeks** |
+| Phase | Name | Duration | Status |
+|-------|------|----------|--------|
+| 1 | Data Analysis Foundations | 8 weeks | ✅ Completed |
+| 2 | SQL | 4 weeks | 🚧 In Progress |
+| 3 | Introduction to Probability & Linear Algebra | 16 weeks | ⏳ Not Started |
+| 4 | Statistics Fundamentals | 6 weeks | ⏳ Not Started |
+| 5 | Mathematical Statistics | 12 weeks | ⏳ Not Started |
+| 6 | Applied Multivariate Statistics | 8 weeks | ⏳ Not Started |
+| 7 | Bayesian Statistics & Missing Data | 9 weeks | ⏳ Not Started |
+| 8 | Statistical Learning with Python (ISLP) | 12 weeks | ⏳ Not Started |
+| 9 | Data Mining | 10 weeks | ⏳ Not Started |
+| 10 | Classical Machine Learning | 16 weeks | ⏳ Not Started |
+| 11 | Elements of Statistical Learning | 14 weeks | ⏳ Not Started |
+| 12 | Deep Learning | 20 weeks | ⏳ Not Started |
+| 13 | R for Data Science | 7 weeks | ⏳ Not Started |
+| 14 | Econometrics, Time Series & Financial Econometrics | 16 weeks | ⏳ Not Started |
+| 15 | Causal Inference | 10 weeks | ⏳ Not Started |
+| 16 | MLOps & Data Engineering | 16 weeks | ⏳ Not Started |
+| 17 | Flow Matching & Diffusion Models | 8 weeks | ⏳ Not Started |
+| | **TOTAL** | **~192 weeks** | |
 
 ---
 
