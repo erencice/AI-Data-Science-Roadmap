@@ -4,9 +4,9 @@
 
 > **A Professional, Execution-Oriented Syllabus for Serious Practitioners**
 
-> **Study Pace:** 10–12 hours per week
+> **Study Pace:** 12–15 hours per week (minimum)
 
-> **Total Estimated Duration:** ~124 weeks (~2.4 years)
+> **Total Estimated Duration:** ~192 weeks (~3.7 years)
 
 > **Format:** Self-paced, resource-integrated, project-driven
 
@@ -14,36 +14,39 @@
 
 ## 📋 Roadmap Overview
 
-| Phase | Name | Duration |
-|-------|------|----------|
-| 1 | Data Analysis Foundations | 6 weeks |
-| 2 | SQL | 3 weeks |
-| 3 | Introduction to Probability & Linear Algebra | 11 weeks |
-| 4 | Statistics Fundamentals | 4 weeks |
-| 5 | Mathematical Statistics | 8 weeks |
-| 6 | Applied Multivariate Statistics | 5 weeks |
-| 7 | Bayesian Statistics & Missing Data | 6 weeks |
-| 8 | Statistical Learning with Python (ISLP) | 8 weeks |
-| 9 | Data Mining | 7 weeks |
-| 10 | Classical Machine Learning | 10 weeks |
-| 11 | Elements of Statistical Learning | 8 weeks |
-| 12 | Deep Learning | 12 weeks |
-| 13 | R for Data Science | 5 weeks |
-| 14 | Econometrics, Time Series & Financial Econometrics | 10 weeks |
-| 15 | Causal Inference | 6 weeks |
-| 16 | MLOps & Data Engineering | 10 weeks |
-| 17 | Flow Matching & Diffusion Models | 5 weeks |
-| | **TOTAL** | **~124 weeks** |
+| Phase | Name | Duration | Status |
+|-------|------|----------|--------|
+| 1 | Data Analysis Foundations | 8 weeks | ✅ Completed |
+| 2 | SQL | 4 weeks | 🚧 In Progress |
+| 3 | Introduction to Probability & Linear Algebra | 16 weeks | ⏳ Not Started |
+| 4 | Statistics Fundamentals | 6 weeks | ⏳ Not Started |
+| 5 | Mathematical Statistics | 12 weeks | ⏳ Not Started |
+| 6 | Applied Multivariate Statistics | 8 weeks | ⏳ Not Started |
+| 7 | Bayesian Statistics & Missing Data | 9 weeks | ⏳ Not Started |
+| 8 | Statistical Learning with Python (ISLP) | 12 weeks | ⏳ Not Started |
+| 9 | Data Mining | 10 weeks | ⏳ Not Started |
+| 10 | Classical Machine Learning | 16 weeks | ⏳ Not Started |
+| 11 | Elements of Statistical Learning | 14 weeks | ⏳ Not Started |
+| 12 | Deep Learning | 20 weeks | ⏳ Not Started |
+| 13 | R for Data Science | 7 weeks | ⏳ Not Started |
+| 14 | Econometrics, Time Series & Financial Econometrics | 16 weeks | ⏳ Not Started |
+| 15 | Causal Inference | 10 weeks | ⏳ Not Started |
+| 16 | MLOps & Data Engineering | 16 weeks | ⏳ Not Started |
+| 17 | Flow Matching & Diffusion Models | 8 weeks | ⏳ Not Started |
+| | **TOTAL** | **~192 weeks** | |
 
 ---
 
 ## 🧭 How to Use This Roadmap
 
-- **Read the checkpoint first.** Before starting each week, know exactly what "done" looks like.
-- **Code every day.** Passive reading without implementation is not acceptable.
-- **Never skip a phase.** Each phase is a prerequisite for the next.
-- **Track your hours.** Aim for a minimum of 10 hours per week; 12 is the target.
-- **Resources are interwoven.** When a phase has multiple sources, they are deliberately alternated — video for intuition, textbook for rigor.
+- **Core Principle:** Starting a resource is irrelevant. Finishing it completely is what matters.
+- **Finished means all of it.** All chapters read, all lectures watched, all exercises solved, all labs completed, all checkpoints passed, all projects implemented.
+- **Never skip a phase.** Each phase is a hard prerequisite for the next.
+- **Never skip exercises.** Superficial familiarity is not accepted.
+- **Track your hours.** Aim for 12–15 hours per week minimum.
+- **Run weekly completion audits.** Unfinished items roll forward before any new content.
+- **Enforce phase gates.** You cannot enter the next phase until deliverables and mastery criteria are fully met.
+- **Use monthly cumulative review blocks.** Every 4th week block includes review to prevent shallow progression.
 
 ---
 
@@ -52,9 +55,13 @@
 <details>
 <summary><h2>Phase 1: Data Analysis Foundations</h2></summary>
 
-**Duration:** 6 Weeks
+**Duration:** 8 Weeks
 **Resource:** [Python for Data Analysis, 3rd Ed. — Wes McKinney](https://wesmckinney.com/book/)
-**Depth Assessment:** ~550 pages. Practical, code-heavy, moderate difficulty. The definitive reference for pandas and NumPy. At 10–12 hrs/week this translates to roughly 90 pages + labs per week.
+**Depth Assessment:** ~550 pages. Practical, code-heavy, moderate difficulty. The definitive reference for pandas and NumPy. At 12–15 hrs/week this translates to disciplined chapter completion plus full labs and capstone hardening.
+**Why this resource matters:** Core Python/NumPy/pandas implementation fluency for everything downstream.
+**Weekly Structure (Strict Completion):** Original Week 1–6 sequence + 2 completion buffer weeks.
+**Phase Deliverables:** All weekly notebooks + end-to-end capstone (clean, reproducible, tested).
+**Phase Mastery Criteria:** Every chapter, exercise, lab, checkpoint, and capstone step completed.
 
 ---
 
@@ -157,10 +164,14 @@
 <details>
 <summary><h2>Phase 2: SQL</h2></summary>
 
-**Duration:** 3 Weeks
+**Duration:** 4 Weeks
 **Resource:** [SQL Roadmap — GeeksforGeeks](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
 **Supplementary Platform:** [SQLZoo](https://sqlzoo.net/), [pgexercises.com](https://pgexercises.com/), [LeetCode SQL](https://leetcode.com/problemset/database/)
-**Depth Assessment:** The GfG roadmap is a structured guide, not a textbook. The core SQL curriculum (~60 topics) at this pace covers 3 weeks intensively with daily practice.
+**Depth Assessment:** The GfG roadmap is a structured guide, not a textbook. The core SQL curriculum (~60 topics) at this pace covers 4 weeks with daily practice and a dedicated advanced drill week.
+**Why this resource matters:** Query thinking, relational design, and analytics-grade data retrieval.
+**Weekly Structure (Strict Completion):** Existing Week 7–9 topics + 1 dedicated advanced drill week.
+**Phase Deliverables:** Schema DDL, seed scripts, solved SQL sets, advanced optimization notebook.
+**Phase Mastery Criteria:** All roadmap topics solved across platforms with no unresolved query class gaps.
 
 ---
 
@@ -221,7 +232,7 @@
 <details>
 <summary><h2>Phase 3: Introduction to Probability & Linear Algebra</h2></summary>
 
-**Duration:** 11 Weeks
+**Duration:** 16 Weeks
 **Resources (Interwoven):**
 - [Statistics 110 — Harvard (YouTube, 34 lectures)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
 - [Introduction to Probability — Blitzstein & Hwang (probabilitybook.net)](http://probabilitybook.net)
@@ -229,6 +240,10 @@
 - [Khan Academy Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
 
 **Depth Assessment:** Stat 110 = 34 × ~70 min = ~40 hrs. Blitzstein book = ~600 pages, rigorous. 3B1B = ~3 hrs total. Khan = ~20 hrs. Linear algebra is interwoven in the second half of this phase.
+**Why this resource matters:** Mathematical bedrock for statistics/ML proofs and modeling intuition.
+**Weekly Structure (Strict Completion):** Keep original Week 10–20 order + 5 proof/problem completion weeks.
+**Phase Deliverables:** Simulation notebooks, derivation writeups, and linear algebra computation portfolio.
+**Phase Mastery Criteria:** All lectures watched, all assigned problems solved, derivations reproducible without notes.
 
 ---
 
@@ -411,9 +426,13 @@
 <details>
 <summary><h2>Phase 4: Statistics Fundamentals</h2></summary>
 
-**Duration:** 4 Weeks
+**Duration:** 6 Weeks
 **Resource:** [Think Stats, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkStats/)
 **Depth Assessment:** ~300 pages, Python-based, moderate difficulty. Bridges probability theory with practical statistical analysis. Strong overlap with Phase 3, so the pace is faster.
+**Why this resource matters:** Bridge from probability theory to practical data-driven inference.
+**Weekly Structure (Strict Completion):** Week 21–24 core + 2 full reproduction/extension weeks.
+**Phase Deliverables:** Full chapter analysis notebooks + phase capstone.
+**Phase Mastery Criteria:** All chapter exercises/labs completed; every figure/result reproducible and interpretable.
 
 ---
 
@@ -484,12 +503,16 @@
 <details>
 <summary><h2>Phase 5: Mathematical Statistics</h2></summary>
 
-**Duration:** 8 Weeks
+**Duration:** 12 Weeks
 **Resources:**
 - [John E. Freund's Mathematical Statistics with Applications, 8th Ed.](https://archive.org/details/johnefreundsmath0008mill)
 - [Solutions Manual](https://archive.org/details/instructors-solutions-manual-for-john-e.-freunds-mathematical-statistics-with-ap/)
 
 **Depth Assessment:** ~650 pages, rigorous mathematical statistics textbook. Heavy on proofs and derivations. Solutions manual is essential for self-study. Hardest phase so far — budget the full 12 hrs/week.
+**Why this resource matters:** Formal estimation/testing theory and proof discipline.
+**Weekly Structure (Strict Completion):** Week 25–32 topics + 4 end-of-chapter closure weeks.
+**Phase Deliverables:** Typed/scanned proof archive + solved problem sets + capstone set.
+**Phase Mastery Criteria:** Target chapter problems solved with full derivations; checkpoint thresholds met.
 
 ---
 
@@ -622,9 +645,13 @@
 <details>
 <summary><h2>Phase 6: Applied Multivariate Statistics</h2></summary>
 
-**Duration:** 5 Weeks
+**Duration:** 8 Weeks
 **Resource:** [PSU STAT 505 — Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/)
 **Depth Assessment:** ~15 course lessons, moderately advanced. Builds directly on Phase 5. Heavy on matrix algebra applications.
+**Why this resource matters:** Matrix-based multivariate inference used in advanced modeling.
+**Weekly Structure (Strict Completion):** Week 33–37 topics + 3 full lesson/implementation weeks.
+**Phase Deliverables:** MVN/Hotelling/MANOVA/PCA/FA/DA notebooks + capstone analysis.
+**Phase Mastery Criteria:** Every lesson and exercise completed; from-scratch implementations validated.
 
 ---
 
@@ -708,12 +735,16 @@
 <details>
 <summary><h2>Phase 7: Bayesian Statistics & Missing Data</h2></summary>
 
-**Duration:** 6 Weeks
+**Duration:** 9 Weeks
 **Resources (Interwoven):**
 - [Think Bayes, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkBayes2/)
 - [Flexible Imputation of Missing Data (FIMD) — Stef van Buuren](https://stefvanbuuren.name/fimd/)
 
 **Depth Assessment:** Think Bayes ~250 pages (moderate, Python-based); FIMD ~300 pages (moderate-hard, R-based). Interwoven: Bayesian methods first, then missing data as a Bayesian application.
+**Why this resource matters:** Bayesian reasoning plus robust handling of incomplete data.
+**Weekly Structure (Strict Completion):** Week 38–43 sequence + 3 consolidation weeks.
+**Phase Deliverables:** Bayesian notebooks, PyMC models, missing-data case study capstone.
+**Phase Mastery Criteria:** Both resources completed with exercises/labs; posterior and imputation decisions justified.
 
 ---
 
@@ -813,9 +844,13 @@
 <details>
 <summary><h2>Phase 8: Statistical Learning with Python (ISLP)</h2></summary>
 
-**Duration:** 8 Weeks
+**Duration:** 12 Weeks
 **Resource:** [An Introduction to Statistical Learning with Applications in Python (ISLP)](https://www.statlearning.com/)
 **Depth Assessment:** ~600 pages, moderate-hard, with Python labs in every chapter. The gold-standard ML textbook for statisticians. Must complete every lab.
+**Why this resource matters:** Canonical applied ML with statistical rigor.
+**Weekly Structure (Strict Completion):** Week 44–51 chapter path + 4 lab/exercise completion weeks.
+**Phase Deliverables:** Full ISLP lab portfolio + from-scratch algorithm notebooks + capstone.
+**Phase Mastery Criteria:** Every lab completed; chapter exercises complete; diagnostics and interpretation complete.
 
 ---
 
@@ -944,9 +979,13 @@
 <details>
 <summary><h2>Phase 9: Data Mining</h2></summary>
 
-**Duration:** 7 Weeks
+**Duration:** 10 Weeks
 **Resource:** [Data Mining: Concepts and Techniques, 3rd Ed. — Jiawei Han](https://hanj.cs.illinois.edu/bk3/)
 **Depth Assessment:** ~700 pages, moderate difficulty. Breadth-first treatment of mining techniques. Builds directly on Phase 8.
+**Why this resource matters:** Pattern mining, clustering, outliers, stream/web mining breadth.
+**Weekly Structure (Strict Completion):** Week 52–58 topics + 3 full exercise/project completion weeks.
+**Phase Deliverables:** Mining implementations + full data mining project.
+**Phase Mastery Criteria:** All chapter work completed; final project covers full mining lifecycle.
 
 ---
 
@@ -1061,12 +1100,16 @@
 <details>
 <summary><h2>Phase 10: Classical Machine Learning</h2></summary>
 
-**Duration:** 10 Weeks
+**Duration:** 16 Weeks
 **Resources (Interwoven):**
 - [Pattern Recognition and Machine Learning (PRML) — Bishop](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
 - [Interpretable Machine Learning — Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
 
 **Depth Assessment:** PRML ~700 pages, high mathematical rigor — the hardest phase yet. IML ~300 pages, moderate. Strategy: PRML for theory, IML for interpretation of the same models.
+**Why this resource matters:** Deep probabilistic ML theory plus interpretability discipline.
+**Weekly Structure (Strict Completion):** Week 59–68 track + 6 derivation/code completion weeks.
+**Phase Deliverables:** PRML derivation notes, from-scratch implementations, interpretation reports, capstone system.
+**Phase Mastery Criteria:** Selected PRML math/implementations completed; interpretation methods correctly applied.
 
 ---
 
@@ -1225,9 +1268,13 @@
 <details>
 <summary><h2>Phase 11: Elements of Statistical Learning</h2></summary>
 
-**Duration:** 8 Weeks
+**Duration:** 14 Weeks
 **Resource:** [The Elements of Statistical Learning, 2nd Ed. — Hastie, Tibshirani, Friedman](https://hastie.su.domains/ElemStatLearn/)
 **Depth Assessment:** ~750 pages, extreme mathematical rigor. ESL is the graduate-level complement to ISLP. After Phase 10 (PRML), you have the prerequisite foundation. Emphasis on theory and derivations.
+**Why this resource matters:** Graduate-level theory depth and statistical learning foundations.
+**Weekly Structure (Strict Completion):** Week 69–76 sequence + 6 proof/replication weeks.
+**Phase Deliverables:** Chapter derivation dossier + computational replications + capstone.
+**Phase Mastery Criteria:** Full chapter progression completed; algorithm behavior understood at derivation level.
 
 ---
 
@@ -1359,13 +1406,17 @@
 <details>
 <summary><h2>Phase 12: Deep Learning</h2></summary>
 
-**Duration:** 12 Weeks
+**Duration:** 20 Weeks
 **Resources (Interwoven):**
 - [Dive into Deep Learning (D2L.ai)](https://d2l.ai/)
 - [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
 - [Deep Learning Book — Goodfellow, Bengio, Courville](https://www.deeplearningbook.org/)
 
 **Depth Assessment:** D2L.ai = massive (~1000+ pages with code); DL Book = ~800 pages; Illustrated Transformer = short but essential. Strategy: DL Book for theory, D2L for code-first implementation. This is the longest and most demanding phase.
+**Why this resource matters:** Full modern deep learning stack from fundamentals to transformers and generative models.
+**Weekly Structure (Strict Completion):** Week 77–87 path + 8 lab/reproduction/capstone-hardening weeks.
+**Phase Deliverables:** From-scratch DL modules, transformer/generative notebooks, major capstone.
+**Phase Mastery Criteria:** Assigned chapters/labs complete; models trained, evaluated, and explained rigorously.
 
 ---
 
@@ -1546,9 +1597,13 @@
 <details>
 <summary><h2>Phase 13: R for Data Science</h2></summary>
 
-**Duration:** 5 Weeks
+**Duration:** 7 Weeks
 **Resource:** [R for Data Science, 2nd Ed. — Hadley Wickham](https://r4ds.hadley.nz/)
 **Depth Assessment:** ~500 pages, moderate difficulty. Deliberately placed here — you already know the statistical concepts. The goal is to become proficient in the R ecosystem for statistical computing.
+**Why this resource matters:** Statistical computing fluency in the R/tidyverse ecosystem.
+**Weekly Structure (Strict Completion):** Week 88–92 + 2 completion/polish weeks.
+**Phase Deliverables:** R Markdown/Quarto analyses + reproducible R capstone.
+**Phase Mastery Criteria:** All chapter tasks complete; reproducible workflow from import to reporting.
 
 ---
 
@@ -1633,12 +1688,16 @@
 <details>
 <summary><h2>Phase 14: Econometrics, Time Series & Financial Econometrics</h2></summary>
 
-**Duration:** 10 Weeks
+**Duration:** 16 Weeks
 **Resources (Interwoven):**
 - [Basic Econometrics, 5th Ed. — Gujarati & Porter](https://www.mheducation.com/highered/product/basic-econometrics-gujarati-porter/M912000001.html)
 - [Financial Econometrics Notes — Kevin Sheppard](https://www.kevinsheppard.com/teaching/mfe/)
 
 **Depth Assessment:** Gujarati ~900 pages, moderate-hard (economic applications context); Sheppard MFE notes ~400 pages + Python code, hard. Strategy: Gujarati for foundational theory, Sheppard for financial applications and Python implementation.
+**Why this resource matters:** Causal/statistical modeling for economics and financial time series.
+**Weekly Structure (Strict Completion):** Week 93–101 + 6 diagnostics/robustness/replication weeks.
+**Phase Deliverables:** Econometrics notebooks, time-series models, financial econometrics capstone.
+**Phase Mastery Criteria:** Required chapters/notes completed; diagnostics and assumptions fully verified.
 
 ---
 
@@ -1782,9 +1841,13 @@
 <details>
 <summary><h2>Phase 15: Causal Inference</h2></summary>
 
-**Duration:** 6 Weeks
+**Duration:** 10 Weeks
 **Resource:** [Causal Inference: The Mixtape — Scott Cunningham](https://mixtape.scunning.com/)
 **Depth Assessment:** ~600 pages, moderate-hard. Essential for anyone working with observational data. Rich in intuition and applied examples. Python and R code available.
+**Why this resource matters:** Correct decision-making under observational data and policy settings.
+**Weekly Structure (Strict Completion):** Week 102–107 + 4 identification-strategy implementation weeks.
+**Phase Deliverables:** DAG analyses, DiD/RDD/IV/SC implementations, causal capstone.
+**Phase Mastery Criteria:** Identification assumptions defended; all method exercises/implementations complete.
 
 ---
 
@@ -1885,13 +1948,17 @@
 <details>
 <summary><h2>Phase 16: MLOps & Data Engineering</h2></summary>
 
-**Duration:** 10 Weeks
+**Duration:** 16 Weeks
 **Resources (Interwoven):**
 - [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp)
 - [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/)
 - [Data Engineering Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
 **Depth Assessment:** MLOps Zoomcamp = 9 structured modules; mlsysbook = ~400 pages; DE Zoomcamp = 9 structured modules. All are very practical and hands-on. This phase demands significant infrastructure work.
+**Why this resource matters:** Production-grade systems, deployment, monitoring, and infrastructure reliability.
+**Weekly Structure (Strict Completion):** Week 108–117 + 6 infra hardening and observability validation weeks.
+**Phase Deliverables:** Containerized pipelines, orchestration, deployment, monitoring stack, production capstone.
+**Phase Mastery Criteria:** End-to-end system reproducible/monitored; all modules/labs complete with passing checks.
 
 ---
 
@@ -2058,10 +2125,14 @@
 <details>
 <summary><h2>Phase 17: Flow Matching & Diffusion Models</h2></summary>
 
-**Duration:** 5 Weeks
+**Duration:** 8 Weeks
 **Resource:** [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html)
 **Supplementary:** "Score-Based Generative Modeling through Stochastic Differential Equations" (Song et al., 2021); "Flow Matching for Generative Modeling" (Lipman et al., 2022)
 **Depth Assessment:** A cutting-edge graduate-level course (MIT CSAIL, 2026). Lectures + problem sets. Requires Phase 12 (DL) as a firm prerequisite. This is the frontier of generative AI theory.
+**Why this resource matters:** Frontier generative modeling theory and implementation.
+**Weekly Structure (Strict Completion):** Week 118–122 + 3 problem-set/paper re-derivation weeks.
+**Phase Deliverables:** DDPM/score-based/flow-matching implementations + research-style capstone report.
+**Phase Mastery Criteria:** Lectures/problem sets/papers completed; implementations reproduce expected behavior.
 
 ---
 
@@ -2193,4 +2264,4 @@ After completing this roadmap, consider:
 
 ---
 
-*Roadmap Version 1.0 | Designed for 10–12 hrs/week | Total: ~124 weeks (~2.4 years)*
+*Roadmap Version 2.0 | Designed for 12–15 hrs/week | Total: ~192 weeks (~3.7 years)*
