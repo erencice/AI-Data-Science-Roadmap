@@ -1,16 +1,12 @@
-# 🎓 Data Science & AI Mastery Roadmap (Optimized 2026)
+# Data Science & AI Mastery Roadmap (Optimized 2026)
 
-> **A Professional, Execution-Oriented Syllabus for Serious Practitioners**
-
-> **Study Pace:** 10–12 hours per week
-
-> **Total Estimated Duration:** ~52 weeks core + 6 buffer + 8 elective = ~58–66 weeks (~1 year)
-
-> **Format:** Self-paced, resource-integrated, project-driven
+> A professional, execution-oriented syllabus for serious practitioners.
+>
+> **Pace:** 10–12 hrs/week · **Duration:** ~52 weeks core + 6 buffer + 8 elective · **Format:** Self-paced, project-driven
 
 ---
 
-## 📋 Roadmap Overview
+## Roadmap Overview
 
 | Phase | Name | Duration |
 |-------|------|----------|
@@ -19,18 +15,18 @@
 | 3 | ML Foundations | 6 weeks |
 | 4 | Applied ML | 5 weeks |
 | 5 | Deep Learning | 8 weeks |
-| 5.5 | **LLM/GenAI Engineering** | **6 weeks** |
+| 5.5 | LLM/GenAI Engineering | 6 weeks |
 | 6 | Time Series & Causal | 4 weeks |
 | 7 | MLOps & Production | 6 weeks |
 | 8 | Capstone & Portfolio | 8 weeks |
 | | **Core Total** | **~52 weeks** |
-| | Buffer Weeks (6×) | **~6 weeks** |
+| | Buffer Weeks (6x) | **~6 weeks** |
 | E1 | Bayesian & Advanced (Elective) | 4 weeks |
 | E2 | Generative AI & Diffusion (Elective) | 4 weeks |
 
 ---
 
-## 🧭 How to Use This Roadmap
+## How to Use This Roadmap
 
 ### Learning Principles
 
@@ -50,28 +46,28 @@
 | **Theory Overload** | Reading 200 pages before writing code | Code-first approach — try, fail, then read to understand why |
 | **Skipping Phases** | Jumping to Deep Learning without stats | Each phase is a prerequisite. Never skip. |
 
-### Quick Win Strategy
+### Quick Wins
 
-| Week | Quick Win | Deliverable |
-|------|-----------|-------------|
-| **W2** | First EDA | Real-world dataset analysis with 5+ insights, 3+ visuals |
-| **W4** | First Quarto Report | Professional HTML/PDF analysis report |
-| **W5** | M1: Data Ready | pandas + SQL practical exam passed |
-| **W11** | M2: Stats Ready | A/B test analysis with correct interpretation |
-| **W17** | M3: ML Ready | First ML model comparison study on Kaggle |
+| Week | Deliverable |
+|------|-------------|
+| **W2** | First EDA — real-world dataset with 5+ insights, 3+ visuals |
+| **W4** | First Quarto report — professional HTML/PDF analysis |
+| **W5** | M1: Data Ready — pandas + SQL practical exam |
+| **W11** | M2: Stats Ready — A/B test analysis with correct interpretation |
+| **W17** | M3: ML Ready — first ML model comparison study on Kaggle |
 
 ### Buffer Weeks
 
 Every 8 weeks there is a built-in buffer week for catch-up, review, project extension, or rest:
 
-```
-W1–8 → Buffer W9
-W10–17 → Buffer W18
-W19–26 → Buffer W27
-W28–35 → Buffer W36
-W37–44 → Buffer W45
-W46–52 → Buffer (capstone extension)
-```
+| Range | Buffer Week |
+|-------|-------------|
+| W1–8 | **W9** |
+| W10–17 | **W18** |
+| W19–26 | **W27** |
+| W28–35 | **W36** |
+| W37–44 | **W45** |
+| W46–52 | **Capstone extension** |
 
 Buffer weeks are **planned**, not optional. Use them intentionally.
 
@@ -80,11 +76,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 1: Data Foundations</h2></summary>
 
-**Duration:** 5 Weeks
-**Resource(s):** [Python for Data Analysis, 3rd Ed. — Wes McKinney](https://wesmckinney.com/book/), [SQLBolt](https://sqlbolt.com/), [DataLemur](https://datalemur.com/), [pgexercises](https://pgexercises.com/)
-**Depth Assessment:** McKinney ~550pp (focus on Ch. 1–12), SQLBolt (interactive, ~20 exercises), DataLemur (interview-focused). Python basics move fast — pandas is the core. At 10–12 hrs/week: ~80pp + 50 SQL exercises total.
-
----
+| | |
+|---|---|
+| **Duration** | 5 Weeks |
+| **Resources** | [Python for Data Analysis, 3rd Ed. — Wes McKinney](https://wesmckinney.com/book/), [SQLBolt](https://sqlbolt.com/), [DataLemur](https://datalemur.com/), [pgexercises](https://pgexercises.com/) |
+| **Depth** | McKinney ~550pp (Ch. 1–12), SQLBolt ~20 exercises, DataLemur (interview-focused). At 10–12 hrs/week: ~80pp + 50 SQL exercises total. |
 
 ### Week 1: Python Environment, NumPy & pandas Basics
 
@@ -102,7 +98,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 2: pandas — Loading, Cleaning & First EDA 🏆 Quick Win #1
+### Week 2: pandas — Loading, Cleaning & First EDA *(Quick Win #1)*
 
 **Study:**
 - McKinney: Chapters 5–7 (pandas intro, Data Loading, Data Cleaning)
@@ -134,7 +130,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 4: Advanced SQL & First Quarto Report 🏆 Quick Win #2
+### Week 4: Advanced SQL & First Quarto Report *(Quick Win #2)*
 
 **Study:**
 - SQLBolt: Lessons 11–15 (Window functions, subqueries)
@@ -164,9 +160,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase1_capstone/`: Complete analysis with Quarto report, 8+ visualizations, summary table of findings, and a "Limitations & Next Steps" section. Must be reproducible with a single `quarto render` command.
 
-**🏆 M1: Data Ready** — You can load, clean, analyze, and visualize any tabular dataset. You can write SQL with window functions.
-
----
+**M1: Data Ready** — You can load, clean, analyze, and visualize any tabular dataset. You can write SQL with window functions.
 
 </details>
 
@@ -175,18 +169,18 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 2: Statistics & Probability</h2></summary>
 
-**Duration:** 6 Weeks
-**Resource(s):** [StatQuest (YouTube)](https://www.youtube.com/c/joshstarmer), [Practical Statistics for Data Scientists, 3rd Ed. — Bruce & Bruce](https://www.oreilly.com/library/view/practical-statistics-for-data/9781492072935/), [3Blue1Brown Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-**Depth Assessment:** StatQuest videos (~15 hrs total), Practical Stats ~350pp (focus on Ch. 1–8), 3B1B LA (~3 hrs). This replaces 34 weeks of Blitzstein + Freund + Think Stats with focused, practitioner-relevant content.
-
----
+| | |
+|---|---|
+| **Duration** | 6 Weeks |
+| **Resources** | [StatQuest (YouTube)](https://www.youtube.com/c/joshstarmer), [OpenIntro Statistics](https://www.openintro.org/book/os/), [3Blue1Brown Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), [Seeing Theory](https://seeing-theory.brown.edu/) |
+| **Depth** | StatQuest ~15 hrs, OpenIntro ~400pp (Ch. 1–8), 3B1B ~3 hrs, Seeing Theory interactive. 100% free, practitioner-focused. |
 
 ### Week 6: Probability Distributions & Descriptive Statistics
 
 **Study:**
 - StatQuest: Probability & Distribution series (~2 hrs)
-- Practical Stats: Chapters 1–2 (Data types, descriptive stats, distributions)
-- Practical Stats: Chapter 3 (Probability fundamentals)
+- OpenIntro Statistics: Chapters 1–3 (Data types, distributions, probability)
+- Seeing Theory: Probability & Distributions interactive modules
 
 **Practice:**
 - Simulate the Birthday Problem in Python (group sizes 1–80); plot probability curve
@@ -202,7 +196,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - StatQuest: Hypothesis Testing series (~2 hrs)
-- Practical Stats: Chapters 4–5 (Statistical tests, confidence intervals)
+- OpenIntro Statistics: Chapters 4–5 (Statistical inference, confidence intervals)
 
 **Practice:**
 - Implement permutation test from scratch for two-sample comparison
@@ -218,7 +212,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - 3Blue1Brown: Episodes 1–10 (Vectors, matrices, determinants, eigenvectors, SVD)
-- Practical Stats: Chapter 6 (Linear algebra essentials for DS)
+- Seeing Theory: Linear Algebra interactive modules
 
 **Practice:**
 - Implement Power Iteration from scratch to find dominant eigenvector
@@ -234,7 +228,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - StatQuest: Linear Regression series (~1.5 hrs)
-- Practical Stats: Chapter 7 (Simple & multiple regression)
+- OpenIntro Statistics: Chapter 8 (Multiple & logistic regression)
 
 **Practice:**
 - Implement OLS regression from scratch using matrix algebra (no sklearn)
@@ -250,7 +244,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - StatQuest: Logistic Regression, Poisson Regression, ANOVA (~2 hrs)
-- Practical Stats: Chapter 8 (Classification & ML overview)
+- OpenIntro Statistics: Chapter 9 (ANO & model diagnostics)
 
 **Practice:**
 - Implement logistic regression from scratch using gradient descent
@@ -266,7 +260,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Review all StatQuest videos from this phase
-- Re-read Practical Stats chapters where you felt weakest
+- Re-read OpenIntro Statistics chapters where you felt weakest
 
 **Practice:**
 - Full statistical analysis on a business problem: "Did this marketing campaign actually work?"
@@ -275,9 +269,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase2_capstone.qmd`: Blog-post format statistical analysis with Quarto. Must include: research question, data description, test selection rationale, results with visualizations, and actionable business recommendation.
 
-**🏆 M2: Stats Ready** — You can select and execute appropriate statistical tests, interpret p-values and confidence intervals, and translate results into business decisions.
-
----
+**M2: Stats Ready** — You can select and execute appropriate statistical tests, interpret p-values and confidence intervals, and translate results into business decisions.
 
 </details>
 
@@ -286,11 +278,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 3: ML Foundations</h2></summary>
 
-**Duration:** 6 Weeks
-**Resource(s):** [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/)
-**Depth Assessment:** ISLP ~600pp with Python labs in every chapter. The gold-standard ML textbook. Must complete every lab. Focus on Chapters 2–10 (skip DL overview in Ch. 10, cover in Phase 5). At 10–12 hrs/week: ~100pp + labs per week.
-
----
+| | |
+|---|---|
+| **Duration** | 6 Weeks |
+| **Resources** | [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/) |
+| **Depth** | ISLP ~600pp with Python labs in every chapter. Gold-standard ML textbook. Focus Ch. 2–10. At 10–12 hrs/week: ~100pp + labs per week. |
 
 ### Week 12: Statistical Learning Overview & Linear Regression
 
@@ -385,9 +377,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase3_capstone/`: Complete ML pipeline with proper CV, at least 5 model classes tested, final model card with performance metrics and limitations. GitHub repo with README and reproducible setup.
 
-**🏆 M3: ML Ready** — You can build, evaluate, and compare ML models. You understand cross-validation, regularization, and model selection.
-
----
+**M3: ML Ready** — You can build, evaluate, and compare ML models. You understand cross-validation, regularization, and model selection.
 
 </details>
 
@@ -396,20 +386,24 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 4: Applied ML</h2></summary>
 
-**Duration:** 5 Weeks
-**Resource(s):** [Hands-On Machine Learning, 3rd Ed. — Aurélien Géron](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/), [Interpretable ML — Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
-**Depth Assessment:** HoML ~850pp (focus on Part 1: Classical ML, Ch. 1–9), IML ~300pp (Ch. 4–10 for interpretability). Code-first, production-oriented. At 10–12 hrs/week: ~150pp + exercises per week.
-
----
+| | |
+|---|---|
+| **Duration** | 5 Weeks |
+| **Resources** | [Scikit-Learn User Guide](https://scikit-learn.org/stable/user_guide.html), [Kaggle ML Micro-Courses](https://www.kaggle.com/learn) (Intro to ML, Intermediate ML), [StatQuest ML Series](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF), [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course) |
+| **Depth** | Scikit-Learn User Guide (comprehensive), Kaggle (~5 hrs), StatQuest (~4 hrs), Google MLCC (~15 hrs). Code-first, production-oriented. |
 
 ### Week 18: End-to-End ML Projects & Data Pipelines
 
 **Study:**
-- HoML: Chapters 1–2 (ML landscape, End-to-End project)
-- IML: Chapters 1–3 (Introduction, Interpretability overview)
+- Scikit-Learn User Guide:
+  - [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html) → "Linear Models" (Ridge, Lasso, ElasticNet)
+  - [Model Selection](https://scikit-learn.org/stable/model_selection.html) → "Cross-validation", "Grid Search"
+  - [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) → `Pipeline`, `ColumnTransformer`, `make_pipeline`
+- Kaggle ML Micro-Courses: [Intro to ML](https://www.kaggle.com/learn/intro-to-machine-learning), [Intermediate ML](https://www.kaggle.com/learn/intermediate-machine-learning)
+- StatQuest: ML Overview series (~1 hr)
 
 **Practice:**
-- Complete the HoML Chapter 2 end-to-end project (Housing dataset)
+- Complete the Kaggle "Intro to Machine Learning" course project (Housing dataset)
 - Build a scikit-learn Pipeline that handles: imputation → scaling → feature selection → model
 - Add unit tests for your pipeline using `pytest`
 
@@ -421,8 +415,13 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 19: Feature Engineering Masterclass
 
 **Study:**
-- HoML: Chapters 3–4 (Classification, Training Models — SGD, polynomial features)
-- HoML: Chapter 6 (Decision Trees — advanced)
+- Scikit-Learn User Guide:
+  - [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html) → "Classification" (LogisticRegression, SGDClassifier)
+  - [Linear Models](https://scikit-learn.org/stable/modules/linear_model.html) → "Stochastic Gradient Descent"
+  - [Tree Models](https://scikit-learn.org/stable/modules/tree.html) → DecisionTreeClassifier, DecisionTreeRegressor, `max_depth`, `min_samples_split`
+- Google ML Crash Course: [Classification](https://developers.google.com/machine-learning/crash-course/classification) module
+- [Google Decision Forests Guide](https://developers.google.com/machine-learning/decision-forests) — Decision trees, random forests, gradient boosted trees
+- StatQuest: Decision Trees, Random Forests series (~1.5 hrs)
 
 **Practice:**
 - Create 20+ features from a raw dataset (polynomial, interaction, binning, target encoding)
@@ -437,8 +436,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 20: Hyperparameter Tuning & Model Interpretability
 
 **Study:**
-- HoML: Chapter 5 (SVMs — kernel tricks, hyperparameter tuning)
-- IML: Chapters 4–8 (Partial Dependence Plots, Feature Importance, SHAP, LIME)
+- Scikit-Learn User Guide:
+  - [Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html) → `SVC`, `kernel='rbf'`, `C`, `gamma` parameters
+  - [Model Selection](https://scikit-learn.org/stable/model_selection.html) → `GridSearchCV`, `RandomizedSearchCV`, `HalvingGridSearchCV`
+- SHAP documentation: [shap.readthedocs.io](https://shap.readthedocs.io/) (examples + API)
+- StatQuest: SVM, Hyperparameter Tuning series (~1.5 hrs)
 
 **Practice:**
 - Hyperparameter tuning shootout: GridSearchCV vs. RandomizedSearchCV vs. Optuna on 3 models
@@ -453,8 +455,10 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 21: Imbalanced Learning & Ensemble Techniques
 
 **Study:**
-- HoML: Chapters 7–8 (Ensemble Learning, Dimensionality Reduction)
-- Topics: Voting classifiers, stacking, boosting, PCA, t-SNE, UMAP
+- Scikit-Learn User Guide:
+  - [Ensemble Methods](https://scikit-learn.org/stable/modules/ensemble.html) → `RandomForestClassifier`, `GradientBoostingClassifier`, `VotingClassifier`, `StackingClassifier`
+  - [Decomposition](https://scikit-learn.org/stable/modules/decomposition.html) → `PCA`, `TruncatedSVD`
+- StatQuest: Boosting, PCA, t-SNE series (~2 hrs)
 
 **Practice:**
 - Handle an imbalanced dataset: SMOTE, class weights, threshold tuning — compare AUC-PR
@@ -469,8 +473,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 22: Phase 4 Capstone — Production-Ready ML
 
 **Study:**
-- HoML: Chapter 9 (Unsupervised techniques — review)
-- IML: Chapters 9–10 (Counterfactual explanations, global surrogates)
+- Scikit-Learn User Guide:
+  - [Clustering](https://scikit-learn.org/stable/modules/clustering.html) → `KMeans`, `DBSCAN`, `AgglomerativeClustering`
+  - [Manifold Learning](https://scikit-learn.org/stable/modules/manifold.html) → `UMAP` (via `umap-learn`), `t-SNE`
+  - Review: [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) for capstone
+- SHAP docs: Counterfactual explanations, global surrogate models
 
 **Practice:**
 - End-to-end production-ready ML project:
@@ -483,9 +490,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase4_capstone/`: GitHub repo with modular Python code, `requirements.txt`, `pytest` tests, model card, and README. Must reproduce with a single `python run.py` command.
 
-**🏆 M4: Applied ML Ready** — You can build production-ready ML pipelines with feature engineering, tuning, and interpretability.
-
----
+**M4: Applied ML Ready** — You can build production-ready ML pipelines with feature engineering, tuning, and interpretability.
 
 </details>
 
@@ -494,11 +499,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 5: Deep Learning</h2></summary>
 
-**Duration:** 8 Weeks
-**Resource(s):** [Dive into Deep Learning (D2L.ai)](https://d2l.ai/), [Understanding Deep Learning — Simon Prince](https://udlbook.github.io/udlbook/)
-**Depth Assessment:** D2L.ai (interactive notebooks, continuously updated), Prince ~600pp (modern, visually rich, accessible). Replaces Goodfellow DL Book (800pp, 2016, dense). At 10–12 hrs/week: D2L notebooks + Prince chapters.
-
----
+| | |
+|---|---|
+| **Duration** | 8 Weeks |
+| **Resources** | [Dive into Deep Learning (D2L.ai)](https://d2l.ai/), [Understanding Deep Learning — Simon Prince](https://udlbook.github.io/udlbook/) |
+| **Depth** | D2L.ai (interactive notebooks, continuously updated), Prince ~600pp (modern, visually rich, free online). At 10–12 hrs/week: D2L notebooks + Prince chapters. |
 
 ### Week 23: Neural Networks Foundations
 
@@ -628,9 +633,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase5_capstone/`: Complete DL project with trained model, evaluation report, and demo (Gradio or Streamlit). Upload model to HuggingFace Hub. Include model card with architecture, training details, and limitations.
 
-**🏆 M5: DL Ready** — You understand neural network architectures, can train CNNs/RNNs/Transformers, and can apply transfer learning.
-
----
+**M5: DL Ready** — You understand neural network architectures, can train CNNs/RNNs/Transformers, and can apply transfer learning.
 
 </details>
 
@@ -639,11 +642,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 5.5: LLM/GenAI Engineering</h2></summary>
 
-**Duration:** 6 Weeks
-**Resource(s):** [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain Documentation](https://python.langchain.com/), [RAGAS Documentation](https://docs.ragas.io/), [DeepLearning.AI LLM Courses](https://www.deeplearning.ai/short-courses/)
-**Depth Assessment:** This is the most critical new module for 2026 job readiness. 65%+ of DS job postings now require LLM/GenAI skills. All resources are free and continuously updated. At 10–12 hrs/week: ~80 hours total.
-
----
+| | |
+|---|---|
+| **Duration** | 6 Weeks |
+| **Resources** | [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain](https://python.langchain.com/), [RAGAS](https://docs.ragas.io/), [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/) |
+| **Depth** | Most critical new module for 2026 job readiness (65%+ of DS postings require LLM/GenAI). All resources free. At 10–12 hrs/week: ~80 hours total. |
 
 ### Week 31: LLM Fundamentals — Transformers, Tokenization & Scaling
 
@@ -755,9 +758,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase5.5_capstone/`: End-to-end LLM application with RAG + Agent + Evaluation, deployed demo URL, blog post, and GitHub repo with full documentation. This is your strongest portfolio piece for 2026 job applications.
 
-**🏆 M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand RAG, fine-tuning, prompt engineering, and agentic patterns.
-
----
+**M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand RAG, fine-tuning, prompt engineering, and agentic patterns.
 
 </details>
 
@@ -766,16 +767,31 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 6: Time Series & Causal Inference</h2></summary>
 
-**Duration:** 4 Weeks
-**Resource(s):** [Causal Inference: The Mixtape — Scott Cunningham](https://mixtape.scunning.com/), [Financial Econometrics Notes — Kevin Sheppard](https://www.kevinsheppard.com/teaching/mfe/) (time series sections only)
-**Depth Assessment:** Mixtape ~600pp (focus on Ch. 1–7, 9), Sheppard MFE (time series chapters only). Replaces 16 weeks of Gujarati + full Mixtape with essentials. At 10–12 hrs/week: focused, applied approach.
+| | |
+|---|---|
+| **Duration** | 4 Weeks |
+| **Resources** | [Causal Inference: The Mixtape](https://mixtape.scunning.com/), [StatsModels Time Series](https://www.statsmodels.org/stable/tsa.html), [Forecasting: Principles & Practice (FPP3)](https://otexts.com/fpp3/), [StatQuest Time Series](https://www.youtube.com/playlist?list=PLblh5JKOoLUIxGDQs4LFFq--41Vc-MEzP) |
+| **Depth** | Mixtape ~600pp (Ch. 1–7, 9), FPP3 ~400pp (Ch. 1–10), StatsModels docs (Python examples), StatQuest (~2 hrs). FPP3 for theory → StatsModels for implementation. |
 
----
+**FPP3 Chapters:**
+
+| Chapter | Topic | Key Concepts |
+|---------|-------|-------------|
+| [Ch. 2](https://otexts.com/fpp3/graphics.html) | Time Series Graphics | Time plots, seasonal plots, lag plots |
+| [Ch. 3](https://otexts.com/fpp3/decomposition.html) | Decomposition | Trend, seasonality, remainder, STL |
+| [Ch. 4](https://otexts.com/fpp3/features.html) | Features | ACF features, STL features, exploration |
+| [Ch. 5](https://otexts.com/fpp3/toolbox.html) | Forecaster's Toolbox | Simple methods, residuals, accuracy, CV |
+| [Ch. 7](https://otexts.com/fpp3/regression.html) | Time Series Regression | Linear models, predictor selection |
+| [Ch. 8](https://otexts.com/fpp3/expsmooth.html) | Exponential Smoothing | SES, Holt's, Holt-Winters, ETS |
+| [Ch. 9](https://otexts.com/fpp3/arima.html) | ARIMA Models | Stationarity, differencing, ACF/PACF |
+| [Ch. 10](https://otexts.com/fpp3/dynamic.html) | Dynamic Regression | ARIMA + exogenous variables, Fourier |
+| [Ch. 12](https://otexts.com/fpp3/advanced.html) | Advanced Forecasting | VAR, Prophet, neural networks |
 
 ### Week 37: Time Series — Stationarity, ARIMA & Forecasting
 
 **Study:**
-- Sheppard MFE: Time Series chapters (stationarity, ARMA, ARIMA)
+- FPP3: [Ch. 2](https://otexts.com/fpp3/graphics.html) (Time Series Graphics), [Ch. 3](https://otexts.com/fpp3/decomposition.html) (Decomposition), [Ch. 9](https://otexts.com/fpp3/arima.html) (ARIMA Models)
+- StatsModels Time Series docs: [ARIMA](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_stata.html), [SARIMAX](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_internet.html), [VAR](https://www.statsmodels.org/stable/vector_ar.html) examples
 - StatQuest: Time Series Forecasting series (~1 hr)
 
 **Practice:**
@@ -837,9 +853,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase6_capstone.qmd`: Causal analysis report in Quarto format. Must include: research question, DAG, identification assumption, method, results with confidence intervals, robustness checks, and discussion of assumption plausibility.
 
-**🏆 M6.5: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
-
----
+**M6.5: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
 
 </details>
 
@@ -848,11 +862,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 7: MLOps & Production</h2></summary>
 
-**Duration:** 6 Weeks
-**Resource(s):** [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (selected chapters)
-**Depth Assessment:** MLOps Zoomcamp (9 modules, hands-on), mlsysbook selected chapters (1–7). Replaces 10 weeks of MLOps + DE Zoomcamp with focused production skills. Spark/Kafka moved to elective. At 10–12 hrs/week: infrastructure-heavy, very practical.
-
----
+| | |
+|---|---|
+| **Duration** | 6 Weeks |
+| **Resources** | [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (Ch. 1–7) |
+| **Depth** | MLOps Zoomcamp (9 modules, hands-on), mlsysbook (Ch. 1–7). Infrastructure-heavy, very practical. |
 
 ### Week 41: Docker & Containerized ML
 
@@ -952,9 +966,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `phase7_capstone/`: Public GitHub repository with complete documentation, system architecture diagram, and 2-minute demo video. Must be deployable from scratch with a single `make deploy` command.
 
-**🏆 M7: Production Ready** — You can build, deploy, monitor, and maintain production ML systems.
-
----
+**M7: Production Ready** — You can build, deploy, monitor, and maintain production ML systems.
 
 </details>
 
@@ -963,11 +975,11 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 <details>
 <summary><h2>Phase 8: Capstone & Portfolio</h2></summary>
 
-**Duration:** 8 Weeks
-**Resource(s):** Real-world datasets, [Kaggle](https://www.kaggle.com/), [HuggingFace Datasets](https://huggingface.co/datasets), industry benchmarks
-**Depth Assessment:** This is your synthesis phase. No new textbooks — you apply everything you've learned to build an original, end-to-end project that demonstrates job readiness.
-
----
+| | |
+|---|---|
+| **Duration** | 8 Weeks |
+| **Resources** | Real-world datasets, [Kaggle](https://www.kaggle.com/), [HuggingFace Datasets](https://huggingface.co/datasets), industry benchmarks |
+| **Depth** | Synthesis phase — no new textbooks. Apply everything to build an original, end-to-end project demonstrating job readiness. |
 
 ### Week 47: Capstone Proposal & Data Collection
 
@@ -1035,15 +1047,13 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Checkpoint:**
 > `interview_prep/`: SQL solutions (20+), ML system design notes (3 scenarios), statistics cheat sheet, behavioral interview stories (5 STAR-format stories). Mock interview completed with ≥80% score.
 
-**🏆 M8: Job Ready** — You have a portfolio of 10+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, or AI Engineer roles.
-
----
+**M8: Job Ready** — You have a portfolio of 10+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, or AI Engineer roles.
 
 </details>
 
 ---
 
-## ⚡ Buffer Weeks
+## Buffer Weeks
 
 Buffer weeks are **planned recovery periods** — not optional extras. Use them intentionally:
 
@@ -1066,9 +1076,11 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 <details>
 <summary><h2>Elective E1: Bayesian & Advanced Statistics</h2></summary>
 
-**Duration:** 4 Weeks (Elective — Optional)
-**Resource(s):** [Think Bayes, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkBayes2/), [Flexible Imputation of Missing Data — Stef van Buuren](https://stefvanbuuren.name/fimd/) (Ch. 1–3)
-**Prerequisites:** Phase 2 (Statistics & Probability), Phase 3 (ML Foundations)
+| | |
+|---|---|
+| **Duration** | 4 Weeks (Optional) |
+| **Prerequisites** | Phase 2 (Statistics & Probability), Phase 3 (ML Foundations) |
+| **Resources** | [Think Bayes, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkBayes2/), [Flexible Imputation of Missing Data — Stef van Buuren](https://stefvanbuuren.name/fimd/) (Ch. 1–3) |
 
 ---
 
@@ -1130,8 +1142,6 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 **Checkpoint:**
 > `e1_capstone.ipynb`: MICE imputation with m=20, Rubin's rules pooling, PyMC model fitted on imputed data, pooled posterior inference. Written 1-page discussion of uncertainty sources.
 
----
-
 </details>
 
 ---
@@ -1139,9 +1149,11 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 <details>
 <summary><h2>Elective E2: Generative AI & Diffusion Models</h2></summary>
 
-**Duration:** 4 Weeks (Elective — Optional)
-**Resource(s):** [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html)
-**Prerequisites:** Phase 5 (Deep Learning)
+| | |
+|---|---|
+| **Duration** | 4 Weeks (Optional) |
+| **Prerequisites** | Phase 5 (Deep Learning) |
+| **Resources** | [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html) |
 
 ---
 
@@ -1204,13 +1216,11 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 **Checkpoint:**
 > `e2_capstone/`: Complete generative modeling project with technical report (~1500 words): mathematical derivation, architecture decisions, training details, quantitative evaluation (FID or domain-specific metric), limitations section.
 
----
-
 </details>
 
 ---
 
-## 🏆 Final Synthesis & Portfolio
+## Final Synthesis & Portfolio
 
 Upon completing this roadmap, you will have:
 
@@ -1222,20 +1232,18 @@ Upon completing this roadmap, you will have:
 
 ### Portfolio Structure (10 Projects)
 
-```
-portfolio/
-├── README.md                      # Overview with links to all projects
-├── 01_data_foundations/           # EDA + data quality report (Phase 1)
-├── 02_statistical_analysis/       # A/B test + business decision (Phase 2)
-├── 03_ml_pipeline/                # ISLP capstone — model comparison (Phase 3)
-├── 04_applied_ml/                 # Feature engineering + SHAP (Phase 4)
-├── 05_deep_learning/              # CNN/Transformer project (Phase 5)
-├── 06_llm_rag_application/        # ⭐ Production RAG app (Phase 5.5)
-├── 07_llm_finetuning/             # ⭐ Fine-tuned model + benchmark (Phase 5.5)
-├── 08_causal_analysis/            # Observational data causal inference (Phase 6)
-├── 09_mlops_production/           # Deployed ML system + monitoring (Phase 7)
-└── 10_final_capstone/             # End-to-end original project (Phase 8)
-```
+| # | Project | Phase |
+|---|---------|-------|
+| 01 | EDA + data quality report | Phase 1 |
+| 02 | A/B test + business decision | Phase 2 |
+| 03 | ISLP capstone — model comparison | Phase 3 |
+| 04 | Feature engineering + SHAP | Phase 4 |
+| 05 | CNN/Transformer project | Phase 5 |
+| 06 | Production RAG application | Phase 5.5 |
+| 07 | Fine-tuned model + benchmark | Phase 5.5 |
+| 08 | Observational data causal inference | Phase 6 |
+| 09 | Deployed ML system + monitoring | Phase 7 |
+| 10 | End-to-end original project | Phase 8 |
 
 ### Project Quality Checklist
 
