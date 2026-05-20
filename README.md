@@ -1,12 +1,10 @@
-# 🎓 Data Science & Artificial Intelligence Mastery Roadmap
-
----
+# 🎓 Data Science & AI Mastery Roadmap (Optimized 2026)
 
 > **A Professional, Execution-Oriented Syllabus for Serious Practitioners**
 
 > **Study Pace:** 10–12 hours per week
 
-> **Total Estimated Duration:** ~124 weeks (~2.4 years)
+> **Total Estimated Duration:** ~52 weeks core + 6 buffer + 8 elective = ~58–66 weeks (~1 year)
 
 > **Format:** Self-paced, resource-integrated, project-driven
 
@@ -16,688 +14,157 @@
 
 | Phase | Name | Duration |
 |-------|------|----------|
-| 1 | Data Analysis Foundations | 6 weeks |
-| 2 | SQL | 3 weeks |
-| 3 | Introduction to Probability & Linear Algebra | 11 weeks |
-| 4 | Statistics Fundamentals | 4 weeks |
-| 5 | Mathematical Statistics | 8 weeks |
-| 6 | Applied Multivariate Statistics | 5 weeks |
-| 7 | Bayesian Statistics & Missing Data | 6 weeks |
-| 8 | Statistical Learning with Python (ISLP) | 8 weeks |
-| 9 | Data Mining | 7 weeks |
-| 10 | Classical Machine Learning | 10 weeks |
-| 11 | Elements of Statistical Learning | 8 weeks |
-| 12 | Deep Learning | 12 weeks |
-| 13 | R for Data Science | 5 weeks |
-| 14 | Econometrics, Time Series & Financial Econometrics | 10 weeks |
-| 15 | Causal Inference | 6 weeks |
-| 16 | MLOps & Data Engineering | 10 weeks |
-| 17 | Flow Matching & Diffusion Models | 5 weeks |
-| | **TOTAL** | **~124 weeks** |
+| 1 | Data Foundations | 5 weeks |
+| 2 | Statistics & Probability | 6 weeks |
+| 3 | ML Foundations | 6 weeks |
+| 4 | Applied ML | 5 weeks |
+| 5 | Deep Learning | 8 weeks |
+| 5.5 | **LLM/GenAI Engineering** | **6 weeks** |
+| 6 | Time Series & Causal | 4 weeks |
+| 7 | MLOps & Production | 6 weeks |
+| 8 | Capstone & Portfolio | 8 weeks |
+| | **Core Total** | **~52 weeks** |
+| | Buffer Weeks (6×) | **~6 weeks** |
+| E1 | Bayesian & Advanced (Elective) | 4 weeks |
+| E2 | Generative AI & Diffusion (Elective) | 4 weeks |
 
 ---
 
 ## 🧭 How to Use This Roadmap
 
-- **Read the checkpoint first.** Before starting each week, know exactly what "done" looks like.
-- **Code every day.** Passive reading without implementation is not acceptable.
-- **Never skip a phase.** Each phase is a prerequisite for the next.
-- **Track your hours.** Aim for a minimum of 10 hours per week; 12 is the target.
-- **Resources are interwoven.** When a phase has multiple sources, they are deliberately alternated — video for intuition, textbook for rigor.
+### Learning Principles
 
----
+1. **30/70 Rule:** Maximum 30% theory, 70% hands-on coding every week. If you spent 4 hours reading, spend 9+ hours coding.
+2. **Max 3 New Concepts/Week:** Cognitive load management. If a week introduces probability distributions, hypothesis testing, and Python simulation — that's 3. No more.
+3. **Spaced Repetition:** Every 4–6 weeks, revisit earlier concepts by applying them in new contexts. The roadmap builds this in automatically.
+4. **Code Every Day:** Passive reading without implementation is not learning. Even 30 minutes of coding beats 3 hours of reading.
+5. **Read the Checkpoint First:** Before starting each week, know exactly what "done" looks like. Work backward from the deliverable.
 
----
+### Anti-Pattern Warnings
 
-<details>
-<summary><h2>Phase 1: Data Analysis Foundations</h2></summary>
+| Anti-Pattern | What It Looks Like | How to Avoid |
+|---|---|---|
+| **Tutorial Hell** | Watching videos without writing original code | 1:2 rule — 1 hour tutorial = 2 hours hands-on coding |
+| **Certification Collecting** | Collecting certificates but no GitHub activity | GitHub > Certificate. Every phase ends with a project, not a quiz |
+| **Perfectionism** | Spending 3 weeks on one notebook | "Done > Perfect." Time-box each checkpoint to 1 week |
+| **Theory Overload** | Reading 200 pages before writing code | Code-first approach — try, fail, then read to understand why |
+| **Skipping Phases** | Jumping to Deep Learning without stats | Each phase is a prerequisite. Never skip. |
 
-**Duration:** 6 Weeks
-**Resource:** [Python for Data Analysis, 3rd Ed. — Wes McKinney](https://wesmckinney.com/book/)
-**Depth Assessment:** ~550 pages. Practical, code-heavy, moderate difficulty. The definitive reference for pandas and NumPy. At 10–12 hrs/week this translates to roughly 90 pages + labs per week.
+### Quick Win Strategy
 
----
+| Week | Quick Win | Deliverable |
+|------|-----------|-------------|
+| **W2** | First EDA | Real-world dataset analysis with 5+ insights, 3+ visuals |
+| **W4** | First Quarto Report | Professional HTML/PDF analysis report |
+| **W5** | M1: Data Ready | pandas + SQL practical exam passed |
+| **W11** | M2: Stats Ready | A/B test analysis with correct interpretation |
+| **W17** | M3: ML Ready | First ML model comparison study on Kaggle |
 
-### Week 1: Python Environment, NumPy & Data Structures
+### Buffer Weeks
 
-**Study:**
-- Read Chapters 1–3 (Preliminaries, Python Language Basics, Built-in Data Structures)
-- Set up your full environment: Python 3.11+, Jupyter Lab, conda environments
+Every 8 weeks there is a built-in buffer week for catch-up, review, project extension, or rest:
 
-**Practice:**
-- Write 30+ Python one-liners covering list comprehensions, dict/set operations, generators, and lambda functions
-- Implement a simple custom class (e.g., `DataRecord`) with `__repr__`, `__len__`, and iteration support
+```
+W1–8 → Buffer W9
+W10–17 → Buffer W18
+W19–26 → Buffer W27
+W28–35 → Buffer W36
+W37–44 → Buffer W45
+W46–52 → Buffer (capstone extension)
+```
 
-**Checkpoint:**
-> Create a Jupyter notebook titled `week01_python_foundations.ipynb`. It must demonstrate mastery of all built-in data structures, implement at least one generator function, and pass 10 self-written `assert` unit tests.
-
----
-
-### Week 2: NumPy — Arrays, Vectorization & Broadcasting
-
-**Study:**
-- Read Chapter 4 (NumPy Basics: Arrays and Vectorized Computation) in full
-- Supplement: Skim the official NumPy documentation on broadcasting rules
-
-**Practice:**
-- Implement matrix multiplication **from scratch** using only NumPy array indexing (no `np.matmul`)
-- Benchmark your manual implementation vs. `np.dot` and record the speedup
-
-**Checkpoint:**
-> Submit `week02_numpy.ipynb` containing: a visual explanation of broadcasting with annotated examples, a performance benchmark table comparing pure Python loops vs. vectorized NumPy for 5 operations, and your from-scratch matrix multiply function.
-
----
-
-### Week 3: pandas I — Loading, Indexing & Cleaning
-
-**Study:**
-- Read Chapters 5–6 (Getting Started with pandas; Data Loading, Storage & File Formats)
-- Focus: Series, DataFrame, indexing (`.loc`, `.iloc`, boolean indexing), I/O (CSV, JSON, Excel, SQL)
-
-**Practice:**
-- Download a real-world messy dataset (e.g., [NYC 311 Service Requests](https://data.cityofnewyork.us/)) with at least 100,000 rows
-- Write a complete data cleaning pipeline: handle missing values, fix dtypes, rename columns, parse dates
-
-**Checkpoint:**
-> Produce `week03_pandas_cleaning.ipynb`. It must: load the dataset, generate a "data quality report" (% nulls, dtype summary, unique value counts per column), and output a fully cleaned DataFrame saved to Parquet.
-
----
-
-### Week 4: pandas II — Transformation, GroupBy & Merging
-
-**Study:**
-- Read Chapters 7–8 (Data Cleaning and Preparation; Data Wrangling: Join, Combine, Reshape)
-- Supplement Chapter 10 (Data Aggregation and Group Operations)
-
-**Practice:**
-- Using the dataset from Week 3, write a full GroupBy analysis: compute min, max, mean, median, and a custom aggregation function in a single `.agg()` call
-- Practice `merge`, `join`, and `concat` by combining two related real datasets
-
-**Checkpoint:**
-> `week04_groupby_merge.ipynb` must include: at least 3 non-trivial GroupBy analyses with custom `agg` functions, a multi-key merge demonstrating all join types (inner, left, right, outer), and a pivot table with proper formatting.
-
----
-
-### Week 5: Time Series, Visualization & Advanced Features
-
-**Study:**
-- Read Chapters 11–12 (Time Series; Advanced pandas)
-- Read Chapter 9 (Plotting and Visualization) — focus on matplotlib integration
-
-**Practice:**
-- Download historical stock price data (e.g., via `yfinance`) for 5 tickers
-- Build a time-series analysis notebook: resample to weekly/monthly, compute rolling statistics, handle timezone localization, plot with annotated events
-
-**Checkpoint:**
-> `week05_timeseries.ipynb` must: demonstrate `resample`, `rolling`, `shift`, and `ewm`; produce at least 4 publication-quality matplotlib plots with titles, axis labels, and legends; and compute a 20-day/50-day moving average crossover signal.
-
----
-
-### Week 6: Capstone — End-to-End Data Analysis Project
-
-**Study:**
-- Review Chapters 13–14 (Introduction to Modeling Libraries; Data Analysis Examples)
-- Re-read any sections where you felt weakest during Weeks 1–5
-
-**Practice:**
-- Full end-to-end analysis on a chosen dataset (e.g., [Titanic](https://www.kaggle.com/c/titanic/data), [AirBnb NYC](http://insideairbnb.com/), or similar)
-- Pipeline must cover: ingestion → cleaning → feature engineering → GroupBy insights → visualization → written narrative conclusions
-
-**Checkpoint:**
-> Deliver `phase1_capstone.ipynb` with a structured narrative (using Markdown cells), at least 8 visualizations, a summary table of key findings, and a "Limitations & Next Steps" section. Must be reproducible end-to-end with a single `Run All` command.
-
----
-
----
-
-</details>
+Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
 <details>
-<summary><h2>Phase 2: SQL</h2></summary>
-
-**Duration:** 3 Weeks
-**Resource:** [SQL Roadmap — GeeksforGeeks](https://www.geeksforgeeks.org/blogs/sql-roadmap/)
-**Supplementary Platform:** [SQLZoo](https://sqlzoo.net/), [pgexercises.com](https://pgexercises.com/), [LeetCode SQL](https://leetcode.com/problemset/database/)
-**Depth Assessment:** The GfG roadmap is a structured guide, not a textbook. The core SQL curriculum (~60 topics) at this pace covers 3 weeks intensively with daily practice.
-
----
-
-### Week 7: SQL Foundations — DDL, DML & Basic Queries
-
-**Study:**
-- GfG Roadmap: "SQL Basics" → "DDL Commands" → "DML Commands" → "SELECT Queries"
-- Topics: `CREATE`, `ALTER`, `DROP`, `INSERT`, `UPDATE`, `DELETE`, `WHERE`, `ORDER BY`, `LIMIT`
-- Install PostgreSQL locally; use pgAdmin or DBeaver as your IDE
-
-**Practice:**
-- Design and create a normalized 3-table schema (e.g., `customers`, `orders`, `products`)
-- Populate it with 1000+ rows using a script
-- Write 20 SELECT queries of increasing complexity
-
-**Checkpoint:**
-> Submit a `.sql` file containing your schema DDL, a seed script, and 20 documented queries. Every query must have a comment explaining its business question. Run all on PostgreSQL with no errors.
-
----
-
-### Week 8: Intermediate SQL — Joins, Aggregations & Subqueries
-
-**Study:**
-- GfG Roadmap: "Joins" (all types) → "Aggregate Functions" → "GROUP BY / HAVING" → "Subqueries"
-- Topics: `INNER`, `LEFT`, `RIGHT`, `FULL OUTER`, `CROSS`, `SELF` joins; `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`; correlated subqueries; `EXISTS` / `IN`
-
-**Practice:**
-- Solve 15 problems on [pgexercises.com](https://pgexercises.com/) (Joins + Aggregates sections)
-- Solve 5 LeetCode SQL medium problems (e.g., "Consecutive Numbers," "Department Top 3 Salaries")
-
-**Checkpoint:**
-> A documented solution notebook (Markdown + SQL blocks) for all 20 problems. For each problem: state the question, write the query, and explain the join/subquery logic in one sentence.
-
----
-
-### Week 9: Advanced SQL — Window Functions, CTEs, Indexes & Optimization
-
-**Study:**
-- GfG Roadmap: "Window Functions" → "CTEs" → "Stored Procedures & Functions" → "Indexes & Query Optimization"
-- Topics: `ROW_NUMBER`, `RANK`, `DENSE_RANK`, `LAG`, `LEAD`, `PARTITION BY`; `WITH` CTEs; `EXPLAIN ANALYZE`; B-tree indexes
-
-**Practice:**
-- Rewrite 5 of your Week 8 subquery solutions using CTEs — compare readability
-- Use `EXPLAIN ANALYZE` to profile 3 queries; add appropriate indexes and document the speedup
-- Implement a running total and a 3-period moving average using window functions on your orders table
-
-**Checkpoint:**
-> `phase2_sql_advanced.sql`: contains all window function solutions, CTE rewrites with inline commentary, and a performance report (before/after `EXPLAIN ANALYZE` output) showing measurable query plan improvement.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 3: Introduction to Probability & Linear Algebra</h2></summary>
-
-**Duration:** 11 Weeks
-**Resources (Interwoven):**
-- [Statistics 110 — Harvard (YouTube, 34 lectures)](https://youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
-- [Introduction to Probability — Blitzstein & Hwang (probabilitybook.net)](http://probabilitybook.net)
-- [Essence of Linear Algebra — 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-- [Khan Academy Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
-
-**Depth Assessment:** Stat 110 = 34 × ~70 min = ~40 hrs. Blitzstein book = ~600 pages, rigorous. 3B1B = ~3 hrs total. Khan = ~20 hrs. Linear algebra is interwoven in the second half of this phase.
-
----
-
-### Week 10: Sample Spaces, Events & Axioms of Probability
-
-**Study:**
-- Watch Stat 110 Lectures 1–3 (Sample Spaces, Probability Axioms, Birthday Problem)
-- Read Blitzstein Ch. 1 (Probability and Counting)
-- Complete all Ch. 1 practice problems
-
-**Practice:**
-- Simulate the Birthday Problem in Python for group sizes 1–80; plot the probability curve
-- Code a Monte Carlo estimator for the probability that at least 2 people share a birthday — verify it converges to the analytic formula
-
-**Checkpoint:**
-> `week10_probability.ipynb`: simulation code, convergence plot (simulation vs. analytic), and written derivation of the Birthday Problem formula in LaTeX (Markdown math mode).
-
----
-
-### Week 11: Conditional Probability & Bayes' Theorem
-
-**Study:**
-- Watch Stat 110 Lectures 4–6 (Conditional Probability, Bayes' Theorem, Independence)
-- Read Blitzstein Ch. 2 (Conditional Probability)
-
-**Practice:**
-- Implement Bayes' Theorem for a medical test scenario (sensitivity, specificity, prevalence) as a Python function
-- Simulate the Monty Hall Problem (N=100,000 trials) and compare "switch" vs. "stay" win rates
-
-**Checkpoint:**
-> `week11_bayes.ipynb`: Monty Hall simulation with bar chart, a generalized Bayes' calculator function, and a written answer explaining why counterintuitive results arise.
-
----
-
-### Week 12: Discrete Random Variables & Distributions
-
-**Study:**
-- Watch Stat 110 Lectures 7–10 (Discrete RVs, Binomial, Hypergeometric, Geometric)
-- Read Blitzstein Ch. 3–4 (Random Variables and Their Distributions; Expectation)
-
-**Practice:**
-- Implement PMF and CDF from scratch for Binomial and Poisson distributions (no `scipy.stats`)
-- Compare your implementations against `scipy.stats` — verify they match
-
-**Checkpoint:**
-> `week12_discrete_rvs.ipynb`: from-scratch PMF/CDF implementations, side-by-side comparison plots vs. `scipy.stats`, and a short proof (in LaTeX) that the Poisson distribution is the limit of Binomial as n→∞, λ=np fixed.
-
----
-
-### Week 13: Continuous Distributions & the Normal Distribution
-
-**Study:**
-- Watch Stat 110 Lectures 11–14 (Continuous RVs, Uniform, Normal, Exponential)
-- Read Blitzstein Ch. 5 (Continuous Random Variables)
-
-**Practice:**
-- Plot PDFs and CDFs for Uniform, Exponential, and Normal distributions with varied parameters
-- Implement the Box-Muller transform to generate Normal samples from Uniform random numbers — verify normality with a Q-Q plot
-
-**Checkpoint:**
-> `week13_continuous.ipynb`: Box-Muller implementation, Q-Q plot vs. theoretical normal, and distribution parameter sensitivity plots.
-
----
-
-### Week 14: Expectation, Variance & Moment Generating Functions
-
-**Study:**
-- Watch Stat 110 Lectures 15–17 (Expectation, Variance, MGFs)
-- Read Blitzstein Ch. 6 (Moments)
-
-**Practice:**
-- Derive (on paper) the expectation and variance of the Binomial, Poisson, and Exponential distributions
-- Implement a general `moment(k, distribution)` function using numerical integration (`scipy.integrate.quad`)
-
-**Checkpoint:**
-> Scan/photograph your paper derivations and include in a notebook with the numerical moment function. The function must correctly compute the first 4 moments for at least 3 distributions.
-
----
-
-### Week 15: Joint Distributions, Covariance & Correlation
-
-**Study:**
-- Watch Stat 110 Lectures 18–20 (Joint Distributions, Covariance, Correlation)
-- Read Blitzstein Ch. 7 (Joint Distributions)
-- **Begin Linear Algebra:** Watch 3Blue1Brown Episodes 1–5 (Vectors, Linear Combinations, Matrix Transformations, Determinants)
-
-**Practice:**
-- Simulate a 2D multivariate normal with a specified covariance matrix; plot the joint density as a contour map
-- Animate (using matplotlib) how a 2×2 matrix transformation distorts the unit circle
-
-**Checkpoint:**
-> `week15_joint_linalg.ipynb`: joint density contour plot, animated matrix transformation (saved as GIF), and a written explanation of what the determinant geometrically represents.
-
----
-
-### Week 16: Law of Large Numbers, CLT & Linear Algebra Foundations
-
-**Study:**
-- Watch Stat 110 Lectures 21–23 (LLN, CLT, Chi-Squared)
-- Read Blitzstein Ch. 10 (Inequalities and Limit Theorems)
-- Khan Academy Linear Algebra: "Vectors and Spaces" unit + "Matrix Transformations" unit
-
-**Practice:**
-- Simulate LLN convergence for 5 different distributions — plot mean estimates vs. sample size on log-scale
-- Demonstrate CLT: sample means of a highly skewed distribution approach normality — animate with increasing n
-
-**Checkpoint:**
-> `week16_lln_clt.ipynb`: LLN convergence plots (log-scale), CLT animation for a skewed distribution, and a written statement of both theorems with the key conditions.
-
----
-
-### Week 17: Matrix Operations — Eigenvectors, Eigenvalues & Decompositions
-
-**Study:**
-- Watch 3Blue1Brown Episodes 6–15 (Dot Products, Cross Products, Eigenvectors, Change of Basis, Abstract Vector Spaces)
-- Khan Academy: "Eigenvalues and Eigenvectors" unit
-- Supplement: NumPy `linalg` documentation
-
-**Practice:**
-- Implement Power Iteration from scratch to find the dominant eigenvector of a matrix
-- Apply eigendecomposition to PCA by hand on a 2D dataset — compare to `sklearn.decomposition.PCA`
-
-**Checkpoint:**
-> `week17_eigens.ipynb`: Power Iteration implementation with convergence tracking, visual comparison of manual PCA vs. sklearn PCA on a 2D scatter plot, with written explanation of what each eigenvector represents.
-
----
-
-### Week 18: SVD, Projections & Linear Systems
-
-**Study:**
-- Khan Academy: "Alternate coordinate systems" + "Orthogonality" units
-- Stat 110 Lectures 24–25 (Order Statistics, Conditional Expectation)
-- Read Blitzstein Ch. 9 (Conditional Expectation)
-
-**Practice:**
-- Implement image compression using SVD — show the reconstruction at k=5, 20, 50, 100 singular values
-- Solve a linear regression as a linear system (`Ax = b`) using both SVD and normal equations — compare solutions
-
-**Checkpoint:**
-> `week18_svd.ipynb`: image compression at multiple ranks with PSNR metric table, linear regression solved via SVD vs. normal equations with numerical comparison.
-
----
-
-### Week 19: Markov Chains & Generating Functions
-
-**Study:**
-- Watch Stat 110 Lectures 26–30 (Markov Chains, Stationary Distribution, Gambler's Ruin)
-- Read Blitzstein Ch. 11 (Markov Chains)
-
-**Practice:**
-- Implement a Markov Chain from scratch with a custom transition matrix
-- Simulate the Gambler's Ruin problem for multiple starting capitals and compute empirical vs. theoretical ruin probabilities
-
-**Checkpoint:**
-> `week19_markov.ipynb`: Markov Chain class with `.simulate()`, `.stationary_distribution()` methods; Gambler's Ruin comparison table; and a state-transition diagram (using `networkx`).
-
----
-
-### Week 20: Phase 3 Review & Capstone Problem Set
-
-**Study:**
-- Watch Stat 110 Lectures 31–34 (Poisson Processes, Beta, Dirichlet, Final Review)
-- Read Blitzstein Ch. 12–13 (Markov Chains continued, Poisson Processes)
-
-**Practice:**
-- Solve 10 problems from the Blitzstein book's Strategic Practice sets (Chapters 1–12)
-- Implement a simple Poisson Process simulator and verify inter-arrival times are exponentially distributed
-
-**Checkpoint:**
-> `phase3_capstone_problems.ipynb`: 10 solved practice problems with written mathematical derivations + code verification. Must include at least one proof by induction and one moment generating function derivation.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 4: Statistics Fundamentals</h2></summary>
-
-**Duration:** 4 Weeks
-**Resource:** [Think Stats, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkStats/)
-**Depth Assessment:** ~300 pages, Python-based, moderate difficulty. Bridges probability theory with practical statistical analysis. Strong overlap with Phase 3, so the pace is faster.
-
----
-
-### Week 21: Exploratory Statistics — Distributions & PMFs
-
-**Study:**
-- Read Think Stats Chapters 1–3 (Histograms, PMFs, CDFs)
-- Contrast with your Phase 1 pandas EDA work
-
-**Practice:**
-- Download the NSFG (National Survey of Family Growth) dataset used in the book
-- Reproduce and extend all Chapter 1–3 figures with additional annotations and commentary
-
-**Checkpoint:**
-> `week21_exploratory_stats.ipynb`: full reproduction of NSFG analysis + 3 original questions answered with new visualizations. Each figure must have a caption explaining the statistical insight.
-
----
-
-### Week 22: Probability Distributions & Hypothesis Testing
-
-**Study:**
-- Read Think Stats Chapters 4–6 (Distributions, Probability, Operations on Distributions)
-
-**Practice:**
-- Fit Normal, Exponential, and Pareto distributions to real data using MLE
-- Implement a Kernel Density Estimator (KDE) from scratch using a Gaussian kernel — compare to `scipy.stats.gaussian_kde`
-
-**Checkpoint:**
-> `week22_distributions.ipynb`: MLE fitting for 3 distribution families, Q-Q plots for goodness-of-fit, and your KDE implementation vs. scipy with a visual comparison.
-
----
-
-### Week 23: Hypothesis Testing, p-values & Effect Sizes
-
-**Study:**
-- Read Think Stats Chapters 7–9 (Relationships Between Variables, Estimation, Hypothesis Testing)
-
-**Practice:**
-- Implement a permutation test from scratch for two-sample comparison
-- Implement bootstrap confidence intervals for the mean, median, and variance of a sample
-- Compare your results to `scipy.stats.ttest_ind` and comment on differences
-
-**Checkpoint:**
-> `week23_hypothesis.ipynb`: permutation test vs. t-test comparison on real data, bootstrap CI for 3 statistics with 95% CI plots, and a written discussion of when permutation tests are preferable.
-
----
-
-### Week 24: Regression, Correlation & Phase 4 Capstone
-
-**Study:**
-- Read Think Stats Chapters 10–12 (Linear Least Squares, Regression, Time Series)
-
-**Practice:**
-- Implement Ordinary Least Squares (OLS) regression from scratch using matrix algebra (no sklearn)
-- Analyze the residuals for heteroskedasticity and autocorrelation using diagnostic plots
-
-**Checkpoint:**
-> `phase4_capstone.ipynb`: from-scratch OLS implementation, coefficient comparison with `statsmodels.OLS`, residual diagnostic plots (residuals vs. fitted, Q-Q of residuals, scale-location), and a written interpretation of model assumptions.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 5: Mathematical Statistics</h2></summary>
-
-**Duration:** 8 Weeks
-**Resources:**
-- [John E. Freund's Mathematical Statistics with Applications, 8th Ed.](https://archive.org/details/johnefreundsmath0008mill)
-- [Solutions Manual](https://archive.org/details/instructors-solutions-manual-for-john-e.-freunds-mathematical-statistics-with-ap/)
-
-**Depth Assessment:** ~650 pages, rigorous mathematical statistics textbook. Heavy on proofs and derivations. Solutions manual is essential for self-study. Hardest phase so far — budget the full 12 hrs/week.
-
----
-
-### Week 25: Probability & Mathematical Foundations (Chapters 1–2)
-
-**Study:**
-- Freund Chapters 1–2 (Introduction to Probability, Probability Distributions)
-- Focus: formal definitions of sample space, sigma-algebras, probability measure
-
-**Practice:**
-- Solve 15 end-of-chapter problems from Chapters 1–2 without consulting solutions
-- Verify answers against the Solutions Manual
-
-**Checkpoint:**
-> Paper problem set (scanned or typed in LaTeX): 15 solved problems, each with a complete proof and not just a numerical answer. Must score 12+/15 verified against solution manual.
-
----
-
-### Week 26: Discrete & Continuous Distributions (Chapters 3–4)
-
-**Study:**
-- Freund Chapters 3–4 (Mathematical Expectation, Special Probability Distributions)
-- Focus: Binomial, Multinomial, Hypergeometric, Negative Binomial, Poisson; Uniform, Gamma, Beta, Normal
-
-**Practice:**
-- Derive the MGF of the Gamma distribution from first principles
-- Use MGFs to prove that the sum of independent Poisson RVs is Poisson
-
-**Checkpoint:**
-> LaTeX document with 2 full derivations (Gamma MGF + Poisson sum proof) and 10 solved textbook problems from Chapters 3–4.
-
----
-
-### Week 27: Functions of Random Variables & Sampling Distributions (Chapters 5–6)
-
-**Study:**
-- Freund Chapters 5–6 (Functions of Random Variables, Sampling Distributions)
-- Focus: Jacobian transformation method, Chi-squared, t, and F distributions
-
-**Practice:**
-- Derive the PDF of Y = X² where X ~ N(0,1) using the Jacobian method
-- Simulate and verify the t-distribution as a ratio of Normal and Chi-squared variables
-
-**Checkpoint:**
-> `week27_transformations.ipynb`: Jacobian derivation (LaTeX), simulation verification of t-distribution with histogram overlay of theoretical PDF, and 8 solved problems from Chapters 5–6.
-
----
-
-### Week 28: Point Estimation (Chapter 7)
-
-**Study:**
-- Freund Chapter 7 (Point Estimation)
-- Focus: MLE, Method of Moments, UMVUE, Cramér-Rao Lower Bound, sufficiency
-
-**Practice:**
-- Derive MLE estimators for Normal (μ, σ²) and Exponential (λ) distributions
-- Compute the Fisher Information and Cramér-Rao bound for the Bernoulli distribution; verify MLE achieves it
-
-**Checkpoint:**
-> LaTeX problem set: MLE derivations for 3 distributions, Fisher Information computation, and a written explanation of what "UMVUE" means and why it matters.
-
----
-
-### Week 29: Interval Estimation (Chapter 8)
-
-**Study:**
-- Freund Chapter 8 (Interval Estimation)
-- Focus: confidence intervals for mean, difference of means, variance; bootstrap CIs
-
-**Practice:**
-- Implement CIs for μ (known σ), μ (unknown σ), proportion, and difference of two means from scratch
-- Demonstrate coverage probability: simulate 1,000 CIs and show 95% of them contain the true parameter
-
-**Checkpoint:**
-> `week29_confidence_intervals.ipynb`: all CI functions from scratch, coverage simulation with a visualization of 1,000 CI intervals plotted as horizontal lines (true parameter marked).
-
----
-
-### Week 30: Hypothesis Testing I (Chapter 9)
-
-**Study:**
-- Freund Chapter 9 (Tests of Hypotheses)
-- Focus: Neyman-Pearson lemma, UMP tests, likelihood ratio tests, Type I/II errors, power functions
-
-**Practice:**
-- Derive the Neyman-Pearson most powerful test for a simple hypothesis for Normal data
-- Plot a power curve as a function of the true mean for a one-sample z-test
-
-**Checkpoint:**
-> LaTeX proof of the Neyman-Pearson lemma for a specific case, plus `week30_power_curve.ipynb` with power curves for multiple significance levels (α = 0.01, 0.05, 0.10) plotted together.
-
----
-
-### Week 31: Hypothesis Testing II & Nonparametric Tests (Chapters 10–11)
-
-**Study:**
-- Freund Chapters 10–11 (Nonparametric Tests, Analysis of Variance)
-- Focus: Wilcoxon, Mann-Whitney U, Kruskal-Wallis, one-way ANOVA
-
-**Practice:**
-- Implement the Wilcoxon signed-rank test from scratch; verify against `scipy.stats.wilcoxon`
-- Run a one-way ANOVA on a real dataset; follow up with Tukey's HSD post-hoc test
-
-**Checkpoint:**
-> `week31_nonparametric.ipynb`: from-scratch Wilcoxon with comparison to scipy, ANOVA F-table generated manually vs. `scipy.stats.f_oneway`, and written interpretation of all results.
-
----
-
-### Week 32: Regression & Correlation + Phase 5 Capstone (Chapters 12–13)
-
-**Study:**
-- Freund Chapters 12–13 (Regression and Correlation, Multiple Regression)
-- Focus: Gauss-Markov theorem, F-test for overall significance, adjusted R², multicollinearity
-
-**Practice:**
-- Prove the Gauss-Markov theorem (OLS is BLUE) in a LaTeX document
-- Implement multiple regression with all diagnostics from scratch; apply to a real dataset
-
-**Checkpoint:**
-> `phase5_capstone.ipynb`: multiple regression from scratch (matrix form), Gauss-Markov proof (LaTeX embedded), VIF computation for multicollinearity, and a written 1-page analysis of your regression results.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 6: Applied Multivariate Statistics</h2></summary>
+<summary><h2>Phase 1: Data Foundations</h2></summary>
 
 **Duration:** 5 Weeks
-**Resource:** [PSU STAT 505 — Applied Multivariate Statistical Analysis](https://online.stat.psu.edu/stat505/)
-**Depth Assessment:** ~15 course lessons, moderately advanced. Builds directly on Phase 5. Heavy on matrix algebra applications.
+**Resource(s):** [Python for Data Analysis, 3rd Ed. — Wes McKinney](https://wesmckinney.com/book/), [SQLBolt](https://sqlbolt.com/), [DataLemur](https://datalemur.com/), [pgexercises](https://pgexercises.com/)
+**Depth Assessment:** McKinney ~550pp (focus on Ch. 1–12), SQLBolt (interactive, ~20 exercises), DataLemur (interview-focused). Python basics move fast — pandas is the core. At 10–12 hrs/week: ~80pp + 50 SQL exercises total.
 
 ---
 
-### Week 33: Multivariate Normal & Hotelling's T²
+### Week 1: Python Environment, NumPy & pandas Basics
 
 **Study:**
-- STAT 505 Lessons 1–3 (Introduction, Multivariate Normal Distribution, Hotelling's T²)
+- McKinney: Chapters 1–4 (Preliminaries, Python Basics, NumPy Basics)
+- Set up environment: Python 3.11+, Jupyter Lab or VS Code, conda/venv, git
 
 **Practice:**
-- Generate 3D multivariate normal data; visualize pairwise scatter plots and the ellipsoidal contours
-- Implement Hotelling's T² test from scratch and compare to a reference implementation
+- Write 30+ Python one-liners: list comprehensions, dict operations, generators
+- Implement matrix multiplication from scratch using only NumPy indexing (no `np.matmul`)
+- Benchmark pure Python loop vs. vectorized NumPy for 3 operations
 
 **Checkpoint:**
-> `week33_mvn.ipynb`: 3D MVN simulation, pairwise plot matrix with density curves, Hotelling's T² from scratch with p-value comparison.
+> `week01_foundations.ipynb`: NumPy array operations, broadcasting visual explanation, performance benchmark table, and 10 self-written `assert` tests. Must run end-to-end with a single "Run All."
 
 ---
 
-### Week 34: MANOVA & Profile Analysis
+### Week 2: pandas — Loading, Cleaning & First EDA 🏆 Quick Win #1
 
 **Study:**
-- STAT 505 Lessons 4–6 (MANOVA, Profile Analysis)
+- McKinney: Chapters 5–7 (pandas intro, Data Loading, Data Cleaning)
+- Focus: Series, DataFrame, `.loc`/`.iloc`, handling missing values, dtypes
 
 **Practice:**
-- Apply one-way MANOVA to the Iris dataset using both `statsmodels` and a manual computation
-- Perform profile analysis comparing group mean profiles; test for parallelism, levels, and flatness
+- Download a real-world messy dataset (e.g., NYC 311, Airbnb listings) with 50,000+ rows
+- Build a complete data cleaning pipeline: handle nulls, fix dtypes, parse dates, rename columns
+- Perform exploratory analysis: 5+ insights, 3+ visualizations
 
 **Checkpoint:**
-> `week34_manova.ipynb`: MANOVA with full output table, profile analysis plots with hypothesis test results, and written interpretation of each test.
+> `week02_eda.ipynb`: Load messy dataset → generate data quality report (% nulls, dtype summary, unique counts) → clean DataFrame → 5 insights with visualizations → save to Parquet. This is your first portfolio piece — push to GitHub.
 
 ---
 
-### Week 35: Principal Component Analysis (PCA) — Theory & Application
+### Week 3: pandas — GroupBy, Merging & SQL Foundations
 
 **Study:**
-- STAT 505 Lessons 7–8 (Principal Component Analysis)
-- Review SVD from Week 18 — connect to PCA via eigendecomposition of the covariance matrix
+- McKinney: Chapters 8–10 (Wrangling, GroupBy, Aggregation)
+- SQLBolt: Lessons 1–10 (SELECT, WHERE, JOINs, aggregates)
 
 **Practice:**
-- Implement PCA from scratch using the covariance matrix eigendecomposition
-- Apply to a high-dimensional dataset (e.g., gene expression data); plot scree plot and biplot
+- Using your Week 2 dataset: 3+ non-trivial GroupBy analyses with custom `.agg()` calls
+- Practice `merge`, `join`, `concat` by combining two related datasets
+- Complete SQLBolt exercises 1–10
 
 **Checkpoint:**
-> `week35_pca.ipynb`: from-scratch PCA with scree plot, explained variance table, biplot, and a comparison vs. `sklearn.decomposition.PCA`. Must explain why standardization matters for PCA.
+> `week03_groupby_sql.ipynb`: Multi-key merge (all 4 join types), pivot table, GroupBy with custom aggregations. Plus: SQLBolt completion screenshots.
 
 ---
 
-### Week 36: Factor Analysis & Discriminant Analysis
+### Week 4: Advanced SQL & First Quarto Report 🏆 Quick Win #2
 
 **Study:**
-- STAT 505 Lessons 9–11 (Factor Analysis, Discriminant Analysis)
+- SQLBolt: Lessons 11–15 (Window functions, subqueries)
+- DataLemur: 10 Easy/Medium SQL problems
+- Install Quarto
 
 **Practice:**
-- Perform exploratory factor analysis (EFA) using `factor_analyzer`; compare Varimax vs. Promax rotation
-- Implement Linear Discriminant Analysis (LDA) from scratch; apply to a classification problem and compute classification error
+- Solve 10 DataLemur SQL problems (focus on window functions: `ROW_NUMBER`, `RANK`, `LAG`)
+- Use `pgexercises.com` for 10 PostgreSQL practice problems
+- Convert your Week 2 EDA into a professional Quarto report
 
 **Checkpoint:**
-> `week36_factor_lda.ipynb`: EFA with factor loading heatmap, LDA from scratch with decision boundary visualization, confusion matrix, and comparison to `sklearn.discriminant_analysis.LinearDiscriminantAnalysis`.
+> `phase1_report.qmd`: Quarto document with code, figures, tables, and narrative. Must render to both HTML and PDF via `quarto render`. Include: data quality analysis, key findings, limitations. Publish to GitHub Pages.
 
 ---
 
-### Week 37: Cluster Analysis, MANCOVA & Phase 6 Capstone
+### Week 5: Phase 1 Capstone — End-to-End Analysis
 
 **Study:**
-- STAT 505 Lessons 12–15 (Clustering, Canonical Correlation, MANCOVA)
+- McKinney: Chapters 11–12 (Time Series, Advanced pandas) — skim for awareness
+- Review any weak areas from Weeks 1–4
 
 **Practice:**
-- Implement k-means from scratch and apply hierarchical clustering with Ward linkage
-- Perform canonical correlation analysis on two sets of variables; interpret the canonical variates
+- End-to-end analysis on a new dataset (choose from: [Kaggle Datasets](https://www.kaggle.com/datasets), [UCI ML Repository](https://archive.ics.uci.edu/))
+- Pipeline: ingestion → cleaning → feature engineering → GroupBy insights → visualization → narrative conclusions
 
 **Checkpoint:**
-> `phase6_capstone.ipynb`: full multivariate analysis pipeline on a chosen dataset — PCA for dimensionality reduction → LDA for classification → Cluster analysis for unsupervised grouping. Include a 1-page written report summarizing findings.
+> `phase1_capstone/`: Complete analysis with Quarto report, 8+ visualizations, summary table of findings, and a "Limitations & Next Steps" section. Must be reproducible with a single `quarto render` command.
 
----
+**🏆 M1: Data Ready** — You can load, clean, analyze, and visualize any tabular dataset. You can write SQL with window functions.
 
 ---
 
@@ -706,103 +173,109 @@
 ---
 
 <details>
-<summary><h2>Phase 7: Bayesian Statistics & Missing Data</h2></summary>
+<summary><h2>Phase 2: Statistics & Probability</h2></summary>
 
 **Duration:** 6 Weeks
-**Resources (Interwoven):**
-- [Think Bayes, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkBayes2/)
-- [Flexible Imputation of Missing Data (FIMD) — Stef van Buuren](https://stefvanbuuren.name/fimd/)
-
-**Depth Assessment:** Think Bayes ~250 pages (moderate, Python-based); FIMD ~300 pages (moderate-hard, R-based). Interwoven: Bayesian methods first, then missing data as a Bayesian application.
+**Resource(s):** [StatQuest (YouTube)](https://www.youtube.com/c/joshstarmer), [Practical Statistics for Data Scientists, 3rd Ed. — Bruce & Bruce](https://www.oreilly.com/library/view/practical-statistics-for-data/9781492072935/), [3Blue1Brown Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+**Depth Assessment:** StatQuest videos (~15 hrs total), Practical Stats ~350pp (focus on Ch. 1–8), 3B1B LA (~3 hrs). This replaces 34 weeks of Blitzstein + Freund + Think Stats with focused, practitioner-relevant content.
 
 ---
 
-### Week 38: Bayes' Theorem to Bayesian Inference
+### Week 6: Probability Distributions & Descriptive Statistics
 
 **Study:**
-- Think Bayes Chapters 1–4 (Bayes' Theorem, Distributions, Estimating Counts, Estimating Rates)
+- StatQuest: Probability & Distribution series (~2 hrs)
+- Practical Stats: Chapters 1–2 (Data types, descriptive stats, distributions)
+- Practical Stats: Chapter 3 (Probability fundamentals)
 
 **Practice:**
-- Implement the "Cookie Problem," "M&M Problem," and "Monty Hall" using the `Pmf` class
-- Build a Bayesian A/B test from scratch for conversion rate comparison
+- Simulate the Birthday Problem in Python (group sizes 1–80); plot probability curve
+- Monte Carlo estimator for Birthday Problem — verify convergence to analytic formula
+- Plot PDFs/CDFs for Normal, Exponential, Poisson, Binomial with varied parameters
 
 **Checkpoint:**
-> `week38_bayesian_basics.ipynb`: all three classic problems solved with grid approximation, A/B test with posterior distributions plotted, and a written explanation of why the Bayesian result is more informative than a p-value.
+> `week06_probability.ipynb`: Birthday Problem simulation + convergence plot, distribution PDF/CDF grid with parameter sensitivity, and written explanation of when to use each distribution.
 
 ---
 
-### Week 39: Bayesian Hypothesis Testing & Estimation
+### Week 7: Hypothesis Testing & Confidence Intervals
 
 **Study:**
-- Think Bayes Chapters 5–8 (Odds, Addends, Mixtures, Simulation)
+- StatQuest: Hypothesis Testing series (~2 hrs)
+- Practical Stats: Chapters 4–5 (Statistical tests, confidence intervals)
 
 **Practice:**
-- Compute Bayes Factors for comparing two models
-- Implement a Bayesian linear regression with conjugate priors (Normal-Inverse-Gamma); visualize the posterior predictive distribution
+- Implement permutation test from scratch for two-sample comparison
+- Implement bootstrap confidence intervals (95% CI) for mean, median, variance
+- Compare results to `scipy.stats.ttest_ind` — discuss when they differ
 
 **Checkpoint:**
-> `week39_bayes_estimation.ipynb`: Bayes Factor computation, Bayesian linear regression from scratch with posterior predictive interval plot, and comparison of credible intervals vs. frequentist confidence intervals.
+> `week07_hypothesis.ipynb`: Permutation test vs. t-test on real data, bootstrap CI with 1,000 resamples visualized, and written discussion of assumptions and when to use each test.
 
 ---
 
-### Week 40: PyMC & Probabilistic Programming
+### Week 8: Linear Algebra for ML
 
 **Study:**
-- Think Bayes Chapters 9–13 (Decision Analysis, Approximate Bayesian Computation, Hierarchical Models)
-- Install PyMC; read the official "Getting Started" documentation
+- 3Blue1Brown: Episodes 1–10 (Vectors, matrices, determinants, eigenvectors, SVD)
+- Practical Stats: Chapter 6 (Linear algebra essentials for DS)
 
 **Practice:**
-- Implement a hierarchical model for school test scores using PyMC (8-schools problem)
-- Use MCMC sampling; diagnose convergence with R-hat statistics and trace plots
+- Implement Power Iteration from scratch to find dominant eigenvector
+- Apply eigendecomposition to PCA on a 2D dataset — compare to `sklearn.decomposition.PCA`
+- Image compression using SVD: show reconstruction at k=5, 20, 50, 100 singular values
 
 **Checkpoint:**
-> `week40_pymc_hierarchical.ipynb`: PyMC hierarchical model, trace plots, posterior predictive check plots, and written interpretation of partial pooling vs. no-pooling.
+> `week08_linalg.ipynb`: Power Iteration with convergence tracking, manual PCA vs. sklearn comparison, SVD image compression with PSNR metric table.
 
 ---
 
-### Week 41: Missing Data — Mechanisms & Single Imputation
+### Week 9: Regression Foundations & A/B Test Analysis
 
 **Study:**
-- FIMD Chapters 1–3 (Introduction, Multiple Imputation, Univariate Missing Data)
-- Understand MCAR, MAR, MNAR
+- StatQuest: Linear Regression series (~1.5 hrs)
+- Practical Stats: Chapter 7 (Simple & multiple regression)
 
 **Practice:**
-- Simulate all three missing data mechanisms on a real dataset
-- Apply and compare: complete case analysis, mean imputation, regression imputation — assess bias in each
+- Implement OLS regression from scratch using matrix algebra (no sklearn)
+- Analyze residuals: heteroskedasticity, autocorrelation, Q-Q plots
+- Download a real A/B test dataset; run full analysis with hypothesis testing
 
 **Checkpoint:**
-> `week41_missing_data.ipynb`: simulation of MCAR/MAR/MNAR with empirical bias tables, comparison of 3 imputation strategies, and a written explanation of when each missing data mechanism produces biased estimates.
+> `week09_regression.ipynb`: From-scratch OLS with coefficient comparison to `statsmodels.OLS`, residual diagnostic plots (4-panel), and A/B test analysis with business recommendation.
 
 ---
 
-### Week 42: Multiple Imputation (MICE)
+### Week 10: Statistical Modeling Essentials
 
 **Study:**
-- FIMD Chapters 4–6 (Multivariate Missing Data, Analysis of Imputed Data, Imputation in Practice)
+- StatQuest: Logistic Regression, Poisson Regression, ANOVA (~2 hrs)
+- Practical Stats: Chapter 8 (Classification & ML overview)
 
 **Practice:**
-- Implement the MICE algorithm conceptually step-by-step; use `miceforest` or `sklearn.impute.IterativeImputer` in Python
-- Apply multiple imputation (m=20) to a dataset with 30%+ missingness; pool results using Rubin's rules
+- Implement logistic regression from scratch using gradient descent
+- Apply to a binary classification dataset; plot decision boundary
+- Run one-way ANOVA on a real dataset; follow up with Tukey's HSD
 
 **Checkpoint:**
-> `week42_mice.ipynb`: MICE imputation with m=20, Rubin's rules pooling for regression coefficients, trace plots of imputation convergence, and comparison of MICE estimates vs. listwise deletion.
+> `week10_stat_modeling.ipynb`: From-scratch logistic regression with learning curve, ANOVA with post-hoc test, and written interpretation of all results in business context.
 
 ---
 
-### Week 43: Advanced Missing Data & Phase 7 Capstone
+### Week 11: Phase 2 Capstone — Data-Driven Decision
 
 **Study:**
-- FIMD Chapters 7–9 (Sensitive Variables, Longitudinal Data, Multilevel Data)
-- Think Bayes Chapters 14–19 (review and advanced topics)
+- Review all StatQuest videos from this phase
+- Re-read Practical Stats chapters where you felt weakest
 
 **Practice:**
-- Apply multiple imputation to a longitudinal dataset (e.g., panel data with attrition)
-- Build a Bayesian model that jointly handles missing data and inference (selection model)
+- Full statistical analysis on a business problem: "Did this marketing campaign actually work?"
+- Must include: research question → data exploration → appropriate test selection → execution → interpretation → business recommendation
 
 **Checkpoint:**
-> `phase7_capstone.ipynb`: end-to-end Bayesian + missing data pipeline — MICE imputation → PyMC model fitted on imputed data → pooled posterior inference. Written 1-page discussion of uncertainty sources.
+> `phase2_capstone.qmd`: Blog-post format statistical analysis with Quarto. Must include: research question, data description, test selection rationale, results with visualizations, and actionable business recommendation.
 
----
+**🏆 M2: Stats Ready** — You can select and execute appropriate statistical tests, interpret p-values and confidence intervals, and translate results into business decisions.
 
 ---
 
@@ -811,129 +284,108 @@
 ---
 
 <details>
-<summary><h2>Phase 8: Statistical Learning with Python (ISLP)</h2></summary>
+<summary><h2>Phase 3: ML Foundations</h2></summary>
 
-**Duration:** 8 Weeks
-**Resource:** [An Introduction to Statistical Learning with Applications in Python (ISLP)](https://www.statlearning.com/)
-**Depth Assessment:** ~600 pages, moderate-hard, with Python labs in every chapter. The gold-standard ML textbook for statisticians. Must complete every lab.
+**Duration:** 6 Weeks
+**Resource(s):** [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/)
+**Depth Assessment:** ISLP ~600pp with Python labs in every chapter. The gold-standard ML textbook. Must complete every lab. Focus on Chapters 2–10 (skip DL overview in Ch. 10, cover in Phase 5). At 10–12 hrs/week: ~100pp + labs per week.
 
 ---
 
-### Week 44: Linear Regression — Theory & Lab
+### Week 12: Statistical Learning Overview & Linear Regression
 
 **Study:**
-- ISLP Chapters 1–3 (Statistical Learning, Linear Regression) — full chapters and all Python labs
+- ISLP: Chapters 1–3 (Statistical Learning intro, Linear Regression) — full chapters + Python labs
+- StatQuest: Cross-Validation series (~1 hr)
 
 **Practice:**
-- Complete the Chapter 3 Python lab in full (Boston dataset and beyond)
+- Complete the Chapter 3 Python lab in full
 - Implement Ridge and Lasso regression from scratch using coordinate descent
+- Plot coefficient paths vs. λ for both
 
 **Checkpoint:**
-> `week44_islp_linreg.ipynb`: full Chapter 3 lab + from-scratch Ridge/Lasso with coefficient paths plotted vs. λ.
+> `week12_linreg.ipynb`: Full ISLP Chapter 3 lab + from-scratch Ridge/Lasso with coefficient path plots. Include model comparison table (OLS vs. Ridge vs. Lasso) with MSE, R², and training time.
 
 ---
 
-### Week 45: Classification — Logistic Regression, LDA, QDA, KNN
+### Week 13: Classification
 
 **Study:**
-- ISLP Chapter 4 (Classification) — full chapter and Python lab
+- ISLP: Chapter 4 (Classification) — full chapter + Python lab
+- Topics: Logistic Regression, LDA, QDA, KNN
 
 **Practice:**
-- Implement logistic regression from scratch using gradient descent (not Newton's method)
-- Apply all 4 classifiers (LR, LDA, QDA, KNN) to a dataset; produce a comparative confusion matrix table
-
-**Checkpoint:**
-> `week45_classification.ipynb`: from-scratch logistic regression with learning curve, all 4 classifiers with a comparative table of Accuracy, Precision, Recall, F1, and AUC.
-
----
-
-### Week 46: Resampling Methods — Cross-Validation & Bootstrap
-
-**Study:**
-- ISLP Chapter 5 (Resampling Methods) — full chapter and Python lab
-
-**Practice:**
+- Apply all 4 classifiers to a dataset; produce comparative confusion matrix table
 - Implement k-fold cross-validation from scratch
-- Implement the bootstrap for estimating the standard error of any statistic (passed as a function)
+- Tune KNN's k parameter using your from-scratch CV
 
 **Checkpoint:**
-> `week46_resampling.ipynb`: from-scratch k-fold CV with hyperparameter tuning demonstration, bootstrap SE for 3 statistics, and comparison of CV estimates vs. test set estimates.
+> `week13_classification.ipynb`: All 4 classifiers with Accuracy, Precision, Recall, F1, AUC comparison table. From-scratch k-fold CV with hyperparameter tuning demonstration.
 
 ---
 
-### Week 47: Model Selection & Regularization
+### Week 14: Resampling & Model Selection
 
 **Study:**
-- ISLP Chapter 6 (Linear Model Selection and Regularization) — full chapter and lab
-- Focus: Best subset selection, Ridge, Lasso, PCR, PLS
+- ISLP: Chapters 5–6 (Resampling Methods, Model Selection & Regularization) — full chapters + labs
+- Focus: k-fold CV, bootstrap, best subset selection, Ridge, Lasso, PCR
 
 **Practice:**
-- Implement best subset selection via exhaustive search for p ≤ 15
-- Tune Ridge and Lasso via cross-validation; plot validation curve showing optimal λ
+- Implement bootstrap for estimating standard error of any statistic (passed as a function)
+- Best subset selection via exhaustive search for p ≤ 15
+- Tune Ridge and Lasso via cross-validation; plot validation curve
 
 **Checkpoint:**
-> `week47_regularization.ipynb`: subset selection with AIC/BIC/adjusted-R² comparison, regularization path for Ridge and Lasso, optimal λ selection via 10-fold CV.
+> `week14_resampling.ipynb`: From-scratch bootstrap SE for 3 statistics, subset selection with AIC/BIC/adjusted-R² comparison, regularization path for Ridge and Lasso with optimal λ via 10-fold CV.
 
 ---
 
-### Week 48: Nonlinear Models & Splines
+### Week 15: Nonlinear Models & Splines
 
 **Study:**
-- ISLP Chapter 7 (Moving Beyond Linearity) — polynomial regression, step functions, splines, GAMs
+- ISLP: Chapter 7 (Moving Beyond Linearity) — polynomial regression, step functions, splines, GAMs
 
 **Practice:**
 - Implement a cubic spline from scratch with knots at specified quantiles
 - Fit a GAM to a dataset; plot partial dependence plots for each predictor
+- Compare polynomial degree 1–5 on a nonlinear dataset; plot bias-variance trade-off
 
 **Checkpoint:**
-> `week48_nonlinear.ipynb`: from-scratch cubic spline vs. `scipy.interpolate.CubicSpline`, GAM with partial dependence plots, and a written explanation of the bias-variance trade-off for polynomial degree.
+> `week15_nonlinear.ipynb`: From-scratch cubic spline vs. `scipy.interpolate.CubicSpline`, GAM with partial dependence plots, and written explanation of bias-variance trade-off for polynomial degree.
 
 ---
 
-### Week 49: Decision Trees & Ensemble Methods
+### Week 16: Decision Trees, Ensembles & SVMs
 
 **Study:**
-- ISLP Chapters 8 (Tree-Based Methods) — full chapter and lab
-- Topics: CART, Random Forests, Boosting (AdaBoost, Gradient Boosting), Bagging
+- ISLP: Chapters 8–9 (Tree-Based Methods, SVMs) — full chapters + labs
+- Topics: CART, Random Forests, Gradient Boosting, Bagging, SVM (linear, RBF)
 
 **Practice:**
 - Implement CART (classification tree) from scratch using recursive binary splitting and Gini impurity
-- Train Random Forest and Gradient Boosting on a real dataset; plot feature importances
+- Train Random Forest and Gradient Boosting; plot feature importances
+- Compare linear, polynomial, and RBF kernels on a non-linearly separable dataset
 
 **Checkpoint:**
-> `week49_trees.ipynb`: from-scratch CART with tree visualization (using `graphviz`), RF and GBM comparison table, and feature importance bar chart for both ensemble methods.
+> `week16_trees_svm.ipynb`: From-scratch CART with tree visualization, RF and GBM comparison table, feature importance bar chart, SVM decision boundary plots for all 3 kernels.
 
 ---
 
-### Week 50: Support Vector Machines
+### Week 17: Phase 3 Capstone — ML Pipeline v1
 
 **Study:**
-- ISLP Chapter 9 (Support Vector Machines) — full chapter and lab
-- Understand: maximal margin classifier, soft-margin SVM, kernel trick (RBF, polynomial)
+- ISLP: Chapter 12 (Unsupervised Learning) — PCA, K-Means, Hierarchical Clustering
+- Review all previous chapters
 
 **Practice:**
-- Implement a hard-margin SVM using `cvxpy` (quadratic programming formulation)
-- Compare linear, polynomial, and RBF kernels on a non-linearly separable dataset; plot decision boundaries
+- Full ML pipeline: data → preprocessing → model comparison (5+ model classes) → evaluation → model card
+- PCA → K-Means → Hierarchical clustering on a high-dimensional dataset
+- Multiple testing correction (Bonferroni, BH-FDR) on a gene expression example
 
 **Checkpoint:**
-> `week50_svm.ipynb`: hard-margin SVM from cvxpy, decision boundary plots for all 3 kernels, and a written explanation of what the kernel trick achieves mathematically.
+> `phase3_capstone/`: Complete ML pipeline with proper CV, at least 5 model classes tested, final model card with performance metrics and limitations. GitHub repo with README and reproducible setup.
 
----
-
-### Week 51: Unsupervised Learning & Phase 8 Capstone
-
-**Study:**
-- ISLP Chapters 10–13 (Deep Learning overview, Survival Analysis, Multiple Testing, Unsupervised Learning)
-- Focus primarily on Chapter 12 (PCA, K-Means, Hierarchical Clustering) and Chapter 13
-
-**Practice:**
-- Full pipeline: PCA → K-Means → Hierarchical clustering on a high-dimensional dataset
-- Apply multiple testing correction (Bonferroni, BH-FDR) to a gene expression example
-
-**Checkpoint:**
-> `phase8_capstone.ipynb`: complete ML pipeline from data → feature engineering → model comparison → evaluation. Must test at least 5 model classes, use proper CV, and produce a final model card with performance metrics and limitations.
-
----
+**🏆 M3: ML Ready** — You can build, evaluate, and compare ML models. You understand cross-validation, regularization, and model selection.
 
 ---
 
@@ -942,115 +394,96 @@
 ---
 
 <details>
-<summary><h2>Phase 9: Data Mining</h2></summary>
+<summary><h2>Phase 4: Applied ML</h2></summary>
 
-**Duration:** 7 Weeks
-**Resource:** [Data Mining: Concepts and Techniques, 3rd Ed. — Jiawei Han](https://hanj.cs.illinois.edu/bk3/)
-**Depth Assessment:** ~700 pages, moderate difficulty. Breadth-first treatment of mining techniques. Builds directly on Phase 8.
+**Duration:** 5 Weeks
+**Resource(s):** [Hands-On Machine Learning, 3rd Ed. — Aurélien Géron](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/), [Interpretable ML — Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
+**Depth Assessment:** HoML ~850pp (focus on Part 1: Classical ML, Ch. 1–9), IML ~300pp (Ch. 4–10 for interpretability). Code-first, production-oriented. At 10–12 hrs/week: ~150pp + exercises per week.
 
 ---
 
-### Week 52: Data Preprocessing & Exploration
+### Week 18: End-to-End ML Projects & Data Pipelines
 
 **Study:**
-- Han Chapters 1–3 (Introduction, Getting to Know Your Data, Data Preprocessing)
+- HoML: Chapters 1–2 (ML landscape, End-to-End project)
+- IML: Chapters 1–3 (Introduction, Interpretability overview)
 
 **Practice:**
-- Build a comprehensive data preprocessing pipeline class in Python: handles normalization, standardization, discretization, and outlier detection
-- Apply to a new real-world dataset and produce a "data health report"
+- Complete the HoML Chapter 2 end-to-end project (Housing dataset)
+- Build a scikit-learn Pipeline that handles: imputation → scaling → feature selection → model
+- Add unit tests for your pipeline using `pytest`
 
 **Checkpoint:**
-> `week52_data_preprocessing.ipynb`: reusable `DataPreprocessor` class with unit tests, applied to a new dataset with a written data health report.
+> `week18_pipeline/`: Reproducible scikit-learn Pipeline with `pytest` tests. Must include: data loading, preprocessing, model training, evaluation, and model saving/loading.
 
 ---
 
-### Week 53: Frequent Pattern Mining — Apriori & FP-Growth
+### Week 19: Feature Engineering Masterclass
 
 **Study:**
-- Han Chapters 5–7 (Mining Frequent Patterns, Association Rules, Advanced Pattern Mining)
+- HoML: Chapters 3–4 (Classification, Training Models — SGD, polynomial features)
+- HoML: Chapter 6 (Decision Trees — advanced)
 
 **Practice:**
-- Implement the Apriori algorithm from scratch
-- Apply FP-Growth (via `mlxtend`) to a retail transaction dataset; discover and interpret top 10 association rules
+- Create 20+ features from a raw dataset (polynomial, interaction, binning, target encoding)
+- Feature importance analysis: permutation importance, SHAP values
+- Compare model performance with raw features vs. engineered features
 
 **Checkpoint:**
-> `week53_association_rules.ipynb`: from-scratch Apriori verified against `mlxtend.frequent_patterns.apriori`, FP-Growth rules with support/confidence/lift table, and practical interpretation of the top rules.
+> `week19_feature_eng.ipynb`: 20+ engineered features, feature importance analysis with SHAP summary plot, performance comparison table (raw vs. engineered), and written analysis of which features matter most.
 
 ---
 
-### Week 54: Classification — Advanced Techniques
+### Week 20: Hyperparameter Tuning & Model Interpretability
 
 **Study:**
-- Han Chapters 8–9 (Classification, Advanced Classification)
-- Focus: decision tree induction (ID3, C4.5, CART differences), Bayesian classification, rule-based, SVM, ensemble methods from a data mining perspective
+- HoML: Chapter 5 (SVMs — kernel tricks, hyperparameter tuning)
+- IML: Chapters 4–8 (Partial Dependence Plots, Feature Importance, SHAP, LIME)
 
 **Practice:**
-- Implement ID3 (using Information Gain) from scratch; compare split criteria with Gini (CART)
-- Build a comparison table of 6 classifiers on 3 datasets using identical preprocessing and CV
+- Hyperparameter tuning shootout: GridSearchCV vs. RandomizedSearchCV vs. Optuna on 3 models
+- Train a complex model (GBM); apply SHAP values, PDP, and LIME
+- Produce: SHAP summary, SHAP waterfall for 3 individual predictions, PDP for top 3 features
 
 **Checkpoint:**
-> `week54_classification_dm.ipynb`: ID3 from scratch, 6-classifier comparison table across 3 datasets, and a written analysis of when each classifier family performs best.
+> `week20_tuning_interpret.ipynb`: Tuning comparison table (3 strategies × 3 models), full interpretability analysis with SHAP/LIME/PDP, and written section on when each method should be preferred.
 
 ---
 
-### Week 55: Clustering — K-Means, DBSCAN & Hierarchical
+### Week 21: Imbalanced Learning & Ensemble Techniques
 
 **Study:**
-- Han Chapter 10 (Cluster Analysis)
-- Focus: partitioning, hierarchical, density-based, grid-based, model-based methods
+- HoML: Chapters 7–8 (Ensemble Learning, Dimensionality Reduction)
+- Topics: Voting classifiers, stacking, boosting, PCA, t-SNE, UMAP
 
 **Practice:**
-- Implement DBSCAN from scratch using only NumPy
-- Compare K-Means, DBSCAN, and Agglomerative clustering on 3 synthetic datasets (blobs, moons, circles)
+- Handle an imbalanced dataset: SMOTE, class weights, threshold tuning — compare AUC-PR
+- Build a stacking ensemble with 3 base learners and a meta-learner
+- Apply PCA + UMAP to a high-dimensional dataset; visualize clusters
 
 **Checkpoint:**
-> `week55_clustering.ipynb`: from-scratch DBSCAN with comparison against `sklearn.cluster.DBSCAN`, side-by-side visualization of all 3 algorithms on all 3 datasets (9-panel figure), and Silhouette scores.
+> `week21_imbalanced_ensemble.ipynb`: Imbalanced learning comparison (4 strategies), stacking ensemble with out-of-fold predictions, PCA + UMAP visualization with cluster analysis.
 
 ---
 
-### Week 56: Outlier Detection
+### Week 22: Phase 4 Capstone — Production-Ready ML
 
 **Study:**
-- Han Chapter 12 (Outlier Detection)
-- Topics: statistical, distance-based, density-based (LOF), isolation-based (Isolation Forest)
+- HoML: Chapter 9 (Unsupervised techniques — review)
+- IML: Chapters 9–10 (Counterfactual explanations, global surrogates)
 
 **Practice:**
-- Implement Local Outlier Factor (LOF) from scratch
-- Apply LOF, Isolation Forest, and One-Class SVM to a real anomaly detection dataset (e.g., credit card fraud); compare AUC-ROC
+- End-to-end production-ready ML project:
+  - Data pipeline with scikit-learn Pipeline
+  - Feature engineering (20+ features)
+  - Hyperparameter tuning (Optuna or GridSearchCV)
+  - Model interpretability (SHAP + PDP)
+  - Model card with performance metrics, limitations, and ethical considerations
 
 **Checkpoint:**
-> `week56_outlier.ipynb`: from-scratch LOF, AUC-ROC comparison of all 3 methods, precision-recall curve for imbalanced data, and written discussion of the computational complexity of each approach.
+> `phase4_capstone/`: GitHub repo with modular Python code, `requirements.txt`, `pytest` tests, model card, and README. Must reproduce with a single `python run.py` command.
 
----
-
-### Week 57: Mining Data Streams & Web Data
-
-**Study:**
-- Han Chapters 13–14 (Mining Data Streams, Mining Social Networks)
-- Topics: sliding window, Flajolet-Martin, Bloom filter, PageRank
-
-**Practice:**
-- Implement a Bloom Filter from scratch for approximate set membership
-- Implement the Flajolet-Martin algorithm for cardinality estimation; test on a stream of 1M items
-
-**Checkpoint:**
-> `week57_streaming.ipynb`: Bloom Filter class with false positive rate analysis, Flajolet-Martin cardinality estimation vs. exact count, and performance benchmark.
-
----
-
-### Week 58: Phase 9 Capstone — Full Data Mining Project
-
-**Study:**
-- Han Chapters 4, 15–16 (Data Warehousing, Spatial Mining, Multimedia Mining — skim for awareness)
-
-**Practice:**
-- End-to-end data mining project on a dataset of your choice (recommend: [UCI ML Repository](https://archive.ics.uci.edu/))
-- Must include: preprocessing → association rule mining → 3+ classification models → clustering → outlier removal → final model selection
-
-**Checkpoint:**
-> `phase9_capstone/` directory with a reproducible pipeline, a written report (~1000 words), and a results table. The project must tell a coherent data mining story from question to conclusion.
-
----
+**🏆 M4: Applied ML Ready** — You can build production-ready ML pipelines with feature engineering, tuning, and interpretability.
 
 ---
 
@@ -1059,483 +492,143 @@
 ---
 
 <details>
-<summary><h2>Phase 10: Classical Machine Learning</h2></summary>
-
-**Duration:** 10 Weeks
-**Resources (Interwoven):**
-- [Pattern Recognition and Machine Learning (PRML) — Bishop](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-- [Interpretable Machine Learning — Christoph Molnar](https://christophm.github.io/interpretable-ml-book/)
-
-**Depth Assessment:** PRML ~700 pages, high mathematical rigor — the hardest phase yet. IML ~300 pages, moderate. Strategy: PRML for theory, IML for interpretation of the same models.
-
----
-
-### Week 59: Polynomial Curve Fitting & Probability Theory (PRML Ch. 1)
-
-**Study:**
-- PRML Chapter 1 (Introduction) — all sections
-- IML Chapter 1–2 (Introduction, Interpretability)
-
-**Practice:**
-- Implement polynomial regression with regularization (PRML Figure 1.4 reproduction)
-- Plot overfitting progression for M=0,1,3,9 polynomials with 10 training points
-
-**Checkpoint:**
-> `week59_prml_intro.ipynb`: exact reproduction of Bishop Figure 1.4 and 1.5 from scratch (no sklearn), written explanation of the bias-variance trade-off in terms of the PRML framework.
-
----
-
-### Week 60: Probability Distributions (PRML Ch. 2)
-
-**Study:**
-- PRML Chapter 2 (Probability Distributions) — Gaussian, Bernoulli, Multinomial, Dirichlet, Exponential family
-
-**Practice:**
-- Derive the MLE for the Dirichlet-Multinomial conjugate pair
-- Implement the EM algorithm for a 1D Gaussian Mixture Model from scratch
-
-**Checkpoint:**
-> `week60_distributions.ipynb`: GMM-EM from scratch with visualization of convergence (log-likelihood vs. iteration), compared to `sklearn.mixture.GaussianMixture`.
-
----
-
-### Week 61: Linear Models for Regression (PRML Ch. 3)
-
-**Study:**
-- PRML Chapter 3 (Linear Models for Regression)
-- Focus: Bayesian linear regression, evidence approximation, Automatic Relevance Determination
-
-**Practice:**
-- Implement Bayesian linear regression from scratch with predictive distribution
-- Plot the posterior over weights and the predictive uncertainty bands
-
-**Checkpoint:**
-> `week61_bayesian_linreg.ipynb`: Bayesian linear regression from scratch, posterior weight distribution visualization, predictive uncertainty bands at different data sizes.
-
----
-
-### Week 62: Linear Models for Classification (PRML Ch. 4)
-
-**Study:**
-- PRML Chapter 4 (Linear Models for Classification)
-- Focus: generative vs. discriminative, Laplace approximation for logistic regression, multi-class
-
-**Practice:**
-- Implement softmax regression (multinomial logistic regression) from scratch with Newton-Raphson optimizer
-- Apply to MNIST (first 3 classes); visualize decision regions
-
-**Checkpoint:**
-> `week62_linear_classification.ipynb`: from-scratch softmax regression with Newton-Raphson, decision boundary plots, and comparison to `sklearn.linear_model.LogisticRegression`.
-
----
-
-### Week 63: Neural Networks (PRML Ch. 5)
-
-**Study:**
-- PRML Chapter 5 (Neural Networks) — feed-forward nets, backpropagation, regularization
-
-**Practice:**
-- Implement a 2-layer neural network with backpropagation **entirely from scratch** using only NumPy
-- Train on a classification dataset; implement gradient checking to verify your backprop
-
-**Checkpoint:**
-> `week63_neural_net_scratch.ipynb`: fully from-scratch neural network with gradient checking (must pass), training/validation loss curves, and accuracy comparison to a comparable `sklearn.neural_network.MLPClassifier`.
-
----
-
-### Week 64: Kernel Methods & SVMs (PRML Ch. 6–7)
-
-**Study:**
-- PRML Chapters 6–7 (Kernel Methods, Sparse Kernel Machines)
-- Focus: Gaussian Process regression, SVM dual formulation, relevance vector machine
-
-**Practice:**
-- Implement Gaussian Process Regression from scratch (RBF kernel)
-- Plot GP posterior mean and 2σ uncertainty bands; vary the kernel hyperparameters and observe the effect
-
-**Checkpoint:**
-> `week64_gp.ipynb`: from-scratch GP regression with uncertainty bands, kernel hyperparameter sensitivity analysis (3-panel plot), and a written explanation of what each hyperparameter controls.
-
----
-
-### Week 65: Graphical Models & EM Algorithm (PRML Ch. 8–9)
-
-**Study:**
-- PRML Chapters 8–9 (Graphical Models, Mixture Models and EM)
-
-**Practice:**
-- Implement the EM algorithm for a full Gaussian Mixture Model (K components, D dimensions)
-- Visualize the EM convergence on 2D data with animated steps (each iteration = one frame)
-
-**Checkpoint:**
-> `week65_em_gmm.ipynb`: full multivariate GMM-EM from scratch (NumPy only), animated convergence saved as GIF, BIC/AIC model selection for K=1..8.
-
----
-
-### Week 66: Sampling Methods & Approximate Inference (PRML Ch. 11)
-
-**Study:**
-- PRML Chapter 11 (Sampling Methods)
-- Focus: Rejection sampling, Importance sampling, Metropolis-Hastings, Gibbs sampling
-
-**Practice:**
-- Implement Metropolis-Hastings from scratch for sampling from a 2D bimodal distribution
-- Visualize the Markov chain trajectory and the final approximated distribution
-
-**Checkpoint:**
-> `week66_mcmc.ipynb`: MH sampler from scratch, chain trajectory plot, sample histogram vs. true distribution, and written discussion of acceptance rate tuning.
-
----
-
-### Week 67: Model Interpretability — SHAP, LIME & PDP
-
-**Study:**
-- IML Chapters 4–8 (Regression Models, Linear Models, Decision Trees, RuleFit, Other Interpretable Models)
-- IML Chapters 9–10 (Model-Agnostic Methods, Partial Dependence Plots)
-
-**Practice:**
-- Train a complex model (GBM) on a real dataset; apply SHAP values (using `shap` library)
-- Produce: SHAP summary plot, SHAP waterfall plot for 3 individual predictions, PDP for top 3 features
-
-**Checkpoint:**
-> `week67_interpretability.ipynb`: full interpretability analysis with SHAP, LIME, and PDP. Must include both global and local explanations, and a written section on when each method should be preferred.
-
----
-
-### Week 68: Phase 10 Capstone — From-Scratch Classical ML System
-
-**Study:**
-- PRML Chapter 12 (Continuous Latent Variables — PCA and probabilistic PCA)
-- IML Chapter 11–12 (Neural Network Interpretation, Counter-factual Explanations)
-
-**Practice:**
-- Build a complete classical ML system from scratch: includes data pipeline, feature engineering, 3 model classes (one probabilistic), cross-validation, hyperparameter tuning, and interpretability analysis
-
-**Checkpoint:**
-> `phase10_capstone/`: modular Python package (not a notebook) with proper `__init__.py`, docstrings, and unit tests. Must include a `README.md` and reproduce your best result with a single `python run.py` command.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 11: Elements of Statistical Learning</h2></summary>
+<summary><h2>Phase 5: Deep Learning</h2></summary>
 
 **Duration:** 8 Weeks
-**Resource:** [The Elements of Statistical Learning, 2nd Ed. — Hastie, Tibshirani, Friedman](https://hastie.su.domains/ElemStatLearn/)
-**Depth Assessment:** ~750 pages, extreme mathematical rigor. ESL is the graduate-level complement to ISLP. After Phase 10 (PRML), you have the prerequisite foundation. Emphasis on theory and derivations.
+**Resource(s):** [Dive into Deep Learning (D2L.ai)](https://d2l.ai/), [Understanding Deep Learning — Simon Prince](https://udlbook.github.io/udlbook/)
+**Depth Assessment:** D2L.ai (interactive notebooks, continuously updated), Prince ~600pp (modern, visually rich, accessible). Replaces Goodfellow DL Book (800pp, 2016, dense). At 10–12 hrs/week: D2L notebooks + Prince chapters.
 
 ---
 
-### Week 69: ESL Chapters 1–4 — Linear Methods
+### Week 23: Neural Networks Foundations
 
 **Study:**
-- ESL Chapters 1–4 (Introduction, Overview, Linear Regression, Linear Methods for Classification)
-- Compare ESL's treatment of ridge regression and lasso to ISLP's — note the deeper mathematical treatment
+- Prince: Chapters 1–5 (Introduction, Supervised learning, Shallow neural networks, Deep neural networks, Loss functions)
+- D2L: Chapters 3–5 (MLPs, backpropagation, numerical stability)
 
 **Practice:**
-- Derive the ridge regression shrinkage in terms of SVD — show how ridge shrinks singular values
-- Implement Linear Discriminant Analysis using Fisher's criterion (from-scratch, matrix form)
+- Implement a 2-layer neural network with backpropagation from scratch using only NumPy
+- Gradient checking: verify your backprop implementation
+- Train on a classification dataset; compare to `sklearn.neural_network.MLPClassifier`
 
 **Checkpoint:**
-> LaTeX document with SVD-based ridge derivation + `week69_esl.ipynb` with from-scratch LDA and comparison to sklearn.
+> `week23_nn_scratch.ipynb`: From-scratch neural network with gradient checking (must pass), training/validation loss curves, and accuracy comparison to sklearn MLP.
 
 ---
 
-### Week 70: Basis Expansions, Splines & Smoothing (Ch. 5)
+### Week 24: Optimization, Initialization & Regularization
 
 **Study:**
-- ESL Chapter 5 (Basis Expansions and Regularization) — all sections including smoothing splines, RKHS
-
-**Practice:**
-- Implement natural cubic splines from scratch using the truncated power basis
-- Implement a smoothing spline via the penalized least squares criterion; vary the smoothing parameter
-
-**Checkpoint:**
-> `week70_splines.ipynb`: natural cubic spline from scratch, smoothing spline with λ sensitivity plot (equivalent degrees of freedom vs. λ), and cross-validated optimal λ selection.
-
----
-
-### Week 71: Kernel Smoothing & Model Assessment (Ch. 6–7)
-
-**Study:**
-- ESL Chapters 6–7 (Kernel Smoothing Methods, Model Assessment and Selection)
-- Focus: Nadaraya-Watson estimator, local polynomial regression, AIC, BIC, MDL, VC dimension
-
-**Practice:**
-- Implement the Nadaraya-Watson kernel estimator from scratch
-- Implement a leave-one-out CV estimator using the hat matrix shortcut (avoid refitting)
-
-**Checkpoint:**
-> `week71_kernel_cv.ipynb`: NW estimator with bandwidth sensitivity plot, LOO-CV via hat matrix (verify it matches brute-force LOO), and a written explanation of the optimism of in-sample error.
-
----
-
-### Week 72: Additive Models & Boosting (Ch. 9–10)
-
-**Study:**
-- ESL Chapters 9–10 (Additive Models, Trees, Boosting)
-- Focus: Gradient Boosting derivation (Friedman's view), AdaBoost as exponential loss
-
-**Practice:**
-- Implement Gradient Boosting (for regression) from scratch using decision stumps as base learners
-- Show the equivalence between AdaBoost and forward stagewise additive modeling with exponential loss
-
-**Checkpoint:**
-> `week72_boosting.ipynb`: from-scratch gradient boosting with learning curve, proof of AdaBoost-exponential loss equivalence (LaTeX), and comparison vs. `sklearn.ensemble.GradientBoostingRegressor`.
-
----
-
-### Week 73: Neural Networks & Radial Basis Functions (Ch. 11–12)
-
-**Study:**
-- ESL Chapters 11–12 (Neural Networks, Support Vector Machines and Flexible Discriminants)
-- Note: compare ESL's NN treatment to PRML Ch. 5 — ESL is more optimization-focused
-
-**Practice:**
-- Implement a Radial Basis Function (RBF) network from scratch: learn centers via k-means, train output weights via least squares
-- Compare the RBF network to a standard neural network on a regression task
-
-**Checkpoint:**
-> `week73_rbf.ipynb`: from-scratch RBF network, comparison with MLP, and a written analysis of inductive biases of each architecture.
-
----
-
-### Week 74: Prototype Methods, Unsupervised Learning & EM (Ch. 13–14)
-
-**Study:**
-- ESL Chapters 13–14 (Prototype Methods, Unsupervised Learning)
-- Focus: k-means, k-medoids, LVQ, hierarchical methods, ICA, PCA revisited
-
-**Practice:**
-- Implement K-Medoids (PAM algorithm) from scratch
-- Implement FastICA from scratch; apply to cocktail party problem (blind source separation)
-
-**Checkpoint:**
-> `week74_kmedoids_ica.ipynb`: K-Medoids from scratch vs. K-Means on non-Euclidean data, FastICA demonstration on mixed audio signals with before/after plots.
-
----
-
-### Week 75: Random Forests & Ensemble Methods (Ch. 15–16)
-
-**Study:**
-- ESL Chapters 15–16 (Random Forests, Ensemble Learning)
-- Focus: variance reduction mechanism, out-of-bag error, stacking, super-learner
-
-**Practice:**
-- Implement Random Forest from scratch (bag of CART trees + random feature subsets)
-- Implement a 2-level stacking ensemble with 3 base learners and a meta-learner
-
-**Checkpoint:**
-> `week75_ensemble.ipynb`: from-scratch Random Forest vs. `sklearn.ensemble.RandomForestClassifier`, stacking ensemble with out-of-fold predictions, and a written analysis of when stacking adds value.
-
----
-
-### Week 76: High-Dimensional Problems & Phase 11 Capstone (Ch. 17–18)
-
-**Study:**
-- ESL Chapters 17–18 (Undirected Graphical Models, High-Dimensional Problems)
-- Focus: graphical lasso, Dantzig selector, compressed sensing intuition
-
-**Practice:**
-- Implement the Graphical Lasso (glasso) algorithm for sparse precision matrix estimation
-- Apply to financial return data; interpret the resulting conditional independence graph
-
-**Checkpoint:**
-> `phase11_capstone.ipynb`: graphical lasso on real financial data with network visualization, and a 500-word written synthesis comparing ESL's and ISLP's treatment of the same topics, noting key mathematical extensions in ESL.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 12: Deep Learning</h2></summary>
-
-**Duration:** 12 Weeks
-**Resources (Interwoven):**
-- [Dive into Deep Learning (D2L.ai)](https://d2l.ai/)
-- [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
-- [Deep Learning Book — Goodfellow, Bengio, Courville](https://www.deeplearningbook.org/)
-
-**Depth Assessment:** D2L.ai = massive (~1000+ pages with code); DL Book = ~800 pages; Illustrated Transformer = short but essential. Strategy: DL Book for theory, D2L for code-first implementation. This is the longest and most demanding phase.
-
----
-
-### Week 77: Linear Neural Networks & MLP from Scratch
-
-**Study:**
-- DL Book Ch. 6 (Deep Feedforward Networks) — full chapter
-- D2L Chapters 1–4 (Introduction, Preliminaries, Linear Networks, MLPs)
-
-**Practice:**
-- Implement a fully functional MLP from scratch in PyTorch **without using `nn.Module`** (only `torch.Tensor` and autograd)
-- Train on MNIST; achieve >97% test accuracy
-
-**Checkpoint:**
-> `week77_mlp_scratch.ipynb`: raw-PyTorch MLP, training/validation loss curves, confusion matrix, and a written explanation of how `torch.autograd` computes gradients.
-
----
-
-### Week 78: Optimization, Initialization & Regularization
-
-**Study:**
-- DL Book Ch. 7–8 (Regularization, Optimization for Deep Learning)
-- D2L Ch. 5–6 (Builders' Guide, CNNs intro)
+- Prince: Chapters 6–9 (Training, Optimizers, Initialization, Regularization)
+- D2L: Chapter 6 (Builders' Guide — optimization deep-dive)
 
 **Practice:**
 - Implement and compare SGD, Momentum, RMSProp, and Adam optimizers from scratch
-- Demonstrate the effect of initialization (Xavier vs. He vs. random) on training dynamics
+- Demonstrate initialization effects: Xavier vs. He vs. random on training dynamics
+- Ablation study: Dropout, L2 regularization, early stopping — record performance
 
 **Checkpoint:**
-> `week78_optimization.ipynb`: 4 optimizer implementations from scratch, side-by-side convergence plots on the same task, and initialization experiment with training loss curves.
+> `week24_optimization.ipynb`: 4 optimizer implementations from scratch, side-by-side convergence plots, initialization experiment with training loss curves, ablation table (8 combinations).
 
 ---
 
-### Week 79: Convolutional Neural Networks (CNNs)
+### Week 25: Convolutional Neural Networks
 
 **Study:**
-- DL Book Ch. 9 (Convolutional Networks)
-- D2L Ch. 7–8 (CNNs, Modern CNNs — AlexNet, VGG, NiN, GoogLeNet, ResNet)
+- Prince: Chapters 10–11 (Convolutional networks, Residual networks)
+- D2L: Chapters 7–8 (CNNs, Modern CNNs — AlexNet, VGG, ResNet)
 
 **Practice:**
 - Implement a 2D convolution operation from scratch using only NumPy
-- Build and train a ResNet-20 from scratch in PyTorch on CIFAR-10; achieve >90% test accuracy
+- Build and train a ResNet-18 (from `torchvision.models`) on CIFAR-10; fine-tune to >90% accuracy
+- Grad-CAM visualization: show what the network "sees" for 5 sample predictions
 
 **Checkpoint:**
-> `week79_cnn.ipynb`: from-scratch convolution, ResNet-20 training with final test accuracy and training curves, and feature map visualizations for 3 layers.
+> `week25_cnn.ipynb`: From-scratch 2D convolution, ResNet-18 training with final test accuracy and learning curves, Grad-CAM visualizations for 5 samples, and feature map visualizations for 3 layers.
 
 ---
 
-### Week 80: Recurrent Neural Networks & LSTMs
+### Week 26: RNNs, LSTMs & Sequence Models
 
 **Study:**
-- DL Book Ch. 10 (Sequence Modeling: Recurrent and Recursive Nets)
-- D2L Ch. 9 (RNNs) — all sections
+- Prince: Chapter 12 (Recurrent neural networks)
+- D2L: Chapter 9 (RNNs) — all sections
 
 **Practice:**
 - Implement an LSTM cell from scratch using only `torch.Tensor` operations (no `nn.LSTM`)
 - Build a character-level language model; generate text samples after training
+- Compare LSTM vs. GRU on a sequence prediction task
 
 **Checkpoint:**
-> `week80_rnn_lstm.ipynb`: from-scratch LSTM cell verified against `nn.LSTM`, character LM with generated text samples at epoch 1, 10, 50, and final perplexity metric.
+> `week26_rnn_lstm.ipynb`: From-scratch LSTM cell verified against `nn.LSTM`, character LM with generated text samples at epoch 1, 10, 50, and final perplexity metric.
 
 ---
 
-### Week 81: Attention Mechanism & The Transformer
+### Week 27: Attention Mechanism & Transformer Architecture
 
 **Study:**
-- Read [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — multiple times, diagram by diagram
-- D2L Ch. 11 (Attention Mechanisms and Transformers) — all sections
-- DL Book Ch. 12 (Applications)
+- Prince: Chapter 13 (Transformers)
+- D2L: Chapter 11 (Attention Mechanisms)
+- Read: [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
 
 **Practice:**
 - Implement scaled dot-product attention from scratch
 - Implement multi-head attention from scratch
-- Implement a full Transformer encoder block from scratch (no `nn.TransformerEncoder`)
+- Implement a full Transformer encoder block (no `nn.TransformerEncoder`)
 
 **Checkpoint:**
-> `week81_transformer.ipynb`: from-scratch attention mechanisms, a Transformer encoder block tested on a simple sequence task, and an annotated diagram (matplotlib) of your implementation matching the Illustrated Transformer's visualization.
+> `week27_attention.ipynb`: From-scratch attention mechanisms, Transformer encoder block tested on a simple sequence task, annotated diagram matching Illustrated Transformer's visualization. **This is the most important from-scratch implementation in Phase 5.**
 
 ---
 
-### Week 82: Full Transformer & Pre-training Objectives
+### Week 28: Transfer Learning & Modern Architectures
 
 **Study:**
-- D2L Ch. 15 (Natural Language Processing: Pretraining)
-- Research papers: "Attention Is All You Need" (Vaswani et al., 2017), "BERT" (Devlin et al., 2019) — read abstracts and architecture sections
+- Prince: Chapters 14–16 (Transfer learning, Modern architectures, Self-supervised learning)
+- D2L: Chapter 14 (Computer Vision — Fine-Tuning)
 
 **Practice:**
-- Implement a complete encoder-decoder Transformer for machine translation from scratch
-- Train on a small bilingual dataset (e.g., English-French subset from Tatoeba)
+- Fine-tune a pre-trained ResNet-50 on a custom 5-class image dataset
+- Compare: full fine-tuning vs. head-only vs. last-2-layers; plot accuracy vs. epochs
+- Apply to a text classification task using HuggingFace Transformers (pre-trained BERT)
 
 **Checkpoint:**
-> `week82_seq2seq_transformer.ipynb`: complete Transformer from scratch, training on translation task, BLEU score computation, and attention heatmap visualization.
+> `week28_transfer.ipynb`: 3-strategy fine-tuning comparison table, Grad-CAM visualizations, HuggingFace BERT fine-tuning on text classification with evaluation metrics.
 
 ---
 
-### Week 83: Generative Models — VAEs & GANs
+### Week 29: Generative Models — VAEs & GANs
 
 **Study:**
-- DL Book Ch. 20 (Deep Generative Models)
-- D2L Ch. 20 (Generative Adversarial Networks)
+- Prince: Chapters 17–18 (Autoencoders, Generative adversarial networks)
+- D2L: Chapter 20 (GANs)
 
 **Practice:**
 - Implement a Variational Autoencoder (VAE) from scratch; train on MNIST
-- Implement a DC-GAN from scratch; train on CelebA or CIFAR-10
+- Visualize latent space with t-SNE; generate new samples by sampling from latent space
+- Implement a DC-GAN; train on CIFAR-10; generate sample grid
 
 **Checkpoint:**
-> `week83_generative.ipynb`: VAE with latent space visualization (t-SNE of latent codes), image reconstructions, GAN with FID score estimation and generated samples grid.
+> `week29_generative.ipynb`: VAE with latent space t-SNE visualization, image reconstructions, DC-GAN with generated samples grid, and written comparison of VAE vs. GAN strengths/weaknesses.
 
 ---
 
-### Week 84: Normalization, Modern Architectures & Tricks
+### Week 30: Phase 5 Capstone — DL + LLM Project
 
 **Study:**
-- D2L Ch. 8 (Modern CNNs — DenseNet, BatchNorm)
-- DL Book Ch. 8 (Optimization for Training Deep Models — second pass)
-- Topics: Batch Norm, Layer Norm, Dropout, Label Smoothing, Mixed Precision Training
+- Review all Prince chapters and D2L notebooks from this phase
+- HuggingFace Course: Chapters 1–3 (Transformers overview)
 
 **Practice:**
-- Implement Batch Normalization from scratch (both forward and backward pass)
-- Ablation study: train the same model with and without BatchNorm, Dropout, and Label Smoothing — record performance
+- End-to-end deep learning project combining CNN/Transformer with LLM:
+  - Option A: Image captioning system (CNN encoder + LLM decoder)
+  - Option B: Document understanding pipeline (OCR + LLM summarization)
+  - Option C: Multimodal search (image + text embeddings)
 
 **Checkpoint:**
-> `week84_normalization.ipynb`: from-scratch BatchNorm with gradient verification, ablation table (8 combinations of BatchNorm/Dropout/LabelSmoothing ON/OFF), and written conclusions.
+> `phase5_capstone/`: Complete DL project with trained model, evaluation report, and demo (Gradio or Streamlit). Upload model to HuggingFace Hub. Include model card with architecture, training details, and limitations.
 
----
-
-### Week 85: Transfer Learning & Fine-Tuning
-
-**Study:**
-- D2L Ch. 14 (Computer Vision — Fine-Tuning, Object Detection intro)
-
-**Practice:**
-- Fine-tune a pre-trained ResNet-50 (from `torchvision`) on a custom 5-class image dataset
-- Compare: full fine-tuning vs. head-only vs. last-2-layers; plot accuracy vs. epochs for all 3
-
-**Checkpoint:**
-> `week85_transfer.ipynb`: 3-strategy fine-tuning comparison table and learning curves, Grad-CAM visualizations for 5 sample predictions, and a written explanation of when to freeze vs. unfreeze layers.
-
----
-
-### Week 86: Reinforcement Learning Fundamentals
-
-**Study:**
-- DL Book Ch. 17 (Monte Carlo Methods — skim as RL background)
-- D2L Ch. 17 (Reinforcement Learning) — Markov Decision Processes, Q-Learning, Policy Gradient
-
-**Practice:**
-- Implement Deep Q-Network (DQN) from scratch; apply to CartPole-v1 (`gymnasium`)
-- Implement REINFORCE (policy gradient) from scratch; compare convergence to DQN on CartPole
-
-**Checkpoint:**
-> `week86_rl.ipynb`: DQN and REINFORCE from scratch, training reward curves for both, and a written comparison of value-based vs. policy-based RL methods.
-
----
-
-### Week 87: Scaling Laws, LLMs & Phase 12 Capstone
-
-**Study:**
-- D2L Ch. 11 (remaining sections on large-scale pre-training)
-- Read: "Scaling Laws for Neural Language Models" (Kaplan et al., 2020) — key findings
-- DL Book: Appendix review
-
-**Practice:**
-- Fine-tune a small pre-trained language model (e.g., GPT-2 small via HuggingFace) on a domain-specific dataset
-- Implement a simple RAG (Retrieval-Augmented Generation) pipeline
-
-**Checkpoint:**
-> `phase12_capstone/`: a complete end-to-end deep learning project — choose one: (a) image classification system with custom dataset, (b) text generation with fine-tuned LM, or (c) multimodal system. Must include training code, evaluation, model card, and a 1-page technical report.
-
----
+**🏆 M5: DL Ready** — You understand neural network architectures, can train CNNs/RNNs/Transformers, and can apply transfer learning.
 
 ---
 
@@ -1544,85 +637,125 @@
 ---
 
 <details>
-<summary><h2>Phase 13: R for Data Science</h2></summary>
+<summary><h2>Phase 5.5: LLM/GenAI Engineering</h2></summary>
 
-**Duration:** 5 Weeks
-**Resource:** [R for Data Science, 2nd Ed. — Hadley Wickham](https://r4ds.hadley.nz/)
-**Depth Assessment:** ~500 pages, moderate difficulty. Deliberately placed here — you already know the statistical concepts. The goal is to become proficient in the R ecosystem for statistical computing.
+**Duration:** 6 Weeks
+**Resource(s):** [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain Documentation](https://python.langchain.com/), [RAGAS Documentation](https://docs.ragas.io/), [DeepLearning.AI LLM Courses](https://www.deeplearning.ai/short-courses/)
+**Depth Assessment:** This is the most critical new module for 2026 job readiness. 65%+ of DS job postings now require LLM/GenAI skills. All resources are free and continuously updated. At 10–12 hrs/week: ~80 hours total.
 
 ---
 
-### Week 88: R Basics, Tidyverse & Data Import
+### Week 31: LLM Fundamentals — Transformers, Tokenization & Scaling
 
 **Study:**
-- R4DS Chapters 1–9 (Introduction, Workflow Basics, Data Transformation, Workflow Scripts, Data Tidying, Data Import)
-- Install R 4.3+, RStudio, and `tidyverse`
+- HuggingFace NLP Course: Chapters 1–3 (Transformers, using pipelines, processing data)
+- Read: "Attention Is All You Need" (Vaswani et al., 2017) — architecture sections
+- Karpathy: ["Let's build GPT"](https://www.youtube.com/watch?v=kCc8FmEb1nY) (2 hrs)
 
 **Practice:**
-- Reproduce your Phase 1 Capstone analysis in R using `dplyr` and `readr` — compare the pandas vs. tidyverse syntax
-- Create a `tibble`, perform GroupBy aggregation with `group_by()` + `summarise()`
+- Implement scaled dot-product attention from scratch (review from Week 27, now in LLM context)
+- Compare tokenizers: BPE (tiktoken), WordPiece, SentencePiece — tokenize the same text, compare outputs
+- Experiment with OpenAI/Anthropic API: zero-shot, few-shot, chain-of-thought prompts
 
 **Checkpoint:**
-> `week88_r_basics.Rmd`: R Markdown document with the Phase 1 analysis reproduced in R, a comparison table of pandas vs. dplyr syntax for 10 common operations.
+> `week31_llm_fundamentals.ipynb`: Attention mechanism from-scratch, tokenizer comparison notebook (same text, 3 tokenizers, token count + output comparison), and a prompt experimentation log with 10+ prompts across 3 prompt patterns.
 
 ---
 
-### Week 89: Data Visualization with ggplot2
+### Week 32: Prompt Engineering & LLM APIs
 
 **Study:**
-- R4DS Chapters 10–12 (Layers, Exploratory Data Analysis, Communication with ggplot2)
+- [OpenAI Cookbook](https://cookbook.openai.com/) — prompt patterns, function calling, structured output
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
+- DeepLearning.AI: "Prompt Engineering for Developers" (short course)
 
 **Practice:**
-- Reproduce 6 of your Phase 1 matplotlib figures using `ggplot2` — comment on aesthetic differences
-- Create a publication-quality `ggplot2` figure with custom theme, annotations, and a multi-panel layout using `patchwork`
+- Build a production-quality prompt library: 20+ prompt patterns (zero-shot, few-shot, CoT, ReAct, system prompts)
+- Implement structured output parsing (JSON mode, function calling) with OpenAI/Anthropic API
+- Cost optimization: token counting, caching, rate limiting
 
 **Checkpoint:**
-> `week89_ggplot2.Rmd`: 6 reproduced figures + 1 publication-quality multi-panel figure. Each figure must have a caption. Export as PDF.
+> `week32_prompt_engineering/`: Prompt library with 20+ patterns, each with: prompt template, example input/output, cost estimate, and best-use-case documentation. API integration project with structured output parsing and error handling.
 
 ---
 
-### Week 90: Functions, Iteration & Functional Programming
+### Week 33: RAG Architecture — Embeddings, Vector DBs & Retrieval
 
 **Study:**
-- R4DS Chapters 13–27 (Logical Vectors, Numbers, Strings, Regular Expressions, Factors, Dates, Missing Values, Joins, Strings advanced)
+- LangChain: [RAG tutorials](https://python.langchain.com/docs/use_cases/question_answering/)
+- "RAG From Scratch" (LangChain YouTube series)
+- Embedding models overview: text-embedding-3, bge, e5
 
 **Practice:**
-- Write a suite of custom R functions that replicate your Python preprocessing pipeline from Phase 9
-- Use `purrr::map()` family for iteration — compare to `for` loops and `lapply`
+- Build a full RAG pipeline:
+  - Document ingestion and chunking (fixed, semantic, recursive — compare)
+  - Embedding generation and storage in ChromaDB (local)
+  - Retrieval with similarity search
+  - LLM-powered Q&A with retrieved context
+- Compare retrieval strategies: dense search, hybrid search (BM25 + dense), reranking
 
 **Checkpoint:**
-> `week90_r_programming.Rmd`: custom preprocessing pipeline in R, a benchmark comparing `for` loop vs. `lapply` vs. `purrr::map` for 5 operations.
+> `week33_rag_pipeline/`: Full RAG application with ChromaDB, 3 chunking strategies compared (retrieval accuracy, latency), hybrid search implementation, and Streamlit demo interface. This is a portfolio-worthy project.
 
 ---
 
-### Week 91: Statistical Modeling in R — `lm`, `glm`, `tidymodels`
+### Week 34: Fine-tuning LLMs — LoRA, QLoRA & PEFT
 
 **Study:**
-- R4DS Chapters 28–29 (Modeling intro — note: R4DS 2e defers to tidymodels)
-- Supplement: [tidymodels.org Getting Started tutorial](https://www.tidymodels.org/start/)
+- HuggingFace: ["Fine-tuning LLMs" guide](https://huggingface.co/docs/transformers/training)
+- Unsloth tutorials (free tier: Colab/Kaggle)
+- Read: "QLoRA" paper (Dettmers et al., 2023) — key sections
 
 **Practice:**
-- Fit a linear model and GLM using `lm()` and `glm()` in base R
-- Reproduce your Phase 8 ISLP analysis using `tidymodels`: 5-fold CV, Lasso tuning, final fit
+- Prepare a custom instruction-tuning dataset (Alpaca format, 500+ examples)
+- Fine-tune a base model (Llama-3-8B or Mistral-7B) using LoRA/QLoRA via PEFT
+- Evaluate: perplexity, human evaluation, benchmark comparison (before vs. after fine-tuning)
+- Export to GGUF format; test with Ollama
 
 **Checkpoint:**
-> `week91_tidymodels.Rmd`: complete tidymodels workflow with `recipe`, `workflow`, `tune_grid`, and `last_fit`, compared to your Python sklearn pipeline.
+> `week34_finetuning/`: Fine-tuned model on custom dataset with benchmark report (pre vs. post fine-tuning), training logs, and model uploaded to HuggingFace Hub. Include: dataset description, training configuration, evaluation methodology, and results.
 
 ---
 
-### Week 92: R Capstone — Reproducible Research with Quarto
+### Week 35: LLM Evaluation & Production
 
 **Study:**
-- R4DS Chapters 28–30 (Quarto, Workflow: Getting Help) — create a Quarto document
+- RAGAS documentation: evaluation metrics (faithfulness, answer relevance, context precision)
+- LangSmith tutorials: LLM observability, tracing, evaluation
+- "Building LLM Apps for Production" — monitoring, guardrails, cost tracking
 
 **Practice:**
-- Convert your most important Python analysis (Phase 8 or Phase 10 Capstone) into a fully reproducible Quarto report
-- The report must render to both HTML and PDF without modification
+- Build an LLM evaluation pipeline using RAGAS:
+  - Generate test dataset (questions, ground truth answers, contexts)
+  - Evaluate RAG pipeline on faithfulness, answer relevance, context recall
+  - Compare 2 retrieval strategies using RAGAS metrics
+- Set up monitoring: latency tracking, token usage, error rates
+- Implement guardrails: output validation, content filtering
 
 **Checkpoint:**
-> `phase13_capstone.qmd`: a complete Quarto document with code, figures, tables, LaTeX equations, and cross-references. Must compile to both HTML and PDF via a single `quarto render` command.
+> `week35_llm_eval/`: Evaluation pipeline with RAGAS metrics dashboard, comparison report of 2 RAG configurations, monitoring setup with latency/token usage tracking, and guardrails implementation.
 
 ---
+
+### Week 36: Agentic AI & Phase 5.5 Capstone
+
+**Study:**
+- LangGraph tutorials: building agents with LLMs
+- CrewAI documentation: multi-agent systems
+- Tool use & function calling patterns: ReAct, Plan-and-Execute
+
+**Practice:**
+- Build a production LLM application combining:
+  - RAG pipeline (from Week 33)
+  - Agent with tool use (web search, calculator, database query)
+  - Evaluation pipeline (from Week 35)
+- Deploy as a web application (Streamlit/Gradio)
+- Write a blog post explaining your architecture and decisions
+
+**Checkpoint:**
+> `phase5.5_capstone/`: End-to-end LLM application with RAG + Agent + Evaluation, deployed demo URL, blog post, and GitHub repo with full documentation. This is your strongest portfolio piece for 2026 job applications.
+
+**🏆 M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand RAG, fine-tuning, prompt engineering, and agentic patterns.
 
 ---
 
@@ -1631,147 +764,80 @@
 ---
 
 <details>
-<summary><h2>Phase 14: Econometrics, Time Series & Financial Econometrics</h2></summary>
+<summary><h2>Phase 6: Time Series & Causal Inference</h2></summary>
 
-**Duration:** 10 Weeks
-**Resources (Interwoven):**
-- [Basic Econometrics, 5th Ed. — Gujarati & Porter](https://www.mheducation.com/highered/product/basic-econometrics-gujarati-porter/M912000001.html)
-- [Financial Econometrics Notes — Kevin Sheppard](https://www.kevinsheppard.com/teaching/mfe/)
-
-**Depth Assessment:** Gujarati ~900 pages, moderate-hard (economic applications context); Sheppard MFE notes ~400 pages + Python code, hard. Strategy: Gujarati for foundational theory, Sheppard for financial applications and Python implementation.
+**Duration:** 4 Weeks
+**Resource(s):** [Causal Inference: The Mixtape — Scott Cunningham](https://mixtape.scunning.com/), [Financial Econometrics Notes — Kevin Sheppard](https://www.kevinsheppard.com/teaching/mfe/) (time series sections only)
+**Depth Assessment:** Mixtape ~600pp (focus on Ch. 1–7, 9), Sheppard MFE (time series chapters only). Replaces 16 weeks of Gujarati + full Mixtape with essentials. At 10–12 hrs/week: focused, applied approach.
 
 ---
 
-### Week 93: OLS — Theory & Gauss-Markov Assumptions
+### Week 37: Time Series — Stationarity, ARIMA & Forecasting
 
 **Study:**
-- Gujarati Chapters 1–5 (Nature of Regression, Two-Variable Regression, Interval Estimation, Hypothesis Testing)
-
-**Practice:**
-- Implement OLS in matrix form with full diagnostic output (coefficients, SEs, t-stats, p-values, F-stat, R²)
-- Apply to a real economic dataset from FRED; interpret every coefficient
-
-**Checkpoint:**
-> `week93_ols_econometrics.ipynb`: from-scratch OLS with formatted output table matching a statsmodels summary, interpretation of all statistics for a real economic regression.
-
----
-
-### Week 94: Multiple Regression & Specification Issues
-
-**Study:**
-- Gujarati Chapters 6–10 (Multiple Regression, Dummy Variables, Multicollinearity)
-
-**Practice:**
-- Demonstrate the Frisch-Waugh-Lovell theorem numerically
-- Run a regression with dummies for quarters; interpret the seasonal effects
-
-**Checkpoint:**
-> `week94_multiple_regression.ipynb`: FWL theorem numerical verification, seasonal dummy regression with plotted seasonal components, VIF computation and remediation.
-
----
-
-### Week 95: Heteroskedasticity & Autocorrelation
-
-**Study:**
-- Gujarati Chapters 11–12 (Heteroskedasticity, Autocorrelation)
-- Sheppard MFE: HAC standard errors section
-
-**Practice:**
-- Implement the Breusch-Pagan and White tests for heteroskedasticity from scratch
-- Implement Newey-West HAC standard errors; compare to OLS SEs on financial time series data
-
-**Checkpoint:**
-> `week95_diagnostics.ipynb`: from-scratch BP and White tests, Newey-West implementation with comparison table, and a simulated Monte Carlo showing OLS inference failure under heteroskedasticity.
-
----
-
-### Week 96: Time Series I — Stationarity, ARIMA
-
-**Study:**
-- Gujarati Chapters 21–22 (Time Series Econometrics)
-- Sheppard MFE: Time Series chapter
+- Sheppard MFE: Time Series chapters (stationarity, ARMA, ARIMA)
+- StatQuest: Time Series Forecasting series (~1 hr)
 
 **Practice:**
 - Implement the Augmented Dickey-Fuller (ADF) test from scratch
-- Fit ARIMA(p,d,q) models to an economic time series; select orders using AIC/BIC; generate forecasts
+- Fit ARIMA(p,d,q) models to an economic time series; select orders using AIC/BIC
+- Generate 12-step-ahead forecasts with confidence intervals
+- Compare ARIMA vs. Prophet on the same dataset
 
 **Checkpoint:**
-> `week96_arima.ipynb`: from-scratch ADF test vs. `statsmodels.tsa.stattools.adfuller`, ARIMA model selection ACF/PACF plots, 12-step-ahead forecast with confidence intervals.
+> `week37_timeseries.ipynb`: From-scratch ADF test vs. `statsmodels`, ARIMA model selection with ACF/PACF plots, 12-step forecast with confidence intervals, ARIMA vs. Prophet comparison table.
 
 ---
 
-### Week 97: Time Series II — VAR, Cointegration & ECM
+### Week 38: Causal Inference — DAGs & Potential Outcomes
 
 **Study:**
-- Gujarati Chapter 22 (continued: VAR, VECM, Cointegration)
-- Sheppard MFE: Multivariate Time Series
+- Mixtape: Chapters 1–3 (Introduction, Probability review, DAGs)
+- Practice drawing DAGs with `graphviz` or `dagitty`
 
 **Practice:**
-- Test for cointegration between two price series using the Engle-Granger two-step method
-- Estimate a Vector Error Correction Model (VECM); interpret the adjustment coefficients
+- Draw DAGs for 3 different research questions
+- Identify confounders, mediators, and colliders in each DAG
+- Determine the correct adjustment set for each
+- Simulate collider bias to demonstrate why controlling for colliders is dangerous
 
 **Checkpoint:**
-> `week97_var_vecm.ipynb`: cointegration test with visual of residuals, VECM estimation and interpretation, impulse response functions plotted for a 10-period horizon.
+> `week38_causal_dags.ipynb`: 3 annotated DAGs with confounder/mediator/collider identification, d-separation analysis, and collider bias simulation with before/after effect estimates.
 
 ---
 
-### Week 98: Volatility Modeling — ARCH, GARCH, Variations
+### Week 39: Matching, DiD & IV Estimation
 
 **Study:**
-- Sheppard MFE: ARCH, GARCH, GJR-GARCH, EGARCH
-- Read the original Engle (1982) ARCH paper and Bollerslev (1986) GARCH paper — abstract + model sections
+- Mixtape: Chapters 4–5 (Potential Outcomes, Matching)
+- Mixtape: Chapter 9 (Difference-in-Differences)
 
 **Practice:**
-- Implement GARCH(1,1) estimation via maximum likelihood from scratch (optimize with `scipy.optimize`)
-- Apply to S&P 500 daily returns; compare GARCH, GJR-GARCH, and EGARCH using AIC
+- Implement Propensity Score Matching from scratch; apply to LaLonde (1986) job training dataset
+- Implement canonical 2×2 DiD estimator; verify parallel trends visually
+- Apply to a real policy change dataset; produce event study plot
 
 **Checkpoint:**
-> `week98_garch.ipynb`: from-scratch GARCH(1,1) MLE, volatility forecast plot with `arch` library comparison, model comparison table, and written interpretation of asymmetric volatility (leverage effect).
+> `week39_matching_did.ipynb`: PSM with love plot (covariate balance before/after), ATE estimate with CI, 2×2 DiD with parallel trends test, event study plot (leads and lags), and written causal interpretation.
 
 ---
 
-### Week 99: Panel Data & Instrumental Variables
+### Week 40: Phase 6 Capstone — Causal Analysis
 
 **Study:**
-- Gujarati Chapters 14–16 (Panel Data Regression, Dummy Variables advanced, IV Estimation)
+- Mixtape: Chapter 7 (Instrumental Variables) — essentials only
+- Review all previous weeks
 
 **Practice:**
-- Estimate Fixed Effects and Random Effects models on a panel dataset; run the Hausman test
-- Implement 2SLS (Two-Stage Least Squares) from scratch for an IV estimation problem
+- Full causal analysis on an observational dataset:
+  - Research question → DAG construction → identification strategy
+  - Method selection (matching, DiD, or IV) → execution → robustness checks
+  - Written report with causal interpretation
 
 **Checkpoint:**
-> `week99_panel_iv.ipynb`: FE vs. RE comparison with Hausman test, 2SLS from scratch vs. `linearmodels.iv.IV2SLS`, and written discussion of endogeneity and instrument validity.
+> `phase6_capstone.qmd`: Causal analysis report in Quarto format. Must include: research question, DAG, identification assumption, method, results with confidence intervals, robustness checks, and discussion of assumption plausibility.
 
----
-
-### Week 100: Financial Econometrics — Asset Pricing & Factor Models
-
-**Study:**
-- Sheppard MFE: Asset Pricing, Factor Models, Portfolio Evaluation
-
-**Practice:**
-- Estimate the Fama-French 3-Factor model for 10 portfolios using OLS; test the zero-alpha hypothesis
-- Implement Mean-Variance portfolio optimization (Markowitz) from scratch using `cvxpy`
-
-**Checkpoint:**
-> `week100_asset_pricing.ipynb`: FF3 factor model with GRS test, efficient frontier plot from scratch vs. `cvxpy`, and written interpretation of alpha, beta, and factor loadings.
-
----
-
-### Week 101: Advanced Topics & Econometrics Capstone
-
-**Study:**
-- Gujarati Chapters 17–20 (Qualitative Response Models, Limited Dependent Variables, Probit/Logit/Tobit)
-- Sheppard MFE: remaining advanced topics
-
-**Practice:**
-- Estimate a Probit and Logit model; compute marginal effects at the mean and average marginal effects
-- Full econometric study: pose an economic question, collect data, estimate a model, check robustness, write up results
-
-**Checkpoint:**
-> `phase14_capstone.ipynb` + a 1500-word econometric report in Quarto/LaTeX: research question, data description, estimation results table (formatted like an academic paper), robustness checks, and conclusion.
-
----
+**🏆 M6.5: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
 
 ---
 
@@ -1780,274 +846,113 @@
 ---
 
 <details>
-<summary><h2>Phase 15: Causal Inference</h2></summary>
+<summary><h2>Phase 7: MLOps & Production</h2></summary>
 
 **Duration:** 6 Weeks
-**Resource:** [Causal Inference: The Mixtape — Scott Cunningham](https://mixtape.scunning.com/)
-**Depth Assessment:** ~600 pages, moderate-hard. Essential for anyone working with observational data. Rich in intuition and applied examples. Python and R code available.
+**Resource(s):** [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (selected chapters)
+**Depth Assessment:** MLOps Zoomcamp (9 modules, hands-on), mlsysbook selected chapters (1–7). Replaces 10 weeks of MLOps + DE Zoomcamp with focused production skills. Spark/Kafka moved to elective. At 10–12 hrs/week: infrastructure-heavy, very practical.
 
 ---
 
-### Week 102: DAGs, Potential Outcomes & Selection Bias
+### Week 41: Docker & Containerized ML
 
 **Study:**
-- Mixtape Chapters 1–3 (Introduction, Probability and Regression Review, Directed Acyclical Graphs)
+- MLOps Zoomcamp: Module 1 (Introduction, MLOps maturity)
+- mlsysbook: Chapters 1–2 (ML lifecycle overview)
 
 **Practice:**
-- Draw DAGs for 3 different economic questions using `graphviz` or `dagitty`
-- Identify confounders, mediators, and colliders in each DAG; determine the correct adjustment set
+- Containerize your Phase 4 Applied ML project in Docker
+- Write `Dockerfile`, `docker-compose.yml`, and `Makefile` with targets for `train`, `predict`, `test`
+- Build a FastAPI model serving endpoint
 
 **Checkpoint:**
-> `week102_dags.ipynb`: 3 DAGs with annotated confounders/mediators/colliders, written d-separation analysis for each, and simulation demonstrating collider bias.
+> `week41_docker/`: Fully containerized ML project. `docker-compose up` must reproduce training, evaluation, and inference. FastAPI `/predict` endpoint with request validation (Pydantic) and health check.
 
 ---
 
-### Week 103: Randomization & Matching Methods
+### Week 42: Experiment Tracking & Model Registry
 
 **Study:**
-- Mixtape Chapters 4–5 (Potential Outcomes Causal Model, Matching and Subclassification)
+- MLOps Zoomcamp: Module 2 (Experiment Tracking — MLflow)
+- mlsysbook: Chapter 4 (Model Training)
 
 **Practice:**
-- Implement Propensity Score Matching from scratch using logistic regression for the propensity score
-- Apply to the LaLonde (1986) job training dataset; estimate the Average Treatment Effect (ATE)
+- Integrate MLflow into your Phase 5 Deep Learning project
+- Log all hyperparameters, metrics, and artifacts for 20 runs
+- Register the best model in MLflow Model Registry
 
 **Checkpoint:**
-> `week103_matching.ipynb`: PSM from scratch with love plot (covariate balance before/after matching), ATE estimate with confidence interval, and written comparison of matched vs. unmatched estimates.
+> `week42_mlflow/`: MLflow-instrumented training script with 20 hyperparameter configurations, registered model in Model Registry, and MLflow UI screenshot showing run comparison.
 
 ---
 
-### Week 104: Regression Discontinuity Design
+### Week 43: ML Pipelines & Orchestration
 
 **Study:**
-- Mixtape Chapter 6 (Regression Discontinuity)
-- Read the Lee & Lemieux (2010) RD survey — key sections
+- MLOps Zoomcamp: Module 3 (Orchestration — Prefect or Mage)
+- mlsysbook: Chapter 5 (Model Deployment)
 
 **Practice:**
-- Implement a sharp RD estimator from scratch (local linear regression on each side of cutoff)
-- Perform bandwidth selection (Imbens-Kalyanaraman), placebo tests at false cutoffs, and McCrary density test
+- Build an end-to-end ML pipeline using Prefect: data ingestion → feature engineering → training → evaluation → model registration
+- Pipeline must be schedulable and handle failures with retries
+- Add logging and alerting
 
 **Checkpoint:**
-> `week104_rdd.ipynb`: sharp RD implementation, optimal bandwidth selection, 3-panel diagnostic figure (RD plot, density test, placebo at false cutoffs), and written causal interpretation.
+> `week43_pipeline/`: Working Prefect pipeline with 5+ tasks, retry logic, and logging. Must complete a full run end-to-end without manual intervention. Include pipeline visualization from Prefect UI.
 
 ---
 
-### Week 105: Difference-in-Differences & Event Studies
+### Week 44: Model Monitoring & Drift Detection
 
 **Study:**
-- Mixtape Chapter 9 (Difference-in-Differences)
-- Read Callaway & Sant'Anna (2021) for staggered DiD
+- MLOps Zoomcamp: Module 5 (Model Monitoring)
+- mlsysbook: Chapter 7 (Model Monitoring)
 
 **Practice:**
-- Implement canonical 2×2 DiD estimator; verify the parallel trends assumption visually
-- Apply to a real policy change dataset; produce an event study plot
+- Set up Evidently to monitor prediction drift and data drift
+- Simulate distribution shift over 5 time periods
+- Trigger automated alert when drift exceeds threshold
+- Build a monitoring dashboard (Streamlit or Grafana)
 
 **Checkpoint:**
-> `week105_did.ipynb`: 2×2 DiD with parallel trends test, event study plot (leads and lags), and written discussion of the parallel trends assumption and its plausibility.
+> `week44_monitoring/`: Monitoring pipeline with Evidently reports for 5 time periods showing drift progression, automated alert system, and dashboard with key metrics (accuracy, drift score, latency).
 
 ---
 
-### Week 106: Instrumental Variables & Local Average Treatment Effect
+### Week 45: CI/CD for ML & Cloud Deployment
 
 **Study:**
-- Mixtape Chapter 7 (Instrumental Variables)
-- Focus: LATE interpretation, weak instruments, Angrist-Pischke F-statistic
+- mlsysbook: Chapters 9–10 (MLOps Tooling, Production Infrastructure)
+- AWS SageMaker / GCP Vertex AI overview (choose one cloud provider)
 
 **Practice:**
-- Apply IV estimation to a classic example (e.g., compulsory schooling laws and earnings — Angrist & Krueger 1991 setup)
-- Test for instrument relevance (first-stage F-stat) and construct a Wald estimator
+- Set up GitHub Actions CI/CD pipeline: `pytest` → Docker build → MLflow training → deploy to staging
+- Deploy your model to a cloud service (AWS SageMaker, GCP Vertex AI, or Render/Railway)
+- Add data quality checks (Great Expectations basics)
 
 **Checkpoint:**
-> `week106_iv_late.ipynb`: IV estimation with first-stage diagnostics, LATE interpretation, and written discussion of the monotonicity assumption.
+> `week45_cicd/`: GitHub repository with CI/CD workflow file, Dockerfile, passing CI/CD run log, cloud-deployed model endpoint URL, and data quality check configuration. Pipeline must complete in under 15 minutes.
 
 ---
 
-### Week 107: Synthetic Control & Phase 15 Capstone
+### Week 46: Phase 7 Capstone — Production ML System
 
 **Study:**
-- Mixtape Chapter 10 (Synthetic Control)
-
-**Practice:**
-- Implement Synthetic Control from scratch (solve the constrained optimization problem using `scipy.optimize`)
-- Apply to a real policy evaluation (e.g., California tobacco control program)
-- Write a 1500-word causal analysis report using the most appropriate method for your chosen question
-
-**Checkpoint:**
-> `phase15_capstone/`: Synthetic Control implementation, donor pool visualization, pre/post comparison, and a full causal inference report. Must clearly state the identification assumption, why it holds (or is plausible), and what the estimate means causally.
-
----
-
----
-
-</details>
-
----
-
-<details>
-<summary><h2>Phase 16: MLOps & Data Engineering</h2></summary>
-
-**Duration:** 10 Weeks
-**Resources (Interwoven):**
-- [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp)
-- [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/)
-- [Data Engineering Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp)
-
-**Depth Assessment:** MLOps Zoomcamp = 9 structured modules; mlsysbook = ~400 pages; DE Zoomcamp = 9 structured modules. All are very practical and hands-on. This phase demands significant infrastructure work.
-
----
-
-### Week 108: Docker, Containers & ML Project Structure
-
-**Study:**
-- MLOps Zoomcamp Module 1 (Introduction & MLOps Maturity)
-- mlsysbook Chapters 1–3 (Introduction, ML Lifecycle, Data Engineering)
-- Install: Docker, Docker Compose
-
-**Practice:**
-- Containerize your Phase 10 Classical ML project in Docker
-- Write a `Dockerfile`, `docker-compose.yml`, and a `Makefile` with targets for `train`, `predict`, `test`
-
-**Checkpoint:**
-> A fully containerized ML project: `docker-compose up` must reproduce training, evaluation, and inference. Include a `README.md` with exact reproduction instructions.
-
----
-
-### Week 109: Experiment Tracking with MLflow
-
-**Study:**
-- MLOps Zoomcamp Module 2 (Experiment Tracking — MLflow)
-- mlsysbook Chapter 4 (Model Training)
-
-**Practice:**
-- Integrate MLflow into your Phase 12 Deep Learning project: log all hyperparameters, metrics, and artifacts
-- Set up an MLflow tracking server; compare 20 runs and select the best model using the MLflow UI
-
-**Checkpoint:**
-> An MLflow-instrumented training script with: experiment tracking for 20 hyperparameter configurations, a registered model in the MLflow Model Registry, and a screenshot of the MLflow UI showing the run comparison.
-
----
-
-### Week 110: ML Pipelines & Workflow Orchestration
-
-**Study:**
-- MLOps Zoomcamp Module 3 (Orchestration — Prefect or Mage)
-- mlsysbook Chapter 5 (Model Deployment)
-
-**Practice:**
-- Build an end-to-end ML pipeline using Prefect (or Mage): data ingestion → feature engineering → training → evaluation → model registration
-- The pipeline must be schedulable and handle failures gracefully with retries
-
-**Checkpoint:**
-> A working Prefect/Mage pipeline with at least 5 tasks, retry logic, and logging. Must complete a full run end-to-end without manual intervention.
-
----
-
-### Week 111: Model Deployment — REST APIs & Batch Scoring
-
-**Study:**
-- MLOps Zoomcamp Module 4 (Deployment)
-- mlsysbook Chapter 6 (Model Serving)
-
-**Practice:**
-- Deploy your best model as a REST API using FastAPI
-- Build a batch scoring script that processes a CSV of 10,000 records; containerize both services
-
-**Checkpoint:**
-> A `FastAPI` model service with: a `/predict` endpoint, request validation (Pydantic), health check endpoint, and a batch scoring script. Both containerized and tested with `pytest`.
-
----
-
-### Week 112: Model Monitoring & Drift Detection
-
-**Study:**
-- MLOps Zoomcamp Module 5 (Model Monitoring)
-- mlsysbook Chapter 7 (Model Monitoring)
-
-**Practice:**
-- Set up Evidently to monitor prediction drift and data drift for your deployed model
-- Simulate distribution shift; trigger an automated retraining job when drift exceeds a threshold
-
-**Checkpoint:**
-> A monitoring pipeline: Evidently reports generated for 5 simulated time periods showing drift progression, automated alert (email or log) when threshold is breached, and a dashboard (Grafana or Streamlit).
-
----
-
-### Week 113: Data Engineering I — Batch Pipelines & Warehousing
-
-**Study:**
-- DE Zoomcamp Modules 1–3 (Introduction, Workflow Orchestration, Data Warehouse)
-- Install: Google Cloud SDK or use local alternatives; DuckDB for local warehousing
-
-**Practice:**
-- Build a batch ELT pipeline: ingest NYC TLC taxi data → load to DuckDB → transform with dbt → serve analytics queries
-- Write 5 dbt models with tests and documentation
-
-**Checkpoint:**
-> A dbt project with: source definitions, 5 models (staging → intermediate → mart), `dbt test` passing, and `dbt docs generate` producing browsable documentation.
-
----
-
-### Week 114: Data Engineering II — Streaming with Kafka
-
-**Study:**
-- DE Zoomcamp Modules 4–5 (Analytics Engineering, Batch Processing with Spark)
-
-**Practice:**
-- Set up a local Kafka cluster using Docker Compose
-- Build a producer that streams taxi ride events; a consumer that aggregates running totals by zone in 1-minute windows
-
-**Checkpoint:**
-> A Kafka streaming pipeline: producer script, consumer with windowed aggregation, visualized real-time metrics in a simple Streamlit dashboard.
-
----
-
-### Week 115: Apache Spark & Distributed Computing
-
-**Study:**
-- DE Zoomcamp Module 5 (Spark) — all sections
-- mlsysbook Chapter 8 (Efficient AI Training and Inference)
-
-**Practice:**
-- Process the NYC TLC dataset (full year, ~100M rows) using PySpark on your local machine or a cloud cluster
-- Implement a Spark ML pipeline: feature engineering → training → evaluation
-
-**Checkpoint:**
-> A PySpark job that: reads Parquet, applies transformations, trains a model via `pyspark.ml`, and writes results back to Parquet. Must run to completion and log runtime metrics.
-
----
-
-### Week 116: CI/CD for ML & Infrastructure as Code
-
-**Study:**
-- mlsysbook Chapters 9–10 (MLOps Tooling, Production Infrastructure)
-- DE Zoomcamp Module 6 (Streaming continued)
-
-**Practice:**
-- Set up a GitHub Actions CI/CD pipeline that: runs `pytest`, builds the Docker image, runs MLflow training, and deploys to a staging endpoint on every PR merge
-- Write Terraform (or Pulumi) code to provision your infrastructure
-
-**Checkpoint:**
-> A GitHub repository with: GitHub Actions workflow file, Dockerfile, Terraform config, and a passing CI/CD run log. The pipeline must complete end-to-end in under 15 minutes.
-
----
-
-### Week 117: Phase 16 Capstone — Production ML System
-
-**Study:**
-- mlsysbook final chapters (review)
-- Review all Zoomcamp best practices
+- Review all MLOps Zoomcamp modules
+- mlsysbook: final chapters (review)
 
 **Practice:**
 - Build a production-ready ML system end-to-end:
-  - Data ingestion from an external API (scheduled via Prefect)
-  - Feature store (use Feast or a simple DuckDB-based store)
+  - Data ingestion (scheduled via Prefect)
   - Automated training pipeline with MLflow tracking
   - FastAPI serving with monitoring
   - CI/CD via GitHub Actions
+  - Data quality checks
 
 **Checkpoint:**
-> A public GitHub repository with complete documentation, a system architecture diagram, and a 2-minute recorded demo video. The system must be deployable from scratch with a single `make deploy` command.
+> `phase7_capstone/`: Public GitHub repository with complete documentation, system architecture diagram, and 2-minute demo video. Must be deployable from scratch with a single `make deploy` command.
 
----
+**🏆 M7: Production Ready** — You can build, deploy, monitor, and maintain production ML systems.
 
 ---
 
@@ -2056,133 +961,311 @@
 ---
 
 <details>
-<summary><h2>Phase 17: Flow Matching & Diffusion Models</h2></summary>
+<summary><h2>Phase 8: Capstone & Portfolio</h2></summary>
 
-**Duration:** 5 Weeks
-**Resource:** [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html)
-**Supplementary:** "Score-Based Generative Modeling through Stochastic Differential Equations" (Song et al., 2021); "Flow Matching for Generative Modeling" (Lipman et al., 2022)
-**Depth Assessment:** A cutting-edge graduate-level course (MIT CSAIL, 2026). Lectures + problem sets. Requires Phase 12 (DL) as a firm prerequisite. This is the frontier of generative AI theory.
+**Duration:** 8 Weeks
+**Resource(s):** Real-world datasets, [Kaggle](https://www.kaggle.com/), [HuggingFace Datasets](https://huggingface.co/datasets), industry benchmarks
+**Depth Assessment:** This is your synthesis phase. No new textbooks — you apply everything you've learned to build an original, end-to-end project that demonstrates job readiness.
 
 ---
 
-### Week 118: Diffusion Fundamentals — Forward & Reverse Processes
+### Week 47: Capstone Proposal & Data Collection
 
 **Study:**
-- MIT Diffusion: Lectures 1–3 (Introduction, Denoising Score Matching, DDPM)
-- Read Ho et al. (2020) DDPM paper in full
+- Review industry job postings for your target role
+- Study 3–5 successful DS portfolios on GitHub
 
 **Practice:**
-- Implement DDPM (Denoising Diffusion Probabilistic Models) from scratch in PyTorch
-- Train on MNIST; visualize the forward noising process and the reverse denoising chain at each step
+- Define your capstone project: original problem, dataset, methodology, expected deliverables
+- Collect and validate your dataset
+- Write a project proposal (1–2 pages) with: problem statement, data description, methodology, success criteria, timeline
 
 **Checkpoint:**
-> `week118_ddpm.ipynb`: from-scratch DDPM, visualization of forward process (T=0 to T=1000), and a grid of reverse-process samples showing progressive denoising.
+> `capstone/PROPOSAL.md`: Project proposal with problem statement, dataset description, methodology plan, success criteria, and timeline. Dataset validated and loaded.
 
 ---
 
-### Week 119: Score Matching & SDE Formulation
-
-**Study:**
-- MIT Diffusion: Lectures 4–6 (Score Matching, SDEs, Continuous-Time Diffusion)
-- Read Song et al. (2021) SDE paper — Sections 1–4
+### Week 48–49: Build — Core Implementation
 
 **Practice:**
-- Implement denoising score matching loss from scratch
-- Train a score network on 2D toy data (e.g., a mixture of Gaussians); visualize the learned score field as a vector field
+- Data pipeline: ingestion, cleaning, feature engineering
+- Model development: train, evaluate, iterate
+- If applicable: LLM integration (RAG, fine-tuning, or agentic patterns)
+- Version control everything: data, code, models, experiments
 
 **Checkpoint:**
-> `week119_score_matching.ipynb`: score matching implementation, 2D score field visualization (quiver plot), and a comparison of the learned vs. true score fields.
+> `capstone/` with working pipeline: data → features → model → evaluation. MLflow tracking with 10+ runs. Mid-point review: are you on track for Week 52 delivery?
 
 ---
 
-### Week 120: Flow Matching — Theory & Implementation
-
-**Study:**
-- MIT Diffusion: Lectures 7–9 (Continuous Normalizing Flows, Flow Matching, Optimal Transport)
-- Read Lipman et al. (2022) Flow Matching paper in full
+### Week 50: Build — Production & Deployment
 
 **Practice:**
-- Implement Conditional Flow Matching (CFM) from scratch using the `torchdiffeq` ODE solver
-- Train on 2D toy data; visualize the learned flow trajectories
+- Containerize your solution (Docker)
+- Deploy as a web service (FastAPI + Streamlit/Gradio)
+- Add monitoring and logging
+- Write comprehensive documentation
 
 **Checkpoint:**
-> `week120_flow_matching.ipynb`: CFM implementation, flow trajectory visualization (animated), and a comparison of sample quality (2D density estimates) between DDPM and CFM on the same toy dataset.
+> Deployed capstone application with live URL, Docker configuration, and API documentation.
 
 ---
 
-### Week 121: Latent Diffusion & Guidance Techniques
-
-**Study:**
-- MIT Diffusion: Lectures 10–12 (Latent Diffusion, Classifier-Free Guidance, DALL-E / Stable Diffusion architecture)
-- Read Rombach et al. (2022) LDM paper — key sections
+### Week 51: Portfolio Polish
 
 **Practice:**
-- Implement classifier-free guidance from scratch for a conditional DDPM on MNIST (condition on digit class)
-- Vary guidance scale (w = 0, 1, 3, 7, 10); observe the quality/diversity trade-off
+- Optimize GitHub profile: README, pinned repositories, activity graph
+- Write READMEs for all 10 portfolio projects
+- Create demo videos (2 minutes each) for top 3 projects
+- Optimize LinkedIn profile with project links and skills
 
 **Checkpoint:**
-> `week121_cfg.ipynb`: conditional DDPM with CFG, a grid showing generated samples at 5 guidance scales for each class, and a written analysis of the diversity-fidelity trade-off.
+> GitHub profile with 10+ projects, each with professional README. 3 demo videos. LinkedIn profile optimized with DS/AI keywords and project links.
 
 ---
 
-### Week 122: Advanced Topics & Phase 17 Capstone
-
-**Study:**
-- MIT Diffusion: Lectures 13+ (Consistency Models, Rectified Flow, Applications to proteins, audio, video)
-- Read any one of: Consistency Models (Song et al., 2023) or Rectified Flow (Liu et al., 2022)
+### Week 52: Interview Preparation & Final Review
 
 **Practice:**
-- Implement Rectified Flow from scratch as a simplified flow matching variant
-- Phase 17 Capstone: train a diffusion or flow-matching model on a domain of your choice (audio mel-spectrograms, molecular structures, time series, or image patches)
-- Compare DDPM vs. Flow Matching on your domain: training efficiency, sample quality, inference speed
+- SQL interview practice (DataLemur, StrataScratch) — 20+ problems
+- ML system design mock interviews — 3 scenarios
+- Statistics & probability puzzles — 15+ problems
+- Behavioral interview prep: STAR method, project discussion
 
 **Checkpoint:**
-> `phase17_capstone/`: complete generative modeling project with a written technical report (~2000 words) including: mathematical derivation of your chosen method, architecture decisions, training details, quantitative evaluation (FID or domain-specific metric), and a limitations section. This is your final deliverable — treat it as a paper draft.
+> `interview_prep/`: SQL solutions (20+), ML system design notes (3 scenarios), statistics cheat sheet, behavioral interview stories (5 STAR-format stories). Mock interview completed with ≥80% score.
 
----
+**🏆 M8: Job Ready** — You have a portfolio of 10+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, or AI Engineer roles.
 
 ---
 
 </details>
 
 ---
+
+## ⚡ Buffer Weeks
+
+Buffer weeks are **planned recovery periods** — not optional extras. Use them intentionally:
+
+| Buffer Week | Timing | Recommended Use |
+|---|---|---|
+| **W9** | After Phase 1 | Catch up on SQL/pandas weak spots, extend Phase 1 capstone |
+| **W18** | After Phase 3 | Review ISLP labs, extend ML pipeline project |
+| **W27** | After Phase 5 | Review DL concepts, extend CNN/Transformer project |
+| **W36** | After Phase 5.5 | Extend RAG application, practice prompt engineering |
+| **W45** | After Phase 7 | Fix deployment issues, extend monitoring dashboard |
+| **W52+** | After Phase 8 | Capstone extension, additional interview prep, rest |
+
+**Buffer Week Decision Guide:**
+- Behind schedule? → Catch up on missed checkpoints
+- On schedule? → Review weak areas, extend a project, or take a break
+- Ahead of schedule? → Start an elective, contribute to open source, or begin job applications
+
+---
+
+<details>
+<summary><h2>Elective E1: Bayesian & Advanced Statistics</h2></summary>
+
+**Duration:** 4 Weeks (Elective — Optional)
+**Resource(s):** [Think Bayes, 2nd Ed. — Allen B. Downey](https://allendowney.github.io/ThinkBayes2/), [Flexible Imputation of Missing Data — Stef van Buuren](https://stefvanbuuren.name/fimd/) (Ch. 1–3)
+**Prerequisites:** Phase 2 (Statistics & Probability), Phase 3 (ML Foundations)
+
+---
+
+### Week E1.1: Bayesian Inference Basics
+
+**Study:**
+- Think Bayes: Chapters 1–4 (Bayes' Theorem, distributions, estimation)
+
+**Practice:**
+- Implement the "Cookie Problem," "Monty Hall," and "M&M Problem" using grid approximation
+- Build a Bayesian A/B test from scratch for conversion rate comparison
+
+**Checkpoint:**
+> `e1_week1_bayesian.ipynb`: Classic Bayesian problems solved with grid approximation, A/B test with posterior distributions, and written explanation of Bayesian vs. frequentist interpretation.
+
+---
+
+### Week E1.2: Bayesian Estimation & PyMC
+
+**Study:**
+- Think Bayes: Chapters 5–8 (Odds, mixtures, simulation)
+- Install PyMC; read official "Getting Started"
+
+**Practice:**
+- Implement hierarchical model for school test scores (8-schools problem) using PyMC
+- Use MCMC sampling; diagnose convergence with R-hat and trace plots
+
+**Checkpoint:**
+> `e1_week2_pymc.ipynb`: PyMC hierarchical model, trace plots, posterior predictive checks, and written interpretation of partial pooling vs. no-pooling.
+
+---
+
+### Week E1.3: Missing Data Mechanisms
+
+**Study:**
+- FIMD: Chapters 1–3 (Introduction, missing data mechanisms, single imputation)
+- Understand MCAR, MAR, MNAR
+
+**Practice:**
+- Simulate all three missing data mechanisms on a real dataset
+- Compare: complete case analysis, mean imputation, regression imputation — assess bias
+
+**Checkpoint:**
+> `e1_week3_missing_data.ipynb`: MCAR/MAR/MNAR simulation with empirical bias tables, comparison of 3 imputation strategies, and written explanation of when each mechanism produces biased estimates.
+
+---
+
+### Week E1.4: Multiple Imputation & Capstone
+
+**Study:**
+- FIMD: Chapters 4–6 (MICE, analysis of imputed data)
+- Think Bayes: Chapters 9–13 (review)
+
+**Practice:**
+- Apply multiple imputation (m=20) to a dataset with 30%+ missingness
+- Pool results using Rubin's rules
+- End-to-end Bayesian + missing data pipeline
+
+**Checkpoint:**
+> `e1_capstone.ipynb`: MICE imputation with m=20, Rubin's rules pooling, PyMC model fitted on imputed data, pooled posterior inference. Written 1-page discussion of uncertainty sources.
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><h2>Elective E2: Generative AI & Diffusion Models</h2></summary>
+
+**Duration:** 4 Weeks (Elective — Optional)
+**Resource(s):** [MIT Diffusion Course 2026](https://diffusion.csail.mit.edu/2026/index.html)
+**Prerequisites:** Phase 5 (Deep Learning)
+
+---
+
+### Week E2.1: Diffusion Fundamentals
+
+**Study:**
+- MIT Diffusion: Lectures 1–3 (Introduction, Denoising Score Matching, DDPM)
+- Read: Ho et al. (2020) DDPM paper
+
+**Practice:**
+- Implement DDPM from scratch in PyTorch
+- Train on MNIST; visualize forward noising and reverse denoising
+
+**Checkpoint:**
+> `e2_week1_ddpm.ipynb`: From-scratch DDPM, forward process visualization (T=0 to T=1000), reverse-process sample grid showing progressive denoising.
+
+---
+
+### Week E2.2: Score Matching & SDEs
+
+**Study:**
+- MIT Diffusion: Lectures 4–6 (Score Matching, SDEs, Continuous-Time Diffusion)
+- Read: Song et al. (2021) SDE paper — Sections 1–4
+
+**Practice:**
+- Implement denoising score matching loss from scratch
+- Train score network on 2D toy data; visualize learned score field as vector field
+
+**Checkpoint:**
+> `e2_week2_score.ipynb`: Score matching implementation, 2D score field visualization (quiver plot), learned vs. true score field comparison.
+
+---
+
+### Week E2.3: Flow Matching
+
+**Study:**
+- MIT Diffusion: Lectures 7–9 (Continuous Normalizing Flows, Flow Matching)
+- Read: Lipman et al. (2022) Flow Matching paper
+
+**Practice:**
+- Implement Conditional Flow Matching using `torchdiffeq` ODE solver
+- Train on 2D toy data; visualize flow trajectories
+
+**Checkpoint:**
+> `e2_week3_flow.ipynb`: CFM implementation, animated flow trajectory visualization, DDPM vs. CFM comparison on same toy dataset.
+
+---
+
+### Week E2.4: Latent Diffusion & Capstone
+
+**Study:**
+- MIT Diffusion: Lectures 10–12 (Latent Diffusion, Classifier-Free Guidance, Stable Diffusion)
+- Read: Rombach et al. (2022) LDM paper
+
+**Practice:**
+- Implement classifier-free guidance for conditional DDPM on MNIST
+- Vary guidance scale (w = 0, 1, 3, 7, 10); observe quality/diversity trade-off
+- Train diffusion or flow-matching model on domain of your choice
+
+**Checkpoint:**
+> `e2_capstone/`: Complete generative modeling project with technical report (~1500 words): mathematical derivation, architecture decisions, training details, quantitative evaluation (FID or domain-specific metric), limitations section.
+
+---
+
+</details>
 
 ---
 
 ## 🏆 Final Synthesis & Portfolio
 
-Upon completing all 17 phases, you will have accumulated:
+Upon completing this roadmap, you will have:
 
-- **10+ end-to-end projects** across the full data science and AI stack
-- **From-scratch implementations** of every major algorithm: OLS, MLE, MCMC, SVM, neural networks, transformers, diffusion models
-- **Rigorous mathematical foundations**: probability theory, mathematical statistics, linear algebra, optimization
-- **Production engineering skills**: Docker, CI/CD, Kafka, Spark, model monitoring
-- **Causal reasoning toolkit**: DAGs, DiD, RDD, IV, Synthetic Control
-- **Generative AI expertise**: VAEs, GANs, diffusion models, flow matching
+- **10 portfolio projects** across the full data science and AI stack (2 LLM/GenAI)
+- **From-scratch implementations** of critical algorithms: OLS, logistic regression, CART, basic neural network, attention mechanism
+- **Practical statistics foundation**: hypothesis testing, confidence intervals, Bayesian inference, causal reasoning
+- **Production engineering skills**: Docker, MLflow, FastAPI, CI/CD, monitoring
+- **LLM/GenAI competency**: RAG, fine-tuning, prompt engineering, evaluation, agentic patterns
 
-### Recommended Portfolio Structure
+### Portfolio Structure (10 Projects)
 
 ```
 portfolio/
-├── README.md              # Overview with links to all projects
-├── phase01_data_analysis/ # pandas EDA capstone
-├── phase08_islp/          # ML pipeline capstone
-├── phase10_classical_ml/  # Python package (from-scratch ML)
-├── phase12_deep_learning/ # DL project (CNN/Transformer/Generative)
-├── phase14_econometrics/  # Econometric paper
-├── phase15_causal/        # Causal inference study
-├── phase16_mlops/         # Production ML system
-└── phase17_diffusion/     # Generative model paper draft
+├── README.md                      # Overview with links to all projects
+├── 01_data_foundations/           # EDA + data quality report (Phase 1)
+├── 02_statistical_analysis/       # A/B test + business decision (Phase 2)
+├── 03_ml_pipeline/                # ISLP capstone — model comparison (Phase 3)
+├── 04_applied_ml/                 # Feature engineering + SHAP (Phase 4)
+├── 05_deep_learning/              # CNN/Transformer project (Phase 5)
+├── 06_llm_rag_application/        # ⭐ Production RAG app (Phase 5.5)
+├── 07_llm_finetuning/             # ⭐ Fine-tuned model + benchmark (Phase 5.5)
+├── 08_causal_analysis/            # Observational data causal inference (Phase 6)
+├── 09_mlops_production/           # Deployed ML system + monitoring (Phase 7)
+└── 10_final_capstone/             # End-to-end original project (Phase 8)
 ```
+
+### Project Quality Checklist
+
+Each portfolio project should have:
+- [ ] Professional README with problem statement, methodology, results
+- [ ] Reproducible code (single command to run)
+- [ ] Visualizations (minimum 3 per project)
+- [ ] Written analysis/interpretation
+- [ ] GitHub link (public repository)
+- [ ] For deployed projects: live demo URL
 
 ### Continuing Education
 
-After completing this roadmap, consider:
-
+After completing this roadmap:
 - Read recent NeurIPS/ICML/ICLR proceedings in your specialization
-- Contribute to an open-source project (D2L.ai, scikit-learn, HuggingFace)
-- Write and publish one of your capstone projects as a blog post or preprint
-- Consider graduate coursework or research if you want to push further into theory
+- Contribute to open-source (scikit-learn, HuggingFace, LangChain)
+- Publish a capstone project as a blog post or technical article
+- Join DS/AI communities (Kaggle, HuggingFace Discord, local meetups)
+- Stay current: LLM/GenAI field moves fast — review the resource list quarterly
+
+### Job Readiness Timeline
+
+| Milestone | When | What You Can Apply For |
+|---|---|---|
+| **M1: Data Ready** | Week 5 | Data Analyst, Junior Data Analyst |
+| **M3: ML Ready** | Week 17 | Junior Data Scientist, ML Analyst |
+| **M4: Applied ML Ready** | Week 22 | Data Scientist (entry-level) |
+| **M6: LLM Ready** | Week 35 | AI Engineer, LLM Engineer |
+| **M7: Production Ready** | Week 45 | ML Engineer, MLOps Engineer |
+| **M8: Job Ready** | Week 52 | Senior Data Scientist, ML Engineer, AI Engineer |
 
 ---
 
@@ -2193,4 +1276,4 @@ After completing this roadmap, consider:
 
 ---
 
-*Roadmap Version 1.0 | Designed for 10–12 hrs/week | Total: ~124 weeks (~2.4 years)*
+*Roadmap Version 2.0 (Optimized 2026) | Designed for 10–12 hrs/week | Total: ~52 weeks core + 6 buffer + 8 elective*
