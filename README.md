@@ -622,7 +622,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Review all Prince chapters and D2L notebooks from this phase
-- HuggingFace Course: Chapters 1–3 (Transformers overview)
+- HuggingFace Course: [Ch. 1 (Transformers, what can they do?)](https://huggingface.co/learn/nlp-course/chapter1/1), [Ch. 2 (Using 🤗 Transformers)](https://huggingface.co/learn/nlp-course/chapter2/1), [Ch. 3 (Fine-tuning a pretrained model)](https://huggingface.co/learn/nlp-course/chapter3/1)
 
 **Practice:**
 - End-to-end deep learning project combining CNN/Transformer with LLM:
@@ -668,9 +668,16 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 32: Prompt Engineering & LLM APIs
 
 **Study:**
-- [OpenAI Cookbook](https://cookbook.openai.com/) — prompt patterns, function calling, structured output
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
-- DeepLearning.AI: "Prompt Engineering for Developers" (short course)
+- OpenAI Cookbook:
+  - [How to format inputs](https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models) — system/user/assistant roles
+  - [How to stream completions](https://cookbook.openai.com/examples/how_to_stream_completions) — streaming, token-by-token output
+  - [How to count tokens](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) — token estimation, cost tracking
+  - [How to fine-tune chat models](https://cookbook.openai.com/examples/how_to_finetune_chat_models) — fine-tuning workflow, dataset format
+- OpenAI Docs: [Function Calling](https://python.langchain.com/docs/how_to/tool_calling/) — tool use, structured outputs
+- Anthropic Prompt Engineering Guide:
+  - [Use XML tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) — XML tags, structure
+  - [Long context window tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips) — context management
+- DeepLearning.AI: [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) (Andrew Ng + Isa Fulford, ~1.5 hrs)
 
 **Practice:**
 - Build a production-quality prompt library: 20+ prompt patterns (zero-shot, few-shot, CoT, ReAct, system prompts)
@@ -685,9 +692,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 33: RAG Architecture — Embeddings, Vector DBs & Retrieval
 
 **Study:**
-- LangChain: [RAG tutorials](https://python.langchain.com/docs/use_cases/question_answering/)
-- "RAG From Scratch" (LangChain YouTube series)
-- Embedding models overview: text-embedding-3, bge, e5
+- LangChain: [Build a Question Answering Application](https://python.langchain.com/docs/use_cases/question_answering/) — RAG pipeline walkthrough
+- LangChain YouTube: [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFJuae29fQZ7OoqVrPHnDqMqVqMqM) — Episodes 1–6 (loading, splitting, embedding, retrieval, chat)
+- Embedding models: [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — compare text-embedding-3, bge-large, e5-large-v2
 
 **Practice:**
 - Build a full RAG pipeline:
@@ -705,9 +712,10 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 34: Fine-tuning LLMs — LoRA, QLoRA & PEFT
 
 **Study:**
-- HuggingFace: ["Fine-tuning LLMs" guide](https://huggingface.co/docs/transformers/training)
-- Unsloth tutorials (free tier: Colab/Kaggle)
-- Read: "QLoRA" paper (Dettmers et al., 2023) — key sections
+- HuggingFace: [PEFT documentation](https://huggingface.co/docs/peft/en/index) — LoRA, QLoRA configuration, `get_peft_model`
+- HuggingFace: [Fine-tuning LLMs guide](https://huggingface.co/docs/transformers/training) — `Trainer` API, `TrainingArguments`, dataset preparation
+- Unsloth: [Fine-tune Llama-3 8B (Colab notebook)](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-Alpaca.ipynb) — step-by-step QLoRA tutorial
+- Read: "QLoRA" paper (Dettmers et al., 2023) — Sections 1–3 (introduction, method, results)
 
 **Practice:**
 - Prepare a custom instruction-tuning dataset (Alpaca format, 500+ examples)
@@ -723,9 +731,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 35: LLM Evaluation & Production
 
 **Study:**
-- RAGAS documentation: evaluation metrics (faithfulness, answer relevance, context precision)
-- LangSmith tutorials: LLM observability, tracing, evaluation
-- "Building LLM Apps for Production" — monitoring, guardrails, cost tracking
+- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/stable/getstarted/) — faithfulness, answer_relevance, context_precision metrics
+- LangSmith: [Tracing tutorial](https://docs.smith.langchain.com/old/cookbook/tracing_faq) — trace LLM calls, latency, token usage
+- LangSmith: [Evaluation guide](https://docs.smith.langchain.com/old/cookbook/evaluation_faq) — datasets, evaluators, comparison runs
 
 **Practice:**
 - Build an LLM evaluation pipeline using RAGAS:
@@ -743,9 +751,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 36: Agentic AI & Phase 5.5 Capstone
 
 **Study:**
-- LangGraph tutorials: building agents with LLMs
-- CrewAI documentation: multi-agent systems
-- Tool use & function calling patterns: ReAct, Plan-and-Execute
+- LangGraph: [Build a Tool-Calling Agent](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — ReAct pattern, tool execution, human-in-the-loop
+- LangGraph: [Multi-Agent Workflows](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/multi-agent-collaboration/) — supervisor pattern, agent handoff
+- Tool use patterns: [OpenAI function calling](https://cookbook.openai.com/examples/how_to_finetune_chat_models) — tool use, structured outputs, ReAct pattern
 
 **Practice:**
 - Build a production LLM application combining:
@@ -936,13 +944,17 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 45: CI/CD for ML & Cloud Deployment
 
 **Study:**
-- mlsysbook: Chapters 9–10 (MLOps Tooling, Production Infrastructure)
-- AWS SageMaker / GCP Vertex AI overview (choose one cloud provider)
+- mlsysbook: [Ch. 9 (MLOps Tooling)](https://mlsysbook.ai/), [Ch. 10 (Production Infrastructure)](https://mlsysbook.ai/)
+- Cloud deployment (choose one):
+  - **AWS:** [SageMaker JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models.html) — deploy pre-trained models
+  - **GCP:** [Vertex AI Model Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) — model versioning, online prediction
+  - **Render/Railway:** [Deploy FastAPI on Render](https://render.com/docs/deploy-fastapi) — simpler alternative for portfolio projects
+- Great Expectations: [Getting Started tutorial](https://docs.greatexpectations.io/docs/tutorials/getting_started/) — data validation, expectations, checkpoints
 
 **Practice:**
 - Set up GitHub Actions CI/CD pipeline: `pytest` → Docker build → MLflow training → deploy to staging
 - Deploy your model to a cloud service (AWS SageMaker, GCP Vertex AI, or Render/Railway)
-- Add data quality checks (Great Expectations basics)
+- Add data quality checks: Great Expectations suite with 5+ expectations (null checks, range checks, schema validation)
 
 **Checkpoint:**
 > `week45_cicd/`: GitHub repository with CI/CD workflow file, Dockerfile, passing CI/CD run log, cloud-deployed model endpoint URL, and data quality check configuration. Pipeline must complete in under 15 minutes.
@@ -952,8 +964,8 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 46: Phase 7 Capstone — Production ML System
 
 **Study:**
-- Review all MLOps Zoomcamp modules
-- mlsysbook: final chapters (review)
+- Review all MLOps Zoomcamp modules (1–5)
+- mlsysbook: [Ch. 11 (Case Studies)](https://mlsysbook.ai/) — real-world production systems
 
 **Practice:**
 - Build a production-ready ML system end-to-end:
