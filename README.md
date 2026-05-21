@@ -172,7 +172,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | | |
 |---|---|
 | **Duration** | 6 Weeks |
-| **Resources** | [StatQuest (YouTube)](https://www.youtube.com/c/joshstarmer), [OpenIntro Statistics](https://www.openintro.org/book/os/), [3Blue1Brown Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), [Seeing Theory](https://seeing-theory.brown.edu/) |
+| **Resources** | [StatQuest Statistics (YouTube)](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9), [OpenIntro Statistics](https://www.openintro.org/book/os/), [3Blue1Brown Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab), [Seeing Theory](https://seeing-theory.brown.edu/) |
 | **Depth** | StatQuest ~15 hrs, OpenIntro ~400pp (Ch. 1–8), 3B1B ~3 hrs, Seeing Theory interactive. 100% free, practitioner-focused. |
 
 ### Week 6: Probability Distributions & Descriptive Statistics
@@ -673,7 +673,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
   - [How to stream completions](https://cookbook.openai.com/examples/how_to_stream_completions) — streaming, token-by-token output
   - [How to count tokens](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) — token estimation, cost tracking
   - [How to fine-tune chat models](https://cookbook.openai.com/examples/how_to_finetune_chat_models) — fine-tuning workflow, dataset format
-- OpenAI Docs: [Function Calling](https://python.langchain.com/docs/how_to/tool_calling/) — tool use, structured outputs
+- OpenAI Docs: [Function Calling](https://platform.openai.com/docs/guides/function-calling) — tool use, structured outputs
 - Anthropic Prompt Engineering Guide:
   - [Use XML tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) — XML tags, structure
   - [Long context window tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips) — context management
@@ -753,7 +753,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Study:**
 - LangGraph: [Build a Tool-Calling Agent](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — ReAct pattern, tool execution, human-in-the-loop
 - LangGraph: [Multi-Agent Workflows](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/multi-agent-collaboration/) — supervisor pattern, agent handoff
-- Tool use patterns: [OpenAI function calling](https://cookbook.openai.com/examples/how_to_finetune_chat_models) — tool use, structured outputs, ReAct pattern
+- Tool use patterns: [OpenAI function calling](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models) — tool use, structured outputs, ReAct pattern
 
 **Practice:**
 - Build a production LLM application combining:
@@ -944,7 +944,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 45: CI/CD for ML & Cloud Deployment
 
 **Study:**
-- mlsysbook: [Ch. 9 (MLOps Tooling)](https://mlsysbook.ai/), [Ch. 10 (Production Infrastructure)](https://mlsysbook.ai/)
+- mlsysbook: [Ch. 13: ML Operations](https://mlsysbook.ai/book/contents/core/ops/ops.html), [Model Serving](https://mlsysbook.ai/vol1/contents/vol1/model_serving/model_serving.html)
 - Cloud deployment (choose one):
   - **AWS:** [SageMaker JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models.html) — deploy pre-trained models
   - **GCP:** [Vertex AI Model Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) — model versioning, online prediction
@@ -965,7 +965,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Review all MLOps Zoomcamp modules (1–5)
-- mlsysbook: [Ch. 11 (Case Studies)](https://mlsysbook.ai/) — real-world production systems
+- mlsysbook: [Production System Case Studies](https://mlsysbook.ai/book/contents/core/ml_systems/ml_systems.html) — real-world production systems
 
 **Practice:**
 - Build a production-ready ML system end-to-end:
