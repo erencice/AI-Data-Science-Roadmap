@@ -1,8 +1,8 @@
-# Data Science & AI Mastery Roadmap (Optimized 2026)
+# Data Science & AI Mastery Roadmap (2026 Q3 Edition)
 
 > A professional, execution-oriented syllabus for serious practitioners.
 >
-> **Pace:** 10–12 hrs/week · **Duration:** ~52 weeks core + 6 buffer + 8 elective · **Format:** Self-paced, project-driven
+> **Pace:** 10–12 hrs/week · **Duration:** ~54 weeks core + 6 buffer + 8 elective · **Format:** Self-paced, project-driven
 
 ---
 
@@ -15,11 +15,12 @@
 | 3 | ML Foundations | 6 weeks |
 | 4 | Applied ML | 5 weeks |
 | 5 | Deep Learning | 8 weeks |
-| 5.5 | LLM/GenAI Engineering | 6 weeks |
+| 5.5 | LLM/GenAI Engineering | 8 weeks |
+| 5.6 | Agentic AI & AI Safety | 2 weeks |
 | 6 | Time Series & Causal | 4 weeks |
 | 7 | MLOps & Production | 6 weeks |
 | 8 | Capstone & Portfolio | 8 weeks |
-| | **Core Total** | **~52 weeks** |
+| | **Core Total** | **~54 weeks** |
 | | Buffer Weeks (6x) | **~6 weeks** |
 | E1 | Bayesian & Advanced (Elective) | 4 weeks |
 | E2 | Generative AI & Diffusion (Elective) | 4 weeks |
@@ -68,7 +69,7 @@ As you work through the topics in this roadmap, **use AI tools (ChatGPT, Claude,
 |------|-------------|
 | **W2** | First EDA — real-world dataset with 5+ insights, 3+ visuals |
 | **W4** | First Quarto report — professional HTML/PDF analysis |
-| **W5** | M1: Data Ready — pandas + SQL practical exam |
+| **W5** | M1: Data Ready — pandas + SQL practical exam (including DuckDB/Polars for large datasets) |
 | **W11** | M2: Stats Ready — A/B test analysis with correct interpretation |
 | **W17** | M3: ML Ready — first ML model comparison study on Kaggle |
 
@@ -82,8 +83,8 @@ Every 8 weeks there is a built-in buffer week for catch-up, review, project exte
 | W10–17 | **W18** |
 | W19–26 | **W27** |
 | W28–35 | **W36** |
-| W37–44 | **W45** |
-| W46–52 | **Capstone extension** |
+| W36–43 | **W44** |
+| W44–54 | **Capstone extension** |
 
 Buffer weeks are **planned**, not optional. Use them intentionally.
 
@@ -119,6 +120,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Study:**
 - McKinney: Chapters 8–10 (Wrangling, GroupBy, Aggregation)
 - SQLBolt: Lessons 1–10 (SELECT, WHERE, JOINs, aggregates)
+- **Bonus:** Try [DuckDB](https://duckdb.org/docs/) — run SQL directly on pandas DataFrames with zero setup. For datasets >1GB, DuckDB and [Polars](https://pola.rs/) outperform pandas significantly.
 
 ---
 
@@ -137,7 +139,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 - McKinney: Chapters 11–12 (Time Series, Advanced pandas) — skim for awareness
 - Review any weak areas from Weeks 1–4
 
-**M1: Data Ready** — You can load, clean, analyze, and visualize any tabular dataset. You can write SQL with window functions.
+**M1: Data Ready** — You can load, clean, analyze, and visualize any tabular dataset. You can write SQL with window functions. You know when to use pandas vs. DuckDB/Polars.
 
 </details>
 
@@ -426,9 +428,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 | | |
 |---|---|
-| **Duration** | 6 Weeks |
-| **Resources** | [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain](https://python.langchain.com/), [RAGAS](https://docs.ragas.io/), [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/) |
-| **Depth** | Most critical new module for 2026 job readiness (65%+ of DS postings require LLM/GenAI). All resources free. At 10–12 hrs/week: ~80 hours total. |
+| **Duration** | 8 Weeks |
+| **Resources** | [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain](https://python.langchain.com/), [RAGAS](https://docs.ragas.io/), [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/), [Ollama](https://ollama.com/) |
+| **Depth** | Most critical module for 2026 job readiness (70%+ of DS postings require LLM/GenAI). All resources free. Expanded to 8 weeks to cover advanced RAG, small models, and multimodal AI. |
 
 ### Week 31: LLM Fundamentals — Transformers, Tokenization & Scaling
 
@@ -442,15 +444,13 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 32: Prompt Engineering & LLM APIs
 
 **Study:**
-- OpenAI Cookbook:
-  - [How to format inputs](https://cookbook.openai.com/examples/how_to_format_inputs_to_chatgpt_models) — system/user/assistant roles
-  - [How to stream completions](https://cookbook.openai.com/examples/how_to_stream_completions) — streaming, token-by-token output
-  - [How to count tokens](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) — token estimation, cost tracking
-  - [How to fine-tune chat models](https://cookbook.openai.com/examples/how_to_finetune_chat_models) — fine-tuning workflow, dataset format
+- OpenAI Cookbook — updated recipes:
+  - [Prompt generation for instruction-tuned LLMs](https://cookbook.openai.com/examples/prompt_generation_for_instruction_tuned_llms)
+  - [How to count tokens with tiktoken](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken)
+  - [Structured outputs](https://cookbook.openai.com/examples/structured_outputs_intro) — JSON mode, function calling
 - OpenAI Docs: [Function Calling](https://platform.openai.com/docs/guides/function-calling) — tool use, structured outputs
 - Anthropic Prompt Engineering Guide:
-  - [Use XML tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags) — XML tags, structure
-  - [Long context window tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips) — context management
+  - [Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — XML tags, long context tips, structured prompts
 - DeepLearning.AI: [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) (Andrew Ng + Isa Fulford, ~1.5 hrs)
 
 ---
@@ -459,38 +459,96 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - LangChain: [Build a Question Answering Application](https://python.langchain.com/docs/use_cases/question_answering/) — RAG pipeline walkthrough
-- LangChain YouTube: [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFJuae29fQZ7OoqVrPHnDqMqVqMqM) — Episodes 1–6 (loading, splitting, embedding, retrieval, chat)
+- LangChain YouTube: [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFJuae29fQZ7OoqVrPHnDqMqVqMqM) — Episodes 1–6
+- Vector Databases: Install and experiment with [ChromaDB](https://www.trychroma.com/) — local, open-source vector store
 - Embedding models: [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — compare text-embedding-3, bge-large, e5-large-v2
 
 ---
 
-### Week 34: Fine-tuning LLMs — LoRA, QLoRA & PEFT
+### Week 34: Advanced RAG — Hybrid Search, Reranking & GraphRAG
+
+**Study:**
+- Hybrid Search: Combine sparse (BM25) + dense (embeddings) retrieval. Try LangChain's [Ensemble Retriever](https://python.langchain.com/docs/integrations/retrievers/bm25)
+- Reranking: [Cohere Rerank](https://docs.cohere.com/docs/rerank-2) — improve retrieval quality post-hoc
+- GraphRAG: [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) — knowledge-graph-based retrieval. Read through the quickstart
+- Multimodal RAG: Embed images + text with models like [Jina CLIP](https://jina.ai/news/jina-clip-v2-your-multilingual-multimodal-embedding-model/)
+
+---
+
+### Week 35: Small Language Models & Local Inference
+
+**Study:**
+- [Ollama](https://ollama.com/): Install and run local models (Llama 3, Phi-4, Gemma 3, Mistral)
+- Quantization: Understand GGUF, GPTQ, AWQ formats. Read: [LLM Compression Overview](https://huggingface.co/docs/transformers/quantization/overview)
+- Practical: Run Llama-3.1-8B locally via Ollama, build a lightweight RAG pipeline without API costs
+- Use case comparison: When to use API (GPT-4o, Claude) vs. local (Ollama) vs. fine-tuned small model
+
+---
+
+### Week 36: Fine-tuning LLMs — LoRA, QLoRA & PEFT
 
 **Study:**
 - HuggingFace: [PEFT documentation](https://huggingface.co/docs/peft/en/index) — LoRA, QLoRA configuration, `get_peft_model`
 - HuggingFace: [Fine-tuning LLMs guide](https://huggingface.co/docs/transformers/training) — `Trainer` API, `TrainingArguments`, dataset preparation
-- Unsloth: [Fine-tune Llama-3 8B (Colab notebook)](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-Alpaca.ipynb) — step-by-step QLoRA tutorial
-- Read: "QLoRA" paper (Dettmers et al., 2023) — Sections 1–3 (introduction, method, results)
+- Unsloth: [Fine-tune Llama-3.1 8B (Colab notebook)](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-Alpaca.ipynb) — step-by-step QLoRA tutorial
+- Read: "QLoRA" paper (Dettmers et al., 2023) — Sections 1–3
 
 ---
 
-### Week 35: LLM Evaluation & Production
+### Week 37: LLM Evaluation & Production
 
 **Study:**
-- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/stable/getstarted/) — faithfulness, answer_relevance, context_precision metrics
-- LangSmith: [Tracing tutorial](https://docs.smith.langchain.com/old/cookbook/tracing_faq) — trace LLM calls, latency, token usage
-- LangSmith: [Evaluation guide](https://docs.smith.langchain.com/old/cookbook/evaluation_faq) — datasets, evaluators, comparison runs
+- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/latest/getstarted/) — faithfulness, answer_relevance, context_precision metrics
+- LangSmith Observability: [LangSmith platform](https://docs.langchain.com/langsmith) — trace LLM calls, latency, token usage, evaluation
+- LLM-as-Judge: Use strong models (GPT-4o, Claude) to evaluate LLM outputs at scale. Build an eval harness
+- Prompt Versioning: Track prompt iterations and A/B test with [LangSmith datasets](https://docs.langchain.com/langsmith)
 
 ---
 
-### Week 36: Agentic AI & Phase 5.5 Capstone
+### Week 38: Multimodal AI & Phase 5.5 Capstone
 
 **Study:**
-- LangGraph: [Build a Tool-Calling Agent](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — ReAct pattern, tool execution, human-in-the-loop
-- LangGraph: [Multi-Agent Workflows](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/multi-agent-collaboration/) — supervisor pattern, agent handoff
-- Tool use patterns: [OpenAI function calling](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models) — tool use, structured outputs, ReAct pattern
+- Vision-Language Models: [GPT-4o Vision](https://platform.openai.com/docs/guides/vision), [Claude Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision) — image understanding, chart reading, OCR
+- [HuggingFace Multimodal Models](https://huggingface.co/models?pipeline_tag=image-text-to-text): LLaVA, Qwen-VL, Florence-2
+- Practical: Build a multimodal RAG pipeline (PDF with charts → extraction → embedding → Q&A)
+- Audio/Video understanding: [Whisper](https://github.com/openai/whisper) for transcription, basic video frame analysis
 
-**M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand RAG, fine-tuning, prompt engineering, and agentic patterns.
+**M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand advanced RAG, fine-tuning, prompt engineering, small models, and multimodal AI.
+
+</details>
+
+---
+
+<details>
+<summary><h2>Phase 5.6: Agentic AI & AI Safety</h2></summary>
+
+| | |
+|---|---|
+| **Duration** | 2 Weeks |
+| **Resources** | [LangGraph](https://langchain-ai.github.io/langgraph/), [CrewAI](https://docs.crewai.com/), [Anthropic Model Context Protocol (MCP)](https://modelcontextprotocol.io/), [Guardrails AI](https://www.guardrailsai.com/) |
+| **Depth** | Agentic workflows are the defining paradigm of 2025–2026. AI Safety is a baseline employer expectation. |
+
+### Week 39: Agentic AI — Multi-Agent Systems & Tool Use
+
+**Study:**
+- LangGraph: [Quick Start](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — build a tool-calling agent (ReAct pattern)
+- LangGraph: [Multi-Agent Collaboration](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/) — supervisor pattern, agent handoff
+- CrewAI: [Quickstart](https://docs.crewai.com/quickstart) — role-based multi-agent orchestration
+- Anthropic MCP: [Model Context Protocol](https://modelcontextprotocol.io/) — standardized tool/source integration protocol. Build a simple MCP server
+- OpenAI Function Calling: [Tool use with chat models](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models) — ReAct pattern, structured outputs
+
+---
+
+### Week 40: AI Safety, Guardrails & Responsible AI
+
+**Study:**
+- Guardrails: [Guardrails AI](https://www.guardrailsai.com/) — output validation, structure enforcement
+- Red-Teaming: Practice adversarial testing on your own RAG/agent systems. Read: [Anthropic Red Teaming Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/red-teaming)
+- Bias & Fairness: [HuggingFace Evaluate](https://huggingface.co/docs/evaluate/en/index) — fairness metrics for model outputs
+- Content Safety: [NVIDIA NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) — programmatic safety boundaries
+- Practical: Add guardrails to your Phase 5.5 RAG application. Test with edge cases, jailbreak attempts, and toxic prompts.
+
+**M6.5: Agentic & Safety Ready** — You can build multi-agent systems, implement safety guardrails, and evaluate AI outputs for bias and harm. These skills differentiate you from 80% of LLM practitioners.
 
 </details>
 
@@ -519,7 +577,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | [Ch. 10](https://otexts.com/fpp3/dynamic.html) | Dynamic Regression | ARIMA + exogenous variables, Fourier |
 | [Ch. 12](https://otexts.com/fpp3/advanced.html) | Advanced Forecasting | VAR, Prophet, neural networks |
 
-### Week 37: Time Series — Stationarity, ARIMA & Forecasting
+### Week 41: Time Series — Stationarity, ARIMA & Forecasting
 
 **Study:**
 - FPP3: [Ch. 2](https://otexts.com/fpp3/graphics.html) (Time Series Graphics), [Ch. 3](https://otexts.com/fpp3/decomposition.html) (Decomposition), [Ch. 9](https://otexts.com/fpp3/arima.html) (ARIMA Models)
@@ -528,7 +586,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 38: Causal Inference — DAGs & Potential Outcomes
+### Week 42: Causal Inference — DAGs & Potential Outcomes
 
 **Study:**
 - Mixtape: Chapters 1–3 (Introduction, Probability review, DAGs)
@@ -536,7 +594,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 39: Matching, DiD & IV Estimation
+### Week 43: Matching, DiD & IV Estimation
 
 **Study:**
 - Mixtape: Chapters 4–5 (Potential Outcomes, Matching)
@@ -544,13 +602,13 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 40: Phase 6 Capstone — Causal Analysis
+### Week 44: Phase 6 Capstone — Causal Analysis
 
 **Study:**
 - Mixtape: Chapter 7 (Instrumental Variables) — essentials only
 - Review all previous weeks
 
-**M6.5: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
+**M7: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
 
 </details>
 
@@ -562,60 +620,62 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | | |
 |---|---|
 | **Duration** | 6 Weeks |
-| **Resources** | [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (Ch. 1–7) |
-| **Depth** | MLOps Zoomcamp (9 modules, hands-on), mlsysbook (Ch. 1–7). Infrastructure-heavy, very practical. |
+| **Resources** | [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (Vol I: Foundations, Vol II: At Scale) |
+| **Depth** | MLOps Zoomcamp (9 modules, hands-on), mlsysbook (two-volume textbook). Infrastructure-heavy, very practical. Includes LLMOps coverage. |
 
-### Week 41: Docker & Containerized ML
+### Week 45: Docker & Containerized ML
 
 **Study:**
 - MLOps Zoomcamp: Module 1 (Introduction, MLOps maturity)
-- mlsysbook: Chapters 1–2 (ML lifecycle overview)
+- mlsysbook: Volume I — Chapters 1–2 (ML lifecycle overview, system design)
 
 ---
 
-### Week 42: Experiment Tracking & Model Registry
+### Week 46: Experiment Tracking & Model Registry
 
 **Study:**
 - MLOps Zoomcamp: Module 2 (Experiment Tracking — MLflow)
-- mlsysbook: Chapter 4 (Model Training)
+- mlsysbook: Volume I — Chapter 4 (Model Training)
+- **LLMOps:** Set up [LangSmith](https://docs.langchain.com/langsmith) for LLM experiment tracking alongside MLflow for ML experiments
 
 ---
 
-### Week 43: ML Pipelines & Orchestration
+### Week 47: ML Pipelines & Orchestration
 
 **Study:**
 - MLOps Zoomcamp: Module 3 (Orchestration — Prefect or Mage)
-- mlsysbook: Chapter 5 (Model Deployment)
+- mlsysbook: Volume I — Chapter 5 (Model Deployment)
 
 ---
 
-### Week 44: Model Monitoring & Drift Detection
+### Week 48: Model Monitoring & Drift Detection
 
 **Study:**
 - MLOps Zoomcamp: Module 5 (Model Monitoring)
-- mlsysbook: Chapter 7 (Model Monitoring)
+- mlsysbook: Volume I — Chapter 7 (Model Monitoring)
+- **LLMOps Monitoring:** LLM-specific metrics — hallucination rate, retrieval precision, response latency
 
 ---
 
-### Week 45: CI/CD for ML & Cloud Deployment
+### Week 49: CI/CD for ML & Cloud Deployment
 
 **Study:**
-- mlsysbook: [Ch. 13: ML Operations](https://mlsysbook.ai/book/contents/core/ops/ops.html), [Model Serving](https://mlsysbook.ai/vol1/contents/vol1/model_serving/model_serving.html)
+- mlsysbook: Volume II — [ML Operations](https://mlsysbook.ai/), [Model Serving](https://mlsysbook.ai/) (navigate to Vol II → Ops, Vol I → Model Serving)
 - Cloud deployment (choose one):
   - **AWS:** [SageMaker JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models.html) — deploy pre-trained models
-  - **GCP:** [Vertex AI Model Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) — model versioning, online prediction
+  - **GCP:** [Vertex AI](https://cloud.google.com/vertex-ai) — model registry, online prediction
   - **Render/Railway:** [Deploy FastAPI on Render](https://render.com/docs/deploy-fastapi) — simpler alternative for portfolio projects
-- Great Expectations: [Getting Started tutorial](https://docs.greatexpectations.io/docs/tutorials/getting_started/) — data validation, expectations, checkpoints
+- Great Expectations: [Getting Started](https://docs.greatexpectations.io/docs/) — data validation, expectations, checkpoints
 
 ---
 
-### Week 46: Phase 7 Capstone — Production ML System
+### Week 50: Phase 7 Capstone — Production ML System
 
 **Study:**
 - Review all MLOps Zoomcamp modules (1–5)
-- mlsysbook: [Production System Case Studies](https://mlsysbook.ai/book/contents/core/ml_systems/ml_systems.html) — real-world production systems
+- mlsysbook: Production system case studies (Volume II — Case Studies)
 
-**M7: Production Ready** — You can build, deploy, monitor, and maintain production ML systems.
+**M8: Production Ready** — You can build, deploy, monitor, and maintain production ML and LLM systems.
 
 </details>
 
@@ -630,7 +690,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | **Resources** | Real-world datasets, [Kaggle](https://www.kaggle.com/), [HuggingFace Datasets](https://huggingface.co/datasets), industry benchmarks |
 | **Depth** | Synthesis phase — no new textbooks. Apply everything to build an original, end-to-end project demonstrating job readiness. |
 
-### Week 47: Capstone Proposal & Data Collection
+### Week 51: Capstone Proposal & Data Collection
 
 **Study:**
 - Review industry job postings for your target role
@@ -638,21 +698,21 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 48–49: Build — Core Implementation
+### Week 52–53: Build — Core Implementation
 
 ---
 
-### Week 50: Build — Production & Deployment
+### Week 54: Build — Production & Deployment
 
 ---
 
-### Week 51: Portfolio Polish
+### Week 55: Portfolio Polish
 
 ---
 
-### Week 52: Interview Preparation & Final Review
+### Week 56: Interview Preparation & Final Review
 
-**M8: Job Ready** — You have a portfolio of 10+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, or AI Engineer roles.
+**M9: Job Ready** — You have a portfolio of 12+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, AI Engineer, or LLM Engineer roles.
 
 </details>
 
@@ -667,9 +727,9 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 | **W9** | After Phase 1 | Catch up on SQL/pandas weak spots, extend Phase 1 capstone |
 | **W18** | After Phase 3 | Review ISLP labs, extend ML pipeline project |
 | **W27** | After Phase 5 | Review DL concepts, extend CNN/Transformer project |
-| **W36** | After Phase 5.5 | Extend RAG application, practice prompt engineering |
-| **W45** | After Phase 7 | Fix deployment issues, extend monitoring dashboard |
-| **W52+** | After Phase 8 | Capstone extension, additional interview prep, rest |
+| **W36** | Mid Phase 5.5 | Extend RAG application, experiment with small models |
+| **W44** | After Phase 5.6 | Practice agentic patterns, extend safety testing |
+| **W56+** | After Phase 8 | Capstone extension, additional interview prep, rest |
 
 **Buffer Week Decision Guide:**
 - Behind schedule? → Catch up on missed checkpoints
@@ -771,13 +831,14 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 
 Upon completing this roadmap, you will have:
 
-- **10 portfolio projects** across the full data science and AI stack (2 LLM/GenAI)
+- **12 portfolio projects** across the full data science, AI, and agentic stack (3 LLM/GenAI/Agentic)
 - **From-scratch implementations** of critical algorithms: OLS, logistic regression, CART, basic neural network, attention mechanism
 - **Practical statistics foundation**: hypothesis testing, confidence intervals, Bayesian inference, causal reasoning
-- **Production engineering skills**: Docker, MLflow, FastAPI, CI/CD, monitoring
-- **LLM/GenAI competency**: RAG, fine-tuning, prompt engineering, evaluation, agentic patterns
+- **Production engineering skills**: Docker, MLflow, FastAPI, CI/CD, monitoring (ML + LLM)
+- **LLM/GenAI competency**: Advanced RAG, fine-tuning, prompt engineering, evaluation, agentic patterns, AI safety
+- **Modern data tooling**: pandas, DuckDB, Polars for analytical-scale data
 
-### Portfolio Structure (10 Projects)
+### Portfolio Structure (12 Projects)
 
 | # | Project | Phase |
 |---|---------|-------|
@@ -786,11 +847,13 @@ Upon completing this roadmap, you will have:
 | 03 | ISLP capstone — model comparison | Phase 3 |
 | 04 | Feature engineering + SHAP | Phase 4 |
 | 05 | CNN/Transformer project | Phase 5 |
-| 06 | Production RAG application | Phase 5.5 |
+| 06 | Production RAG application + guardrails | Phase 5.5 |
 | 07 | Fine-tuned model + benchmark | Phase 5.5 |
-| 08 | Observational data causal inference | Phase 6 |
-| 09 | Deployed ML system + monitoring | Phase 7 |
-| 10 | End-to-end original project | Phase 8 |
+| 08 | Multi-agent system (LangGraph/CrewAI) | Phase 5.6 |
+| 09 | Observational data causal inference | Phase 6 |
+| 10 | Deployed ML/LLM system + monitoring | Phase 7 |
+| 11 | End-to-end original project | Phase 8 |
+| 12 | AI safety audit of own system | Phase 5.6 |
 
 ### Project Quality Checklist
 
@@ -801,15 +864,17 @@ Each portfolio project should have:
 - [ ] Written analysis/interpretation
 - [ ] GitHub link (public repository)
 - [ ] For deployed projects: live demo URL
+- [ ] For LLM projects: evaluation results, safety considerations
 
 ### Continuing Education
 
 After completing this roadmap:
 - Read recent NeurIPS/ICML/ICLR proceedings in your specialization
-- Contribute to open-source (scikit-learn, HuggingFace, LangChain)
+- Contribute to open-source (scikit-learn, HuggingFace, LangChain, Ollama)
 - Publish a capstone project as a blog post or technical article
 - Join DS/AI communities (Kaggle, HuggingFace Discord, local meetups)
-- Stay current: LLM/GenAI field moves fast — review the resource list quarterly
+- Stay current: LLM/GenAI and agentic fields move fast — review the resource list quarterly
+- Watch for: MCP ecosystem growth, new reasoning models, open-source AGI progress
 
 ### Job Readiness Timeline
 
@@ -818,9 +883,10 @@ After completing this roadmap:
 | **M1: Data Ready** | Week 5 | Data Analyst, Junior Data Analyst |
 | **M3: ML Ready** | Week 17 | Junior Data Scientist, ML Analyst |
 | **M4: Applied ML Ready** | Week 22 | Data Scientist (entry-level) |
-| **M6: LLM Ready** | Week 35 | AI Engineer, LLM Engineer |
-| **M7: Production Ready** | Week 45 | ML Engineer, MLOps Engineer |
-| **M8: Job Ready** | Week 52 | Senior Data Scientist, ML Engineer, AI Engineer |
+| **M6: LLM Ready** | Week 38 | AI Engineer, LLM Engineer |
+| **M6.5: Agentic & Safety Ready** | Week 40 | Senior AI Engineer, AI Safety Engineer |
+| **M8: Production Ready** | Week 50 | ML Engineer, MLOps Engineer, LLMOps Engineer |
+| **M9: Job Ready** | Week 56 | Senior Data Scientist, ML Engineer, AI Engineer, LLM Engineer |
 
 ---
 
@@ -831,4 +897,4 @@ After completing this roadmap:
 
 ---
 
-*Roadmap Version 2.0 (Optimized 2026) | Designed for 10–12 hrs/week | Total: ~52 weeks core + 6 buffer + 8 elective*
+*Roadmap Version 3.0 (2026 Q3 Edition) | Designed for 10–12 hrs/week | Total: ~54 weeks core + 6 buffer + 8 elective*
