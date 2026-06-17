@@ -2,7 +2,7 @@
 
 > A professional, execution-oriented syllabus for serious practitioners.
 >
-> **Pace:** 10–12 hrs/week · **Duration:** ~54 weeks core + 6 buffer + 8 elective · **Format:** Self-paced, project-driven
+> **Pace:** 10–12 hrs/week · **Duration:** ~64 weeks core + 6 buffer + 8 elective · **Format:** Self-paced, project-driven
 
 ---
 
@@ -12,15 +12,16 @@
 |-------|------|----------|
 | 1 | Data Foundations | 5 weeks |
 | 2 | Statistics & Probability | 6 weeks |
-| 3 | ML Foundations | 6 weeks |
+| 3 | ML Foundations | 7 weeks |
 | 4 | Applied ML | 5 weeks |
 | 5 | Deep Learning | 8 weeks |
-| 5.5 | LLM/GenAI Engineering | 8 weeks |
-| 5.6 | Agentic AI & AI Safety | 2 weeks |
-| 6 | Time Series & Causal | 4 weeks |
-| 7 | MLOps & Production | 6 weeks |
-| 8 | Capstone & Portfolio | 8 weeks |
-| | **Core Total** | **~54 weeks** |
+| 6 | LLM/GenAI Engineering | 7 weeks |
+| 7 | Agentic AI & AI Safety | 3 weeks |
+| 8 | Econometrics — Regression & Diagnostics | 6 weeks |
+| 9 | Advanced Econometrics & Time Series | 5 weeks |
+| 10 | MLOps & Production | 6 weeks |
+| 11 | Capstone & Portfolio | 6 weeks |
+| | **Core Total** | **~64 weeks** |
 | | Buffer Weeks (6x) | **~6 weeks** |
 | E1 | Bayesian & Advanced (Elective) | 4 weeks |
 | E2 | Generative AI & Diffusion (Elective) | 4 weeks |
@@ -81,10 +82,11 @@ Every 8 weeks there is a built-in buffer week for catch-up, review, project exte
 |-------|-------------|
 | W1–8 | **W9** |
 | W10–17 | **W18** |
-| W19–26 | **W27** |
-| W28–35 | **W36** |
-| W36–43 | **W44** |
-| W44–54 | **Capstone extension** |
+| W18–25 | **W26** |
+| W26–33 | **W34** |
+| W34–41 | **W42** |
+| W42–52 | **W53** |
+| W53–64 | **Capstone extension** |
 
 Buffer weeks are **planned**, not optional. Use them intentionally.
 
@@ -220,9 +222,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 | | |
 |---|---|
-| **Duration** | 6 Weeks |
+| **Duration** | 7 Weeks |
 | **Resources** | [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/) |
-| **Depth** | ISLP ~600pp with Python labs in every chapter. Gold-standard ML textbook. Focus Ch. 2–10. At 10–12 hrs/week: ~100pp + labs per week. |
+| **Depth** | ISLP ~600pp with Python labs in every chapter. Gold-standard ML textbook. Focus Ch. 2–10, 12. At 10–12 hrs/week: ~85pp + labs per week. Expanded to 7 weeks for sustainable pace. |
 
 ### Week 12: Statistical Learning Overview & Linear Regression
 
@@ -240,30 +242,39 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 14: Resampling & Model Selection
+### Week 14: Resampling Methods
 
 **Study:**
-- ISLP: Chapters 5–6 (Resampling Methods, Model Selection & Regularization) — full chapters + labs
-- Focus: k-fold CV, bootstrap, best subset selection, Ridge, Lasso, PCR
+- ISLP: Chapter 5 (Resampling Methods) — full chapter + lab
+- Focus: k-fold CV, bootstrap, validation set approach
 
 ---
 
-### Week 15: Nonlinear Models & Splines
+### Week 15: Model Selection & Regularization
+
+**Study:**
+- ISLP: Chapter 6 (Model Selection & Regularization) — full chapter + lab
+- Focus: Best subset selection, forward/backward stepwise, Ridge, Lasso, PCR, PLS
+
+---
+
+### Week 16: Moving Beyond Linearity
 
 **Study:**
 - ISLP: Chapter 7 (Moving Beyond Linearity) — polynomial regression, step functions, splines, GAMs
+- ISLP: Chapter 8 (Tree-Based Methods) — CART, Random Forests, Bagging
 
 ---
 
-### Week 16: Decision Trees, Ensembles & SVMs
+### Week 17: Support Vector Machines
 
 **Study:**
-- ISLP: Chapters 8–9 (Tree-Based Methods, SVMs) — full chapters + labs
-- Topics: CART, Random Forests, Gradient Boosting, Bagging, SVM (linear, RBF)
+- ISLP: Chapter 9 (Support Vector Machines) — full chapter + lab
+- Topics: Maximal margin classifier, support vector classifier, SVM (linear, RBF), SVMs with more than 2 classes
 
 ---
 
-### Week 17: Phase 3 Capstone — ML Pipeline v1
+### Week 18: Phase 3 Capstone — ML Pipeline v1
 
 **Study:**
 - ISLP: Chapter 12 (Unsupervised Learning) — PCA, K-Means, Hierarchical Clustering
@@ -284,7 +295,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | **Resources** | [Scikit-Learn User Guide](https://scikit-learn.org/stable/user_guide.html), [Kaggle ML Micro-Courses](https://www.kaggle.com/learn) (Intro to ML, Intermediate ML), [StatQuest ML Series](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF), [Google ML Crash Course](https://developers.google.com/machine-learning/crash-course) |
 | **Depth** | Scikit-Learn User Guide (comprehensive), Kaggle (~5 hrs), StatQuest (~4 hrs), Google MLCC (~15 hrs). Code-first, production-oriented. |
 
-### Week 18: End-to-End ML Projects & Data Pipelines
+### Week 19: End-to-End ML Projects & Data Pipelines
 
 **Study:**
 - Scikit-Learn User Guide:
@@ -296,7 +307,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 19: Feature Engineering Masterclass
+### Week 20: Feature Engineering Masterclass
 
 **Study:**
 - Scikit-Learn User Guide:
@@ -309,7 +320,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 20: Hyperparameter Tuning & Model Interpretability
+### Week 21: Hyperparameter Tuning & Model Interpretability
 
 **Study:**
 - Scikit-Learn User Guide:
@@ -320,7 +331,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 21: Imbalanced Learning & Ensemble Techniques
+### Week 22: Imbalanced Learning & Ensemble Techniques
 
 **Study:**
 - Scikit-Learn User Guide:
@@ -330,7 +341,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 22: Phase 4 Capstone — Production-Ready ML
+### Week 23: Phase 4 Capstone — Production-Ready ML
 
 **Study:**
 - Scikit-Learn User Guide:
@@ -354,7 +365,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | **Resources** | [Dive into Deep Learning (D2L.ai)](https://d2l.ai/), [Understanding Deep Learning — Simon Prince](https://udlbook.github.io/udlbook/) |
 | **Depth** | D2L.ai (interactive notebooks, continuously updated), Prince ~600pp (modern, visually rich, free online). At 10–12 hrs/week: D2L notebooks + Prince chapters. |
 
-### Week 23: Neural Networks Foundations
+### Week 24: Neural Networks Foundations
 
 **Study:**
 - Prince: Chapters 1–5 (Introduction, Supervised learning, Shallow neural networks, Deep neural networks, Loss functions)
@@ -362,7 +373,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 24: Optimization, Initialization & Regularization
+### Week 25: Optimization, Initialization & Regularization
 
 **Study:**
 - Prince: Chapters 6–9 (Training, Optimizers, Initialization, Regularization)
@@ -370,7 +381,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 25: Convolutional Neural Networks
+### Week 26: Convolutional Neural Networks
 
 **Study:**
 - Prince: Chapters 10–11 (Convolutional networks, Residual networks)
@@ -378,7 +389,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 26: RNNs, LSTMs & Sequence Models
+### Week 27: RNNs, LSTMs & Sequence Models
 
 **Study:**
 - Prince: Chapter 12 (Recurrent neural networks)
@@ -386,7 +397,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 27: Attention Mechanism & Transformer Architecture
+### Week 28: Attention Mechanism & Transformer Architecture
 
 **Study:**
 - Prince: Chapter 13 (Transformers)
@@ -395,7 +406,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 28: Transfer Learning & Modern Architectures
+### Week 29: Transfer Learning & Modern Architectures
 
 **Study:**
 - Prince: Chapters 14–16 (Transfer learning, Modern architectures, Self-supervised learning)
@@ -403,7 +414,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 29: Generative Models — VAEs & GANs
+### Week 30: Generative Models — VAEs & GANs
 
 **Study:**
 - Prince: Chapters 17–18 (Autoencoders, Generative adversarial networks)
@@ -411,7 +422,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 30: Phase 5 Capstone — DL + LLM Project
+### Week 31: Phase 5 Capstone — DL + LLM Project
 
 **Study:**
 - Review all Prince chapters and D2L notebooks from this phase
@@ -424,15 +435,15 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ---
 
 <details>
-<summary><h2>Phase 5.5: LLM/GenAI Engineering</h2></summary>
+<summary><h2>Phase 6: LLM/GenAI Engineering</h2></summary>
 
 | | |
 |---|---|
-| **Duration** | 8 Weeks |
+| **Duration** | 7 Weeks |
 | **Resources** | [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course), [LangChain](https://python.langchain.com/), [RAGAS](https://docs.ragas.io/), [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/), [Ollama](https://ollama.com/) |
-| **Depth** | Most critical module for 2026 job readiness (70%+ of DS postings require LLM/GenAI). All resources free. Expanded to 8 weeks to cover advanced RAG, small models, and multimodal AI. |
+| **Depth** | Most critical module for 2026 job readiness (70%+ of DS postings). All resources free. Trimmed to 7 weeks (from 8) to balance curriculum — slack moved to Agentic AI and Econometrics. |
 
-### Week 31: LLM Fundamentals — Transformers, Tokenization & Scaling
+### Week 32: LLM Fundamentals — Transformers, Tokenization & Scaling
 
 **Study:**
 - HuggingFace NLP Course: Chapters 1–3 (Transformers, using pipelines, processing data)
@@ -441,7 +452,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 32: Prompt Engineering & LLM APIs
+### Week 33: Prompt Engineering & LLM APIs
 
 **Study:**
 - OpenAI Cookbook — updated recipes:
@@ -455,7 +466,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 33: RAG Architecture — Embeddings, Vector DBs & Retrieval
+### Week 34: RAG Architecture — Embeddings, Vector DBs & Retrieval
 
 **Study:**
 - LangChain: [Build a Question Answering Application](https://python.langchain.com/docs/use_cases/question_answering/) — RAG pipeline walkthrough
@@ -465,7 +476,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 34: Advanced RAG — Hybrid Search, Reranking & GraphRAG
+### Week 35: Advanced RAG — Hybrid Search, Reranking & GraphRAG
 
 **Study:**
 - Hybrid Search: Combine sparse (BM25) + dense (embeddings) retrieval. Try LangChain's [Ensemble Retriever](https://python.langchain.com/docs/integrations/retrievers/bm25)
@@ -475,7 +486,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 35: Small Language Models & Local Inference
+### Week 36: Small Language Models & Local Inference
 
 **Study:**
 - [Ollama](https://ollama.com/): Install and run local models (Llama 3, Phi-4, Gemma 3, Mistral)
@@ -485,7 +496,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 36: Fine-tuning LLMs — LoRA, QLoRA & PEFT
+### Week 37: Fine-tuning LLMs — LoRA, QLoRA & PEFT
 
 **Study:**
 - HuggingFace: [PEFT documentation](https://huggingface.co/docs/peft/en/index) — LoRA, QLoRA configuration, `get_peft_model`
@@ -495,23 +506,15 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 37: LLM Evaluation & Production
+### Week 38: LLM Evaluation, Multimodal AI & Phase 6 Capstone
 
 **Study:**
-- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/latest/getstarted/) — faithfulness, answer_relevance, context_precision metrics
-- LangSmith Observability: [LangSmith platform](https://docs.langchain.com/langsmith) — trace LLM calls, latency, token usage, evaluation
-- LLM-as-Judge: Use strong models (GPT-4o, Claude) to evaluate LLM outputs at scale. Build an eval harness
-- Prompt Versioning: Track prompt iterations and A/B test with [LangSmith datasets](https://docs.langchain.com/langsmith)
+- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/latest/getstarted/) — faithfulness, answer_relevance, context_precision
+- LangSmith Observability: [LangSmith platform](https://docs.langchain.com/langsmith) — trace LLM calls, latency, token usage
+- Vision-Language Models: [GPT-4o Vision](https://platform.openai.com/docs/guides/vision), [Claude Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision)
+- [HuggingFace Multimodal Models](https://huggingface.co/models?pipeline_tag=image-text-to-text): LLaVA, Qwen-VL
 
----
-
-### Week 38: Multimodal AI & Phase 5.5 Capstone
-
-**Study:**
-- Vision-Language Models: [GPT-4o Vision](https://platform.openai.com/docs/guides/vision), [Claude Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision) — image understanding, chart reading, OCR
-- [HuggingFace Multimodal Models](https://huggingface.co/models?pipeline_tag=image-text-to-text): LLaVA, Qwen-VL, Florence-2
-- Practical: Build a multimodal RAG pipeline (PDF with charts → extraction → embedding → Q&A)
-- Audio/Video understanding: [Whisper](https://github.com/openai/whisper) for transcription, basic video frame analysis
+**Hands-on:** Build a multimodal RAG pipeline (PDF with charts → extraction → embedding → Q&A). Set up LangSmith tracing. Evaluate your RAG system with RAGAS metrics.
 
 **M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand advanced RAG, fine-tuning, prompt engineering, small models, and multimodal AI.
 
@@ -520,13 +523,13 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ---
 
 <details>
-<summary><h2>Phase 5.6: Agentic AI & AI Safety</h2></summary>
+<summary><h2>Phase 7: Agentic AI & AI Safety</h2></summary>
 
 | | |
 |---|---|
-| **Duration** | 2 Weeks |
+| **Duration** | 3 Weeks |
 | **Resources** | [LangGraph](https://langchain-ai.github.io/langgraph/), [CrewAI](https://docs.crewai.com/), [Anthropic Model Context Protocol (MCP)](https://modelcontextprotocol.io/), [Guardrails AI](https://www.guardrailsai.com/) |
-| **Depth** | Agentic workflows are the defining paradigm of 2025–2026. AI Safety is a baseline employer expectation. |
+| **Depth** | Agentic workflows are the defining paradigm of 2025–2026. AI Safety is a baseline employer expectation. Expanded to 3 weeks — this is the job-market differentiator. |
 
 ### Week 39: Agentic AI — Multi-Agent Systems & Tool Use
 
@@ -534,88 +537,186 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 - LangGraph: [Quick Start](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — build a tool-calling agent (ReAct pattern)
 - LangGraph: [Multi-Agent Collaboration](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/) — supervisor pattern, agent handoff
 - CrewAI: [Quickstart](https://docs.crewai.com/quickstart) — role-based multi-agent orchestration
-- Anthropic MCP: [Model Context Protocol](https://modelcontextprotocol.io/) — standardized tool/source integration protocol. Build a simple MCP server
 - OpenAI Function Calling: [Tool use with chat models](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models) — ReAct pattern, structured outputs
 
 ---
 
-### Week 40: AI Safety, Guardrails & Responsible AI
+### Week 40: MCP, Protocols & Advanced Agent Patterns
+
+**Study:**
+- Anthropic MCP: [Model Context Protocol](https://modelcontextprotocol.io/) — standardized tool/source integration. Build a simple MCP server
+- Agent patterns: Router, orchestrator-worker, critic-refine, hierarchical
+- Human-in-the-loop: Approval gates, interrupt patterns in LangGraph
+- Memory: Conversation memory, vector memory, entity memory in agent systems
+
+---
+
+### Week 41: AI Safety, Guardrails & Responsible AI
 
 **Study:**
 - Guardrails: [Guardrails AI](https://www.guardrailsai.com/) — output validation, structure enforcement
 - Red-Teaming: Practice adversarial testing on your own RAG/agent systems. Read: [Anthropic Red Teaming Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/red-teaming)
 - Bias & Fairness: [HuggingFace Evaluate](https://huggingface.co/docs/evaluate/en/index) — fairness metrics for model outputs
 - Content Safety: [NVIDIA NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) — programmatic safety boundaries
-- Practical: Add guardrails to your Phase 5.5 RAG application. Test with edge cases, jailbreak attempts, and toxic prompts.
 
-**M6.5: Agentic & Safety Ready** — You can build multi-agent systems, implement safety guardrails, and evaluate AI outputs for bias and harm. These skills differentiate you from 80% of LLM practitioners.
+**Hands-on:** Add guardrails to your Phase 6 RAG application. Red-team it with jailbreak attempts. Build a simple multi-agent workflow with LangGraph.
+
+**M7: Agentic & Safety Ready** — You can build multi-agent systems, implement safety guardrails, and evaluate AI outputs for bias and harm. These skills differentiate you from 80% of LLM practitioners.
 
 </details>
 
 ---
 
 <details>
-<summary><h2>Phase 6: Time Series & Causal Inference</h2></summary>
+<summary><h2>Phase 8: Econometrics — Regression & Diagnostics</h2></summary>
 
 | | |
 |---|---|
-| **Duration** | 4 Weeks |
-| **Resources** | [Causal Inference: The Mixtape](https://mixtape.scunning.com/), [StatsModels Time Series](https://www.statsmodels.org/stable/tsa.html), [Forecasting: Principles & Practice (FPP3)](https://otexts.com/fpp3/), [StatQuest Time Series](https://www.youtube.com/playlist?list=PLblh5JKOoLUIxGDQs4LFFq--41Vc-MEzP) |
-| **Depth** | Mixtape ~600pp (Ch. 1–7, 9), FPP3 ~400pp (Ch. 1–10), StatsModels docs (Python examples), StatQuest (~2 hrs). FPP3 for theory → StatsModels for implementation. |
+| **Duration** | 6 Weeks |
+| **Resources** | [Basic Econometrics, 5th Ed. — Gujarati & Porter](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) (Ch. 1–13), Python: `statsmodels` |
+| **Depth** | Gujarati Part I–II (~500pp). Gold-standard econometrics textbook. Sustainable pace: ~80pp/week + Python implementation. Complements ISLP (Phase 3) with rigorous assumption testing and diagnostic framework. |
 
-**FPP3 Chapters:**
-
-| Chapter | Topic | Key Concepts |
-|---------|-------|-------------|
-| [Ch. 2](https://otexts.com/fpp3/graphics.html) | Time Series Graphics | Time plots, seasonal plots, lag plots |
-| [Ch. 3](https://otexts.com/fpp3/decomposition.html) | Decomposition | Trend, seasonality, remainder, STL |
-| [Ch. 4](https://otexts.com/fpp3/features.html) | Features | ACF features, STL features, exploration |
-| [Ch. 5](https://otexts.com/fpp3/toolbox.html) | Forecaster's Toolbox | Simple methods, residuals, accuracy, CV |
-| [Ch. 7](https://otexts.com/fpp3/regression.html) | Time Series Regression | Linear models, predictor selection |
-| [Ch. 8](https://otexts.com/fpp3/expsmooth.html) | Exponential Smoothing | SES, Holt's, Holt-Winters, ETS |
-| [Ch. 9](https://otexts.com/fpp3/arima.html) | ARIMA Models | Stationarity, differencing, ACF/PACF |
-| [Ch. 10](https://otexts.com/fpp3/dynamic.html) | Dynamic Regression | ARIMA + exogenous variables, Fourier |
-| [Ch. 12](https://otexts.com/fpp3/advanced.html) | Advanced Forecasting | VAR, Prophet, neural networks |
-
-### Week 41: Time Series — Stationarity, ARIMA & Forecasting
+### Week 42: Introduction & Simple Regression (Ch. 1–3)
 
 **Study:**
-- FPP3: [Ch. 2](https://otexts.com/fpp3/graphics.html) (Time Series Graphics), [Ch. 3](https://otexts.com/fpp3/decomposition.html) (Decomposition), [Ch. 9](https://otexts.com/fpp3/arima.html) (ARIMA Models)
-- StatsModels Time Series docs: [ARIMA](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_stata.html), [SARIMAX](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_internet.html), [VAR](https://www.statsmodels.org/stable/vector_ar.html) examples
-- StatQuest: Time Series Forecasting series (~1 hr)
+- Introduction (I.1–I.4): What is econometrics, methodology, types of data, computer's role
+- Ch. 1: The nature of regression analysis — statistical vs. deterministic, regression vs. causation vs. correlation, data types (time series, cross-section, pooled)
+- Ch. 2: Two-variable regression — population regression function (PRF), stochastic specification, sample regression function (SRF), the meaning of linear
+- Ch. 3: Two-variable OLS estimation — classical linear regression model (CLRM) 10 assumptions, Gauss-Markov theorem, coefficient of determination r², properties of OLS
+
+**Hands-on:** Implement OLS from scratch with NumPy. Verify against `statsmodels.OLS`. Estimate a consumption function with real data.
 
 ---
 
-### Week 42: Causal Inference — DAGs & Potential Outcomes
+### Week 43: Inference & Hypothesis Testing (Ch. 4–5)
 
 **Study:**
-- Mixtape: Chapters 1–3 (Introduction, Probability review, DAGs)
-- Practice drawing DAGs with `graphviz` or `dagitty`
+- Ch. 4: Classical Normal Linear Regression Model (CNLRM) — normality assumption, why normality, maximum likelihood estimation (MLE) vs. OLS
+- Ch. 5: Two-variable regression inference — confidence intervals (β₁, β₂, σ²), t-test, χ² test, p-values, significance vs. practical significance, ANOVA, prediction intervals
+
+**Hands-on:** Replicate all Chapter 5 examples. Calculate confidence intervals manually + with `statsmodels`. Interpret p-values correctly.
 
 ---
 
-### Week 43: Matching, DiD & IV Estimation
+### Week 44: Functional Forms & Multiple Regression (Ch. 6–7)
 
 **Study:**
-- Mixtape: Chapters 4–5 (Potential Outcomes, Matching)
-- Mixtape: Chapter 9 (Difference-in-Differences)
+- Ch. 6: Extensions of two-variable regression — regression through origin, scaling/standardization, functional forms (log-linear, semilog, reciprocal, logarithmic reciprocal), Box-Cox transformation, growth rate formulas
+- Ch. 7: Multiple regression — partial regression coefficients, R² and adjusted R², specification bias, Cobb-Douglas production function, polynomial regression, partial correlation
+
+**Hands-on:** Test log-linear vs. linear specifications on real wage/income data. Build a Cobb-Douglas production function. Compare R² vs. adjusted R².
 
 ---
 
-### Week 44: Phase 6 Capstone — Causal Analysis
+### Week 45: Multiple Regression Inference & Dummy Variables (Ch. 8–9)
 
 **Study:**
-- Mixtape: Chapter 7 (Instrumental Variables) — essentials only
-- Review all previous weeks
+- Ch. 8: Multiple regression inference — individual/overall significance (t and F tests), restricted least squares, Chow test for structural stability, LR/Wald/LM tests
+- Ch. 9: Dummy variable regression — ANOVA/ANCOVA models, interaction effects, seasonal analysis, piecewise linear regression, interpretation in semilogarithmic models
 
-**M7: Causal Ready** — You can identify causal relationships from observational data and communicate results with appropriate caveats.
+**Hands-on:** Build a wage determination model with dummy variables (gender, education, region). Run Chow test for structural breaks. Check for interaction effects.
+
+---
+
+### Week 46: Multicollinearity & Heteroscedasticity (Ch. 10–11)
+
+**Study:**
+- Ch. 10: Multicollinearity — nature, theoretical vs. practical consequences, detection (VIF, condition index, auxiliary regressions), ridge regression (intro)
+- Ch. 11: Heteroscedasticity — consequences of OLS, detection (Breusch-Pagan, White, Goldfeld-Quandt, Park, Glejser), weighted least squares (WLS), White's heteroscedasticity-consistent standard errors
+
+**Hands-on:** Take your Phase 4 ML project. Run VIF analysis on all features. Test for heteroscedasticity with 3 methods. Compare OLS vs. robust SE vs. WLS results.
+
+---
+
+### Week 47: Autocorrelation & Model Specification (Ch. 12–13)
+
+**Study:**
+- Ch. 12: Autocorrelation — nature, OLS consequences, detection (Durbin-Watson d, Breusch-Godfrey LM, runs test), GLS/FGLS correction, Newey-West HAC standard errors, ARCH/GARCH intro
+- Ch. 13: Model specification & diagnostic testing — omitted/irrelevant variable bias, RESET test, nested vs. non-nested models, model selection criteria (AIC, SIC, Mallow's Cp), outliers/leverage/influence, Chow prediction failure test
+
+**Hands-on:** Apply full diagnostics to a time series regression. Run RESET, check AIC/SIC across specifications. Test for autocorrelation and correct with Newey-West SE.
+
+**M8: Diagnostics Ready** — You can rigorously test regression assumptions and apply corrections. This bridges ML and econometrics — a rare and highly valued dual competency.
 
 </details>
 
 ---
 
 <details>
-<summary><h2>Phase 7: MLOps & Production</h2></summary>
+<summary><h2>Phase 9: Advanced Econometrics & Time Series</h2></summary>
+
+| | |
+|---|---|
+| **Duration** | 5 Weeks |
+| **Resources** | [Basic Econometrics, 5th Ed. — Gujarati & Porter](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/ECO/1.pdf) (Ch. 15–17, 21–22), Python: `statsmodels`, `arch` |
+| **Depth** | Gujarati Part III–IV (~400pp). Sustainable pace: ~80pp/week + implementation. Covers qualitative response, panel data, dynamic models, and time series econometrics. Builds directly on Phase 8 diagnostics foundation. |
+
+### Week 48: Qualitative Response Models (Ch. 15)
+
+**Study:**
+- Ch. 15: Linear Probability Model (LPM) — problems and limitations
+- Logit and Probit models — estimation (MLE), interpretation (odds ratios, marginal effects)
+- Tobit model (censored regression), Poisson regression (count data)
+- Multinomial/ordinal logit and probit extensions
+
+**Hands-on:** Build Logit and Probit models for binary outcomes (loan default, customer churn). Compare LPM vs. Logit marginal effects. Estimate a Tobit model.
+
+---
+
+### Week 49: Panel Data Regression (Ch. 16)
+
+**Study:**
+- Ch. 16: Why panel data, pooled OLS (constant coefficients)
+- Fixed effects: LSDV model, within-group (WG) estimator, caveats
+- Random effects model (REM), Breusch-Pagan LM test
+- Hausman test: FE vs. RE, properties comparison, practical guidelines
+
+**Hands-on:** Work with a cross-country panel dataset (World Bank, Penn World Table). Implement FE, RE, and pooled OLS. Run Hausman test to choose specification.
+
+---
+
+### Week 50: Dynamic Econometric Models (Ch. 17)
+
+**Study:**
+- Ch. 17: The role of time and lags in economics, reasons for lags
+- Distributed-lag models: ad hoc estimation, Koyck transformation (median/mean lag)
+- Adaptive expectations model, partial (stock) adjustment model
+- Instrumental Variables (IV), Granger causality, Sims causality
+
+**Hands-on:** Estimate Koyck distributed-lag models on macro data. Test Granger causality between money supply and GDP. Apply IV estimation with `statsmodels`.
+
+---
+
+### Week 51: Time Series Econometrics I (Ch. 21)
+
+**Study:**
+- Ch. 21: Stationary and nonstationary stochastic processes, trend stationary (TS) vs. difference stationary (DS)
+- Unit root stochastic process, spurious regression
+- Tests of stationarity: graphical, ACF/correlogram, statistical significance of AC
+- Unit root tests: Augmented Dickey-Fuller (ADF), Phillips-Perron (PP)
+- Cointegration: Engle-Granger (EG) two-step, Augmented Engle-Granger (AEG), error correction mechanism (ECM)
+
+**Hands-on:** Test unit roots in financial/economic time series (stock prices, GDP, exchange rates). Run ADF tests with proper lag selection. Test cointegration between consumption-income. Build an ECM.
+
+---
+
+### Week 52: Time Series Econometrics II & Capstone (Ch. 22)
+
+**Study:**
+- Ch. 22: AR, MA, ARMA, ARIMA modeling, Box-Jenkins methodology (identification → estimation → diagnostic checking → forecasting)
+- Vector Autoregression (VAR) — estimation, impulse response functions (IRF), forecast error variance decomposition (FEVD)
+- Volatility modeling: ARCH and GARCH models, EGARCH, GARCH-M extensions
+
+**Hands-on:** Fit ARIMA/SARIMA to seasonal data (Box-Jenkins full workflow). Build a VAR model and generate IRF plots. Estimate GARCH(1,1) volatility on financial returns with `arch` package.
+
+**M9: Econometrics Ready** — You can specify, estimate, diagnose, and forecast with the full econometric toolkit. You bridge ML and econometrics — qualifying for quantitative analyst, econometrician, and forecasting roles.
+
+</details>
+
+---
+
+<details>
+<summary><h2>Phase 10: MLOps & Production</h2></summary>
 
 | | |
 |---|---|
@@ -623,7 +724,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 | **Resources** | [MLOps Zoomcamp — DataTalksClub](https://github.com/DataTalksClub/mlops-zoomcamp), [Machine Learning Systems — mlsysbook.ai](https://mlsysbook.ai/) (Vol I: Foundations, Vol II: At Scale) |
 | **Depth** | MLOps Zoomcamp (9 modules, hands-on), mlsysbook (two-volume textbook). Infrastructure-heavy, very practical. Includes LLMOps coverage. |
 
-### Week 45: Docker & Containerized ML
+### Week 53: Docker & Containerized ML
 
 **Study:**
 - MLOps Zoomcamp: Module 1 (Introduction, MLOps maturity)
@@ -631,7 +732,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 46: Experiment Tracking & Model Registry
+### Week 54: Experiment Tracking & Model Registry
 
 **Study:**
 - MLOps Zoomcamp: Module 2 (Experiment Tracking — MLflow)
@@ -640,7 +741,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 47: ML Pipelines & Orchestration
+### Week 55: ML Pipelines & Orchestration
 
 **Study:**
 - MLOps Zoomcamp: Module 3 (Orchestration — Prefect or Mage)
@@ -648,7 +749,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 48: Model Monitoring & Drift Detection
+### Week 56: Model Monitoring & Drift Detection
 
 **Study:**
 - MLOps Zoomcamp: Module 5 (Model Monitoring)
@@ -657,7 +758,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 49: CI/CD for ML & Cloud Deployment
+### Week 57: CI/CD for ML & Cloud Deployment
 
 **Study:**
 - mlsysbook: Volume II — [ML Operations](https://mlsysbook.ai/), [Model Serving](https://mlsysbook.ai/) (navigate to Vol II → Ops, Vol I → Model Serving)
@@ -669,28 +770,28 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 50: Phase 7 Capstone — Production ML System
+### Week 58: Phase 10 Capstone — Production ML System
 
 **Study:**
 - Review all MLOps Zoomcamp modules (1–5)
 - mlsysbook: Production system case studies (Volume II — Case Studies)
 
-**M8: Production Ready** — You can build, deploy, monitor, and maintain production ML and LLM systems.
+**M10: Production Ready** — You can build, deploy, monitor, and maintain production ML and LLM systems.
 
 </details>
 
 ---
 
 <details>
-<summary><h2>Phase 8: Capstone & Portfolio</h2></summary>
+<summary><h2>Phase 11: Capstone & Portfolio</h2></summary>
 
 | | |
 |---|---|
-| **Duration** | 8 Weeks |
+| **Duration** | 6 Weeks |
 | **Resources** | Real-world datasets, [Kaggle](https://www.kaggle.com/), [HuggingFace Datasets](https://huggingface.co/datasets), industry benchmarks |
-| **Depth** | Synthesis phase — no new textbooks. Apply everything to build an original, end-to-end project demonstrating job readiness. |
+| **Depth** | Synthesis phase — no new textbooks. Apply everything to build an original, end-to-end project demonstrating job readiness. Trimmed to 6 weeks (from 8) — focused execution. |
 
-### Week 51: Capstone Proposal & Data Collection
+### Week 59: Capstone Proposal & Data Collection
 
 **Study:**
 - Review industry job postings for your target role
@@ -698,21 +799,21 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 ---
 
-### Week 52–53: Build — Core Implementation
+### Week 60–61: Build — Core Implementation
 
 ---
 
-### Week 54: Build — Production & Deployment
+### Week 62: Build — Production & Deployment
 
 ---
 
-### Week 55: Portfolio Polish
+### Week 63: Portfolio Polish & Documentation
 
 ---
 
-### Week 56: Interview Preparation & Final Review
+### Week 64: Interview Preparation & Final Review
 
-**M9: Job Ready** — You have a portfolio of 12+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, AI Engineer, or LLM Engineer roles.
+**M11: Job Ready** — You have a portfolio of 12+ projects, deployed applications, and interview preparation. You are ready to apply for Data Scientist, ML Engineer, AI Engineer, LLM Engineer, or Quantitative Analyst roles.
 
 </details>
 
@@ -725,11 +826,12 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 | Buffer Week | Timing | Recommended Use |
 |---|---|---|
 | **W9** | After Phase 1 | Catch up on SQL/pandas weak spots, extend Phase 1 capstone |
-| **W18** | After Phase 3 | Review ISLP labs, extend ML pipeline project |
-| **W27** | After Phase 5 | Review DL concepts, extend CNN/Transformer project |
-| **W36** | Mid Phase 5.5 | Extend RAG application, experiment with small models |
-| **W44** | After Phase 5.6 | Practice agentic patterns, extend safety testing |
-| **W56+** | After Phase 8 | Capstone extension, additional interview prep, rest |
+| **W18** | After Phase 2 | Review statistics, extend A/B test project |
+| **W26** | After Phase 4 | Review ISLP labs + Scikit-learn, extend ML pipeline |
+| **W34** | Mid Phase 6 | Extend RAG application, experiment with small models |
+| **W42** | After Phase 7 | Practice agentic patterns, extend safety testing |
+| **W53** | After Phase 9 | Review econometrics, extend time series capstone |
+| **W64+** | After Phase 11 | Capstone extension, interview prep, rest |
 
 **Buffer Week Decision Guide:**
 - Behind schedule? → Catch up on missed checkpoints
@@ -831,11 +933,11 @@ Buffer weeks are **planned recovery periods** — not optional extras. Use them 
 
 Upon completing this roadmap, you will have:
 
-- **12 portfolio projects** across the full data science, AI, and agentic stack (3 LLM/GenAI/Agentic)
-- **From-scratch implementations** of critical algorithms: OLS, logistic regression, CART, basic neural network, attention mechanism
-- **Practical statistics foundation**: hypothesis testing, confidence intervals, Bayesian inference, causal reasoning
+- **12 portfolio projects** across the full data science, AI, agentic, and econometrics stack
+- **From-scratch implementations** of critical algorithms: OLS, logistic regression, CART, basic neural network, attention mechanism, ARIMA
+- **Practical statistics & econometrics**: hypothesis testing, confidence intervals, regression diagnostics (heteroscedasticity, autocorrelation, multicollinearity), time series analysis, panel data
 - **Production engineering skills**: Docker, MLflow, FastAPI, CI/CD, monitoring (ML + LLM)
-- **LLM/GenAI competency**: Advanced RAG, fine-tuning, prompt engineering, evaluation, agentic patterns, AI safety
+- **LLM/GenAI competency**: Advanced RAG, fine-tuning, prompt engineering, agentic patterns, AI safety
 - **Modern data tooling**: pandas, DuckDB, Polars for analytical-scale data
 
 ### Portfolio Structure (12 Projects)
@@ -847,13 +949,13 @@ Upon completing this roadmap, you will have:
 | 03 | ISLP capstone — model comparison | Phase 3 |
 | 04 | Feature engineering + SHAP | Phase 4 |
 | 05 | CNN/Transformer project | Phase 5 |
-| 06 | Production RAG application + guardrails | Phase 5.5 |
-| 07 | Fine-tuned model + benchmark | Phase 5.5 |
-| 08 | Multi-agent system (LangGraph/CrewAI) | Phase 5.6 |
-| 09 | Observational data causal inference | Phase 6 |
-| 10 | Deployed ML/LLM system + monitoring | Phase 7 |
-| 11 | End-to-end original project | Phase 8 |
-| 12 | AI safety audit of own system | Phase 5.6 |
+| 06 | Production RAG application | Phase 6 |
+| 07 | Fine-tuned model + benchmark | Phase 6 |
+| 08 | Multi-agent system (LangGraph/CrewAI) | Phase 7 |
+| 09 | Full econometric diagnostics report | Phase 8 |
+| 10 | Time series forecasting + volatility modeling | Phase 9 |
+| 11 | Deployed ML/LLM system + monitoring | Phase 10 |
+| 12 | End-to-end original capstone project | Phase 11 |
 
 ### Project Quality Checklist
 
@@ -881,12 +983,14 @@ After completing this roadmap:
 | Milestone | When | What You Can Apply For |
 |---|---|---|
 | **M1: Data Ready** | Week 5 | Data Analyst, Junior Data Analyst |
-| **M3: ML Ready** | Week 17 | Junior Data Scientist, ML Analyst |
-| **M4: Applied ML Ready** | Week 22 | Data Scientist (entry-level) |
+| **M3: ML Ready** | Week 18 | Junior Data Scientist, ML Analyst |
+| **M4: Applied ML Ready** | Week 23 | Data Scientist (entry-level) |
 | **M6: LLM Ready** | Week 38 | AI Engineer, LLM Engineer |
-| **M6.5: Agentic & Safety Ready** | Week 40 | Senior AI Engineer, AI Safety Engineer |
-| **M8: Production Ready** | Week 50 | ML Engineer, MLOps Engineer, LLMOps Engineer |
-| **M9: Job Ready** | Week 56 | Senior Data Scientist, ML Engineer, AI Engineer, LLM Engineer |
+| **M7: Agentic & Safety Ready** | Week 41 | Senior AI Engineer, AI Safety Engineer |
+| **M8: Diagnostics Ready** | Week 47 | Data Scientist (econometrics-focused), Quantitative Analyst |
+| **M9: Econometrics Ready** | Week 52 | Econometrician, Quantitative Researcher, Forecasting Analyst |
+| **M10: Production Ready** | Week 58 | ML Engineer, MLOps Engineer, LLMOps Engineer |
+| **M11: Job Ready** | Week 64 | Senior Data Scientist, ML Engineer, AI Engineer, LLM Engineer |
 
 ---
 
@@ -897,4 +1001,4 @@ After completing this roadmap:
 
 ---
 
-*Roadmap Version 3.0 (2026 Q3 Edition) | Designed for 10–12 hrs/week | Total: ~54 weeks core + 6 buffer + 8 elective*
+*Roadmap Version 4.0 (2026 Q3 Edition — Balanced Track) | Designed for 10–12 hrs/week | Total: ~64 weeks core + 6 buffer + 8 elective*
