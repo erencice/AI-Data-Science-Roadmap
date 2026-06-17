@@ -113,7 +113,6 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - McKinney: Chapters 5–7 (pandas intro, Data Loading, Data Cleaning)
-- Focus: Series, DataFrame, `.loc`/`.iloc`, handling missing values, dtypes
 
 ---
 
@@ -122,7 +121,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Study:**
 - McKinney: Chapters 8–10 (Wrangling, GroupBy, Aggregation)
 - SQLBolt: Lessons 1–10 (SELECT, WHERE, JOINs, aggregates)
-- **Bonus:** Try [DuckDB](https://duckdb.org/docs/) — run SQL directly on pandas DataFrames with zero setup. For datasets >1GB, DuckDB and [Polars](https://pola.rs/) outperform pandas significantly.
+- Bonus: [DuckDB](https://duckdb.org/docs/), [Polars](https://pola.rs/) — for datasets >1GB
 
 ---
 
@@ -159,57 +158,43 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 6: Introduction to Statistics & Descriptive Data Analysis
 
 **Study:**
-- Watch Section 1 & 2 of the video course:
-  - Getting started with statistics, data classification, and the statistical study process.
-  - Frequency distributions, graphical displays (bar charts, histograms, stem-and-leaf plots), and data visualization analysis.
+- Video course: Section 1 & 2
 
 ---
 
 ### Week 7: Measures of Central Tendency & Dispersion
 
 **Study:**
-- Watch Section 3 of the video course:
-  - Measures of center (mean, median, mode).
-  - Measures of dispersion (range, variance, standard deviation).
-  - Measures of relative position (percentiles, quartiles, z-scores).
+- Video course: Section 3
 
 ---
 
 ### Week 8: Probability Foundations & Counting Rules
 
 **Study:**
-- Watch Section 4 of the video course:
-  - Introduction to probability, sample spaces, and events.
-  - Addition and multiplication rules of probability.
-  - Permutations, combinations, and counting principles.
+- Video course: Section 4
 
 ---
 
 ### Week 9: Probability Distributions (Discrete & Continuous)
 
 **Study:**
-- Watch Section 5 of the video course:
-  - Discrete probability distributions (Binomial, Poisson, Hypergeometric).
-  - Continuous probability distributions (Uniform, Exponential, Normal).
-  - The Standard Normal Distribution and z-tables.
+- Video course: Section 5
 
 ---
 
 ### Week 10: Sampling Distributions & Inferential Statistics
 
 **Study:**
-- Watch Section 6 of the video course:
-  - Sampling distributions and the Central Limit Theorem (CLT).
-  - Confidence intervals for population means and proportions.
-  - Hypothesis testing: z-tests, t-tests, null vs. alternative hypotheses, p-values, Type I and Type II errors.
+- Video course: Section 6
 
 ---
 
 ### Week 11: Phase 2 Capstone — Data-Driven Decision (A/B Test Analysis)
 
 **Study:**
-- Review the entire course content from the video, focusing on inferential statistics.
-- Read about A/B testing design, sample size determination, and statistical power.
+- Review entire video course, focusing on inferential statistics
+- Read about A/B testing design, sample size determination, and statistical power
 
 **M2: Stats Ready** — You can select and execute appropriate statistical tests, interpret p-values and confidence intervals, and translate results into business decisions.
 
@@ -229,7 +214,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 12: Statistical Learning Overview & Linear Regression
 
 **Study:**
-- ISLP: Chapters 1–3 (Statistical Learning intro, Linear Regression) — full chapters + Python labs
+- ISLP: Chapters 1–3 (Statistical Learning intro, Linear Regression) + Python labs
 - StatQuest: Cross-Validation series (~1 hr)
 
 ---
@@ -237,40 +222,36 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 13: Classification
 
 **Study:**
-- ISLP: Chapter 4 (Classification) — full chapter + Python lab
-- Topics: Logistic Regression, LDA, QDA, KNN
+- ISLP: Chapter 4 (Classification) + Python lab
 
 ---
 
 ### Week 14: Resampling Methods
 
 **Study:**
-- ISLP: Chapter 5 (Resampling Methods) — full chapter + lab
-- Focus: k-fold CV, bootstrap, validation set approach
+- ISLP: Chapter 5 (Resampling Methods) + lab
 
 ---
 
 ### Week 15: Model Selection & Regularization
 
 **Study:**
-- ISLP: Chapter 6 (Model Selection & Regularization) — full chapter + lab
-- Focus: Best subset selection, forward/backward stepwise, Ridge, Lasso, PCR, PLS
+- ISLP: Chapter 6 (Model Selection & Regularization) + lab
 
 ---
 
 ### Week 16: Moving Beyond Linearity
 
 **Study:**
-- ISLP: Chapter 7 (Moving Beyond Linearity) — polynomial regression, step functions, splines, GAMs
-- ISLP: Chapter 8 (Tree-Based Methods) — CART, Random Forests, Bagging
+- ISLP: Chapter 7 (Moving Beyond Linearity)
+- ISLP: Chapter 8 (Tree-Based Methods)
 
 ---
 
 ### Week 17: Support Vector Machines
 
 **Study:**
-- ISLP: Chapter 9 (Support Vector Machines) — full chapter + lab
-- Topics: Maximal margin classifier, support vector classifier, SVM (linear, RBF), SVMs with more than 2 classes
+- ISLP: Chapter 9 (Support Vector Machines) + lab
 
 ---
 
@@ -298,10 +279,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 19: End-to-End ML Projects & Data Pipelines
 
 **Study:**
-- Scikit-Learn User Guide:
-  - [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html) → "Linear Models" (Ridge, Lasso, ElasticNet)
-  - [Model Selection](https://scikit-learn.org/stable/model_selection.html) → "Cross-validation", "Grid Search"
-  - [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) → `Pipeline`, `ColumnTransformer`, `make_pipeline`
+- Scikit-Learn User Guide: [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Model Selection](https://scikit-learn.org/stable/model_selection.html), [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline)
 - Kaggle ML Micro-Courses: [Intro to ML](https://www.kaggle.com/learn/intro-to-machine-learning), [Intermediate ML](https://www.kaggle.com/learn/intermediate-machine-learning)
 - StatQuest: ML Overview series (~1 hr)
 
@@ -310,12 +288,9 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 20: Feature Engineering Masterclass
 
 **Study:**
-- Scikit-Learn User Guide:
-  - [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html) → "Classification" (LogisticRegression, SGDClassifier)
-  - [Linear Models](https://scikit-learn.org/stable/modules/linear_model.html) → "Stochastic Gradient Descent"
-  - [Tree Models](https://scikit-learn.org/stable/modules/tree.html) → DecisionTreeClassifier, DecisionTreeRegressor, `max_depth`, `min_samples_split`
-- Google ML Crash Course: [Classification](https://developers.google.com/machine-learning/crash-course/classification) module
-- [Google Decision Forests Guide](https://developers.google.com/machine-learning/decision-forests) — Decision trees, random forests, gradient boosted trees
+- Scikit-Learn User Guide: [Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Linear Models](https://scikit-learn.org/stable/modules/linear_model.html), [Tree Models](https://scikit-learn.org/stable/modules/tree.html)
+- Google ML Crash Course: [Classification](https://developers.google.com/machine-learning/crash-course/classification)
+- [Google Decision Forests Guide](https://developers.google.com/machine-learning/decision-forests)
 - StatQuest: Decision Trees, Random Forests series (~1.5 hrs)
 
 ---
@@ -323,10 +298,8 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 21: Hyperparameter Tuning & Model Interpretability
 
 **Study:**
-- Scikit-Learn User Guide:
-  - [Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html) → `SVC`, `kernel='rbf'`, `C`, `gamma` parameters
-  - [Model Selection](https://scikit-learn.org/stable/model_selection.html) → `GridSearchCV`, `RandomizedSearchCV`, `HalvingGridSearchCV`
-- SHAP documentation: [shap.readthedocs.io](https://shap.readthedocs.io/) (examples + API)
+- Scikit-Learn User Guide: [SVM](https://scikit-learn.org/stable/modules/svm.html), [Model Selection](https://scikit-learn.org/stable/model_selection.html)
+- SHAP documentation: [shap.readthedocs.io](https://shap.readthedocs.io/)
 - StatQuest: SVM, Hyperparameter Tuning series (~1.5 hrs)
 
 ---
@@ -334,9 +307,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 22: Imbalanced Learning & Ensemble Techniques
 
 **Study:**
-- Scikit-Learn User Guide:
-  - [Ensemble Methods](https://scikit-learn.org/stable/modules/ensemble.html) → `RandomForestClassifier`, `GradientBoostingClassifier`, `VotingClassifier`, `StackingClassifier`
-  - [Decomposition](https://scikit-learn.org/stable/modules/decomposition.html) → `PCA`, `TruncatedSVD`
+- Scikit-Learn User Guide: [Ensemble Methods](https://scikit-learn.org/stable/modules/ensemble.html), [Decomposition](https://scikit-learn.org/stable/modules/decomposition.html)
 - StatQuest: Boosting, PCA, t-SNE series (~2 hrs)
 
 ---
@@ -344,10 +315,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 23: Phase 4 Capstone — Production-Ready ML
 
 **Study:**
-- Scikit-Learn User Guide:
-  - [Clustering](https://scikit-learn.org/stable/modules/clustering.html) → `KMeans`, `DBSCAN`, `AgglomerativeClustering`
-  - [Manifold Learning](https://scikit-learn.org/stable/modules/manifold.html) → `UMAP` (via `umap-learn`), `t-SNE`
-  - Review: [Pipeline](https://scikit-learn.org/stable/modules/compose.html#pipeline) for capstone
+- Scikit-Learn User Guide: [Clustering](https://scikit-learn.org/stable/modules/clustering.html), [Manifold Learning](https://scikit-learn.org/stable/modules/manifold.html)
 - SHAP docs: Counterfactual explanations, global surrogate models
 
 **M4: Applied ML Ready** — You can build production-ready ML pipelines with feature engineering, tuning, and interpretability.
@@ -369,7 +337,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Prince: Chapters 1–5 (Introduction, Supervised learning, Shallow neural networks, Deep neural networks, Loss functions)
-- D2L: Chapters 3–5 (MLPs, backpropagation, numerical stability)
+- D2L: Chapters 3–5
 
 ---
 
@@ -377,7 +345,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Prince: Chapters 6–9 (Training, Optimizers, Initialization, Regularization)
-- D2L: Chapter 6 (Builders' Guide — optimization deep-dive)
+- D2L: Chapter 6
 
 ---
 
@@ -385,7 +353,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Prince: Chapters 10–11 (Convolutional networks, Residual networks)
-- D2L: Chapters 7–8 (CNNs, Modern CNNs — AlexNet, VGG, ResNet)
+- D2L: Chapters 7–8
 
 ---
 
@@ -393,7 +361,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Prince: Chapter 12 (Recurrent neural networks)
-- D2L: Chapter 9 (RNNs) — all sections
+- D2L: Chapter 9
 
 ---
 
@@ -402,7 +370,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 **Study:**
 - Prince: Chapter 13 (Transformers)
 - D2L: Chapter 11 (Attention Mechanisms)
-- Read: [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
+- [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
 
 ---
 
@@ -426,7 +394,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Review all Prince chapters and D2L notebooks from this phase
-- HuggingFace Course: [Ch. 1 (Transformers, what can they do?)](https://huggingface.co/learn/nlp-course/chapter1/1), [Ch. 2 (Using 🤗 Transformers)](https://huggingface.co/learn/nlp-course/chapter2/1), [Ch. 3 (Fine-tuning a pretrained model)](https://huggingface.co/learn/nlp-course/chapter3/1)
+- HuggingFace Course: [Ch. 1](https://huggingface.co/learn/nlp-course/chapter1/1), [Ch. 2](https://huggingface.co/learn/nlp-course/chapter2/1), [Ch. 3](https://huggingface.co/learn/nlp-course/chapter3/1)
 
 **M5: DL Ready** — You understand neural network architectures, can train CNNs/RNNs/Transformers, and can apply transfer learning.
 
@@ -446,8 +414,8 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 32: LLM Fundamentals — Transformers, Tokenization & Scaling
 
 **Study:**
-- HuggingFace NLP Course: Chapters 1–3 (Transformers, using pipelines, processing data)
-- Read: "Attention Is All You Need" (Vaswani et al., 2017) — architecture sections
+- HuggingFace NLP Course: Chapters 1–3
+- Read: "Attention Is All You Need" (Vaswani et al., 2017)
 - Karpathy: ["Let's build GPT"](https://www.youtube.com/watch?v=kCc8FmEb1nY) (2 hrs)
 
 ---
@@ -455,66 +423,57 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 33: Prompt Engineering & LLM APIs
 
 **Study:**
-- OpenAI Cookbook — updated recipes:
-  - [Prompt generation for instruction-tuned LLMs](https://cookbook.openai.com/examples/prompt_generation_for_instruction_tuned_llms)
-  - [How to count tokens with tiktoken](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken)
-  - [Structured outputs](https://cookbook.openai.com/examples/structured_outputs_intro) — JSON mode, function calling
-- OpenAI Docs: [Function Calling](https://platform.openai.com/docs/guides/function-calling) — tool use, structured outputs
-- Anthropic Prompt Engineering Guide:
-  - [Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — XML tags, long context tips, structured prompts
-- DeepLearning.AI: [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) (Andrew Ng + Isa Fulford, ~1.5 hrs)
+- OpenAI Cookbook: [Prompt generation](https://cookbook.openai.com/examples/prompt_generation_for_instruction_tuned_llms), [Token counting](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken), [Structured outputs](https://cookbook.openai.com/examples/structured_outputs_intro)
+- OpenAI Docs: [Function Calling](https://platform.openai.com/docs/guides/function-calling)
+- Anthropic: [Prompt engineering overview](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering)
+- DeepLearning.AI: [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
 
 ---
 
 ### Week 34: RAG Architecture — Embeddings, Vector DBs & Retrieval
 
 **Study:**
-- LangChain: [Build a Question Answering Application](https://python.langchain.com/docs/use_cases/question_answering/) — RAG pipeline walkthrough
-- LangChain YouTube: [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFJuae29fQZ7OoqVrPHnDqMqVqMqM) — Episodes 1–6
-- Vector Databases: Install and experiment with [ChromaDB](https://www.trychroma.com/) — local, open-source vector store
-- Embedding models: [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard) — compare text-embedding-3, bge-large, e5-large-v2
+- LangChain: [Question Answering Application](https://python.langchain.com/docs/use_cases/question_answering/)
+- LangChain YouTube: [RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFJuae29fQZ7OoqVrPHnDqMqVqMqM)
+- [ChromaDB](https://www.trychroma.com/)
+- [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
 
 ---
 
 ### Week 35: Advanced RAG — Hybrid Search, Reranking & GraphRAG
 
 **Study:**
-- Hybrid Search: Combine sparse (BM25) + dense (embeddings) retrieval. Try LangChain's [Ensemble Retriever](https://python.langchain.com/docs/integrations/retrievers/bm25)
-- Reranking: [Cohere Rerank](https://docs.cohere.com/docs/rerank-2) — improve retrieval quality post-hoc
-- GraphRAG: [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) — knowledge-graph-based retrieval. Read through the quickstart
-- Multimodal RAG: Embed images + text with models like [Jina CLIP](https://jina.ai/news/jina-clip-v2-your-multilingual-multimodal-embedding-model/)
+- LangChain: [Ensemble Retriever](https://python.langchain.com/docs/integrations/retrievers/bm25)
+- [Cohere Rerank](https://docs.cohere.com/docs/rerank-2)
+- [Microsoft GraphRAG](https://microsoft.github.io/graphrag/)
+- [Jina CLIP](https://jina.ai/news/jina-clip-v2-your-multilingual-multimodal-embedding-model/)
 
 ---
 
 ### Week 36: Small Language Models & Local Inference
 
 **Study:**
-- [Ollama](https://ollama.com/): Install and run local models (Llama 3, Phi-4, Gemma 3, Mistral)
-- Quantization: Understand GGUF, GPTQ, AWQ formats. Read: [LLM Compression Overview](https://huggingface.co/docs/transformers/quantization/overview)
-- Practical: Run Llama-3.1-8B locally via Ollama, build a lightweight RAG pipeline without API costs
-- Use case comparison: When to use API (GPT-4o, Claude) vs. local (Ollama) vs. fine-tuned small model
+- [Ollama](https://ollama.com/)
+- HuggingFace: [Quantization overview](https://huggingface.co/docs/transformers/quantization/overview)
 
 ---
 
 ### Week 37: Fine-tuning LLMs — LoRA, QLoRA & PEFT
 
 **Study:**
-- HuggingFace: [PEFT documentation](https://huggingface.co/docs/peft/en/index) — LoRA, QLoRA configuration, `get_peft_model`
-- HuggingFace: [Fine-tuning LLMs guide](https://huggingface.co/docs/transformers/training) — `Trainer` API, `TrainingArguments`, dataset preparation
-- Unsloth: [Fine-tune Llama-3.1 8B (Colab notebook)](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-Alpaca.ipynb) — step-by-step QLoRA tutorial
-- Read: "QLoRA" paper (Dettmers et al., 2023) — Sections 1–3
+- HuggingFace: [PEFT documentation](https://huggingface.co/docs/peft/en/index), [Fine-tuning guide](https://huggingface.co/docs/transformers/training)
+- Unsloth: [Fine-tune Llama-3.1 8B](https://colab.research.google.com/github/unslothai/notebooks/blob/main/nb/Llama3.1_(8B)-Alpaca.ipynb)
+- Read: "QLoRA" paper (Dettmers et al., 2023)
 
 ---
 
 ### Week 38: LLM Evaluation, Multimodal AI & Phase 6 Capstone
 
 **Study:**
-- RAGAS documentation: [Getting Started](https://docs.ragas.io/en/latest/getstarted/) — faithfulness, answer_relevance, context_precision
-- LangSmith Observability: [LangSmith platform](https://docs.langchain.com/langsmith) — trace LLM calls, latency, token usage
-- Vision-Language Models: [GPT-4o Vision](https://platform.openai.com/docs/guides/vision), [Claude Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision)
-- [HuggingFace Multimodal Models](https://huggingface.co/models?pipeline_tag=image-text-to-text): LLaVA, Qwen-VL
-
-**Hands-on:** Build a multimodal RAG pipeline (PDF with charts → extraction → embedding → Q&A). Set up LangSmith tracing. Evaluate your RAG system with RAGAS metrics.
+- RAGAS: [Getting Started](https://docs.ragas.io/en/latest/getstarted/)
+- LangSmith: [Observability](https://docs.langchain.com/langsmith)
+- Vision-Language: [GPT-4o Vision](https://platform.openai.com/docs/guides/vision), [Claude Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision)
+- [HuggingFace Multimodal Models](https://huggingface.co/models?pipeline_tag=image-text-to-text)
 
 **M6: LLM Ready** — You can build, evaluate, and deploy LLM-powered applications. You understand advanced RAG, fine-tuning, prompt engineering, small models, and multimodal AI.
 
@@ -534,32 +493,29 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 39: Agentic AI — Multi-Agent Systems & Tool Use
 
 **Study:**
-- LangGraph: [Quick Start](https://langchain-ai.github.io/langgraph/tutorials/introduction/) — build a tool-calling agent (ReAct pattern)
-- LangGraph: [Multi-Agent Collaboration](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/) — supervisor pattern, agent handoff
-- CrewAI: [Quickstart](https://docs.crewai.com/quickstart) — role-based multi-agent orchestration
-- OpenAI Function Calling: [Tool use with chat models](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models) — ReAct pattern, structured outputs
+- LangGraph: [Quick Start](https://langchain-ai.github.io/langgraph/tutorials/introduction/), [Multi-Agent Collaboration](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/)
+- CrewAI: [Quickstart](https://docs.crewai.com/quickstart)
+- OpenAI: [Function Calling](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models)
 
 ---
 
 ### Week 40: MCP, Protocols & Advanced Agent Patterns
 
 **Study:**
-- Anthropic MCP: [Model Context Protocol](https://modelcontextprotocol.io/) — standardized tool/source integration. Build a simple MCP server
+- Anthropic MCP: [Model Context Protocol](https://modelcontextprotocol.io/)
 - Agent patterns: Router, orchestrator-worker, critic-refine, hierarchical
-- Human-in-the-loop: Approval gates, interrupt patterns in LangGraph
-- Memory: Conversation memory, vector memory, entity memory in agent systems
+- Human-in-the-loop: LangGraph interrupt/approval patterns
+- Memory: Conversation memory, vector memory in agent systems
 
 ---
 
 ### Week 41: AI Safety, Guardrails & Responsible AI
 
 **Study:**
-- Guardrails: [Guardrails AI](https://www.guardrailsai.com/) — output validation, structure enforcement
-- Red-Teaming: Practice adversarial testing on your own RAG/agent systems. Read: [Anthropic Red Teaming Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/red-teaming)
-- Bias & Fairness: [HuggingFace Evaluate](https://huggingface.co/docs/evaluate/en/index) — fairness metrics for model outputs
-- Content Safety: [NVIDIA NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) — programmatic safety boundaries
-
-**Hands-on:** Add guardrails to your Phase 6 RAG application. Red-team it with jailbreak attempts. Build a simple multi-agent workflow with LangGraph.
+- [Guardrails AI](https://www.guardrailsai.com/)
+- [Anthropic Red Teaming Guide](https://docs.anthropic.com/en/docs/test-and-evaluate/red-teaming)
+- [HuggingFace Evaluate](https://huggingface.co/docs/evaluate/en/index)
+- [NVIDIA NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)
 
 **M7: Agentic & Safety Ready** — You can build multi-agent systems, implement safety guardrails, and evaluate AI outputs for bias and harm. These skills differentiate you from 80% of LLM practitioners.
 
@@ -579,62 +535,42 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 42: Introduction & Simple Regression (Ch. 1–3)
 
 **Study:**
-- Introduction (I.1–I.4): What is econometrics, methodology, types of data, computer's role
-- Ch. 1: The nature of regression analysis — statistical vs. deterministic, regression vs. causation vs. correlation, data types (time series, cross-section, pooled)
-- Ch. 2: Two-variable regression — population regression function (PRF), stochastic specification, sample regression function (SRF), the meaning of linear
-- Ch. 3: Two-variable OLS estimation — classical linear regression model (CLRM) 10 assumptions, Gauss-Markov theorem, coefficient of determination r², properties of OLS
-
-**Hands-on:** Implement OLS from scratch with NumPy. Verify against `statsmodels.OLS`. Estimate a consumption function with real data.
+- Gujarati: Introduction (I.1–I.4), Chapters 1–3
 
 ---
 
 ### Week 43: Inference & Hypothesis Testing (Ch. 4–5)
 
 **Study:**
-- Ch. 4: Classical Normal Linear Regression Model (CNLRM) — normality assumption, why normality, maximum likelihood estimation (MLE) vs. OLS
-- Ch. 5: Two-variable regression inference — confidence intervals (β₁, β₂, σ²), t-test, χ² test, p-values, significance vs. practical significance, ANOVA, prediction intervals
-
-**Hands-on:** Replicate all Chapter 5 examples. Calculate confidence intervals manually + with `statsmodels`. Interpret p-values correctly.
+- Gujarati: Chapters 4–5
 
 ---
 
 ### Week 44: Functional Forms & Multiple Regression (Ch. 6–7)
 
 **Study:**
-- Ch. 6: Extensions of two-variable regression — regression through origin, scaling/standardization, functional forms (log-linear, semilog, reciprocal, logarithmic reciprocal), Box-Cox transformation, growth rate formulas
-- Ch. 7: Multiple regression — partial regression coefficients, R² and adjusted R², specification bias, Cobb-Douglas production function, polynomial regression, partial correlation
-
-**Hands-on:** Test log-linear vs. linear specifications on real wage/income data. Build a Cobb-Douglas production function. Compare R² vs. adjusted R².
+- Gujarati: Chapters 6–7
 
 ---
 
 ### Week 45: Multiple Regression Inference & Dummy Variables (Ch. 8–9)
 
 **Study:**
-- Ch. 8: Multiple regression inference — individual/overall significance (t and F tests), restricted least squares, Chow test for structural stability, LR/Wald/LM tests
-- Ch. 9: Dummy variable regression — ANOVA/ANCOVA models, interaction effects, seasonal analysis, piecewise linear regression, interpretation in semilogarithmic models
-
-**Hands-on:** Build a wage determination model with dummy variables (gender, education, region). Run Chow test for structural breaks. Check for interaction effects.
+- Gujarati: Chapters 8–9
 
 ---
 
 ### Week 46: Multicollinearity & Heteroscedasticity (Ch. 10–11)
 
 **Study:**
-- Ch. 10: Multicollinearity — nature, theoretical vs. practical consequences, detection (VIF, condition index, auxiliary regressions), ridge regression (intro)
-- Ch. 11: Heteroscedasticity — consequences of OLS, detection (Breusch-Pagan, White, Goldfeld-Quandt, Park, Glejser), weighted least squares (WLS), White's heteroscedasticity-consistent standard errors
-
-**Hands-on:** Take your Phase 4 ML project. Run VIF analysis on all features. Test for heteroscedasticity with 3 methods. Compare OLS vs. robust SE vs. WLS results.
+- Gujarati: Chapters 10–11
 
 ---
 
 ### Week 47: Autocorrelation & Model Specification (Ch. 12–13)
 
 **Study:**
-- Ch. 12: Autocorrelation — nature, OLS consequences, detection (Durbin-Watson d, Breusch-Godfrey LM, runs test), GLS/FGLS correction, Newey-West HAC standard errors, ARCH/GARCH intro
-- Ch. 13: Model specification & diagnostic testing — omitted/irrelevant variable bias, RESET test, nested vs. non-nested models, model selection criteria (AIC, SIC, Mallow's Cp), outliers/leverage/influence, Chow prediction failure test
-
-**Hands-on:** Apply full diagnostics to a time series regression. Run RESET, check AIC/SIC across specifications. Test for autocorrelation and correct with Newey-West SE.
+- Gujarati: Chapters 12–13
 
 **M8: Diagnostics Ready** — You can rigorously test regression assumptions and apply corrections. This bridges ML and econometrics — a rare and highly valued dual competency.
 
@@ -654,60 +590,35 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 48: Qualitative Response Models (Ch. 15)
 
 **Study:**
-- Ch. 15: Linear Probability Model (LPM) — problems and limitations
-- Logit and Probit models — estimation (MLE), interpretation (odds ratios, marginal effects)
-- Tobit model (censored regression), Poisson regression (count data)
-- Multinomial/ordinal logit and probit extensions
-
-**Hands-on:** Build Logit and Probit models for binary outcomes (loan default, customer churn). Compare LPM vs. Logit marginal effects. Estimate a Tobit model.
+- Gujarati: Chapter 15
 
 ---
 
 ### Week 49: Panel Data Regression (Ch. 16)
 
 **Study:**
-- Ch. 16: Why panel data, pooled OLS (constant coefficients)
-- Fixed effects: LSDV model, within-group (WG) estimator, caveats
-- Random effects model (REM), Breusch-Pagan LM test
-- Hausman test: FE vs. RE, properties comparison, practical guidelines
-
-**Hands-on:** Work with a cross-country panel dataset (World Bank, Penn World Table). Implement FE, RE, and pooled OLS. Run Hausman test to choose specification.
+- Gujarati: Chapter 16
 
 ---
 
 ### Week 50: Dynamic Econometric Models (Ch. 17)
 
 **Study:**
-- Ch. 17: The role of time and lags in economics, reasons for lags
-- Distributed-lag models: ad hoc estimation, Koyck transformation (median/mean lag)
-- Adaptive expectations model, partial (stock) adjustment model
-- Instrumental Variables (IV), Granger causality, Sims causality
-
-**Hands-on:** Estimate Koyck distributed-lag models on macro data. Test Granger causality between money supply and GDP. Apply IV estimation with `statsmodels`.
+- Gujarati: Chapter 17
 
 ---
 
 ### Week 51: Time Series Econometrics I (Ch. 21)
 
 **Study:**
-- Ch. 21: Stationary and nonstationary stochastic processes, trend stationary (TS) vs. difference stationary (DS)
-- Unit root stochastic process, spurious regression
-- Tests of stationarity: graphical, ACF/correlogram, statistical significance of AC
-- Unit root tests: Augmented Dickey-Fuller (ADF), Phillips-Perron (PP)
-- Cointegration: Engle-Granger (EG) two-step, Augmented Engle-Granger (AEG), error correction mechanism (ECM)
-
-**Hands-on:** Test unit roots in financial/economic time series (stock prices, GDP, exchange rates). Run ADF tests with proper lag selection. Test cointegration between consumption-income. Build an ECM.
+- Gujarati: Chapter 21
 
 ---
 
 ### Week 52: Time Series Econometrics II & Capstone (Ch. 22)
 
 **Study:**
-- Ch. 22: AR, MA, ARMA, ARIMA modeling, Box-Jenkins methodology (identification → estimation → diagnostic checking → forecasting)
-- Vector Autoregression (VAR) — estimation, impulse response functions (IRF), forecast error variance decomposition (FEVD)
-- Volatility modeling: ARCH and GARCH models, EGARCH, GARCH-M extensions
-
-**Hands-on:** Fit ARIMA/SARIMA to seasonal data (Box-Jenkins full workflow). Build a VAR model and generate IRF plots. Estimate GARCH(1,1) volatility on financial returns with `arch` package.
+- Gujarati: Chapter 22
 
 **M9: Econometrics Ready** — You can specify, estimate, diagnose, and forecast with the full econometric toolkit. You bridge ML and econometrics — qualifying for quantitative analyst, econometrician, and forecasting roles.
 
@@ -727,46 +638,42 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 ### Week 53: Docker & Containerized ML
 
 **Study:**
-- MLOps Zoomcamp: Module 1 (Introduction, MLOps maturity)
-- mlsysbook: Volume I — Chapters 1–2 (ML lifecycle overview, system design)
+- MLOps Zoomcamp: Module 1
+- mlsysbook: Volume I — Chapters 1–2
 
 ---
 
 ### Week 54: Experiment Tracking & Model Registry
 
 **Study:**
-- MLOps Zoomcamp: Module 2 (Experiment Tracking — MLflow)
-- mlsysbook: Volume I — Chapter 4 (Model Training)
-- **LLMOps:** Set up [LangSmith](https://docs.langchain.com/langsmith) for LLM experiment tracking alongside MLflow for ML experiments
+- MLOps Zoomcamp: Module 2 (MLflow)
+- mlsysbook: Volume I — Chapter 4
+- LLMOps: [LangSmith](https://docs.langchain.com/langsmith)
 
 ---
 
 ### Week 55: ML Pipelines & Orchestration
 
 **Study:**
-- MLOps Zoomcamp: Module 3 (Orchestration — Prefect or Mage)
-- mlsysbook: Volume I — Chapter 5 (Model Deployment)
+- MLOps Zoomcamp: Module 3 (Prefect or Mage)
+- mlsysbook: Volume I — Chapter 5
 
 ---
 
 ### Week 56: Model Monitoring & Drift Detection
 
 **Study:**
-- MLOps Zoomcamp: Module 5 (Model Monitoring)
-- mlsysbook: Volume I — Chapter 7 (Model Monitoring)
-- **LLMOps Monitoring:** LLM-specific metrics — hallucination rate, retrieval precision, response latency
+- MLOps Zoomcamp: Module 5
+- mlsysbook: Volume I — Chapter 7
 
 ---
 
 ### Week 57: CI/CD for ML & Cloud Deployment
 
 **Study:**
-- mlsysbook: Volume II — [ML Operations](https://mlsysbook.ai/), [Model Serving](https://mlsysbook.ai/) (navigate to Vol II → Ops, Vol I → Model Serving)
-- Cloud deployment (choose one):
-  - **AWS:** [SageMaker JumpStart](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models.html) — deploy pre-trained models
-  - **GCP:** [Vertex AI](https://cloud.google.com/vertex-ai) — model registry, online prediction
-  - **Render/Railway:** [Deploy FastAPI on Render](https://render.com/docs/deploy-fastapi) — simpler alternative for portfolio projects
-- Great Expectations: [Getting Started](https://docs.greatexpectations.io/docs/) — data validation, expectations, checkpoints
+- mlsysbook: Volume II — ML Operations, Volume I — Model Serving
+- Cloud (choose one): [AWS SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models.html), [GCP Vertex AI](https://cloud.google.com/vertex-ai), [Render](https://render.com/docs/deploy-fastapi)
+- [Great Expectations](https://docs.greatexpectations.io/docs/)
 
 ---
 
@@ -774,7 +681,7 @@ Buffer weeks are **planned**, not optional. Use them intentionally.
 
 **Study:**
 - Review all MLOps Zoomcamp modules (1–5)
-- mlsysbook: Production system case studies (Volume II — Case Studies)
+- mlsysbook: Volume II — Case Studies
 
 **M10: Production Ready** — You can build, deploy, monitor, and maintain production ML and LLM systems.
 
